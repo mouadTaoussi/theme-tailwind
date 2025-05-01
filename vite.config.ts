@@ -3,6 +3,7 @@ import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
 import banner from "vite-plugin-banner";
 import { viteStaticCopy as copy } from "vite-plugin-static-copy";
+import tailwindcss from "@tailwindcss/vite";
 
 import { fileURLToPath } from "url";
 import { resolve } from "path";
@@ -16,7 +17,7 @@ function generate(version: string): string {
         version = `${version} (build ${preview_build})`;
     }
 
-    return `/*! Oruga Tsilwind Theme v${version} | MIT License | github.com/oruga-ui/theme-tailwind */`;
+    return `/*! Oruga Tailwind Theme v${version} | MIT License | github.com/oruga-ui/theme-tailwind */`;
 }
 
 // https://vitejs.dev/config/
@@ -24,7 +25,8 @@ export default defineConfig(({ mode }) => {
     if (mode === "development") {
         return {
             root: __dirname,
-            plugins: [vue()],
+            plugins: [vue(), tailwindcss()],
+            // plugins: [vue()],
             resolve: {
                 alias: {
                     "@": fileURLToPath(new URL("./src", import.meta.url)),

@@ -7,10 +7,14 @@
                 alt="Logo Oruga Theme Tailwind" />
         </div>
         <h1>Oruga Tailwind Theme Demo</h1>
+        <h1 class="text-3xl font-bold font-serif text-center underline">
+            Hello world!
+        </h1>
     </div>
 </template>
 
 <style scoped>
+@import "tailwindcss";
 .image__oruga {
     height: 128px;
 }

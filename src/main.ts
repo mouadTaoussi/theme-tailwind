@@ -10,7 +10,7 @@ import Examples from "@oruga-ui/examples";
 import "@oruga-ui/examples/dist/examples.css";
 
 // add theme config
-import { tailwindConfig } from "./plugins/theme";
+import { config as tailwindConfig } from "./plugins/theme";
 
 createApp(App)
     .use(router)

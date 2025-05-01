@@ -2,7 +2,7 @@
 // import { isTrueish } from "@oruga-ui/oruga-next";
 
 // import theme style
-// import "../assets/scss/bulma-build.scss";
+import "../assets/scss/tailwind-build.scss";
 
 const tailwindConfig = {
     name: "Test",
