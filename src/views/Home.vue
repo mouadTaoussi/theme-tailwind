@@ -3,10 +3,10 @@
         <div class="column is-narrow">
             <img
                 class="image__oruga"
-                src="https://raw.githubusercontent.com/oruga-ui/theme-bulma/master/public/logo.svg"
+                src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
                 alt="Logo Oruga Theme Tailwind" />
         </div>
-        <h1>Oruga Tailwind Theme Demo</h1>
+        <h1 class="text-center">Oruga Tailwind Theme Demo</h1>
         <h1 class="text-3xl font-bold font-serif text-center underline">
             Hello world!
         </h1>

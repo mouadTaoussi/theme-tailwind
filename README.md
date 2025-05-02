@@ -1,9 +1,9 @@
 <p align="center">
-    <img width="240" src="https://raw.githubusercontent.com/oruga-ui/theme-bulma/master/public/logo.svg" />
+    <img width="240" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" />
 </p>
 
 <p align="center">
-  <i><a href="https://bulma.io" target="_blank">Bulma</a> theme for <a href="https://oruga-ui.com" target="_blank">Oruga</a></i>
+  <i><a href="https://tailwindcss.com/" target="_blank">Tailwind</a> theme for <a href="https://oruga-ui.com" target="_blank">Oruga</a></i>
 </p>
 
 <p align="center">
