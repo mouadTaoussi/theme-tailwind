@@ -9,6 +9,10 @@ import Examples from "@oruga-ui/examples";
 // add examples styles
 import "@oruga-ui/examples/dist/examples.css";
 
+//
+import "./assets/scss/tailwind.scss";
+// import "./plugins/theme";
+
 // add theme config
 import { config as tailwindConfig } from "./plugins/theme";
 
