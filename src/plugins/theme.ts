@@ -3,7 +3,6 @@
 
 // import theme style
 import "../assets/scss/tailwind.scss";
-// import "../assets/scss/tailwind-build.scss";
 
 const tailwindConfig = {
     // name: "Test",
