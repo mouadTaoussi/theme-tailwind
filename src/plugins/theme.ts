@@ -1,14 +1,7 @@
 // import type { OrugaOptions, ComponentProps } from "@oruga-ui/oruga-next";
 // import { isTrueish } from "@oruga-ui/oruga-next";
 
-// import theme style
-import "../assets/scss/tailwind.scss";
-
 const tailwindConfig = {
-    // name: "Test",
-    // componentName: {
-    //     interneprops: "classe name",
-    // },
     button: {
         override: true,
         rootClass:
@@ -28,6 +21,36 @@ const tailwindConfig = {
         //     return `is-${variant} is-inverted`;
         // },
     },
+    Autocomplete: {},
+    Breadcrumb: {},
+    Button: {},
+    Carousel: {},
+    Checkbox: {},
+    Collapse: {},
+    Datepicker: {},
+    Datetimepicker: {},
+    Dropdown: {},
+    Field: {},
+    Icon: {},
+    Input: {},
+    Loading: {},
+    Menu: {},
+    Modal: {},
+    Notification: {},
+    Pagination: {},
+    Radio: {},
+    Select: {},
+    Sidebar: {},
+    Skeleton: {},
+    Slider: {},
+    Steps: {},
+    Switch: {},
+    Table: {},
+    Tabs: {},
+    Taginput: {},
+    Timepicker: {},
+    Tooltip: {},
+    Upload: {},
 };
 
 export { tailwindConfig as config };
