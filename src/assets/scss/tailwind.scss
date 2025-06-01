@@ -35,3 +35,37 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind tokens;
+
+// .bg-indigo-600 {
+//   background-color: var(--color-indigo-600);
+// }
+// .text-white {
+//     color: var(--color-white);
+// }
+// .py-2 {
+//     padding-block: calc(var(--spacing) * 2);
+// }
+// .px-4 {
+//     padding-inline: calc(var(--spacing) * 4);
+// }
+// @layer base {
+//   body {
+//     @apply bg-white dark:bg-gray-900;
+//   }
+
+//   h1 {
+//     @apply text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight text-primary dark:text-primary-dark mt-10 mb-8 sm:mt-14 sm:mb-10;
+//   }
+
+//   h2 {
+//     @apply text-3xl text-primary dark:text-primary-dark;
+//   }
+
+//   h3 {
+//     @apply text-lg text-primary dark:text-primary-dark;
+//   }
+
+// }
+button {
+    @apply bg-indigo-600 text-white py-2 px-4
+}

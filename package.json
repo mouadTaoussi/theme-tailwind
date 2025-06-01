@@ -1,5 +1,4 @@
 {
-  "type": "module",
   "name": "theme-tailwind",
   "version": "1.0.0",
   "description": "Tailwind theme for Oruga UI",
