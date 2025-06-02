@@ -1,0 +1,42 @@
+
+// button {
+    // @apply bg-indigo-600 text-white py-2 px-4 sm:px-8 sm:py-3 hover:bg-indigo-800
+    //  text-white px-4 sm:px-8 py-2 sm:py-3 bg-indigo-700 hover:bg-indigo-800
+// }
+
+.button {
+    @apply bg-indigo-600 text-white py-2 px-4 sm:px-8 sm:py-3 hover:bg-indigo-800;
+
+    &.is-small {
+
+    }
+    &.is-medium {
+
+    }
+    &.is-large {
+
+    }
+
+    &.is-primary {
+
+    }
+    &.is-info {
+        background-color: blue;
+    }
+    &.is-secondary {
+        background-color: yellow;
+        color: black;
+    }
+    &.is-success {
+        background-color: green;
+    }
+    &.is-danger {
+        background-color: red;
+    }
+    &.is-warning {
+        background-color: orange;
+    }
+
+}
+
+

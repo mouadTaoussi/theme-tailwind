@@ -4,13 +4,13 @@
 const tailwindConfig = {
     button: {
         override: true,
-        rootClass:
-            "text-white px-4 sm:px-8 py-2 sm:py-3 bg-sky-700 hover:bg-sky-800",
-        // wrapperClass: "button-wrapper",
-        // sizeClass: "is-",
-        // variantClass: "is-",
-        // roundedClass: "is-rounded",
-        // expandedClass: "is-fullwidth",
+        rootClass: "button",
+        wrapperClass: "button-wrapper",
+        sizeClass: "is-",
+        variantClass: "is-",
+        roundedClass: "rounded",
+        expandedClass: "w-full",
+        disabledClass: "disabled:opacity-75",
         // // loadingClass: "is-loading",
         // outlinedClass: (variant) => {
         //     if (!variant) return "is-outlined";

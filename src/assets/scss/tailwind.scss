@@ -3,7 +3,7 @@
 
 // @forward "./components/autocomplete";
 // @forward "./components/breadcrumb";
-// @forward "./components/button";
+@forward "./components/button";
 // @forward "./components/carousel";
 // @forward "./components/checkbox";
 // @forward "./components/collapse";
@@ -66,6 +66,4 @@
 //   }
 
 // }
-button {
-    @apply bg-indigo-600 text-white py-2 px-4
-}
+
