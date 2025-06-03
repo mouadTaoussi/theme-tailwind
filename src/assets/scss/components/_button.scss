@@ -3,6 +3,16 @@
     // @apply bg-indigo-600 text-white py-2 px-4 sm:px-8 sm:py-3 hover:bg-indigo-800
     //  text-white px-4 sm:px-8 py-2 sm:py-3 bg-indigo-700 hover:bg-indigo-800
 // }
+@use "sass:map";
+
+$variants: (
+    "primary": "bg-indigo-500",
+    "info": "bg-sky-500",
+    "secondary": "bg-gray-500 text-white",
+    "success": "bg-green-500",
+    "danger": "bg-red-500",
+    "warning": "bg-yellow-500"
+);
 
 .button {
     @apply bg-indigo-600 text-white py-2 px-4 sm:px-8 sm:py-3 hover:bg-indigo-800;
@@ -16,27 +26,19 @@
     &.is-large {
 
     }
-
-    &.is-primary {
-
+  
+    @each $name, $variant in $variants {
+        &.is-#{$name} {
+            @apply #{$variant};
+        }
     }
-    &.is-info {
-        background-color: blue;
+    &.disabled {
+        pointer-events: none;
+        opacity: .5;
+        &:hover {
+            cursor: not-allowed;
+        }
     }
-    &.is-secondary {
-        background-color: yellow;
-        color: black;
-    }
-    &.is-success {
-        background-color: green;
-    }
-    &.is-danger {
-        background-color: red;
-    }
-    &.is-warning {
-        background-color: orange;
-    }
-
 }
 
 

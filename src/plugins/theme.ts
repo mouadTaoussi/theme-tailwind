@@ -10,7 +10,7 @@ const tailwindConfig = {
         variantClass: "is-",
         roundedClass: "rounded",
         expandedClass: "w-full",
-        disabledClass: "disabled:opacity-75",
+        disabledClass: "disabled",
         // // loadingClass: "is-loading",
         // outlinedClass: (variant) => {
         //     if (!variant) return "is-outlined";
