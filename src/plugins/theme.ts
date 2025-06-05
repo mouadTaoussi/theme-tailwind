@@ -3,23 +3,24 @@
 
 const tailwindConfig = {
     button: {
+        // Done
         override: true,
         rootClass: "button",
         wrapperClass: "button-wrapper",
-        sizeClass: "is-",
-        variantClass: "is-",
+        sizeClass: "is-", // is- will be removed
+        variantClass: "is-", // is- will be removed
         roundedClass: "rounded",
         expandedClass: "w-full",
         disabledClass: "disabled",
         // // loadingClass: "is-loading",
-        // outlinedClass: (variant) => {
-        //     if (!variant) return "is-outlined";
-        //     return `is-${variant} is-outlined`;
-        // },
-        // invertedClass: (variant) => {
-        //     if (!variant) return "is-inverted";
-        //     return `is-${variant} is-inverted`;
-        // },
+        outlinedClass: (variant)=> {
+            if (!variant) return "outlined";
+            return `is-${variant} outlined`; // is- will be removed
+        },
+        invertedClass: (variant) => {
+            if (!variant) return "inverted";
+            return `is-${variant} inverted`; // is- will be removed
+        },
     },
     autocomplete: {
         override: true,

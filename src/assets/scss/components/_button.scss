@@ -5,17 +5,29 @@
 // }
 @use "sass:map";
 
+/* @docs */
+$btn-spacer: 0.5rem !default;
+/* @docs */
+
 $variants: (
-    "primary": "bg-indigo-500",
-    "info": "bg-sky-500",
-    "secondary": "bg-gray-500 text-white",
-    "success": "bg-green-500",
-    "danger": "bg-red-500",
-    "warning": "bg-yellow-500"
+    "primary": --color-indigo-,
+    "info": --color-sky-,
+    "secondary": --color-gray-,
+    "success": --color-green-,
+    "danger": --color-red-,
+    "warning": --color-yellow-
 );
+$variant-degree : 500;
+
 
 .button {
-    @apply bg-indigo-600 text-white py-2 px-4 sm:px-8 sm:py-3 hover:bg-indigo-800;
+    @apply py-2 px-4 sm:px-8 sm:py-3;
+    background-color: var(--color-indigo-500);
+    color: white;
+    &:hover {
+        // @apply hover:bg-indigo-800;
+        // background-color: var(--color-indigo-500);
+    }
 
     &.is-small {
 
@@ -26,19 +38,48 @@ $variants: (
     &.is-large {
 
     }
-  
+
     @each $name, $variant in $variants {
         &.is-#{$name} {
-            @apply #{$variant};
+            // @apply var(#{$variant});
+            background-color: var(#{$variant}#{$variant-degree});
+            &:hover {
+                opacity: .9;
+            }
+            &.outlined {
+                color: var(#{$variant}#{$variant-degree});
+                background-color: transparent;
+                border: 0.005rem;
+                border-color: rgb(202, 202, 202);
+                border-style: solid;
+                &:hover {
+                    background-color: var(#{$variant}#{$variant-degree});
+                    border-color: var(#{$variant}#{$variant-degree});
+                    color: white;
+                }
+            }
+            &.inverted {
+                color: var(#{$variant}#{$variant-degree});
+                background-color: transparent;
+                border: 0.005rem;
+                border-style: solid;
+                border-color: transparent;
+                &:hover {
+                    background-color: var(#{$variant}100);
+                    color: var(#{$variant}#{$variant-degree});
+                    border-color: var(#{$variant}#{$variant-degree});
+                }
+            }
         }
     }
     &.disabled {
-        pointer-events: none;
-        opacity: .5;
+        opacity: .5; 
         &:hover {
             cursor: not-allowed;
         }
     }
 }
 
-
+.button:not(:last-child):not(.btn-expanded) {
+  margin-right: var($btn-spacer);
+}
