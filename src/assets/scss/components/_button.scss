@@ -1,8 +1,4 @@
 
-// button {
-    // @apply bg-indigo-600 text-white py-2 px-4 sm:px-8 sm:py-3 hover:bg-indigo-800
-    //  text-white px-4 sm:px-8 py-2 sm:py-3 bg-indigo-700 hover:bg-indigo-800
-// }
 @use "sass:map";
 
 /* @docs */
@@ -21,27 +17,26 @@ $variant-degree : 500;
 
 
 .button {
-    @apply py-2 px-4 sm:px-8 sm:py-3;
+    @apply py-2 px-3;
+
     background-color: var(--color-indigo-500);
     color: white;
     &:hover {
-        // @apply hover:bg-indigo-800;
-        // background-color: var(--color-indigo-500);
+        opacity: .9;
     }
 
     &.is-small {
-
+        @apply py-2 px-2 sm:px-7 sm:py-1;
     }
     &.is-medium {
-
+        @apply py-3 px-3;
     }
     &.is-large {
-
+        @apply py-4 px-4 sm:px-9 sm:py-4;
     }
 
     @each $name, $variant in $variants {
         &.is-#{$name} {
-            // @apply var(#{$variant});
             background-color: var(#{$variant}#{$variant-degree});
             &:hover {
                 opacity: .9;
@@ -66,8 +61,8 @@ $variant-degree : 500;
                 border-color: transparent;
                 &:hover {
                     background-color: var(#{$variant}100);
-                    color: var(#{$variant}#{$variant-degree});
                     border-color: var(#{$variant}#{$variant-degree});
+                    color: var(#{$variant}#{$variant-degree});
                 }
             }
         }
@@ -80,6 +75,6 @@ $variant-degree : 500;
     }
 }
 
-.button:not(:last-child):not(.btn-expanded) {
+.button:not(:last-child):not(.w-full) {
   margin-right: var($btn-spacer);
 }

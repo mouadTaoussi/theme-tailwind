@@ -1,4 +1,4 @@
-// import type { OrugaOptions, ComponentProps } from "@oruga-ui/oruga-next";
+// import type { ComponentProps } from "@oruga-ui/oruga-next";
 // import { isTrueish } from "@oruga-ui/oruga-next";
 
 const tailwindConfig = {
@@ -7,19 +7,19 @@ const tailwindConfig = {
         override: true,
         rootClass: "button",
         wrapperClass: "button-wrapper",
-        sizeClass: "is-", // is- will be removed
-        variantClass: "is-", // is- will be removed
+        sizeClass: "is-",
+        variantClass: "is-",
         roundedClass: "rounded",
         expandedClass: "w-full",
         disabledClass: "disabled",
         // // loadingClass: "is-loading",
-        outlinedClass: (variant)=> {
+        outlinedClass: (variant) => {
             if (!variant) return "outlined";
-            return `is-${variant} outlined`; // is- will be removed
+            return `is-${variant} outlined`;
         },
         invertedClass: (variant) => {
             if (!variant) return "inverted";
-            return `is-${variant} inverted`; // is- will be removed
+            return `is-${variant} inverted`;
         },
     },
     autocomplete: {
