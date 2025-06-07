@@ -1,68 +1,70 @@
 
 @use "sass:map";
+@use "./utils/all" as utils;
+@use "./utils/variables" as vars;
+
 
 /* @docs */
 $btn-spacer: 0.5rem !default;
 /* @docs */
 
-$variants: (
-    "primary": --color-indigo-,
-    "info": --color-sky-,
-    "secondary": --color-gray-,
-    "success": --color-green-,
-    "danger": --color-red-,
-    "warning": --color-yellow-
-);
-$variant-degree : 500;
-
-
 .button {
-    @apply py-2 px-3;
-
-    background-color: var(--color-indigo-500);
+    // @apply py-2 px-3;
+    background-color: utils.variant-varname("indigo",vars.$variant-degree);
     color: white;
+    padding:0.25rem 0.5rem;
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+    transition: all vars.$speed-slow var(--ease-in);
+
     &:hover {
         opacity: .9;
     }
 
     &.is-small {
-        @apply py-2 px-2 sm:px-7 sm:py-1;
+        padding:0.125rem 0.5rem;
+        font-size: var(--text-sm);
+        line-height: var(--text-sm--line-height);
     }
     &.is-medium {
-        @apply py-3 px-3;
+        padding:0.25rem 0.75rem;
+        font-size: var(--text-base);
+        line-height: var(--text-base--line-height);
     }
     &.is-large {
-        @apply py-4 px-4 sm:px-9 sm:py-4;
+        padding:0.5rem 1rem;
+        font-size: var(--text-lg);
+        line-height: var(--text-lg--line-height);
     }
 
-    @each $name, $variant in $variants {
+    @each $name, $variant in vars.$theme-colors {
         &.is-#{$name} {
-            background-color: var(#{$variant}#{$variant-degree});
+            background-color: utils.variant-varname($variant,vars.$variant-degree);
             &:hover {
                 opacity: .9;
             }
             &.outlined {
-                color: var(#{$variant}#{$variant-degree});
+                color: utils.variant-varname($variant,vars.$variant-degree);
                 background-color: transparent;
                 border: 0.005rem;
                 border-color: rgb(202, 202, 202);
                 border-style: solid;
                 &:hover {
-                    background-color: var(#{$variant}#{$variant-degree});
-                    border-color: var(#{$variant}#{$variant-degree});
+                    background-color: utils.variant-varname($variant,vars.$variant-degree);
+                    border-color: utils.variant-varname($variant,vars.$variant-degree);
                     color: white;
                 }
             }
             &.inverted {
-                color: var(#{$variant}#{$variant-degree});
+                color: utils.variant-varname($variant,vars.$variant-degree);
                 background-color: transparent;
                 border: 0.005rem;
                 border-style: solid;
                 border-color: transparent;
                 &:hover {
-                    background-color: var(#{$variant}100);
-                    border-color: var(#{$variant}#{$variant-degree});
-                    color: var(#{$variant}#{$variant-degree});
+                    background-color: utils.variant-varname($variant,"100");
+                    border-color: utils.variant-varname($variant,vars.$variant-degree);
+                    color: utils.variant-varname($variant,vars.$variant-degree);
                 }
             }
         }
