@@ -9,7 +9,6 @@ $btn-spacer: 0.5rem !default;
 /* @docs */
 
 .button {
-    // @apply py-2 px-3;
     background-color: utils.variant-varname("indigo",vars.$variant-degree);
     color: white;
     padding:0.25rem 0.5rem;

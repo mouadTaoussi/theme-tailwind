@@ -13,11 +13,11 @@ const tailwindConfig = {
         expandedClass: "w-full",
         disabledClass: "disabled",
         // // loadingClass: "is-loading",
-        outlinedClass: (variant) => {
+        outlinedClass: (variant: string): string => {
             if (!variant) return "outlined";
             return `is-${variant} outlined`;
         },
-        invertedClass: (variant) => {
+        invertedClass: (variant: string): string => {
             if (!variant) return "inverted";
             return `is-${variant} inverted`;
         },
