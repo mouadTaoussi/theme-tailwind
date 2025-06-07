@@ -20,22 +20,6 @@ $btn-spacer: 0.5rem !default;
         opacity: .9;
     }
 
-    &.is-small {
-        padding:0.125rem 0.5rem;
-        font-size: var(--text-sm);
-        line-height: var(--text-sm--line-height);
-    }
-    &.is-medium {
-        padding:0.25rem 0.75rem;
-        font-size: var(--text-base);
-        line-height: var(--text-base--line-height);
-    }
-    &.is-large {
-        padding:0.5rem 1rem;
-        font-size: var(--text-lg);
-        line-height: var(--text-lg--line-height);
-    }
-
     @each $name, $variant in vars.$theme-colors {
         &.is-#{$name} {
             background-color: utils.variant-varname($variant,vars.$variant-degree);
@@ -68,6 +52,23 @@ $btn-spacer: 0.5rem !default;
             }
         }
     }
+
+    &.is-small {
+        padding:0.125rem 0.5rem;
+        font-size: var(--text-sm);
+        line-height: var(--text-sm--line-height);
+    }
+    &.is-medium {
+        padding:0.25rem 0.75rem;
+        font-size: var(--text-base);
+        line-height: var(--text-base--line-height);
+    }
+    &.is-large {
+        padding:0.5rem 1rem;
+        font-size: var(--text-lg);
+        line-height: var(--text-lg--line-height);
+    }
+
     &.disabled {
         opacity: .5; 
         &:hover {
