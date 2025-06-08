@@ -30,7 +30,7 @@ $btn-spacer: 0.5rem !default;
                 color: utils.variant-varname($variant,vars.$variant-degree);
                 background-color: transparent;
                 border: 0.005rem;
-                border-color: rgb(202, 202, 202);
+                border-color: vars.$secondary rgb(202, 202, 202);
                 border-style: solid;
                 &:hover {
                     background-color: utils.variant-varname($variant,vars.$variant-degree);

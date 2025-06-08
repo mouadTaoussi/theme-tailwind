@@ -1,4 +1,4 @@
-// import type { ComponentProps } from "@oruga-ui/oruga-next";
+import type { ComponentProps } from "@oruga-ui/oruga-next";
 // import { isTrueish } from "@oruga-ui/oruga-next";
 
 const tailwindConfig = {
@@ -24,70 +24,111 @@ const tailwindConfig = {
     },
     autocomplete: {
         override: true,
-        rootClass: "autocompleteeeeee control",
-        itemClass: "teeeest",
-        itemHoverClass: "hover:bg-sky-700",
-        itemEmptyClass: "is-disabled",
-        itemGroupTitleClass: "has-text-weight-bold",
+        rootClass: `
+            autocomplete
+            w-full max-w-md bg-white border border-gray-300 
+            rounded-md shadow-md overflow-hidden text-sm 
+            focus-within:ring-2 focus-within:ring-indigo-500 
+            focus-within:border-indigo-500 transition-all
+        `,
+        itemClass: `px-4 py-2 text-gray-700 cursor-pointer hover:bg-indigo-100 transition-colors`,
+        itemHoverClass: `bg-indigo-100 text-indigo-800`,
+        itemEmptyClass: `px-4 py-2 text-gray-400 italic text-sm`,
+        itemGroupTitleClass: `px-4 py-2 text-xs font-bold text-gray-500 uppercase tracking-wider bg-gray-50`,
     },
-    Breadcrumb: {},
-    Button: {},
-    Carousel: {},
-    Checkbox: {},
-    Collapse: {},
-    Datepicker: {},
-    Datetimepicker: {},
-    Dropdown: {},
-    Field: {},
-    Icon: {},
-    Input: {},
-    Loading: {},
-    Menu: {},
-    Modal: {},
+
+    breadcrumb: {},
+    carousel: {},
+    checkbox: {},
+    collapse: {},
+    datepicker: {},
+    datetimepicker: {},
+    dropdown: {
+        override: true,
+        rootClass: "dropdown btn-group",
+        triggerClass: "dropdown-trigger",
+        disabledClass: "disabled",
+        expandedClass: "expanded",
+        inlineClass: "inline",
+        menuMobileOverlayClass: "dropdown-backdrop",
+        menuClass: (_: string, { computed }: ComponentProps): string => {
+            const classes = ["dropdown-menu"];
+            if (computed.hoverable) classes.push("show");
+            return classes.join(" ");
+        },
+        menuPositionClass: "position-",
+        menuActiveClass: "show",
+        itemTag: "a",
+        itemClass: "dropdown-item",
+        itemActiveClass: "active",
+        itemClickableClass: "clickable",
+        itemDisabledClass: "disabled",
+        mobileClass: "dropdown-modal",
+        teleportClass: "teleported",
+    },
+    field: {},
+    icon: {},
+    // input: {
+    //     override: true,
+    //     rootClass: "input",
+    //     inputClass: (_: string, { props }: ComponentProps): string => {
+    //         const classes = ["form-control"];
+    //         if (props.icon) classes.push("icon-left");
+    //         if (props.iconRight) classes.push("icon-right");
+    //         return classes.join(" ");
+    //     },
+    //     textareaClass: (_: string, { props }: ComponentProps): string => {
+    //         const classes = ["form-control"];
+    //         if (props.icon) classes.push("icon-left");
+    //         if (props.iconRight) classes.push("icon-right");
+    //         return classes.join(" ");
+    //     },
+    //     sizeClass: (_: string, { props }: ComponentProps): string => {
+    //         if (props.size == "small") return "form-control-sm";
+    //         else if (props.size == "medium") return "form-control-md";
+    //         else if (props.size == "large") return "form-control-lg";
+    //         return "form-control-md";
+    //     },
+    //     variantClass: "border-",
+    //     expandedClass: "expanded",
+    //     disabledClass: "disabled",
+    //     roundedClass: "rounded-pill",
+    //     iconLeftClass: "icon-left",
+    //     iconRightClass: "icon-right",
+    //     // iconLeftSpaceClass: 'input-group-text',
+    //     // iconRightSpaceClass: 'input-group-text',
+    //     counterClass: "help counter",
+    // },
+    loading: {},
+    menu: {},
+    modal: {},
     notification: {
         override: true,
-        rootClass: "notificationnnn",
-        wrapperClass: "media",
-        contentClass: "media-content",
-        iconClass: "media-left",
-        closeClass: "delete",
-        positionClass: "is-",
-        noticeClass: "notices",
-        noticePositionClass: "is-",
-        variantClass: "is-",
+        rootClass:
+            "notification flex items-center bg-indigo-100 text-indigo-800 px-4 py-3 my-3 rounded-lg space-x-2",
+        variantClass: "-",
+        wrapperClass: "notifictation-wrapper",
+        contentClass: "notifictation-content",
+        positionClass: "position-",
+        iconClass: "media",
+        closeClass: "",
+        noticeClass: "notifictations",
+        noticePositionClass: "position-",
     },
-    Pagination: {},
-    Radio: {},
-    Select: {},
-    Sidebar: {},
-    Skeleton: {},
-    Slider: {},
-    Steps: {},
-    Switch: {},
-    Table: {},
-    Tabs: {},
-    Taginput: {},
-    Timepicker: {},
-    Tooltip: {
-        override: true,
-        rootClass: "tooltippppppp",
-        contentClass: "tooltip-content",
-        triggerClass: "tooltip-trigger",
-        alwaysClass: "is-always",
-        multilineClass: "is-multiline",
-        variantClass: "is-",
-        positionClass: "is-",
-        teleportClass: "is-teleported",
-    },
-    Upload: {
-        override: true,
-        rootClass: "uploaddddddd control",
-        draggableClass: "upload-draggable",
-        variantClass: "is-",
-        expandedClass: "is-expanded",
-        disabledClass: "is-disabled",
-        hoveredClass: "is-hovered",
-    },
+    pagination: {},
+    radio: {},
+    select: {},
+    sidebar: {},
+    skeleton: {},
+    slider: {},
+    steps: {},
+    switch: {},
+    table: {},
+    tabs: {},
+    taginput: {},
+    timepicker: {},
+    tooltip: {},
+    upload: {},
 };
 
 export { tailwindConfig as config };

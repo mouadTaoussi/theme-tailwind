@@ -1,7 +1,7 @@
 @forward "components/utils/all";
 @forward "tailwindcss";
 
-// @forward "./components/autocomplete";
+@forward "./components/autocomplete";
 // @forward "./components/breadcrumb";
 @forward "./components/button";
 // @forward "./components/carousel";
@@ -15,7 +15,7 @@
 // @forward "./components/loading";
 // @forward "./components/modal";
 // @forward "./components/menu";
-// @forward "./components/notification";
+@forward "./components/notification";
 // @forward "./components/pagination";
 // @forward "./components/radio";
 // @forward "./components/select";

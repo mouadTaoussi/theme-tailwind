@@ -1,0 +1,17 @@
+
+@use "sass:map";
+@use "./utils/all" as utils;
+@use "./utils/variables" as vars;
+
+/* @docs */
+$notification-close-btn-position: 1rem !default;
+$notification-notices-padding: 2em !default;
+// $notification-notices-zindex: $zindex-toast !default;
+$notification-notices-max-width: 600px !default;
+$notification-notices-space: 1.5rem !default;
+$notification-icon-margin-right: 0.5rem !default;
+/* @docs */
+
+.notification {
+    // background-color: red;
+}
