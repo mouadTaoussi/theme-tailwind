@@ -6,7 +6,7 @@
 /* @docs */
 $notification-close-btn-position: 1rem !default;
 $notification-notices-padding: 2em !default;
-// $notification-notices-zindex: $zindex-toast !default;
+$notification-notices-zindex: 99999 !default;
 $notification-notices-max-width: 600px !default;
 $notification-notices-space: 1.5rem !default;
 $notification-icon-margin-right: 0.5rem !default;
@@ -14,4 +14,68 @@ $notification-icon-margin-right: 0.5rem !default;
 
 .notification {
     // background-color: red;
+    background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),400);
+    color: white;
+    // position: relative;
+    transition: all vars.$speed-slow var(--ease-in);
+
+    @each $name, $variant in vars.$theme-colors {
+        &.is-#{$name} {
+            background-color: utils.variant-varname($variant,400);
+        }
+    }
+    .close {
+        // position: absolute;
+        top: 0%;
+        right:0%;
+    }
+}
+
+.notifictations {
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    pointer-events: none;
+    padding: var($notification-notices-padding);
+    z-index: var($notification-notices-zindex);
+
+    .alert {
+        pointer-events: auto;
+        max-width: var($notification-notices-max-width);
+
+        &.position {
+            &-top,
+            &-bottom {
+                align-self: center;
+            }
+
+            &-top-right,
+            &-bottom-right {
+                align-self: flex-end;
+            }
+
+            &-top-left,
+            &-bottom-left {
+                align-self: flex-start;
+            }
+        }
+    }
+
+    &.position {
+        &-top {
+            flex-direction: column;
+        }
+
+        &-bottom {
+            flex-direction: column-reverse;
+
+            > .div:first-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 }

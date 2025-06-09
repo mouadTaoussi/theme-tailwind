@@ -9,7 +9,7 @@ $btn-spacer: 0.5rem !default;
 /* @docs */
 
 .button {
-    background-color: utils.variant-varname("indigo",vars.$variant-degree);
+    background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
     color: white;
     padding:0.25rem 0.5rem;
     font-size: var(--text-base);
