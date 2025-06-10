@@ -13,15 +13,14 @@ $notification-icon-margin-right: 0.5rem !default;
 /* @docs */
 
 .notification {
-    // background-color: red;
-    background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),400);
+    background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
     color: white;
     position: relative;
     transition: all vars.$speed-slow var(--ease-in);
 
     @each $name, $variant in vars.$theme-colors {
         &.is-#{$name} {
-            background-color: utils.variant-varname($variant,400);
+            background-color: utils.variant-varname($variant,vars.$variant-degree);
         }
     }
     .close {
@@ -30,7 +29,15 @@ $notification-icon-margin-right: 0.5rem !default;
         right:0%;
     }
 }
-
+.alert {
+  & > button {
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    top: $notification-close-btn-position;
+    right: $notification-close-btn-position;
+  }
+}
 .notifictations {
     display: flex;
     position: fixed;

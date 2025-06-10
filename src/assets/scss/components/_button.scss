@@ -15,6 +15,9 @@ $btn-spacer: 0.5rem !default;
     font-size: var(--text-base);
     line-height: var(--text-base--line-height);
     transition: all vars.$speed-slow var(--ease-in);
+    border: 0.005rem;
+    border-style: solid;
+    border-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);;
 
     &:hover {
         opacity: .9;
@@ -23,6 +26,7 @@ $btn-spacer: 0.5rem !default;
     @each $name, $variant in vars.$theme-colors {
         &.is-#{$name} {
             background-color: utils.variant-varname($variant,vars.$variant-degree);
+            border-color: utils.variant-varname($variant,vars.$variant-degree);
             &:hover {
                 opacity: .9;
             }
@@ -78,5 +82,5 @@ $btn-spacer: 0.5rem !default;
 }
 
 .button:not(:last-child):not(.w-full) {
-  margin-right: var($btn-spacer);
+    margin-right: var($btn-spacer);
 }

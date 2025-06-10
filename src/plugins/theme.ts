@@ -1,9 +1,8 @@
-import type { ComponentProps } from "@oruga-ui/oruga-next";
+// import type { ComponentProps } from "@oruga-ui/oruga-next";
 // import { isTrueish } from "@oruga-ui/oruga-next";
 
 const tailwindConfig = {
     button: {
-        // Done
         override: true,
         rootClass: "button",
         wrapperClass: "button-wrapper",
@@ -22,20 +21,20 @@ const tailwindConfig = {
             return `is-${variant} inverted`;
         },
     },
-    autocomplete: {
-        override: true,
-        rootClass: `
-            autocomplete
-            w-full max-w-md bg-white border border-gray-300 
-            rounded-md shadow-md overflow-hidden text-sm 
-            focus-within:ring-2 focus-within:ring-indigo-500 
-            focus-within:border-indigo-500 transition-all
-        `,
-        itemClass: `px-4 py-2 text-gray-700 cursor-pointer hover:bg-indigo-100 transition-colors`,
-        itemHoverClass: `bg-indigo-100 text-indigo-800`,
-        itemEmptyClass: `px-4 py-2 text-gray-400 italic text-sm`,
-        itemGroupTitleClass: `px-4 py-2 text-xs font-bold text-gray-500 uppercase tracking-wider bg-gray-50`,
-    },
+    // autocomplete: {
+    //     override: true,
+    //     rootClass: `
+    //         autocomplete
+    //         w-full max-w-md bg-white border border-gray-300
+    //         rounded-md shadow-md overflow-hidden text-sm
+    //         focus-within:ring-2 focus-within:ring-indigo-500
+    //         focus-within:border-indigo-500 transition-all
+    //     `,
+    //     itemClass: `px-4 py-2 text-gray-700 cursor-pointer hover:bg-indigo-100 transition-colors`,
+    //     itemHoverClass: `bg-indigo-100 text-indigo-800`,
+    //     itemEmptyClass: `px-4 py-2 text-gray-400 italic text-sm`,
+    //     itemGroupTitleClass: `px-4 py-2 text-xs font-bold text-gray-500 uppercase tracking-wider bg-gray-50`,
+    // },
 
     breadcrumb: {},
     carousel: {},
@@ -43,29 +42,29 @@ const tailwindConfig = {
     collapse: {},
     datepicker: {},
     datetimepicker: {},
-    dropdown: {
-        override: true,
-        rootClass: "dropdown btn-group",
-        triggerClass: "dropdown-trigger",
-        disabledClass: "disabled",
-        expandedClass: "expanded",
-        inlineClass: "inline",
-        menuMobileOverlayClass: "dropdown-backdrop",
-        menuClass: (_: string, { computed }: ComponentProps): string => {
-            const classes = ["dropdown-menu"];
-            if (computed.hoverable) classes.push("show");
-            return classes.join(" ");
-        },
-        menuPositionClass: "position-",
-        menuActiveClass: "show",
-        itemTag: "a",
-        itemClass: "dropdown-item",
-        itemActiveClass: "active",
-        itemClickableClass: "clickable",
-        itemDisabledClass: "disabled",
-        mobileClass: "dropdown-modal",
-        teleportClass: "teleported",
-    },
+    // dropdown: {
+    //     override: true,
+    //     rootClass: "dropdown btn-group",
+    //     triggerClass: "dropdown-trigger",
+    //     disabledClass: "disabled",
+    //     expandedClass: "expanded",
+    //     inlineClass: "inline",
+    //     menuMobileOverlayClass: "dropdown-backdrop",
+    //     menuClass: (_: string, { computed }: ComponentProps): string => {
+    //         const classes = ["dropdown-menu"];
+    //         if (computed.hoverable) classes.push("show");
+    //         return classes.join(" ");
+    //     },
+    //     menuPositionClass: "position-",
+    //     menuActiveClass: "show",
+    //     itemTag: "a",
+    //     itemClass: "dropdown-item",
+    //     itemActiveClass: "active",
+    //     itemClickableClass: "clickable",
+    //     itemDisabledClass: "disabled",
+    //     mobileClass: "dropdown-modal",
+    //     teleportClass: "teleported",
+    // },
     field: {},
     icon: {},
     // input: {
@@ -106,17 +105,6 @@ const tailwindConfig = {
         override: true,
         rootClass:
             "notification alert flex items-center px-4 py-3 my-3 rounded space-x-2",
-        // rootClass: [
-        //     "notification",
-        //     "alert",
-        //     "flex",
-        //     "items-center",
-        //     "px-4",
-        //     "py-3",
-        //     "my-3",
-        //     "rounded",
-        //     "space-x-2",
-        // ],
         variantClass: "is-",
         wrapperClass: "notifictation-wrapper flex items-center",
         contentClass: "notifictation-content",
