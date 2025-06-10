@@ -16,7 +16,7 @@ $notification-icon-margin-right: 0.5rem !default;
     // background-color: red;
     background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),400);
     color: white;
-    // position: relative;
+    position: relative;
     transition: all vars.$speed-slow var(--ease-in);
 
     @each $name, $variant in vars.$theme-colors {
@@ -25,7 +25,7 @@ $notification-icon-margin-right: 0.5rem !default;
         }
     }
     .close {
-        // position: absolute;
+        position: absolute;
         top: 0%;
         right:0%;
     }
@@ -40,12 +40,12 @@ $notification-icon-margin-right: 0.5rem !default;
     right: 0;
     overflow: hidden;
     pointer-events: none;
-    padding: var($notification-notices-padding);
-    z-index: var($notification-notices-zindex);
+    padding: $notification-notices-padding;
+    z-index: $notification-notices-zindex;
 
     .alert {
         pointer-events: auto;
-        max-width: var($notification-notices-max-width);
+        max-width: $notification-notices-max-width;
 
         &.position {
             &-top,
