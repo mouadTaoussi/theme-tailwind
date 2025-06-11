@@ -8,7 +8,6 @@ $notification-close-btn-position: 1rem !default;
 $notification-notices-padding: 2em !default;
 $notification-notices-zindex: 99999 !default;
 $notification-notices-max-width: 600px !default;
-$notification-notices-space: 1.5rem !default;
 $notification-icon-margin-right: 0.5rem !default;
 /* @docs */
 
@@ -27,6 +26,11 @@ $notification-icon-margin-right: 0.5rem !default;
         position: absolute;
         top: 0%;
         right:0%;
+    }
+    .notifictation-wrapper {
+        .icon {
+            margin-right: $notification-icon-margin-right;
+        }
     }
 }
 .alert {

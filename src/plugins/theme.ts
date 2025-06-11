@@ -39,7 +39,12 @@ const tailwindConfig = {
     breadcrumb: {},
     carousel: {},
     checkbox: {},
-    collapse: {},
+    collapse: {
+        override: true,
+        rootClass: "collapsse",
+        triggerClass: "collapsse-trigger",
+        contentClass: "collapsse-content",
+    },
     datepicker: {},
     datetimepicker: {},
     // dropdown: {

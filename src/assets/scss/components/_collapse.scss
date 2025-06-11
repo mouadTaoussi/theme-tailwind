@@ -1,0 +1,19 @@
+
+@use "sass:map";
+@use "./utils/all" as utils;
+@use "./utils/variables" as vars;
+
+// @docs
+// @docs
+
+.collapsse {
+    // background-color: rgb(0, 200, 255);
+    &-trigger {
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    &-content {
+        display: inherit;
+    }
+}
