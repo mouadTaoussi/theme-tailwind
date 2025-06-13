@@ -41,9 +41,9 @@ const tailwindConfig = {
     checkbox: {},
     collapse: {
         override: true,
-        rootClass: "collapsse",
-        triggerClass: "collapsse-trigger",
-        contentClass: "collapsse-content",
+        rootClass: "collapse-component rounded my-4",
+        triggerClass: "collapse-component-trigger",
+        contentClass: "collapse-component-content",
     },
     datepicker: {},
     datetimepicker: {},
