@@ -2,9 +2,9 @@
 @use "sass:map";
 @use "./utils/variables" as vars;
 
-@docs@
+/* @docs */
 $input-icon-spacer: 0.75rem !default;
-@docs@
+/* @docs */
 
 .input {
     position: relative;
