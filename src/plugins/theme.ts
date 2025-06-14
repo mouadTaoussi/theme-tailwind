@@ -123,7 +123,20 @@ const tailwindConfig = {
     radio: {},
     select: {},
     sidebar: {},
-    skeleton: {},
+    skeleton: {
+        override: true,
+        rootClass: "skeleton flex",
+        itemClass: "skeleton-item",
+        itemRoundedClass: "rounded",
+        animationClass: "animated",
+        sizeClass: "is-",
+        positionClass: (position: string): string => {
+            if (position == "left") return "items-start";
+            else if (position == "centered") return "items-center";
+            else if (position == "right") return "items-end";
+            return "items-start";
+        },
+    },
     slider: {},
     steps: {},
     switch: {},
