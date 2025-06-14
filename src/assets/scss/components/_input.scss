@@ -1,17 +1,29 @@
 
 @use "sass:map";
+@use "./utils/all" as utils;
 @use "./utils/variables" as vars;
 
 /* @docs */
 $input-icon-spacer: 0.75rem !default;
 /* @docs */
 
-.input {
+.select,
+.input-component {
     position: relative;
-
-
+    display: inline-block;
+    
     input {
-        width: 100%;
+        border: 1px solid rgb(227, 227, 227);
+        // width: 100%;
+        // background-color: red;
+        @each $name, $variant in vars.$theme-colors {
+            &.border-#{$name} {
+                border-color: utils.variant-varname($variant,vars.$variant-degree);
+                &:hover {
+                    opacity: .9;
+                }
+            }
+        }
     }
 
     .o-icon { 

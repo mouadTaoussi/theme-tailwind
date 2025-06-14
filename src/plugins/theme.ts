@@ -72,9 +72,10 @@ const tailwindConfig = {
     // },
     field: {},
     icon: {},
-    input: {
+    input: { 
+        // border border-gray-300
         override: true,
-        rootClass: "input border border-gray-300 py-2 pl-2 px-4",
+        rootClass: "input-component py-2 pl-2 px-4 rounded",
         // inputClass: (_: string, { props }: ComponentProps): string => {
         //     const classes = ["form-control"];
         //     if (props.icon) classes.push("icon-left");
@@ -96,7 +97,7 @@ const tailwindConfig = {
         variantClass: "border-",
         expandedClass: "w-full",
         disabledClass: "disabled",
-        roundedClass: "rounded",
+        roundedClass: "rounded-xl",
         iconLeftClass: "icon-left",
         iconRightClass: "icon-right",
         // iconLeftSpaceClass: 'input-group-text',
