@@ -1,0 +1,32 @@
+
+@use "sass:map";
+@use "./utils/variables" as vars;
+
+@docs@
+$input-icon-spacer: 0.75rem !default;
+@docs@
+
+.input {
+    position: relative;
+
+
+    input {
+        width: 100%;
+    }
+
+    .o-icon { 
+        position: absolute;
+        margin: 0;
+        top: 0;
+        height: 100%;
+
+        .icon-left {
+            // left: $input-icon-spacer;
+            left: 0.75rem;
+        }
+        .icon-right {
+            // right: $input-icon-spacer;
+            right: 0.75rem;
+        }
+    }
+}

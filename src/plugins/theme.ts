@@ -41,9 +41,9 @@ const tailwindConfig = {
     checkbox: {},
     collapse: {
         override: true,
-        rootClass: "collapse-component rounded my-4",
+        rootClass: "collapse-component rounded-lg my-4",
         triggerClass: "collapse-component-trigger",
-        contentClass: "collapse-component-content",
+        contentClass: "collapse-component-content space-y-4",
     },
     datepicker: {},
     datetimepicker: {},
@@ -72,44 +72,44 @@ const tailwindConfig = {
     // },
     field: {},
     icon: {},
-    // input: {
-    //     override: true,
-    //     rootClass: "input",
-    //     inputClass: (_: string, { props }: ComponentProps): string => {
-    //         const classes = ["form-control"];
-    //         if (props.icon) classes.push("icon-left");
-    //         if (props.iconRight) classes.push("icon-right");
-    //         return classes.join(" ");
-    //     },
-    //     textareaClass: (_: string, { props }: ComponentProps): string => {
-    //         const classes = ["form-control"];
-    //         if (props.icon) classes.push("icon-left");
-    //         if (props.iconRight) classes.push("icon-right");
-    //         return classes.join(" ");
-    //     },
-    //     sizeClass: (_: string, { props }: ComponentProps): string => {
-    //         if (props.size == "small") return "form-control-sm";
-    //         else if (props.size == "medium") return "form-control-md";
-    //         else if (props.size == "large") return "form-control-lg";
-    //         return "form-control-md";
-    //     },
-    //     variantClass: "border-",
-    //     expandedClass: "expanded",
-    //     disabledClass: "disabled",
-    //     roundedClass: "rounded-pill",
-    //     iconLeftClass: "icon-left",
-    //     iconRightClass: "icon-right",
-    //     // iconLeftSpaceClass: 'input-group-text',
-    //     // iconRightSpaceClass: 'input-group-text',
-    //     counterClass: "help counter",
-    // },
+    input: {
+        override: true,
+        rootClass: "input border border-gray-300 py-2 pl-2 px-4",
+        // inputClass: (_: string, { props }: ComponentProps): string => {
+        //     const classes = ["form-control"];
+        //     if (props.icon) classes.push("icon-left");
+        //     if (props.iconRight) classes.push("icon-right");
+        //     return classes.join(" ");
+        // },
+        // textareaClass: (_: string, { props }: ComponentProps): string => {
+        //     const classes = ["form-control"];
+        //     if (props.icon) classes.push("icon-left");
+        //     if (props.iconRight) classes.push("icon-right");
+        //     return classes.join(" ");
+        // },
+        // sizeClass: (_: string, { props }: ComponentProps): string => {
+        //     if (props.size == "small") return "form-control-sm";
+        //     else if (props.size == "medium") return "form-control-md";
+        //     else if (props.size == "large") return "form-control-lg";
+        //     return "form-control-md";
+        // },
+        variantClass: "border-",
+        expandedClass: "w-full",
+        disabledClass: "disabled",
+        roundedClass: "rounded",
+        iconLeftClass: "icon-left",
+        iconRightClass: "icon-right",
+        // iconLeftSpaceClass: 'input-group-text',
+        // iconRightSpaceClass: 'input-group-text',
+        counterClass: "help counter",
+    },
     loading: {},
     menu: {},
     modal: {},
     notification: {
         override: true,
         rootClass:
-            "notification alert flex items-center px-4 py-3 my-3 rounded space-x-2",
+            "notification alert flex items-center px-4 py-3 my-3 rounded space-x-2 shadow-lg",
         variantClass: "is-",
         wrapperClass: "notifictation-wrapper flex items-center",
         contentClass: "notifictation-content",

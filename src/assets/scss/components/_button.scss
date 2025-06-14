@@ -21,6 +21,7 @@ $btn-spacer: 0.5rem !default;
 
     &:hover {
         opacity: .9;
+        @apply shadow-lg;
     }
 
     @each $name, $variant in vars.$theme-colors {
