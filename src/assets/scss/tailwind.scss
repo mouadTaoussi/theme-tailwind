@@ -3,24 +3,24 @@
 
 // @forward "./components/autocomplete";
 // @forward "./components/breadcrumb";
-@forward "./components/button";
+@forward "./components/button"; // @STATUS: Final Verification required <styles logic interoperabilitiy & standardisation>
 // @forward "./components/carousel";
 // @forward "./components/checkbox";
-@forward "./components/collapse";
+@forward "./components/collapse"; // @STATUS: Done
 // @forward "./components/datepicker";
 // @forward "./components/dropdown";
 // @forward "./components/field";
 // @forward "./components/icon";
-@forward "./components/input";
+@forward "./components/input"; // @STATUS: Working
 // @forward "./components/loading";
 // @forward "./components/modal";
 // @forward "./components/menu";
-@forward "./components/notification";
+@forward "./components/notification"; // @STATUS: Final Verification required <styles logic interoperabilitiy & standardisation>
 // @forward "./components/pagination";
 // @forward "./components/radio";
 // @forward "./components/select";
 // @forward "./components/sidebar";
-@forward "./components/skeleton";
+@forward "./components/skeleton";  // @STATUS: Done
 // @forward "./components/slider";
 // @forward "./components/steps";
 // @forward "./components/switch";

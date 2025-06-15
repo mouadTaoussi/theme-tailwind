@@ -44,21 +44,13 @@ $skeleton-line-height: var(--text-base--line-height);
     }
 
     // Sizes
-    // @each $name, $value in $sizes {
-    //   &.size-#{$name} {
-    //     line-height: $value;
-    //   }
-    // }
     &.is-small {
-        // line-height: var(--text-sm--line-height);
         line-height: .5rem;
     }
     &.is-medium {
-        // line-height: var(--text-base--line-height);
         line-height: 1rem;
     }
     &.is-large {
-        // line-height: var(--text-lg--line-height);
         line-height: 1.5rem;
     }
   }

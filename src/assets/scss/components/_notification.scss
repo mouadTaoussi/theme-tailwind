@@ -14,7 +14,9 @@ $notification-icon-margin-right: 0.5rem !default;
 .notification {
     background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
     color: white;
+   
     position: relative;
+    
     transition: all vars.$speed-slow var(--ease-in);
 
     @each $name, $variant in vars.$theme-colors {
@@ -37,21 +39,28 @@ $notification-icon-margin-right: 0.5rem !default;
   & > button {
     background-color: transparent;
     border: 0;
+    
     position: absolute;
     top: $notification-close-btn-position;
     right: $notification-close-btn-position;
   }
 }
 .notifictations {
-    display: flex;
+    display: flex; // tailwind class
+    
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
+   
     right: 0;
+    
     overflow: hidden;
+   
     pointer-events: none;
+    
     padding: $notification-notices-padding;
+    
     z-index: $notification-notices-zindex;
 
     .alert {

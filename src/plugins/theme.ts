@@ -1,4 +1,4 @@
-// import type { ComponentProps } from "@oruga-ui/oruga-next";
+import type { ComponentProps } from "@oruga-ui/oruga-next";
 // import { isTrueish } from "@oruga-ui/oruga-next";
 
 const tailwindConfig = {
@@ -43,7 +43,7 @@ const tailwindConfig = {
         override: true,
         rootClass: "collapse-component rounded-lg my-4",
         triggerClass: "collapse-component-trigger",
-        contentClass: "collapse-component-content space-y-4",
+        contentClass: "collapse-component-content",
     },
     datepicker: {},
     datetimepicker: {},
@@ -75,25 +75,29 @@ const tailwindConfig = {
     input: { 
         // border border-gray-300
         override: true,
-        rootClass: "input-component py-2 pl-2 px-4 rounded",
-        // inputClass: (_: string, { props }: ComponentProps): string => {
-        //     const classes = ["form-control"];
-        //     if (props.icon) classes.push("icon-left");
-        //     if (props.iconRight) classes.push("icon-right");
-        //     return classes.join(" ");
-        // },
-        // textareaClass: (_: string, { props }: ComponentProps): string => {
-        //     const classes = ["form-control"];
-        //     if (props.icon) classes.push("icon-left");
-        //     if (props.iconRight) classes.push("icon-right");
-        //     return classes.join(" ");
-        // },
-        // sizeClass: (_: string, { props }: ComponentProps): string => {
-        //     if (props.size == "small") return "form-control-sm";
-        //     else if (props.size == "medium") return "form-control-md";
-        //     else if (props.size == "large") return "form-control-lg";
-        //     return "form-control-md";
-        // },
+        rootClass: "input-component",
+        inputClass: (_: string, props: ComponentProps): string => {
+            const classes =
+                ["input", "rounded", "border", "shadow-sm", "focus:outline-none", "focus:ring-2"];
+
+            if (props.icon) classes.push("icon-left");
+            if (props.iconRight) classes.push("icon-right");
+            return classes.join(" ");
+        },
+        textareaClass: (_: string, props: ComponentProps): string => {
+            const classes =
+                ["input", "rounded", "border", "shadow-sm", "focus:outline-none", "focus:ring-2"];
+
+            if (props.icon) classes.push("icon-left");
+            if (props.iconRight) classes.push("icon-right");
+            return classes.join(" ");
+        },
+        sizeClass: (_: string, props: ComponentProps): string => {
+            if (props.size == "small") return "input-sm";
+            else if (props.size == "medium") return "input-md";
+            else if (props.size == "large") return "input-lg";
+            return "input-md";
+        },
         variantClass: "border-",
         expandedClass: "w-full",
         disabledClass: "disabled",
@@ -110,7 +114,7 @@ const tailwindConfig = {
     notification: {
         override: true,
         rootClass:
-            "notification alert flex items-center px-4 py-3 my-3 rounded space-x-2 shadow-lg",
+            "notification alert flex items-center px-4 py-3 my-3 rounded space-x-2 shadow-sm",
         variantClass: "is-",
         wrapperClass: "notifictation-wrapper flex items-center",
         contentClass: "notifictation-content",
