@@ -11,15 +11,15 @@ $btn-spacer: 0.5rem !default;
 .button {
     background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
     color: white;
-    
+    // 
     padding:0.25rem 0.5rem;
-    
+    // 
     font-size: var(--text-base);
-    
+    // 
     line-height: var(--text-base--line-height);
-    
+    // 
     transition: all vars.$speed-slow var(--ease-in);
-    
+    // 
     border: 0.005rem;
     border-style: solid;
     border-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
@@ -39,28 +39,28 @@ $btn-spacer: 0.5rem !default;
             &.outlined {
                 color: utils.variant-varname($variant,vars.$variant-degree);
                 background-color: transparent;
-                
+                // 
                 border: 0.005rem;
                 border-color: vars.$secondary rgb(202, 202, 202);
                 border-style: solid;
                 &:hover {
                     background-color: utils.variant-varname($variant,vars.$variant-degree);
                     color: white;
-
+                    // 
                     border-color: utils.variant-varname($variant,vars.$variant-degree);
                 }
             }
             &.inverted {
                 color: utils.variant-varname($variant,vars.$variant-degree);
                 background-color: transparent;
-                
+                // 
                 border: 0.005rem;
                 border-style: solid;
                 border-color: transparent;
                 &:hover {
                     background-color: utils.variant-varname($variant,"100");
                     color: utils.variant-varname($variant,vars.$variant-degree);
-                    
+                    // 
                     border-color: utils.variant-varname($variant,vars.$variant-degree);
                 }
             }

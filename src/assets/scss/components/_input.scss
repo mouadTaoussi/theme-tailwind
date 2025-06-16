@@ -17,51 +17,52 @@ $input-icon-spacer: 0.75rem !default;
     .input {
         @apply border;
         border-color: rgb(227, 227, 227);
-        
+        // 
         padding: 0.50rem 0;
-        padding-left: 1.25rem;
-        
+        padding-left: 2rem;
+        // 
         font-size: var(--text-base);
-
+        // 
         @each $name, $variant in vars.$theme-colors {
             &.border-#{$name} {
                 border-color: utils.variant-varname($variant,vars.$variant-degree);
             }
         }
         &.input-sm {
-            padding: 0.15rem 0;
-            padding-left: 1.25rem;
-
+            padding: 0.25rem 0;
+            padding-left: 1.75rem;
+            // 
             font-size: var(--text-sm);
-            .o-icon {
-                @apply p-1
-            }
         }
         &.input-md {
             padding: 0.50rem 0;
-            padding-left: 1.50rem;
-
+            padding-left: 2rem;
+            // 
             font-size: var(--text-base);
         }
         &.input-lg {
             padding: 0.75rem 0;
-            padding-left: 1.75rem;
-
+            padding-left: 2.75rem;
+            // 
             font-size: var(--text-lg);
         }
     }
 
     .o-icon { 
-        @apply p-2;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        // 
         position: absolute;
         margin: 0;
         top: 0;
+        // 
         height: 100%;
         // padding: 0.25rem;
-        .icon-left {
+        &.icon-left {
             left: $input-icon-spacer;
         }
-        .icon-right {
+        &.icon-right {
             right: $input-icon-spacer;
             
         }
