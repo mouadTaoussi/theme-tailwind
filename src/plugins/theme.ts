@@ -71,7 +71,14 @@ const tailwindConfig = {
     //     teleportClass: "teleported",
     // },
     field: {},
-    icon: {},
+    icon: {
+        override: true,
+        rootClass: "icon",
+        variantClass: "text-",
+        sizeClass: "size-",
+        clickableClass: "clickable",
+        spinClass: "spin",
+    },
     input: { 
         // border border-gray-300
         override: true,

@@ -28,6 +28,7 @@ $input-icon-spacer: 0.75rem !default;
                 border-color: utils.variant-varname($variant,vars.$variant-degree);
             }
         }
+
         &.input-sm {
             padding: 0.25rem 0;
             padding-left: 1.75rem;
@@ -48,17 +49,7 @@ $input-icon-spacer: 0.75rem !default;
         }
     }
 
-    .o-icon { 
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        // 
-        position: absolute;
-        margin: 0;
-        top: 0;
-        // 
-        height: 100%;
-        // padding: 0.25rem;
+    .icon { 
         &.icon-left {
             left: $input-icon-spacer;
         }

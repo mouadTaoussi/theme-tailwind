@@ -1,0 +1,22 @@
+
+@use "sass:map";
+@use "./utils/all" as utils;
+@use "./utils/variables" as vars;
+
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    // 
+    position: absolute;
+    margin: 0;
+    top: 0;
+    // 
+    height: 100%;
+    // padding: 0.25rem;
+      @each $name, $variant in vars.$theme-colors {
+        &.text-#{$name} {
+            color: utils.variant-varname($variant,vars.$variant-degree);
+        }
+    }
+}
