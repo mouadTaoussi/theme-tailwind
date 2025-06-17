@@ -29,19 +29,19 @@ $input-icon-spacer: 0.75rem !default;
             }
         }
 
-        &.input-sm {
+        &.input-small {
             padding: 0.25rem 0;
             padding-left: 1.75rem;
             // 
             font-size: var(--text-sm);
         }
-        &.input-md {
+        &.input-medium {
             padding: 0.50rem 0;
             padding-left: 2rem;
             // 
             font-size: var(--text-base);
         }
-        &.input-lg {
+        &.input-large {
             padding: 0.75rem 0;
             padding-left: 2.75rem;
             // 
@@ -50,6 +50,9 @@ $input-icon-spacer: 0.75rem !default;
     }
 
     .icon { 
+        position: absolute;
+        margin: 0;
+        top: 0;
         &.icon-left {
             left: $input-icon-spacer;
         }

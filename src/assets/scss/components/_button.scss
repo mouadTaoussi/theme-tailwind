@@ -23,7 +23,7 @@ $btn-spacer: 0.5rem !default;
     border: 0.005rem;
     border-style: solid;
     border-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
-
+    // 
     &:hover {
         opacity: .9;
         @apply shadow-lg;
@@ -89,8 +89,11 @@ $btn-spacer: 0.5rem !default;
             cursor: not-allowed;
         }
     }
+    .icon {
+        margin-right: $btn-spacer;
+    }
 }
 
 .button:not(:last-child):not(.w-full) {
-    margin-right: var($btn-spacer);
+    margin-right: $btn-spacer;
 }

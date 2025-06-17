@@ -100,10 +100,10 @@ const tailwindConfig = {
             return classes.join(" ");
         },
         sizeClass: (_: string, props: ComponentProps): string => {
-            if (props.size == "small") return "input-sm";
-            else if (props.size == "medium") return "input-md";
-            else if (props.size == "large") return "input-lg";
-            return "input-md";
+            if (props.size == "small") return "input-small";
+            else if (props.size == "medium") return "input-medium";
+            else if (props.size == "large") return "input-large";
+            return "input-medium";
         },
         variantClass: "border-",
         expandedClass: "w-full",
