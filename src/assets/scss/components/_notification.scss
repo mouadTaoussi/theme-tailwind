@@ -17,7 +17,7 @@ $notification-icon-margin-right: 0.5rem !default;
     //    
     position: relative;
     // 
-    transition: all vars.$speed-slow var(--ease-in);
+    // transition: all vars.$speed-slow var(--ease-in);
     // 
     @each $name, $variant in vars.$theme-colors {
         &.is-#{$name} {
@@ -46,7 +46,7 @@ $notification-icon-margin-right: 0.5rem !default;
   }
 }
 .notifictations {
-    display: flex; // tailwind class
+    // display: flex; // tailwind class
     // 
     position: fixed;
     top: 0;

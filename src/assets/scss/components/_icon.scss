@@ -7,18 +7,6 @@
 $icon-spin-duration: 2s !default;
 /* @docs */
 
-@keyframes icon-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-
 .icon {
     display: inline-flex;
     align-items: center;
@@ -55,11 +43,4 @@ $icon-spin-duration: 2s !default;
         pointer-events: auto;
         cursor: pointer;
     }
-    &.spin {
-        animation-name: icon-spin;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        animation-duration: $icon-spin-duration;
-    }
-
 }

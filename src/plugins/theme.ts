@@ -4,7 +4,7 @@ import type { ComponentProps } from "@oruga-ui/oruga-next";
 const tailwindConfig = {
     button: {
         override: true,
-        rootClass: "button",
+        rootClass: "button duration-100 ease-in",
         wrapperClass: "button-wrapper",
         sizeClass: "is-",
         variantClass: "is-",
@@ -13,7 +13,7 @@ const tailwindConfig = {
         disabledClass: "disabled",
         // // loadingClass: "is-loading",
         outlinedClass: (variant: string): string => {
-            if (!variant) return "outlined";
+            if (!variant) return "outlined ";
             return `is-${variant} outlined`;
         },
         invertedClass: (variant: string): string => {
@@ -77,23 +77,20 @@ const tailwindConfig = {
         variantClass: "text-",
         sizeClass: "size-",
         clickableClass: "clickable",
-        spinClass: "spin",
+        spinClass: "animate-spin",
     },
-    input: { 
-        // border border-gray-300
+    input: {
         override: true,
         rootClass: "input-component",
         inputClass: (_: string, props: ComponentProps): string => {
-            const classes =
-                ["input", "rounded", "border", "shadow-sm", "focus:outline-none", "focus:ring-2"];
+            const classes = ["input", "rounded", "shadow-sm", "focus:ring-2"];
 
             if (props.icon) classes.push("icon-left");
             if (props.iconRight) classes.push("icon-right");
             return classes.join(" ");
         },
         textareaClass: (_: string, props: ComponentProps): string => {
-            const classes =
-                ["input", "rounded", "border", "shadow-sm", "focus:outline-none", "focus:ring-2"];
+            const classes = ["input", "rounded", "shadow-sm", "focus:ring-2"];
 
             if (props.icon) classes.push("icon-left");
             if (props.iconRight) classes.push("icon-right");
@@ -121,14 +118,14 @@ const tailwindConfig = {
     notification: {
         override: true,
         rootClass:
-            "notification alert flex items-center px-4 py-3 my-3 rounded space-x-2 shadow-sm",
+            "notification alert flex items-center px-4 py-3 my-3 rounded space-x-2 shadow-sm duration-100 ease-in",
         variantClass: "is-",
         wrapperClass: "notifictation-wrapper flex items-center",
         contentClass: "notifictation-content",
         positionClass: "position-",
         iconClass: "media mr-3",
         closeClass: "close",
-        noticeClass: "notifictations",
+        noticeClass: "notifictations flex items-center",
         noticePositionClass: "position-",
     },
     pagination: {},

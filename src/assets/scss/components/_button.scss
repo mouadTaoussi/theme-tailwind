@@ -18,10 +18,10 @@ $btn-spacer: 0.5rem !default;
     // 
     line-height: var(--text-base--line-height);
     // 
-    transition: all vars.$speed-slow var(--ease-in);
+    // transition: all vars.$speed-slow var(--ease-in);  -> duration-100 ease-in
     // 
     border: 0.005rem;
-    border-style: solid;
+    border-style: var(--tw-border-style);
     border-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
     // 
     &:hover {
@@ -40,9 +40,7 @@ $btn-spacer: 0.5rem !default;
                 color: utils.variant-varname($variant,vars.$variant-degree);
                 background-color: transparent;
                 // 
-                border: 0.005rem;
                 border-color: vars.$secondary rgb(202, 202, 202);
-                border-style: solid;
                 &:hover {
                     background-color: utils.variant-varname($variant,vars.$variant-degree);
                     color: white;
@@ -54,8 +52,6 @@ $btn-spacer: 0.5rem !default;
                 color: utils.variant-varname($variant,vars.$variant-degree);
                 background-color: transparent;
                 // 
-                border: 0.005rem;
-                border-style: solid;
                 border-color: transparent;
                 &:hover {
                     background-color: utils.variant-varname($variant,"100");
