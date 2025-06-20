@@ -36,16 +36,14 @@ $btn-spacer: 0.5rem !default;
             &:hover {
                 opacity: .9;
             }
-            &.outlined {
-                color: utils.variant-varname($variant,vars.$variant-degree);
+            &.border {
                 background-color: transparent;
-                // 
-                border-color: vars.$secondary rgb(202, 202, 202);
+                color: utils.variant-varname($variant,vars.$variant-degree);
+                // // 
                 &:hover {
                     background-color: utils.variant-varname($variant,vars.$variant-degree);
                     color: white;
-                    // 
-                    border-color: utils.variant-varname($variant,vars.$variant-degree);
+                // // 
                 }
             }
             &.inverted {

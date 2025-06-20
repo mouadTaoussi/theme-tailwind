@@ -13,8 +13,8 @@ const tailwindConfig = {
         disabledClass: "disabled",
         // // loadingClass: "is-loading",
         outlinedClass: (variant: string): string => {
-            if (!variant) return "outlined ";
-            return `is-${variant} outlined`;
+            if (!variant) return "border";
+            return `is-${variant} border`;
         },
         invertedClass: (variant: string): string => {
             if (!variant) return "inverted";
