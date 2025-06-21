@@ -12,7 +12,7 @@ $btn-spacer: 0.5rem !default;
     background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
     color: white;
     // 
-    padding:0.25rem 0.5rem;
+    padding:0.25rem 1.5rem;
     // 
     font-size: var(--text-base);
     // 
@@ -62,17 +62,17 @@ $btn-spacer: 0.5rem !default;
     }
 
     &.is-small {
-        padding:0.125rem 0.5rem;
+        padding:0.125rem 1.5rem;
         font-size: var(--text-sm);
         line-height: var(--text-sm--line-height);
     }
     &.is-medium {
-        padding:0.25rem 0.75rem;
+        padding:0.25rem 1.5rem;
         font-size: var(--text-base);
         line-height: var(--text-base--line-height);
     }
     &.is-large {
-        padding:0.5rem 1rem;
+        padding:0.5rem 1.5rem;
         font-size: var(--text-lg);
         line-height: var(--text-lg--line-height);
     }

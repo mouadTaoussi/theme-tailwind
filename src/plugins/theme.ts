@@ -4,11 +4,12 @@ import type { ComponentProps } from "@oruga-ui/oruga-next";
 const tailwindConfig = {
     button: {
         override: true,
-        rootClass: "button duration-100 ease-in",
+        rootClass:
+            "button duration-100 ease-in rounded focus:outline-offset-2 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500",
         wrapperClass: "button-wrapper",
         sizeClass: "is-",
         variantClass: "is-",
-        roundedClass: "rounded",
+        roundedClass: "rounded-xl",
         expandedClass: "w-full",
         disabledClass: "disabled",
         // // loadingClass: "is-loading",
@@ -153,7 +154,17 @@ const tailwindConfig = {
     tabs: {},
     taginput: {},
     timepicker: {},
-    tooltip: {},
+    tooltip: {
+        override: true,
+        rootClass: "tooltip",
+        contentClass: "tooltip-content",
+        triggerClass: "tooltip-trigger",
+        alwaysClass: "is-always",
+        multilineClass: "is-multiline",
+        variantClass: "is-",
+        positionClass: "is-",
+        teleportClass: "is-teleported",
+    },
     upload: {},
 };
 
