@@ -81,6 +81,7 @@ $btn-spacer: 0.5rem !default;
         opacity: .5; 
         &:hover {
             cursor: not-allowed;
+            box-shadow: none;
         }
     }
     .icon {
