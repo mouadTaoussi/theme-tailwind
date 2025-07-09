@@ -8,5 +8,19 @@
 /* @docs */
 
 .tooltip {
-    
+    .tooltip-content {
+        &.is-always {
+
+        }
+        &.is-multiline {
+
+        }
+    }
+    .tooltip-trigger {
+          width: 100%;
+    }
+
+    &.is-teleported {
+
+    }
 }
