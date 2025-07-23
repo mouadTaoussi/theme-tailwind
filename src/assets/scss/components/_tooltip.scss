@@ -8,12 +8,34 @@
 /* @docs */
 
 .tooltip {
+    // position: relative;
+    // display: inline-flex;
     .tooltip-content {
-        &.is-always {
+        background-color: black;
+        color: white;
+        border-radius: 3px;
+        position: absolute;
+        width: auto;
+        white-space: nowrap;
+        padding: 0.35rem 0.75rem;
+        font-size: 0.85rem;
+        z-index:9999;
 
+        &::before {
+            position: absolute;
+            content: "";
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        &.is-always {
+            opacity: 1;
+            visibility: visible;
         }
         &.is-multiline {
-
+            text-align: center;
+            white-space: normal;
+            width: 222px;
         }
     }
     .tooltip-trigger {
