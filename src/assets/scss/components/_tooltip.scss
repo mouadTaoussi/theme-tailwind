@@ -4,32 +4,41 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-
+$tooltip-arrow-size: 5px;
+$tooltip-arrow-margin: 2px;
+$tooltip-content-multiline-width: 222px;
+$tooltip-shadow: 0 1px 2px 1px rgba(0, 1, 0, 0.2);
+$tooltip-z: 38;
+$tooltip-colors: black;
+$tooltip-border-radius: 3px;
+$tooltip-bg: black;
+$tooltip-color: white;
 /* @docs */
 
+// source : theme-bulma
 .tooltip {
 
     position: relative;
     display: inline-flex;
-    
+
     .tooltip-content {
-        background-color: black;
-        color: white;
-        border-radius: 3px;
+        background-color: $tooltip-bg;
+        color: $tooltip-color;
+        border-radius: $tooltip-border-radius;
         position: absolute;
         width: auto;
         white-space: nowrap;
         padding: 0.35rem 0.75rem;
         font-weight: 400;
-        box-shadow: 0 1px 2px 1px rgba(0, 1, 0, .2);
+        box-shadow: $tooltip-shadow;
         font-size: 0.85rem;
-        z-index:38;
+        z-index: $tooltip-z;
 
         &::before {
             position: absolute;
             content: "";
             pointer-events: none;
-            z-index: 38;
+            z-index: $tooltip-z;
         }
 
         &.is-always {
@@ -39,13 +48,13 @@
         &.is-multiline {
             text-align: center;
             white-space: normal;
-            width: 222px;
+            width: $tooltip-content-multiline-width;
         }
 
         // variables for the directions
-        $arrow-size: calc(100% + 5px + 2px);
-        $arrow-border: 5px solid black;
-        $arrow-border-passive: 5px solid transparent;
+        $arrow-size: calc(100% + $tooltip-arrow-size + $tooltip-arrow-margin);
+        $arrow-border: $tooltip-arrow-size solid $tooltip-bg;
+        $arrow-border-passive: $tooltip-arrow-size solid transparent;
 
         &.is-top {
             top: auto;
@@ -126,7 +135,40 @@
           width: 100%;
     }
 
-    &.is-teleported {
+    @each $name, $variant in vars.$theme-colors {
+        // $color: list.nth($variant, 1);
+        // $color-invert: if(list.length($variant) >= 2, list.nth($variant, 2), null);
+    }
 
+    &.is-teleported {
+        .tooltip-content {
+            &.is-top {
+                margin-top: calc(-1 * $tooltip-arrow-size);
+            }
+
+            &.is-bottom {
+                margin-top: $tooltip-arrow-size;
+            }
+
+            &.is-right {
+                margin-left: $tooltip-arrow-size;
+            }
+
+            &.is-left {
+                margin-left: calc(-1 * $tooltip-arrow-size);
+            }
+        }
+    }
+    &.is-dashed {
+        .tooltip-trigger {
+            border-bottom: 1px dashed gray;
+            cursor: default;
+        }
+    }
+
+    &.is-square {
+        .tooltip-content {
+            border-radius: 0;
+        }
     }
 }
