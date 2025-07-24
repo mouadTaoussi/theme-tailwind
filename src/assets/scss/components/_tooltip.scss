@@ -8,8 +8,10 @@
 /* @docs */
 
 .tooltip {
-    // position: relative;
-    // display: inline-flex;
+
+    position: relative;
+    display: inline-flex;
+    
     .tooltip-content {
         background-color: black;
         color: white;
@@ -39,6 +41,7 @@
             white-space: normal;
             width: 222px;
         }
+
         // variables for the directions
         $arrow-size: calc(100% + 5px + 2px);
         $arrow-border: 5px solid black;
@@ -62,62 +65,62 @@
                 border-left: $arrow-border-passive;
             }
         }
-        // &.is-bottom {
-        //     top: $arrow-size;
-        //     right: auto;
-        //     bottom: auto;
-        //     left: 50%;
-        //     transform: translateX(-50%);
+        &.is-bottom {
+            top: $arrow-size;
+            right: auto;
+            bottom: auto;
+            left: 50%;
+            transform: translateX(-50%);
 
-        //     &::before {
-        //         top: auto;
-        //         right: auto;
-        //         bottom: 100%;
-        //         left: 50%;
-        //         transform: translateX(-50%);
-        //         border-right: $arrow-border-passive;
-        //         border-bottom: $arrow-border;
-        //         border-left: $arrow-border-passive;
-        //     }
-        // }
+            &::before {
+                top: auto;
+                right: auto;
+                bottom: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                border-right: $arrow-border-passive;
+                border-bottom: $arrow-border;
+                border-left: $arrow-border-passive;
+            }
+        }
 
-        // &.is-right {
-        //     top: 50%;
-        //     right: auto;
-        //     bottom: auto;
-        //     left: $arrow-size;
-        //     transform: translateY(-50%);
+        &.is-right {
+            top: 50%;
+            right: auto;
+            bottom: auto;
+            left: $arrow-size;
+            transform: translateY(-50%);
 
-        //     &:before {
-        //         top: 50%;
-        //         right: 100%;
-        //         bottom: auto;
-        //         left: auto;
-        //         transform: translateY(-50%);
-        //         border-top: $arrow-border-passive;
-        //         border-right: $arrow-border;
-        //         border-bottom: $arrow-border-passive;
-        //     }
-        // }
+            &:before {
+                top: 50%;
+                right: 100%;
+                bottom: auto;
+                left: auto;
+                transform: translateY(-50%);
+                border-top: $arrow-border-passive;
+                border-right: $arrow-border;
+                border-bottom: $arrow-border-passive;
+            }
+        }
 
-        // &.is-left {
-        //     top: 50%;
-        //     right: $arrow-size;
-        //     bottom: auto;
-        //     left: auto;
-        //     transform: translateY(-50%);
+        &.is-left {
+            top: 50%;
+            right: $arrow-size;
+            bottom: auto;
+            left: auto;
+            transform: translateY(-50%);
 
-        //     &::before {
-        //         top: 50%;
-        //         right: auto;
-        //         bottom: auto;
-        //         left: 100%;
-        //         transform: translateY(-50%);
-        //         border-top: $arrow-border-passive;
-        //         border-bottom: $arrow-border-passive;
-        //         border-left: $arrow-border;
-        //     }
-        // }
+            &::before {
+                top: 50%;
+                right: auto;
+                bottom: auto;
+                left: 100%;
+                transform: translateY(-50%);
+                border-top: $arrow-border-passive;
+                border-bottom: $arrow-border-passive;
+                border-left: $arrow-border;
+            }
+        }
     }
     .tooltip-trigger {
           width: 100%;
