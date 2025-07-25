@@ -130,14 +130,23 @@ $tooltip-color: white;
                 border-left: $arrow-border;
             }
         }
+         @each $name, $variant in vars.$theme-colors {
+            // $color: list.nth($variant, 1);
+            // $color-invert: if(list.length($variant) >= 2, list.nth($variant, 2), null);
+            &.is-#{$name} {
+                background-color: utils.variant-varname($variant,vars.$variant-degree);
+                border-color: utils.variant-varname($variant,vars.$variant-degree);
+                
+                &::before {
+                    background-color: utils.variant-varname($variant,vars.$variant-degree);
+                    border-color: utils.variant-varname($variant,vars.$variant-degree);
+                }
+                // If light and dark colors are provided
+            }
+        }
     }
     .tooltip-trigger {
           width: 100%;
-    }
-
-    @each $name, $variant in vars.$theme-colors {
-        // $color: list.nth($variant, 1);
-        // $color-invert: if(list.length($variant) >= 2, list.nth($variant, 2), null);
     }
 
     &.is-teleported {
