@@ -3,19 +3,19 @@
 
 // @forward "./components/autocomplete";
 // @forward "./components/breadcrumb";
-@forward "./components/button"; // @STATUS: Final Verification required <styles logic interoperabilitiy & standardisation>
+@forward "./components/button"; // @STATUS: Done
 // @forward "./components/carousel";
 // @forward "./components/checkbox";
 @forward "./components/collapse"; // @STATUS: Done
 // @forward "./components/datepicker";
 // @forward "./components/dropdown";
 // @forward "./components/field";
-@forward "./components/icon"; // @STATUS: Working simultaneously with input component
-@forward "./components/input"; // @STATUS: Working
+@forward "./components/icon"; // @STATUS: Done
+@forward "./components/input"; // @STATUS: Done
 // @forward "./components/loading";
 // @forward "./components/modal";
 // @forward "./components/menu";
-@forward "./components/notification"; // @STATUS: Final Verification required <styles logic interoperabilitiy & standardisation>
+@forward "./components/notification"; // @STATUS: Done
 // @forward "./components/pagination";
 // @forward "./components/radio";
 // @forward "./components/select";
@@ -24,11 +24,11 @@
 // @forward "./components/slider";
 // @forward "./components/steps";
 // @forward "./components/switch";
-// @forward "./components/table";
+@forward "./components/table";
 // @forward "./components/tabs";
 // @forward "./components/taginput";
 // @forward "./components/timepicker";
-@forward "./components/tooltip";
+@forward "./components/tooltip"; // @STATUS: Done
 // @forward "./components/upload";
 
 @tailwind base;
