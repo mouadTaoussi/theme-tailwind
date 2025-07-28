@@ -193,7 +193,15 @@ const tailwindConfig = {
         positionClass: "is-",
         teleportClass: "is-teleported",
     },
-    upload: {},
+    upload: {
+        override: true,
+        rootClass: "upload control",
+        draggableClass: "upload-draggable",
+        variantClass: "is-",
+        expandedClass: "is-expanded",
+        disabledClass: "is-disabled",
+        hoveredClass: "is-hovered",
+    },
 };
 
 export { tailwindConfig as config };

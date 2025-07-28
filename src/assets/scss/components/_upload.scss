@@ -1,0 +1,20 @@
+
+@use "sass:map";
+@use "./utils/all" as utils;
+@use "./utils/variables" as vars;
+
+/* @docs */
+
+/* @docs */
+
+.upload {
+    input {
+        display: none;
+    }
+    .upload-draggable {
+    
+    }
+    &.is-disabled {
+        
+    }
+}
