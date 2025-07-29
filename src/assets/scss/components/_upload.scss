@@ -30,6 +30,23 @@
         border-radius: 3px; // add var
     }
 
+    @each $name, $variant in vars.$theme-colors {
+            .is-#{$name} {
+                &:hover,
+                &.is-hovered {
+                    // @include css.register-vars(
+                    //     (
+                    //         "upload-bg": #{rgba($color, 0.05)},
+                    //         "upload-border-color": #{$color},
+                    //     )
+                    // );
+                    background-color: utils.variant-varname($variant,100); // 100 is given to have color with less opacity
+                    border-color: utils.variant-varname($variant,vars.$variant-degree);
+                    color: utils.variant-varname($variant,vars.$variant-degree);
+                }
+            }
+    }
+
     &.is-expanded {
         width: 100%;
 

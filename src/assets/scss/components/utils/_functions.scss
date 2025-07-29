@@ -65,7 +65,7 @@
     @return svg-encode("#{$start}#{$content}#{$end}");
 }
 
-// megres the color name and its degree in one variable name
+// megres the color name and its degree in one variable name. For more info see: https://tailwindcss.com/docs/colors
 @function variant-varname($color,$degree) {
     // @if ()
     @return var(--color-#{$color}-#{$degree});
