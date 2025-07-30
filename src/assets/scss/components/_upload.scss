@@ -5,9 +5,9 @@
 
 /* @docs */
 // $upload-colors: file.$file-colors !default;
-// $upload-bg: transparent !default;
-// $upload-draggable-padding: 0.5rem !default;
-// $upload-border-color: css.getVar("grey-light") !default;
+$upload-bg: transparent !default;
+$upload-draggable-padding: 35px !default;
+$upload-border-color: var(--color-gray-500) !default;
 /* @docs */
 
 .upload {
@@ -24,23 +24,17 @@
     }
     .upload-draggable {
         cursor: pointer;
-        padding: 32px; // add var
-        // background-color: css.getVar("upload-bg"); // add var
-        border: 1px dashed grey; // add var
-        border-radius: 3px; // add var
+        padding: $upload-draggable-padding;
+        background-color: $upload-bg;
+        border: 1px dashed $upload-border-color;
+        border-radius: 3px;
     }
 
     @each $name, $variant in vars.$theme-colors {
             .is-#{$name} {
                 &:hover,
                 &.is-hovered {
-                    // @include css.register-vars(
-                    //     (
-                    //         "upload-bg": #{rgba($color, 0.05)},
-                    //         "upload-border-color": #{$color},
-                    //     )
-                    // );
-                    background-color: utils.variant-varname($variant,100); // 100 is given to have color with less opacity
+                    background-color: utils.variant-varname($variant,100); // 100 is given to reduce color's opacity
                     border-color: utils.variant-varname($variant,vars.$variant-degree);
                     color: utils.variant-varname($variant,vars.$variant-degree);
                 }
@@ -60,12 +54,12 @@
         cursor: not-allowed;
     }
 
-    // &.is-rounded {
-    //     border-radius: css.getVar("radius-rounded");
+    &.is-rounded {
+        border-radius: 30px;
 
-    //     .file-name {
-    //         border-top-right-radius: css.getVar("radius-rounded");
-    //         border-bottom-right-radius: css.getVar("radius-rounded");
-    //     }
-    // }
+        .file-name {
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+    }
 }
