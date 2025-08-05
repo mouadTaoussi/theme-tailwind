@@ -129,7 +129,24 @@ const tailwindConfig = {
         noticeClass: "notifictations flex items-center",
         noticePositionClass: "position-",
     },
-    pagination: {},
+    pagination: {
+        override: true,
+        rootClass: (_: string, props: ComponentProps) => {
+            const classes = ["pagination", "flex"];
+            if (props.rounded) classes.push("is-rounded");
+            return classes.join(" ");
+        },
+        sizeClass: "is-",
+        simpleClass: "is-simple",
+        orderClass: "is-",
+        listClass: "pagination-list flex",
+        buttonClass: "pagination-link",
+        buttonCurrentClass: "is-current",
+        buttonDisabledClass: "is-disabled",
+        buttonNextClass: "pagination-next",
+        buttonPrevClass: "pagination-previous",
+        infoClass: "info",
+    },
     radio: {},
     select: {},
     sidebar: {},
