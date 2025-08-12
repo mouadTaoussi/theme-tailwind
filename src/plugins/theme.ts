@@ -131,9 +131,9 @@ const tailwindConfig = {
     },
     pagination: {
         override: true,
-        rootClass: (_: string, props: ComponentProps) => {
+        rootClass: (_: string, props: ComponentProps): string => {
             const classes = ["pagination"];
-            if (props.rounded) classes.push("rounded");
+            if (props.rounded) classes.push("rounded"); // doesn't work
             return classes.join(" ");
         },
         sizeClass: "is-",

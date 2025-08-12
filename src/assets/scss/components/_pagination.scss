@@ -45,9 +45,14 @@
         border-style: var(--tw-border-style);
         border-color: rgb(227, 227, 227);
         //
-        padding: 10px 15px;
-        margin-right: 5px;
-        border-radius: 3px;        
+        padding: 8px 12px;
+        margin: 0 4px;
+        border-radius: 3px;
+        //
+        min-width: 2.5rem;
+        //
+        transition-duration: 294ms;
+        transition-property: background-color, border-color, box-shadow, color;
     }
 
     &.is-simple {
