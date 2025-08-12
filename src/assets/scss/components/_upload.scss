@@ -14,11 +14,14 @@ $upload-border-color: var(--color-gray-500) !default;
         position: absolute;
         top: 0;
         left: 0;
+        //
         width: 100%;
         height: 100%;
+        //
         opacity: 0;
         outline: none;
         cursor: pointer;
+        //
         z-index: -1;
     }
     .upload-draggable {

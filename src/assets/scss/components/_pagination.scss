@@ -8,10 +8,11 @@
 // pagination-nav-padding-right
 /* @docs */
 .pagination {
-    align-items: center;
     display: flex;
-    text-align: center;
+    align-items: center;
     justify-content: space-between;
+    //
+    text-align: center;
 
     .pagination-previous,
     .pagination-next {
@@ -25,23 +26,25 @@
         }
     }
     .pagination-list {
-        align-items: center;
         display: flex;
-        text-align: center;
+        align-items: center;
         list-style: none;
         flex-wrap: wrap;
-        margin: 0;
-        padding: 0;
         flex-grow: 1;
         flex-shrink: 1;
         // justify-content: flex-start;
         justify-content: flex-end;
         order: 1;
+        //
+        text-align: center;
+        margin: 0;
+        padding: 0;
     }
     .pagination-link {
         border: 0.005rem;
         border-style: var(--tw-border-style);
         border-color: rgb(227, 227, 227);
+        //
         padding: 10px 15px;
         margin-right: 5px;
         border-radius: 3px;        
@@ -63,9 +66,12 @@
         }
     }
 
+    // size
+
     .is-current {
         pointer-events: none;
         cursor: not-allowed;
+        //
         background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
         border-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
         color: white;
