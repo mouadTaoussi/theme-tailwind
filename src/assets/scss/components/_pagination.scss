@@ -4,17 +4,20 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
+// pagination-nav-padding-left
+// pagination-nav-padding-right
 /* @docs */
 .pagination {
     align-items: center;
     display: flex;
     text-align: center;
     justify-content: space-between;
-    
+
     .pagination-previous,
     .pagination-next {
-    //      padding-left: css.getVar("pagination-nav-padding-left");
-    //     padding-right: css.getVar("pagination-nav-padding-right");
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+
         &.is-disabled {
             pointer-events: none;
             cursor: not-allowed;
@@ -63,5 +66,8 @@
     .is-current {
         pointer-events: none;
         cursor: not-allowed;
+        background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
+        border-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
+        color: white;
     }
 }

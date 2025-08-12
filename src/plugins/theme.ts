@@ -132,15 +132,15 @@ const tailwindConfig = {
     pagination: {
         override: true,
         rootClass: (_: string, props: ComponentProps) => {
-            const classes = ["pagination", "flex"];
-            if (props.rounded) classes.push("is-rounded");
+            const classes = ["pagination"];
+            if (props.rounded) classes.push("rounded");
             return classes.join(" ");
         },
         sizeClass: "is-",
         simpleClass: "is-simple",
         orderClass: "is-",
-        listClass: "pagination-list flex",
-        buttonClass: "pagination-link",
+        listClass: "pagination-list",
+        buttonClass: "pagination-link shadow-sm",
         buttonCurrentClass: "is-current",
         buttonDisabledClass: "is-disabled",
         buttonNextClass: "pagination-next",
