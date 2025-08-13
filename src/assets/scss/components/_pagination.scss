@@ -4,20 +4,23 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-// pagination-nav-padding-left
-// pagination-nav-padding-right
+$pagination-nav-padding-left: 0.75rem;
+$pagination-nav-padding-right: 0.75rem;
 /* @docs */
+
 .pagination {
     display: flex;
     align-items: center;
     justify-content: space-between;
     //
     text-align: center;
+    // 
+    margin-bottom: 1.5rem;
 
     .pagination-previous,
     .pagination-next {
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
+        padding-left: $pagination-nav-padding-left;
+        padding-right: $pagination-nav-padding-right;
 
         &.is-disabled {
             pointer-events: none;
@@ -32,8 +35,7 @@
         flex-wrap: wrap;
         flex-grow: 1;
         flex-shrink: 1;
-        // justify-content: flex-start;
-        justify-content: flex-end;
+        justify-content: flex-start;
         order: 1;
         //
         text-align: center;
