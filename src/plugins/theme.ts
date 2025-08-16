@@ -140,6 +140,7 @@ const tailwindConfig = {
         simpleClass: "is-simple",
         orderClass: "is-",
         listClass: "pagination-list",
+        mobileClass: "is-mobile",
         buttonClass: "pagination-link shadow-sm",
         buttonCurrentClass: "is-current",
         buttonDisabledClass: "is-disabled",

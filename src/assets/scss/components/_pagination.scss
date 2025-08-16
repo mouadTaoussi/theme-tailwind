@@ -83,10 +83,40 @@ $pagination-nav-padding-right: 0.75rem;
         border-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
         color: white;
     }
+
+    &.is-mobile {
+        flex-wrap: wrap;
+
+        .pagination-link  {
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+
+        .pagination-previous {
+            flex-grow: 1;
+            flex-shrink: 1;
+            order: 0;
+        }
+
+        .pagination-next {
+            flex-grow: 1;
+            flex-shrink: 1;
+            order: 0;
+        }
+
+        .o-pag__ellipsis {
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+
+        .pagination-list {
+            order: 0;
+        }
+    }
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
-}
+// @media only screen and (max-width: 600px) {
+//   body {
+//     background-color: lightblue;
+//   }
+// }
