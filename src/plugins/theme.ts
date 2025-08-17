@@ -113,7 +113,14 @@ const tailwindConfig = {
         // iconRightSpaceClass: 'input-group-text',
         counterClass: "help counter",
     },
-    loading: {},
+    loading: {
+        override: true,
+        fullPageClass: "is-full-page",
+        overlayClass: "loading-overlay",
+        iconClass: "icon",
+        rootClass: "loading",
+        scrollClipClass: "is-clipped",
+    },
     menu: {},
     modal: {},
     notification: {
