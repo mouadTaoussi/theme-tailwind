@@ -155,7 +155,15 @@ const tailwindConfig = {
         buttonPrevClass: "pagination-previous",
         infoClass: "info",
     },
-    radio: {},
+    radio: {
+        override: true,
+        rootClass: "radio",
+        disabledClass: "is-disabled",
+        inputClass: "check",
+        labelClass: "control-label",
+        variantClass: "is-",
+        sizeClass: "is-",
+    },
     select: {},
     sidebar: {},
     skeleton: {

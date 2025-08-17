@@ -12,12 +12,12 @@
 // @forward "./components/field";
 @forward "./components/icon"; // @STATUS: Done
 @forward "./components/input"; // @STATUS: Done  - should be mobile responive 
-@forward "./components/loading";
+@forward "./components/loading"; // @STATUS: Done
 // @forward "./components/modal";
 // @forward "./components/menu";
 @forward "./components/notification"; // @STATUS: Done  - should be mobile responive 
-@forward "./components/pagination"; // @STATUS: Done  - should be mobile responive 
-// @forward "./components/radio";
+@forward "./components/pagination"; // @STATUS: Done  - should be mobile responive - add sizing
+@forward "./components/radio"; // @STATUS: Pending
 // @forward "./components/select";
 // @forward "./components/sidebar";
 @forward "./components/skeleton";  // @STATUS: Done
