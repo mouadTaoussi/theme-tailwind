@@ -3,6 +3,47 @@
 @use "./utils/all" as utils;
 @use "./utils/variables" as vars;
 
+/* @docs */
+$radio-active-background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree) !default;
+$radio-border-size: 2px;
+$radio-border-radius: 50%;
+/* @docs */
+
 .radio {
-    
+
+    .control-label {
+        // display: flex;
+        // align-items: center;
+    }
+    .check {
+        appearance: none;
+        font-size: inherit;
+        //
+        border-radius: $radio-border-radius;
+        border: utils.variant-varname(map.get(vars.$theme-colors, "secondary"),vars.$variant-degree) $radio-border-size solid;
+        //
+        width: 15px;
+        height: 15px;
+        //
+        flex-shrink: 0;
+        //
+        outline: none;
+        //
+        transition: all vars.$speed-slow var(--ease-in);
+    }
+    .check:hover {
+        border: $radio-active-background-color 2px solid;
+    }
+    .check:checked {
+        background-color: $radio-active-background-color;
+        border: $radio-active-background-color 2px solid;
+    }
+
+    // Variant 
+    // Size
+
+    &.is-disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
 }
