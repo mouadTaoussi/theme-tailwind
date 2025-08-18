@@ -4,6 +4,7 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
+$pagination-active-background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree) !default;
 $pagination-nav-padding-left: 0.75rem;
 $pagination-nav-padding-right: 0.75rem;
 /* @docs */
@@ -79,8 +80,8 @@ $pagination-nav-padding-right: 0.75rem;
         pointer-events: none;
         cursor: not-allowed;
         //
-        background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
-        border-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
+        background-color: $pagination-active-background-color;
+        border-color: $pagination-active-background-color;
         color: white;
     }
 
