@@ -10,26 +10,39 @@ $radio-border-radius: 50%;
 /* @docs */
 
 .radio {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    //
+    // padding: 7px 11px;
+    padding-top: calc(.5em - 1px);
+    padding-left: calc(.75em - 1px);
+    padding-bottom: calc(.5em - 1px);
+    padding-right: calc(.75em - 1px);
+    //
+    position: relative;
+    //
+    vertical-align:top;
 
     .control-label {
-        // display: flex;
-        // align-items: center;
+        padding-left: 11px;
     }
     .check {
         appearance: none;
         font-size: inherit;
         //
         border-radius: $radio-border-radius;
-        border: utils.variant-varname(map.get(vars.$theme-colors, "secondary"),vars.$variant-degree) $radio-border-size solid;
+        border: 2px solid utils.variant-varname(map.get(vars.$theme-colors, "secondary"),vars.$variant-degree);
         //
-        width: 15px;
-        height: 15px;
+        width: 1.25rem;
+        height: 1.25rem;
         //
         flex-shrink: 0;
         //
         outline: none;
         //
         transition: all vars.$speed-slow var(--ease-in);
+
     }
     .check:hover {
         border: $radio-active-background-color 2px solid;
