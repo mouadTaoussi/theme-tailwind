@@ -7,6 +7,7 @@
 $radio-active-background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree) !default;
 $radio-border-size: 2px;
 $radio-border-radius: 50%;
+// $radio
 /* @docs */
 
 .radio {
@@ -47,13 +48,37 @@ $radio-border-radius: 50%;
     .check:hover {
         border: $radio-active-background-color 2px solid;
     }
-    .check:checked {
-        background-color: $radio-active-background-color;
-        border: $radio-active-background-color 2px solid;
-    }
+    // .check::before {
+    //     content: '';
+    //     transform: scale(0);
+    //     position: absolute;
+    //     background-color: $radio-active-background-color;
+    //     border: $radio-active-background-color 2px solid;
+    //     border-radius: $radio-border-radius;
+        
+        
+    // }
+    // .check:checked {
+    //     background-color: $radio-active-background-color;
+    //     border: $radio-active-background-color 2px solid;
+    // }
+    // .check:checked::before {
+    //     content: '';
+    //     transform: scale(.5);
+    // }
 
     // Variant 
     // Size
+    @each $name, $variant in vars.$theme-colors {
+        &.is-#{$name} {
+            .check {
+                border: 2px solid utils.variant-varname($variant,vars.$variant-degree);
+            }
+            .check:hover {
+                border: utils.variant-varname($variant,vars.$variant-degree) 2px solid;
+            }
+        }
+    }
 
     &.is-disabled {
         opacity: 0.5;
