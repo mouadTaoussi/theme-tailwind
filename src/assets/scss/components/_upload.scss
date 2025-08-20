@@ -7,6 +7,8 @@
 $upload-bg: transparent !default;
 $upload-draggable-padding: 35px !default;
 $upload-border-color: var(--color-gray-500) !default;
+$upload-border-radius: 3px !default;
+$upload-rounded-border-radius: 30px !default;
 /* @docs */
 
 .upload {
@@ -29,7 +31,7 @@ $upload-border-color: var(--color-gray-500) !default;
         padding: $upload-draggable-padding;
         background-color: $upload-bg;
         border: 1px dashed $upload-border-color;
-        border-radius: 3px;
+        border-radius: $upload-border-radius;
     }
 
     @each $name, $variant in vars.$theme-colors {
@@ -57,11 +59,11 @@ $upload-border-color: var(--color-gray-500) !default;
     }
 
     &.is-rounded {
-        border-radius: 30px;
+        border-radius: $upload-rounded-border-radius;
 
         .file-name {
-            border-top-right-radius: 30px;
-            border-bottom-right-radius: 30px;
+            border-top-right-radius: $upload-rounded-border-radius;
+            border-bottom-right-radius: $upload-rounded-border-radius;
         }
     }
 }

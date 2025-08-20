@@ -5,9 +5,11 @@
 
 /* @docs */
 $radio-active-background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree) !default;
-$radio-border-size: 2px;
-$radio-border-radius: 50%;
-$radio-font-size: 15px;
+$radio-border-size: 2px !default;
+$radio-border-radius: 50% !default;
+$radio-font-size: 15px !default;
+$radio-padding: .5em .75em !default;
+$radio-control-label-padding-left: 11px !default;
 // $radio
 /* @docs */
 
@@ -16,17 +18,14 @@ $radio-font-size: 15px;
     justify-content: flex-start;
     align-items: center;
     //
-    padding-top: .5em;
-    padding-left: .75em;
-    padding-bottom: .5em;
-    padding-right: .75em;
+    padding: $radio-padding;
     //
     position: relative;
     //
     vertical-align:top;
 
     .control-label {
-        padding-left: 11px;
+        padding-left: $radio-control-label-padding-left;
         font-size: $radio-font-size;
     }
     .check {

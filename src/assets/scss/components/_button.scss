@@ -27,10 +27,15 @@ $btn-box-shadow: 1px 1px 16px rgba(207,207,207,10) !default;
     border: 0.005rem;
     border-style: var(--tw-border-style);
     border-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
-    // 
-    &:hover {
+    //     
+   &:hover {
         opacity: .9;
         box-shadow: $btn-box-shadow;
+    }
+    
+    .button-wrapper {
+        display: inline-flex;
+        align-items: center;
     }
 
     @each $name, $variant in vars.$theme-colors {
@@ -90,6 +95,7 @@ $btn-box-shadow: 1px 1px 16px rgba(207,207,207,10) !default;
     }
     .icon {
         margin-right: $btn-spacer;
+        margin-left: calc($btn-spacer / 2);
     }
 }
 

@@ -7,7 +7,7 @@ $skeleton-bg-color: rgb(227, 227, 227) !default;
 $skeleton-bg: linear-gradient( 90deg, $skeleton-bg-color 25%, rgba($skeleton-bg-color, 0.5) 50%, $skeleton-bg-color 75%) !default;
 $skeleton-duration: 1.5s !default;
 $skeleton-margin: 0.5rem 0 0 0 !default;
-$skeleton-line-height: var(--text-base--line-height);
+$skeleton-line-height: var(--text-base--line-height) !default;
 /* @docs */
 
 @keyframes skeleton-loading {

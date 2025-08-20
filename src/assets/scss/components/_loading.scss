@@ -4,7 +4,8 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-$loading-overlay-color: $loading-overlay-background-color !default;
+$loading-overlay-background-color: white !default;
+$loading-overlay-zindex: 9999 !default;
 /* @docs */
 
 .loading {
@@ -17,11 +18,11 @@ $loading-overlay-color: $loading-overlay-background-color !default;
     overflow: hidden;
     align-items: center;
     justify-content: center;
-    z-index: 999;
+    z-index: $loading-overlay-zindex;
     
     &.is-full-page {
         position: fixed;
-        z-index: 999;
+        z-index: $loading-overlay-zindex;
     }
 
     .loading-overlay {

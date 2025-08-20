@@ -5,8 +5,14 @@
 
 /* @docs */
 $pagination-active-background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree) !default;
-$pagination-nav-padding-left: 0.75rem;
-$pagination-nav-padding-right: 0.75rem;
+$pagination-nav-padding-left: 0.75rem !default;
+$pagination-nav-padding-right: 0.75rem !default;
+$pagination-link-margin: 0 4px !default;
+$pagination-link-padding: 8px 12px !default;
+$pagination-link-border-color: rgb(227, 227, 227) !default;
+$pagination-link-border-radius: 3px !default;
+$pagination-link-border-size: 0.005rem !default;
+$pagination-link-min-width: 2.5rem !default;
 /* @docs */
 
 .pagination {
@@ -44,15 +50,15 @@ $pagination-nav-padding-right: 0.75rem;
         padding: 0;
     }
     .pagination-link {
-        border: 0.005rem;
+        border: $pagination-link-border-size;
         border-style: var(--tw-border-style);
-        border-color: rgb(227, 227, 227);
+        border-color: $pagination-link-border-color;
         //
-        padding: 8px 12px;
-        margin: 0 4px;
-        border-radius: 3px;
+        padding: $pagination-link-padding;
+        margin: $pagination-link-margin;
+        border-radius: $pagination-link-border-radius;
         //
-        min-width: 2.5rem;
+        min-width: $pagination-link-min-width;
         //
         transition-duration: 294ms;
         transition-property: background-color, border-color, box-shadow, color;

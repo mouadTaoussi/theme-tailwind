@@ -4,15 +4,17 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-$tooltip-arrow-size: 5px;
-$tooltip-arrow-margin: 2px;
-$tooltip-content-multiline-width: 222px;
-$tooltip-shadow: 0 1px 2px 1px rgba(0, 1, 0, 0.2);
-$tooltip-z: 38;
-$tooltip-colors: black;
-$tooltip-border-radius: 3px;
-$tooltip-bg: black;
-$tooltip-color: white;
+$tooltip-arrow-size: 5px !default;
+$tooltip-arrow-margin: 2px !default;
+$tooltip-content-multiline-width: 222px !default;
+$tooltip-shadow: 0 1px 2px 1px rgba(0, 1, 0, 0.2) !default;
+$tooltip-zindex: 38 !default;
+$tooltip-colors: black !default;
+$tooltip-border-radius: 3px !default;
+$tooltip-bg: black !default;
+$tooltip-color: white !default;
+$tooltip-padding: 0.35rem 0.75rem !default;
+$tooltip-font-size: 0.85rem !default;
 /* @docs */
 
 // source : theme-bulma
@@ -32,18 +34,18 @@ $tooltip-color: white;
         //
         width: auto;
         white-space: nowrap;
-        padding: 0.35rem 0.75rem;
+        padding: $tooltip-padding;
         //
         font-weight: 400;
-        font-size: 0.85rem;
+        font-size: $tooltip-font-size;
         //
-        z-index: $tooltip-z;
+        z-index: $tooltip-zindex;
 
         &::before {
             position: absolute;
             content: "";
             pointer-events: none;
-            z-index: $tooltip-z;
+            z-index: $tooltip-zindex;
         }
 
         &.is-always {
