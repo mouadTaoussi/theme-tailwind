@@ -15,11 +15,10 @@ $radio-border-radius: 50%;
     justify-content: flex-start;
     align-items: center;
     //
-    // padding: 7px 11px;
-    padding-top: calc(.5em - 1px);
-    padding-left: calc(.75em - 1px);
-    padding-bottom: calc(.5em - 1px);
-    padding-right: calc(.75em - 1px);
+    padding-top: .5em;
+    padding-left: .75em;
+    padding-bottom: .5em;
+    padding-right: .75em;
     //
     position: relative;
     //
@@ -41,34 +40,38 @@ $radio-border-radius: 50%;
         flex-shrink: 0;
         //
         outline: none;
-        //
-        transition: all vars.$speed-slow var(--ease-in);
-
     }
     .check:hover {
         border: $radio-active-background-color 2px solid;
     }
-    // .check::before {
-    //     content: '';
-    //     transform: scale(0);
-    //     position: absolute;
-    //     background-color: $radio-active-background-color;
-    //     border: $radio-active-background-color 2px solid;
-    //     border-radius: $radio-border-radius;
-        
-        
+    // .check:focus {
+    //     box-shadow: 2 5px 5px 5px $radio-active-background-color;
     // }
-    // .check:checked {
-    //     background-color: $radio-active-background-color;
-    //     border: $radio-active-background-color 2px solid;
-    // }
-    // .check:checked::before {
-    //     content: '';
-    //     transform: scale(.5);
-    // }
+    .check::before {
+        content: '';
+        transform: scale(0);
+        //
+        position: absolute;
+        //
+        background-color: $radio-active-background-color;
+        //
+        border: $radio-active-background-color 2px solid;
+        border-radius: $radio-border-radius;
+        //
+        width: 1rem;
+        height: 1rem;
+        //
+        transition: all vars.$speed-slow var(--ease-in);      
+    }
+    .check:checked {
+        border: $radio-active-background-color 2px solid;
+    }
+    .check:checked::before {
+        content: '';
+        transform: scale(.6);
+    }
 
     // Variant 
-    // Size
     @each $name, $variant in vars.$theme-colors {
         &.is-#{$name} {
             .check {
@@ -77,8 +80,30 @@ $radio-border-radius: 50%;
             .check:hover {
                 border: utils.variant-varname($variant,vars.$variant-degree) 2px solid;
             }
+            .check::before {
+                content: '';
+                background-color: utils.variant-varname($variant,vars.$variant-degree);
+                border: utils.variant-varname($variant,vars.$variant-degree) 2px solid;
+            }
+            .check:checked {
+                border: utils.variant-varname($variant,vars.$variant-degree) 2px solid;
+            }
         }
     }
+
+    // Size
+    // .control-label {
+    //     font-size:
+    // }
+    // .check { 
+    //     width: 1.25rem;
+    //     height: 1.25rem;
+    // }
+    // .check::before {
+    //     content: '';
+    //     width: 1rem;
+    //     height: 1rem;
+    // }
 
     &.is-disabled {
         opacity: 0.5;
