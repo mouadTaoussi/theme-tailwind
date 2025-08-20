@@ -5,6 +5,10 @@
 
 /* @docs */
 $input-icon-spacer: 0.75rem !default;
+$input-border-color: rgb(227, 227, 227) !default;
+$input-border-size: 0.005rem !default;
+$input-padding: 0.50rem 0 !default;
+$input-font-size: var(--text-base) !default;
 /* @docs */
 
 
@@ -15,14 +19,14 @@ $input-icon-spacer: 0.75rem !default;
     display: inline-block;
     
     .input {
-        border: 0.005rem;
+        border: $input-border-size;
         border-style: var(--tw-border-style);
-        border-color: rgb(227, 227, 227);
+        border-color: $input-border-color;
         // 
-        padding: 0.50rem 0;
+        padding: $input-padding;
         padding-left: 2rem;
         // 
-        font-size: var(--text-base);
+        font-size: $input-font-size;
         // 
         @each $name, $variant in vars.$theme-colors {
             &.border-#{$name} {

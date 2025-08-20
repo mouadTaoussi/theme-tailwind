@@ -3,6 +3,10 @@
 @use "./utils/all" as utils;
 @use "./utils/variables" as vars;
 
+/* @docs */
+$loading-overlay-color: $loading-overlay-background-color !default;
+/* @docs */
+
 .loading {
     position: absolute;
     top: 0;
@@ -26,7 +30,7 @@
         left :0 ;
         right: 0;
         bottom: 0;
-        background-color: white;
+        background-color: $loading-overlay-background-color;
         opacity: .7;
     }
 }

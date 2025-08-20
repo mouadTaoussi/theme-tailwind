@@ -6,17 +6,21 @@
 
 /* @docs */
 $btn-spacer: 0.5rem !default;
+$btn-font-size: var(--text-base) !default;
+$btn-line-height: var(--text-base--line-height) !default;
+$btn-padding: 0.25rem 1.5rem !default;
+$btn-box-shadow: 1px 1px 16px rgba(207,207,207,10) !default;
 /* @docs */
 
 .button {
     background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
     color: white;
     // 
-    padding:0.25rem 1.5rem;
+    padding:$btn-padding;
     // 
-    font-size: var(--text-base);
+    font-size: $btn-font-size;
     // 
-    line-height: var(--text-base--line-height);
+    line-height: $btn-line-height;
     // 
     // transition: all vars.$speed-slow var(--ease-in);  -> duration-100 ease-in
     // 
@@ -26,7 +30,7 @@ $btn-spacer: 0.5rem !default;
     // 
     &:hover {
         opacity: .9;
-        @apply shadow-lg;
+        box-shadow: $btn-box-shadow;
     }
 
     @each $name, $variant in vars.$theme-colors {
