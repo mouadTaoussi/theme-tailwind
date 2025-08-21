@@ -13,6 +13,21 @@ $radio-control-label-padding-left: 11px !default;
 // $radio
 /* @docs */
 
+@mixin radio-size ($control,$check,$checked){
+    .control-label {
+        font-size: $control;
+    }
+    .check { 
+        width: $check;
+        height: $check;
+    }
+    .check::before {
+        content: '';
+        width: $checked;
+        height: $checked;
+    }
+}
+
 .radio {
     display: inline-flex;
     justify-content: flex-start;
@@ -29,7 +44,10 @@ $radio-control-label-padding-left: 11px !default;
         font-size: $radio-font-size;
     }
     .check {
+        -webkit-appearance: none;
+        -moz-appearance: none;
         appearance: none;
+        //
         font-size: inherit;
         //
         border-radius: $radio-border-radius;
@@ -95,48 +113,15 @@ $radio-control-label-padding-left: 11px !default;
         }
     }
 
-    // Size
+    // Size 
     &.is-small {
-        .control-label {
-            font-size: 8px;
-        }
-        .check { 
-            width: 1rem;
-            height: 1rem;
-        }
-        .check::before {
-            content: '';
-            width: .7rem;
-            height: .7rem;
-        }
+        @include radio-size(8px, 1rem, .7rem);
     }
     &.is-medium {
-        .control-label {
-            font-size: 12px;
-        }
-        .check { 
-            width: 1.25rem;
-            height: 1.25rem;
-        }
-        .check::before {
-            content: '';
-            width: 1rem;
-            height: 1rem;
-        }
+        @include radio-size(12px, 1.25rem, 1rem);
     }
     &.is-large {
-        .control-label {
-            font-size: 20px;
-        }
-        .check { 
-            width: 1.50rem;
-            height: 1.50rem;
-        }
-        .check::before {
-            content: '';
-            width: 1.25rem;
-            height: 1.25rem;
-        }
+        @include radio-size(20px, 1.50rem, 1.25rem);
     }
 
     &.is-disabled {

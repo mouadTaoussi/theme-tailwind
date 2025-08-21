@@ -11,6 +11,12 @@ $input-padding: 0.50rem 0 !default;
 $input-font-size: var(--text-base) !default;
 /* @docs */
 
+@mixin input-size ($padding,$padding-left,$font-size){
+    padding: $padding;
+    padding-left: $padding-left;
+    // 
+    font-size: $font-size;
+}
 
 .select,
 .textarea,
@@ -35,22 +41,13 @@ $input-font-size: var(--text-base) !default;
         }
 
         &.input-small {
-            padding: 0.25rem 0;
-            padding-left: 1.75rem;
-            // 
-            font-size: var(--text-sm);
+            @include input-size(0.25rem 0, 1.75rem, var(--text-sm));
         }
         &.input-medium {
-            padding: 0.50rem 0;
-            padding-left: 2rem;
-            // 
-            font-size: var(--text-base);
+            @include input-size(0.50rem 0, 2rem, var(--text-base));
         }
         &.input-large {
-            padding: 0.75rem 0;
-            padding-left: 2.75rem;
-            // 
-            font-size: var(--text-lg);
+            @include input-size(0.75rem 0, 2.75rem, var(--text-lg));
         }
     }
 

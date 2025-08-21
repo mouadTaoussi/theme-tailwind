@@ -12,6 +12,12 @@ $btn-padding: 0.25rem 1.5rem !default;
 $btn-box-shadow: 1px 1px 16px rgba(207,207,207,10) !default;
 /* @docs */
 
+@mixin button-size ($padding, $font-size, $line-height){
+    padding: $padding;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
 .button {
     background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
     color: white;
@@ -71,19 +77,13 @@ $btn-box-shadow: 1px 1px 16px rgba(207,207,207,10) !default;
     }
 
     &.is-small {
-        padding:0.125rem 1.5rem;
-        font-size: var(--text-sm);
-        line-height: var(--text-sm--line-height);
+        @include button-size(0.125rem 1.5rem, var(--text-sm), var(--text-sm--line-height));
     }
     &.is-medium {
-        padding:0.25rem 1.5rem;
-        font-size: var(--text-base);
-        line-height: var(--text-base--line-height);
+        @include button-size(0.25rem 1.5rem, var(--text-base), var(--text-base--line-height));
     }
     &.is-large {
-        padding:0.5rem 1.5rem;
-        font-size: var(--text-lg);
-        line-height: var(--text-lg--line-height);
+        @include button-size(0.5rem 1.5rem, var(--text-lg), var(--text-lg--line-height));
     }
 
     &.disabled {
