@@ -27,10 +27,10 @@ $skeleton-line-height: var(--text-base--line-height) !default;
   width: 100%;
 
   .skeleton-item {
-    width: 100%;
     background-image: $skeleton-bg;
     margin: $skeleton-margin;
     line-height: 1rem;
+    width: 100%;
 
     &.animated {
       background-size: 400% 100%;

@@ -53,14 +53,14 @@ $input-font-size: var(--text-base) !default;
 
     .icon { 
         position: absolute;
-        margin: 0;
         top: 0;
+        margin: 0;
+        
+        &.icon-right {
+            right: $input-icon-spacer;     
+        }
         &.icon-left {
             left: $input-icon-spacer;
-        }
-        &.icon-right {
-            right: $input-icon-spacer;
-            
         }
     }
 }

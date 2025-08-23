@@ -84,14 +84,14 @@ const tailwindConfig = {
         override: true,
         rootClass: "input-component",
         inputClass: (_: string, props: ComponentProps): string => {
-            const classes = ["input", "rounded", "shadow-sm", "focus:ring-2"];
+            const classes = ["input", "rounded", "shadow-md", "focus:ring-2"];
 
             if (props.icon) classes.push("icon-left");
             if (props.iconRight) classes.push("icon-right");
             return classes.join(" ");
         },
         textareaClass: (_: string, props: ComponentProps): string => {
-            const classes = ["input", "rounded", "shadow-sm", "focus:ring-2"];
+            const classes = ["input", "rounded", "shadow-md", "focus:ring-2"];
 
             if (props.icon) classes.push("icon-left");
             if (props.iconRight) classes.push("icon-right");
@@ -126,7 +126,7 @@ const tailwindConfig = {
     notification: {
         override: true,
         rootClass:
-            "notification alert flex items-center px-4 py-3 my-3 rounded space-x-2 shadow-sm duration-100 ease-in",
+            "notification alert flex items-center px-4 py-3 my-3 rounded space-x-2 shadow-md duration-100 ease-in",
         variantClass: "is-",
         wrapperClass: "notifictation-wrapper flex items-center",
         contentClass: "notifictation-content",
@@ -137,6 +137,7 @@ const tailwindConfig = {
         noticePositionClass: "position-",
     },
     pagination: {
+        // @TODO: Integrate Tailwind
         override: true,
         rootClass: (_: string, props: ComponentProps): string => {
             const classes = ["pagination"];
@@ -148,7 +149,7 @@ const tailwindConfig = {
         orderClass: "is-",
         listClass: "pagination-list",
         mobileClass: "is-mobile",
-        buttonClass: "pagination-link shadow-sm",
+        buttonClass: "pagination-link shadow-md",
         buttonCurrentClass: "is-current",
         buttonDisabledClass: "is-disabled",
         buttonNextClass: "pagination-next",
@@ -156,6 +157,7 @@ const tailwindConfig = {
         infoClass: "info",
     },
     radio: {
+        // @TODO: Integrate Tailwind
         override: true,
         rootClass: "radio",
         disabledClass: "is-disabled",
@@ -167,6 +169,7 @@ const tailwindConfig = {
     select: {},
     sidebar: {},
     skeleton: {
+        // @TODO: Integrate Tailwind
         override: true,
         rootClass: "skeleton flex",
         itemClass: "skeleton-item",
@@ -184,6 +187,7 @@ const tailwindConfig = {
     steps: {},
     switch: {},
     table: {
+        // @TODO: Integrate Tailwind
         override: true,
         rootClass: "table-wrapper",
         wrapperClass: "table-inner",
@@ -216,6 +220,7 @@ const tailwindConfig = {
     taginput: {},
     timepicker: {},
     tooltip: {
+        // @TODO: Integrate Tailwind
         override: true,
         rootClass: "tooltip",
         contentClass: "tooltip-content",
@@ -227,6 +232,7 @@ const tailwindConfig = {
         teleportClass: "is-teleported",
     },
     upload: {
+        // @TODO: Integrate Tailwind
         override: true,
         rootClass: "upload control",
         draggableClass: "upload-draggable",

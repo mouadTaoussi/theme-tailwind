@@ -26,8 +26,8 @@ $pagination-link-min-width: 2.5rem !default;
 
     .pagination-previous,
     .pagination-next {
-        padding-left: $pagination-nav-padding-left;
         padding-right: $pagination-nav-padding-right;
+        padding-left: $pagination-nav-padding-left;
 
         &.is-disabled {
             pointer-events: none;
@@ -38,14 +38,14 @@ $pagination-link-min-width: 2.5rem !default;
     .pagination-list {
         display: flex;
         align-items: center;
-        list-style: none;
+        justify-content: flex-start;
         flex-wrap: wrap;
         flex-grow: 1;
         flex-shrink: 1;
-        justify-content: flex-start;
         order: 1;
         //
         text-align: center;
+        list-style: none;
         margin: 0;
         padding: 0;
     }
@@ -87,8 +87,8 @@ $pagination-link-min-width: 2.5rem !default;
         cursor: not-allowed;
         //
         background-color: $pagination-active-background-color;
-        border-color: $pagination-active-background-color;
         color: white;
+        border-color: $pagination-active-background-color;
     }
 
     &.is-mobile {

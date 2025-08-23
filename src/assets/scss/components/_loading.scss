@@ -4,16 +4,16 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-$loading-overlay-background-color: white !default;
+$loading-overlay-background-color: var(--color-gray-100) !default;
 $loading-overlay-zindex: 9999 !default;
 /* @docs */
 
 .loading {
     position: absolute;
     top: 0;
-    left :0;
     right: 0;
     bottom: 0;
+    left :0;
     display: flex;
     overflow: hidden;
     align-items: center;
@@ -27,10 +27,10 @@ $loading-overlay-zindex: 9999 !default;
 
     .loading-overlay {
         position: absolute;
-        top: 0 ;
-        left :0 ;
+        top: 0;
         right: 0;
         bottom: 0;
+        left :0;
         background-color: $loading-overlay-background-color;
         opacity: .7;
     }

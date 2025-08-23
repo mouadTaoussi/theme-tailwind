@@ -13,6 +13,7 @@ $upload-rounded-border-radius: 30px !default;
 
 .upload {
     input[type="file"] {
+        cursor: pointer;
         position: absolute;
         top: 0;
         left: 0;
@@ -22,7 +23,6 @@ $upload-rounded-border-radius: 30px !default;
         //
         opacity: 0;
         outline: none;
-        cursor: pointer;
         //
         z-index: -1;
     }
