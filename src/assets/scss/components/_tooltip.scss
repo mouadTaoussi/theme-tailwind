@@ -7,7 +7,7 @@
 $tooltip-arrow-size: 5px !default;
 $tooltip-arrow-margin: 2px !default;
 $tooltip-content-multiline-width: 222px !default;
-$tooltip-shadow: 0 1px 2px 1px rgba(0, 1, 0, 0.2) !default;
+// $tooltip-shadow: 0 1px 2px 1px rgba(0, 1, 0, 0.2) !default;
 $tooltip-zindex: 38 !default;
 $tooltip-colors: black !default;
 $tooltip-border-radius: 3px !default;
@@ -28,7 +28,7 @@ $tooltip-font-size: 0.85rem !default;
         color: $tooltip-color;
         //
         border-radius: $tooltip-border-radius;
-        box-shadow: $tooltip-shadow;
+        // box-shadow: $tooltip-shadow;
         //
         position: absolute;
         //

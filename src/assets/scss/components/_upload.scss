@@ -8,8 +8,17 @@ $upload-bg: transparent !default;
 $upload-draggable-padding: 35px !default;
 $upload-border-color: var(--color-gray-500) !default;
 $upload-border-radius: 3px !default;
-$upload-rounded-border-radius: 30px !default;
+// $upload-rounded-border-radius: 30px !default;
 /* @docs */
+
+/* Theme plugin file */
+// override: true,
+// rootClass: "upload control",
+// draggableClass: "upload-draggable",
+// variantClass: "is-",
+// expandedClass: "is-expanded",
+// disabledClass: "is-disabled",
+// hoveredClass: "is-hovered",
 
 .upload {
     input[type="file"] {
@@ -45,25 +54,17 @@ $upload-rounded-border-radius: 30px !default;
             }
     }
 
-    &.is-expanded {
-        width: 100%;
-
-        .upload-draggable {
-            width: 100%;
-        }
-    }
-
     &.is-disabled {
         opacity: 0.5;
         cursor: not-allowed;
     }
 
-    &.is-rounded {
-        border-radius: $upload-rounded-border-radius;
+    // &.is-rounded {
+    //     border-radius: $upload-rounded-border-radius;
 
-        .file-name {
-            border-top-right-radius: $upload-rounded-border-radius;
-            border-bottom-right-radius: $upload-rounded-border-radius;
-        }
-    }
+    //     .file-name {
+    //         border-top-right-radius: $upload-rounded-border-radius;
+    //         border-bottom-right-radius: $upload-rounded-border-radius;
+    //     }
+    // }
 }

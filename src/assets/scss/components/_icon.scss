@@ -8,9 +8,9 @@ $icon-spin-duration: 2s !default;
 /* @docs */
 
 .icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    // display: inline-flex;
+    // align-items: center;
+    // justify-content: center; @Tailwind -> flex justify-center items-center
     // 
     // position: absolute;
     // margin: 0;
@@ -22,21 +22,6 @@ $icon-spin-duration: 2s !default;
         &.text-#{$name} {
             color: utils.variant-varname($variant,vars.$variant-degree);
         }
-    }
-    // i {
-    //     // position: absolute;
-    //     margin: 0;
-    //     top: 0;
-    // }
-
-    &.size-small {
-        font-size: var(--text-sm);
-    }
-    &.size-medium {
-        font-size: var(--text-base);
-    }
-    &.size-large {
-        font-size: var(--text-lg);
     }
 
     &.clickable {

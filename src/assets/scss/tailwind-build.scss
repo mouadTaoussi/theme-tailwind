@@ -6,11 +6,3 @@
 @tailwind utilities;
 @tailwind tokens;
 
-@theme {
-  --font-display: "font-sans";
-}
-
-* {
-    font-weight: bold;
-    font-family: var(--font-display);
-}

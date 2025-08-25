@@ -5,7 +5,7 @@ const tailwindConfig = {
     button: {
         override: true,
         rootClass:
-            "button duration-100 ease-in rounded focus:outline-offset-2 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500",
+            "button duration-100 ease-in shadow-sm rounded focus:outline-offset-2 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500",
         wrapperClass: "button-wrapper",
         sizeClass: "is-",
         variantClass: "is-",
@@ -27,7 +27,7 @@ const tailwindConfig = {
     //     rootClass: `
     //         autocomplete
     //         w-full max-w-md bg-white border border-gray-300
-    //         rounded-md shadow-md overflow-hidden text-sm
+    //         rounded-md shadow-sm overflow-hidden text-sm
     //         focus-within:ring-2 focus-within:ring-indigo-500
     //         focus-within:border-indigo-500 transition-all
     //     `,
@@ -74,9 +74,14 @@ const tailwindConfig = {
     field: {},
     icon: {
         override: true,
-        rootClass: "icon",
+        rootClass: "icon flex justify-center items-center",
         variantClass: "text-",
-        sizeClass: "size-",
+        sizeClass: (position: string): string => {
+            if (position == "small") return "text-xs";
+            else if (position == "medium") return "text-md";
+            else if (position == "large") return "text-xl";
+            return "";
+        },
         clickableClass: "clickable",
         spinClass: "animate-spin",
     },
@@ -84,14 +89,14 @@ const tailwindConfig = {
         override: true,
         rootClass: "input-component",
         inputClass: (_: string, props: ComponentProps): string => {
-            const classes = ["input", "rounded", "shadow-md", "focus:ring-2"];
+            const classes = ["input", "rounded", "shadow-sm", "focus:ring-2"];
 
             if (props.icon) classes.push("icon-left");
             if (props.iconRight) classes.push("icon-right");
             return classes.join(" ");
         },
         textareaClass: (_: string, props: ComponentProps): string => {
-            const classes = ["input", "rounded", "shadow-md", "focus:ring-2"];
+            const classes = ["input", "rounded", "shadow-sm", "focus:ring-2"];
 
             if (props.icon) classes.push("icon-left");
             if (props.iconRight) classes.push("icon-right");
@@ -115,10 +120,11 @@ const tailwindConfig = {
     },
     loading: {
         override: true,
+        rootClass:
+            "loading flex justify-center items-center absolute top-0 right-0 bottom-0 left-0",
         fullPageClass: "is-full-page",
-        overlayClass: "loading-overlay",
+        overlayClass: "loading-overlay absolute top-0 right-0 bottom-0 left-0",
         iconClass: "icon",
-        rootClass: "loading",
         scrollClipClass: "is-clipped",
     },
     menu: {},
@@ -126,7 +132,7 @@ const tailwindConfig = {
     notification: {
         override: true,
         rootClass:
-            "notification alert flex items-center px-4 py-3 my-3 rounded space-x-2 shadow-md duration-100 ease-in",
+            "notification alert flex items-center px-4 py-3 my-3 rounded space-x-2 shadow-sm duration-100 ease-in",
         variantClass: "is-",
         wrapperClass: "notifictation-wrapper flex items-center",
         contentClass: "notifictation-content",
@@ -137,19 +143,25 @@ const tailwindConfig = {
         noticePositionClass: "position-",
     },
     pagination: {
-        // @TODO: Integrate Tailwind
         override: true,
         rootClass: (_: string, props: ComponentProps): string => {
-            const classes = ["pagination"];
-            if (props.rounded) classes.push("rounded"); // doesn't work
+            const classes = [
+                "pagination",
+                "text-gray-400",
+                "text-center",
+                "flex",
+                "justify-between",
+                "items-center",
+            ];
+            if (props.rounded) classes.push("rounded"); // doesn't work // position is not included
             return classes.join(" ");
         },
         sizeClass: "is-",
         simpleClass: "is-simple",
         orderClass: "is-",
-        listClass: "pagination-list",
+        listClass: "pagination-list text-center",
         mobileClass: "is-mobile",
-        buttonClass: "pagination-link shadow-md",
+        buttonClass: "pagination-link",
         buttonCurrentClass: "is-current",
         buttonDisabledClass: "is-disabled",
         buttonNextClass: "pagination-next",
@@ -157,7 +169,6 @@ const tailwindConfig = {
         infoClass: "info",
     },
     radio: {
-        // @TODO: Integrate Tailwind
         override: true,
         rootClass: "radio",
         disabledClass: "is-disabled",
@@ -169,13 +180,17 @@ const tailwindConfig = {
     select: {},
     sidebar: {},
     skeleton: {
-        // @TODO: Integrate Tailwind
         override: true,
         rootClass: "skeleton flex",
-        itemClass: "skeleton-item",
+        itemClass: "rounded bg-gray-200 w-full h-2",
         itemRoundedClass: "rounded",
-        animationClass: "animated",
-        sizeClass: "is-",
+        animationClass: "animate-pulse",
+        sizeClass: (position: string): string => {
+            if (position == "small") return "h-2";
+            else if (position == "medium") return "h-3";
+            else if (position == "large") return "h-6";
+            return "h-3";
+        },
         positionClass: (position: string): string => {
             if (position == "left") return "items-start";
             else if (position == "centered") return "items-center";
@@ -220,10 +235,9 @@ const tailwindConfig = {
     taginput: {},
     timepicker: {},
     tooltip: {
-        // @TODO: Integrate Tailwind
         override: true,
         rootClass: "tooltip",
-        contentClass: "tooltip-content",
+        contentClass: "tooltip-content shadow-sm",
         triggerClass: "tooltip-trigger",
         alwaysClass: "is-always",
         multilineClass: "is-multiline",
@@ -232,12 +246,11 @@ const tailwindConfig = {
         teleportClass: "is-teleported",
     },
     upload: {
-        // @TODO: Integrate Tailwind
         override: true,
         rootClass: "upload control",
-        draggableClass: "upload-draggable",
+        draggableClass: "upload-draggable w-full",
         variantClass: "is-",
-        expandedClass: "is-expanded",
+        expandedClass: "w-full",
         disabledClass: "is-disabled",
         hoveredClass: "is-hovered",
     },

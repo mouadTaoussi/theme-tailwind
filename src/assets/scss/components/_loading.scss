@@ -9,15 +9,17 @@ $loading-overlay-zindex: 9999 !default;
 /* @docs */
 
 .loading {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left :0;
-    display: flex;
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // bottom: 0;
+    // left :0; @Tailwind -> absolute top-0 right-0 bottom-0 left-0
+
+    // display: flex;
+    // justify-content: center;
+    // align-items: center; @Tailwind -> flex justify-center items-center
+
     overflow: hidden;
-    align-items: center;
-    justify-content: center;
     z-index: $loading-overlay-zindex;
     
     &.is-full-page {
@@ -26,11 +28,11 @@ $loading-overlay-zindex: 9999 !default;
     }
 
     .loading-overlay {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left :0;
+        // position: absolute;
+        // top: 0;
+        // right: 0;
+        // bottom: 0;
+        // left :0; @Tailwind -> absolute top-0 right-0 bottom-0 left-0
         background-color: $loading-overlay-background-color;
         opacity: .7;
     }

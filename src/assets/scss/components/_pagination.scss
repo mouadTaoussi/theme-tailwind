@@ -16,11 +16,11 @@ $pagination-link-min-width: 2.5rem !default;
 /* @docs */
 
 .pagination {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between; // @Tailwind -> ["flex", "justify-between", "items-center"]
     //
-    text-align: center;
+    // text-align: center; // @Tailwind -> text-center
     // 
     margin-bottom: 1.5rem;
 
@@ -44,8 +44,9 @@ $pagination-link-min-width: 2.5rem !default;
         flex-shrink: 1;
         order: 1;
         //
-        text-align: center;
+        // text-align: center; // @Tailwind -> text-center
         list-style: none;
+        //
         margin: 0;
         padding: 0;
     }
@@ -53,10 +54,10 @@ $pagination-link-min-width: 2.5rem !default;
         border: $pagination-link-border-size;
         border-style: var(--tw-border-style);
         border-color: $pagination-link-border-color;
+        border-radius: $pagination-link-border-radius;
         //
         padding: $pagination-link-padding;
         margin: $pagination-link-margin;
-        border-radius: $pagination-link-border-radius;
         //
         min-width: $pagination-link-min-width;
         //
