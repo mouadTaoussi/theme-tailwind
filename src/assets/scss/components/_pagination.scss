@@ -36,13 +36,13 @@ $pagination-link-min-width: 2.5rem !default;
         }
     }
     .pagination-list {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        flex-grow: 1;
-        flex-shrink: 1;
-        order: 1;
+        // display: flex;
+        // align-items: center;
+        // justify-content: flex-start;
+        // flex-wrap: wrap;
+        // flex-grow: 1;
+        // flex-shrink: 1;
+        // order: 1; // @Tailwind -> flex justify-start items-center flex-wrap grow shrink order-1
         //
         // text-align: center; // @Tailwind -> text-center
         list-style: none;

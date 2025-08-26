@@ -121,8 +121,8 @@ const tailwindConfig = {
     loading: {
         override: true,
         rootClass:
-            "loading flex justify-center items-center absolute top-0 right-0 bottom-0 left-0",
-        fullPageClass: "is-full-page",
+            "loading flex justify-center items-center absolute top-0 right-0 bottom-0 left-0 overflow-hidden",
+        fullPageClass: "is-full-page fixed",
         overlayClass: "loading-overlay absolute top-0 right-0 bottom-0 left-0",
         iconClass: "icon",
         scrollClipClass: "is-clipped",
@@ -132,14 +132,15 @@ const tailwindConfig = {
     notification: {
         override: true,
         rootClass:
-            "notification alert flex items-center px-4 py-3 my-3 rounded space-x-2 shadow-sm duration-100 ease-in",
+            "notification alert relative flex items-center px-4 py-3 my-3 rounded space-x-2 shadow-sm duration-100 ease-in",
         variantClass: "is-",
         wrapperClass: "notifictation-wrapper flex items-center",
         contentClass: "notifictation-content",
         positionClass: "position-",
         iconClass: "media mr-3",
-        closeClass: "close",
-        noticeClass: "notifictations flex items-center",
+        closeClass: "close absolute top-0 right-0",
+        noticeClass:
+            "notifictations fixed top-0 right-0 bottom-0 left-0 overflow-hidden flex items-center",
         noticePositionClass: "position-",
     },
     pagination: {
@@ -159,7 +160,8 @@ const tailwindConfig = {
         sizeClass: "is-",
         simpleClass: "is-simple",
         orderClass: "is-",
-        listClass: "pagination-list text-center",
+        listClass:
+            "pagination-list text-center flex justify-start items-center flex-wrap grow shrink order-1",
         mobileClass: "is-mobile",
         buttonClass: "pagination-link",
         buttonCurrentClass: "is-current",
@@ -170,7 +172,7 @@ const tailwindConfig = {
     },
     radio: {
         override: true,
-        rootClass: "radio",
+        rootClass: "radio flex justify-start items-center relative",
         disabledClass: "is-disabled",
         inputClass: "check",
         labelClass: "control-label",
@@ -236,7 +238,7 @@ const tailwindConfig = {
     timepicker: {},
     tooltip: {
         override: true,
-        rootClass: "tooltip",
+        rootClass: "tooltip flex relative",
         contentClass: "tooltip-content shadow-sm",
         triggerClass: "tooltip-trigger",
         alwaysClass: "is-always",

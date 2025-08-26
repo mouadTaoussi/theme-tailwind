@@ -20,8 +20,8 @@ $tooltip-font-size: 0.85rem !default;
 // source : theme-bulma
 .tooltip {
 
-    position: relative;
-    display: inline-flex;
+    // position: relative;
+    // display: inline-flex; @Tailwaind -> fles relative 
 
     .tooltip-content {
         background-color: $tooltip-bg;

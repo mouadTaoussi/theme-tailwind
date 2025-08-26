@@ -19,11 +19,11 @@ $loading-overlay-zindex: 9999 !default;
     // justify-content: center;
     // align-items: center; @Tailwind -> flex justify-center items-center
 
-    overflow: hidden;
+    // overflow: hidden; @Tailwind -> overflow-hidden
     z-index: $loading-overlay-zindex;
     
     &.is-full-page {
-        position: fixed;
+        // position: fixed;  @Tailwind -> fixed
         z-index: $loading-overlay-zindex;
     }
 
