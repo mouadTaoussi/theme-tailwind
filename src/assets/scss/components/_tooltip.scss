@@ -94,7 +94,6 @@ $tooltip-font-size: 0.85rem !default;
                 border-left: $arrow-border-passive;
             }
         }
-
         &.is-right {
             top: 50%;
             right: auto;
@@ -113,7 +112,6 @@ $tooltip-font-size: 0.85rem !default;
                 border-bottom: $arrow-border-passive;
             }
         }
-
         &.is-left {
             top: 50%;
             right: $arrow-size;
@@ -132,6 +130,7 @@ $tooltip-font-size: 0.85rem !default;
                 border-left: $arrow-border;
             }
         }
+        
          @each $name, $variant in vars.$theme-colors {
             &.is-#{$name} {
                 background-color: utils.variant-varname($variant,vars.$variant-degree);
