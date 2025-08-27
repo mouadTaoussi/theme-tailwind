@@ -29,14 +29,7 @@ $radio-control-label-padding-left: 11px !default;
 }
 
 .radio {
-    // display: inline-flex;
-    // justify-content: flex-start;
-    // align-items: center; @Tailwind -> flex justify-start items-center
-    //
     padding: $radio-padding;
-    //
-    // position: relative;
-    //
     vertical-align:top;
 
     .control-label {

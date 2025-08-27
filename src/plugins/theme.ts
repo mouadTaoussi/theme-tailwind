@@ -48,29 +48,42 @@ const tailwindConfig = {
     },
     datepicker: {},
     datetimepicker: {},
-    // dropdown: {
-    //     override: true,
-    //     rootClass: "dropdown btn-group",
-    //     triggerClass: "dropdown-trigger",
-    //     disabledClass: "disabled",
-    //     expandedClass: "expanded",
-    //     inlineClass: "inline",
-    //     menuMobileOverlayClass: "dropdown-backdrop",
-    //     menuClass: (_: string, { computed }: ComponentProps): string => {
-    //         const classes = ["dropdown-menu"];
-    //         if (computed.hoverable) classes.push("show");
-    //         return classes.join(" ");
-    //     },
-    //     menuPositionClass: "position-",
-    //     menuActiveClass: "show",
-    //     itemTag: "a",
-    //     itemClass: "dropdown-item",
-    //     itemActiveClass: "active",
-    //     itemClickableClass: "clickable",
-    //     itemDisabledClass: "disabled",
-    //     mobileClass: "dropdown-modal",
-    //     teleportClass: "teleported",
-    // },
+    dropdown: {
+        override: true,
+        rootClass: "dropdown btn-group",
+        triggerClass: "dropdown-trigger",
+        disabledClass: "disabled",
+        expandedClass: "expanded",
+        inlineClass: "inline",
+        menuMobileOverlayClass: "dropdown-backdrop",
+        // menuClass:
+        //     "z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44",
+        menuClass: (_: string, { computed }: ComponentProps): string => {
+            const classes = [
+                "dropdown-menu",
+                "absolute",
+                "z-10",
+                "bg-white",
+                "divide-y",
+                "divide-gray-100",
+                "rounded-lg",
+                "shadow-sm",
+                "w-44",
+            ];
+            // if (computed.hoverable) classes.push("show");
+            return classes.join(" ");
+        },
+        menuPositionClass: "position-",
+        menuActiveClass: "show",
+        itemTag: "a",
+        itemClass:
+            "dropdown-item block px-4 py-2 hover:bg-gray-100 hover:text-white cursor-pointer",
+        itemActiveClass: "active",
+        itemClickableClass: "clickable",
+        itemDisabledClass: "disabled",
+        mobileClass: "dropdown-modal",
+        teleportClass: "teleported",
+    },
     field: {},
     icon: {
         override: true,

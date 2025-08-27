@@ -14,21 +14,12 @@ $notification-icon-margin-right: 0.5rem !default;
 .notification {
     background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
     color: white;
-    //    
-    // position: relative; // @Tailwind -> relative
-    // 
-    // transition: all vars.$speed-slow var(--ease-in);
-    // 
+   
     @each $name, $variant in vars.$theme-colors {
         &.is-#{$name} {
             background-color: utils.variant-varname($variant,vars.$variant-degree);
         }
     }
-    // .close {
-    //     position: absolute;
-    //     top: 0%;
-    //     right:0%;
-    // } // @Tailwind -> absolute top-0 right-0
     .notifictation-wrapper {
         .icon {
             margin-right: $notification-icon-margin-right;
@@ -46,17 +37,6 @@ $notification-icon-margin-right: 0.5rem !default;
   }
 }
 .notifictations {
-    // display: flex; // tailwind class
-    // 
-    // position: fixed;
-    // top: 0;
-    // right: 0;
-    // bottom: 0;
-    // left: 0; 
-    // overflow: hidden;
-    // @Tailwind -> fixed top-0 right-0 bottom-0 left-0 overflow-hidden
-    //    
-    //    
     pointer-events: none;
     // 
     padding: $notification-notices-padding;

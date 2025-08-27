@@ -9,30 +9,13 @@ $loading-overlay-zindex: 9999 !default;
 /* @docs */
 
 .loading {
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-    // bottom: 0;
-    // left :0; @Tailwind -> absolute top-0 right-0 bottom-0 left-0
-
-    // display: flex;
-    // justify-content: center;
-    // align-items: center; @Tailwind -> flex justify-center items-center
-
-    // overflow: hidden; @Tailwind -> overflow-hidden
     z-index: $loading-overlay-zindex;
     
     &.is-full-page {
-        // position: fixed;  @Tailwind -> fixed
         z-index: $loading-overlay-zindex;
     }
 
     .loading-overlay {
-        // position: absolute;
-        // top: 0;
-        // right: 0;
-        // bottom: 0;
-        // left :0; @Tailwind -> absolute top-0 right-0 bottom-0 left-0
         background-color: $loading-overlay-background-color;
         opacity: .7;
     }
