@@ -11,15 +11,6 @@ $upload-border-radius: 3px !default;
 // $upload-rounded-border-radius: 30px !default;
 /* @docs */
 
-/* Theme plugin file */
-// override: true,
-// rootClass: "upload control",
-// draggableClass: "upload-draggable",
-// variantClass: "is-",
-// expandedClass: "is-expanded",
-// disabledClass: "is-disabled",
-// hoveredClass: "is-hovered",
-
 .upload {
     input[type="file"] {
         cursor: pointer;
