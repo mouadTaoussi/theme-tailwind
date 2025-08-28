@@ -1,0 +1,41 @@
+
+@use "sass:map";
+@use "./utils/all" as utils;
+@use "./utils/variables" as vars;
+
+/* @docs */
+/* @docs */
+
+.dropdown {
+    display: inline-block;
+	vertical-align: middle;
+
+	.dropdown-menu {
+
+		.dropdown-item {
+			&.active {
+				background-color: utils.variant-varname('indigo',vars.$variant-degree);
+				color: white;
+			}
+		}
+
+		.dropdown-item:first-child {
+			@apply rounded-t-lg;
+		}
+		.dropdown-item:last-child {
+			@apply rounded-b-lg;
+		}
+
+		// Position
+		// &.position-top-left {}
+		// &.position-top-right {}
+		// &.position-bottom-left {}
+		// &.position-bottom-right {}
+
+	}
+	&.inline {
+		.dropdown-menu {
+			position: static;
+		}
+	}
+}

@@ -19,6 +19,9 @@ $tooltip-font-size: 0.85rem !default;
 
 // source : theme-bulma
 .tooltip {
+    position: relative;
+    display: inline-flex;
+
     .tooltip-content {
         background-color: $tooltip-bg;
         color: $tooltip-color;

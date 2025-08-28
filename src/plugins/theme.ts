@@ -51,9 +51,10 @@ const tailwindConfig = {
     dropdown: {
         override: true,
         rootClass: "dropdown btn-group",
+        // rootClass: "dropdown btn-group dropdown-menu absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44",
         triggerClass: "dropdown-trigger",
         disabledClass: "disabled",
-        expandedClass: "expanded",
+        expandedClass: "w-full",
         inlineClass: "inline",
         menuMobileOverlayClass: "dropdown-backdrop",
         // menuClass:
@@ -251,7 +252,7 @@ const tailwindConfig = {
     timepicker: {},
     tooltip: {
         override: true,
-        rootClass: "tooltip flex relative",
+        rootClass: "tooltip",
         contentClass: "tooltip-content shadow-sm",
         triggerClass: "tooltip-trigger",
         alwaysClass: "is-always",
