@@ -10,6 +10,11 @@
     display: inline-block;
 	vertical-align: middle;
 
+	&.disabled {
+		opacity: 0.5;
+        cursor: not-allowed;
+	}
+
 	.dropdown-menu {
 
 		.dropdown-item {
@@ -27,10 +32,14 @@
 		}
 
 		// Position
-		// &.position-top-left {}
 		// &.position-top-right {}
-		// &.position-bottom-left {}
+		// &.position-top-left {}
 		// &.position-bottom-right {}
+		// &.position-bottom-left {}
+		// &.position-top {}
+		// &.position-right {}
+		// &.position-bottom {}
+		// &.position-left {}
 
 	}
 	&.inline {

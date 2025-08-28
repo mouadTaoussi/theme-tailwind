@@ -9,6 +9,7 @@ $icon-spin-duration: 2s !default;
 
 .icon {
     height: 100%;
+    display: inline-flex;
     // padding: 0.25rem;
     @each $name, $variant in vars.$theme-colors {
         &.text-#{$name} {
