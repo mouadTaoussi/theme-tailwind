@@ -50,7 +50,7 @@ const tailwindConfig = {
     datetimepicker: {},
     dropdown: {
         override: true,
-        rootClass: "dropdown btn-group",
+        rootClass: "dropdown relative btn-group",
         // rootClass: "dropdown btn-group dropdown-menu absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44",
         triggerClass: "dropdown-trigger",
         disabledClass: "disabled",
