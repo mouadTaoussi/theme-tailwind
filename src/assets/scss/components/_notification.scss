@@ -22,6 +22,7 @@ $notification-icon-margin-right: 0.5rem !default;
     }
     .notifictation-wrapper {
         .icon {
+            height: 100%;
             margin-right: $notification-icon-margin-right;
         }
     }
