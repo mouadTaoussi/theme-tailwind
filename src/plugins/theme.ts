@@ -22,20 +22,14 @@ const tailwindConfig = {
             return `is-${variant} inverted`;
         },
     },
-    // autocomplete: {
-    //     override: true,
-    //     rootClass: `
-    //         autocomplete
-    //         w-full max-w-md bg-white border border-gray-300
-    //         rounded-md shadow-sm overflow-hidden text-sm
-    //         focus-within:ring-2 focus-within:ring-indigo-500
-    //         focus-within:border-indigo-500 transition-all
-    //     `,
-    //     itemClass: `px-4 py-2 text-gray-700 cursor-pointer hover:bg-indigo-100 transition-colors`,
-    //     itemHoverClass: `bg-indigo-100 text-indigo-800`,
-    //     itemEmptyClass: `px-4 py-2 text-gray-400 italic text-sm`,
-    //     itemGroupTitleClass: `px-4 py-2 text-xs font-bold text-gray-500 uppercase tracking-wider bg-gray-50`,
-    // },
+    autocomplete: {
+        override: true,
+        rootClass: `autocomplete`,
+        // itemClass: ``,
+        itemHoverClass: `bg-gray-50`,
+        itemEmptyClass: `text-gray-400 italic text-sm`,
+        itemGroupTitleClass: `text-xs font-bold text-gray-300 uppercase tracking-wider bg-gray-50`,
+    },
 
     breadcrumb: {},
     carousel: {},
@@ -51,15 +45,12 @@ const tailwindConfig = {
     dropdown: {
         override: true,
         rootClass: "dropdown relative btn-group",
-        // rootClass: "dropdown btn-group dropdown-menu absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44",
         triggerClass: "dropdown-trigger",
         disabledClass: "disabled",
         expandedClass: "w-full",
         inlineClass: "inline",
         menuMobileOverlayClass: "dropdown-backdrop",
-        // menuClass:
-        //     "z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44",
-        menuClass: (_: string, { computed }: ComponentProps): string => {
+        menuClass: (): string => {
             const classes = [
                 "dropdown-menu",
                 "absolute",
@@ -70,15 +61,15 @@ const tailwindConfig = {
                 "rounded-lg",
                 "shadow-sm",
                 "w-44",
+                "w-full",
             ];
-            // if (computed.hoverable) classes.push("show");
             return classes.join(" ");
         },
         menuPositionClass: "position-",
         menuActiveClass: "show",
         itemTag: "a",
         itemClass:
-            "dropdown-item block px-4 py-2 hover:bg-gray-100 hover:text-white cursor-pointer",
+            "dropdown-item block px-4 py-2 hover:bg-gray-50 cursor-pointer",
         itemActiveClass: "active",
         itemClickableClass: "clickable",
         itemDisabledClass: "disabled",
@@ -103,14 +94,26 @@ const tailwindConfig = {
         override: true,
         rootClass: "input-component",
         inputClass: (_: string, props: ComponentProps): string => {
-            const classes = ["input", "rounded", "shadow-sm", "focus:ring-2"];
+            const classes = [
+                "input",
+                "rounded",
+                "shadow-sm",
+                "focus:ring-2",
+                "w-full",
+            ];
 
             if (props.icon) classes.push("icon-left");
             if (props.iconRight) classes.push("icon-right");
             return classes.join(" ");
         },
         textareaClass: (_: string, props: ComponentProps): string => {
-            const classes = ["input", "rounded", "shadow-sm", "focus:ring-2"];
+            const classes = [
+                "input",
+                "rounded",
+                "shadow-sm",
+                "focus:ring-2",
+                "w-full",
+            ];
 
             if (props.icon) classes.push("icon-left");
             if (props.iconRight) classes.push("icon-right");
