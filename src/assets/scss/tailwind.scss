@@ -1,23 +1,23 @@
 @forward "components/utils/all";
 @forward "tailwindcss";
 
-// @forward "./components/autocomplete";
+@forward "./components/autocomplete";  // @STATUS: Done
 // @forward "./components/breadcrumb";
 @forward "./components/button"; // @STATUS: Done
 // @forward "./components/carousel";
 // @forward "./components/checkbox";
 @forward "./components/collapse"; // @STATUS: Done
 // @forward "./components/datepicker";
-@forward "./components/dropdown";
+@forward "./components/dropdown"; // @STATUS: Done - add mobile and teleport
 // @forward "./components/field";
 @forward "./components/icon"; // @STATUS: Done
 @forward "./components/input"; // @STATUS: Done  - should be mobile responive 
 @forward "./components/loading"; // @STATUS: Done
-// @forward "./components/modal";
+@forward "./components/modal";
 // @forward "./components/menu";
 @forward "./components/notification"; // @STATUS: Done  - should be mobile responive 
 @forward "./components/pagination"; // @STATUS: Done  - should be mobile responive - add sizing
-@forward "./components/radio"; // @STATUS: Pending
+@forward "./components/radio"; // @STATUS: Done
 // @forward "./components/select";
 // @forward "./components/sidebar";
 @forward "./components/skeleton";  // @STATUS: Done

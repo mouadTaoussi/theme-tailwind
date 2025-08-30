@@ -31,6 +31,10 @@
 				background-color: utils.variant-varname('indigo',vars.$variant-degree);
 				color: white;
 			}
+			&.disabled {
+				opacity: 0.5;
+        		cursor: not-allowed;
+			}
 			&:first-child {
 				@apply rounded-t-lg;
 			}

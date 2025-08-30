@@ -1,0 +1,48 @@
+
+@use "sass:map";
+@use "./utils/all" as utils;
+@use "./utils/variables" as vars;
+
+/* @docs */
+
+/* @docs */
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 9999;
+
+    .modal-card, .modal-content {
+        width: 400px;
+        max-height: 90vh;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+        overflow: auto;
+    }
+    .modal-background {
+        // position: relative;
+        // top: 0;
+        // left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.8);
+    }
+    .modal-content {
+
+    }
+    &.is-full-screen {
+
+    }
+}

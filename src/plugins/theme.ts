@@ -145,7 +145,16 @@ const tailwindConfig = {
         scrollClipClass: "is-clipped",
     },
     menu: {},
-    modal: {},
+    modal: {
+        override: true,
+        rootClass: "modal",
+        activeClass: "is-active",
+        overlayClass: "modal-background",
+        contentClass: "modal-content",
+        closeClass: "modal-close is-large",
+        fullScreenClass: "is-full-screen",
+        scrollClipClass: "is-clipped",
+    },
     notification: {
         override: true,
         rootClass:

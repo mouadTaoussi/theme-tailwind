@@ -4,10 +4,6 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-$autocomplete-item-hover-background-color: #f5f5f5;
-$autocomplete-menu-max-height: 200px;
 /* @docs */
 
-.autocomplete {
-    background-color: red;
-}
+.autocomplete {}

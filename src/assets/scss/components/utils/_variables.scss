@@ -4,14 +4,14 @@
 @use "sass:map";
 
 $theme-colors: (
-    "primary"  : "indigo",
+    "primary"  : "blue",
     "info"     : "sky",
     "secondary": "gray",
     "success"  : "green",
     "danger"   : "red",
     "warning"  : "yellow"
 );
-$variant-degree : 500;
+$variant-degree : 700;
 
 $speed-slow: 150ms !default;
 $speed-slower: 250ms !default;
