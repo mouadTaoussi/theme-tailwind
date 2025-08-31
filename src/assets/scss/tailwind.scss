@@ -9,14 +9,14 @@
 @forward "./components/collapse"; // @STATUS: Done
 // @forward "./components/datepicker";
 @forward "./components/dropdown"; // @STATUS: Done - add mobile and teleport
-// @forward "./components/field";
+@forward "./components/field";
 @forward "./components/icon"; // @STATUS: Done
-@forward "./components/input"; // @STATUS: Done  - should be mobile responive 
+@forward "./components/input"; // @STATUS: Done 
 @forward "./components/loading"; // @STATUS: Done
-@forward "./components/modal";
+@forward "./components/modal"; // @STATUS: Done - add mobile and teleport
 // @forward "./components/menu";
-@forward "./components/notification"; // @STATUS: Done  - should be mobile responive 
-@forward "./components/pagination"; // @STATUS: Done  - should be mobile responive - add sizing
+@forward "./components/notification"; // @STATUS: Done 
+@forward "./components/pagination"; // @STATUS: Done - add sizing
 @forward "./components/radio"; // @STATUS: Done
 // @forward "./components/select";
 // @forward "./components/sidebar";
@@ -24,7 +24,7 @@
 // @forward "./components/slider";
 // @forward "./components/steps";
 // @forward "./components/switch";
-@forward "./components/table"; // @STATUS: Pending  - should be mobile responive 
+@forward "./components/table"; // @STATUS: Pending 
 // @forward "./components/tabs";
 // @forward "./components/taginput";
 // @forward "./components/timepicker";
