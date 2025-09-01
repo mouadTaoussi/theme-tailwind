@@ -9,5 +9,83 @@
 .field {
     .label {
         display: block;
+        color: rgb(179, 179, 179);
+        margin-bottom: .25rem;
+    }
+    .help {
+        display: block;
+        font-size: .75rem;
+        margin-top: .25rem;
+        // Variants
+        @each $name, $variant in vars.$theme-colors {
+            &.is-#{$name} {
+                color: utils.variant-varname($variant,vars.$variant-degree);
+            }
+        }
+    }
+    .field-body {
+        .has-addons {
+            display: flex;
+            justify-content: flex-start;
+
+            .button, .input-component, select-component {
+                margin: 0;
+            }
+
+            // Border radius
+            // .input-component:first-child:not(:only-child), .select-component:first-child:not(:only-child)   {
+            //     input, select {
+            //         border-start-end-radius: 0;
+            //         border-end-end-radius: 0;
+            //     }
+            // }
+            // .input-component:last-child:not(:only-child), .select-component:last-child:not(:only-child)   {
+            //     input, select {
+            //         border-color: red;
+            //         border-end-start-radius: 0;
+            //         border-start-start-radius: 0;
+            //     }
+            // }
+            // .button:not(:first-child) {
+            //     border-bottom-left-radius: 0;
+            //     border-top-left-radius: 0;
+            // }
+            // .button:not(:last-child) {
+            //     border-bottom-right-radius: 0;
+            //     border-top-right-radius: 0;
+            // }
+              > button:first-child,
+            > *:first-child:not(:only-child) button,
+            > input:first-child,
+            > *:first-child:not(:only-child) input,
+            > select:first-child,
+            > *:first-child:not(:only-child) select {
+                border-bottom-right-radius: 0;
+                border-top-right-radius: 0;
+            }
+
+            > button:last-child,
+            > *:last-child:not(:only-child) button,
+            > input:last-child,
+            > *:last-child:not(:only-child) input,
+            > select:last-child,
+            > *:last-child:not(:only-child) select {
+                border-bottom-left-radius: 0;
+                border-top-left-radius: 0;
+            }
+
+            > *:not(:first-child):not(:last-child) button,
+            > button:not(:first-child):not(:last-child),
+            > *:not(:first-child):not(:last-child) input,
+            > input:not(:first-child):not(:last-child),
+            > *:not(:first-child):not(:last-child) select,
+            > select:not(:first-child):not(:last-child) {
+                border-radius: 0;
+            }
+        }
+    }
+    
+    &:not(:last-child) {
+        margin-bottom: .25rem;
     }
 }
