@@ -33,28 +33,7 @@
             }
 
             // Border radius
-            // .input-component:first-child:not(:only-child), .select-component:first-child:not(:only-child)   {
-            //     input, select {
-            //         border-start-end-radius: 0;
-            //         border-end-end-radius: 0;
-            //     }
-            // }
-            // .input-component:last-child:not(:only-child), .select-component:last-child:not(:only-child)   {
-            //     input, select {
-            //         border-color: red;
-            //         border-end-start-radius: 0;
-            //         border-start-start-radius: 0;
-            //     }
-            // }
-            // .button:not(:first-child) {
-            //     border-bottom-left-radius: 0;
-            //     border-top-left-radius: 0;
-            // }
-            // .button:not(:last-child) {
-            //     border-bottom-right-radius: 0;
-            //     border-top-right-radius: 0;
-            // }
-              > button:first-child,
+            > button:first-child,
             > *:first-child:not(:only-child) button,
             > input:first-child,
             > *:first-child:not(:only-child) input,
@@ -85,6 +64,8 @@
         }
     }
     
+    // Grouped 
+
     &:not(:last-child) {
         margin-bottom: .25rem;
     }

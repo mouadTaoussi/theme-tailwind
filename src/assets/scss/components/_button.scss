@@ -20,8 +20,8 @@ $btn-padding: 0.50rem 1.75rem !default;
 }
 
 .button {
-    background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
-    color: white;
+    background-color: white;
+    color: black;
     // 
     padding:$btn-padding;
     // 
@@ -34,7 +34,7 @@ $btn-padding: 0.50rem 1.75rem !default;
     // 
     border: 0.005rem;
     border-style: var(--tw-border-style);
-    border-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
+    border-color: rgb(227, 227, 227);
     //     
    &:hover {
         opacity: .9;
@@ -50,6 +50,7 @@ $btn-padding: 0.50rem 1.75rem !default;
         &.is-#{$name} {
             background-color: utils.variant-varname($variant,vars.$variant-degree);
             border-color: utils.variant-varname($variant,vars.$variant-degree);
+            color: white;
             &:hover {
                 opacity: .9;
             }
