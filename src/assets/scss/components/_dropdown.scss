@@ -25,6 +25,10 @@
 	}
 
 	.dropdown-menu {
+		min-width: 12rem;
+		border: 0.005rem;
+		border-style: var(--tw-border-style);
+		border-color: rgb(227, 227, 227);
 
 		.dropdown-item {
 			&.active {
