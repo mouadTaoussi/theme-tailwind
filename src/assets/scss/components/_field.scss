@@ -23,6 +23,25 @@
             }
         }
     }
+
+    &.is-horizontal {
+        display: flex;
+        .field-body {
+            flex-grow: 4;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: .75rem;
+    }
+    
+    .field-label {
+        flex-basis: 0;
+        flex-grow: 1;
+        margin-inline-end: 1.5rem;
+        text-align: right;
+    }
+
     .field-body {
         .has-addons {
             display: flex;
@@ -75,9 +94,5 @@
                 margin: 0;
             }
         }
-    }
-    
-    &:not(:last-child) {
-        margin-bottom: .75rem;
     }
 }
