@@ -62,11 +62,22 @@
                 border-radius: 0;
             }
         }
+
+        // Grouped 
+        .is-grouped {
+            display: flex;
+            gap: .75rem;
+            justify-content: flex-start;
+            &.is-grouped-multiline {
+                flex-wrap: wrap;
+            }
+            button , .input , .select {
+                margin: 0;
+            }
+        }
     }
     
-    // Grouped 
-
     &:not(:last-child) {
-        margin-bottom: .25rem;
+        margin-bottom: .75rem;
     }
 }

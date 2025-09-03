@@ -5,7 +5,7 @@ const tailwindConfig = {
     button: {
         override: true,
         rootClass:
-            "button duration-100 ease-in shadow-sm rounded focus:outline-offset-2 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500",
+            "button duration-100 ease-in shadoww-sm rounded focus:outline-offset-2 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500",
         wrapperClass: "button-wrapper",
         sizeClass: "is-",
         variantClass: "is-",
@@ -59,7 +59,7 @@ const tailwindConfig = {
                 "divide-y",
                 "divide-gray-100",
                 "rounded-lg",
-                "shadow-sm",
+                "shadoww-sm",
                 "w-44",
                 "w-full",
             ];
@@ -111,7 +111,7 @@ const tailwindConfig = {
             const classes = [
                 "input",
                 "rounded",
-                "shadow-sm",
+                "shadoww-sm",
                 "focus:ring-2",
                 "w-full",
             ];
@@ -124,7 +124,7 @@ const tailwindConfig = {
             const classes = [
                 "input",
                 "rounded",
-                "shadow-sm",
+                "shadoww-sm",
                 "focus:ring-2",
                 "w-full",
             ];
@@ -172,7 +172,7 @@ const tailwindConfig = {
     notification: {
         override: true,
         rootClass:
-            "notification alert relative flex items-center px-4 py-3 my-3 rounded space-x-2 shadow-sm duration-100 ease-in",
+            "notification alert relative flex items-center px-4 py-3 my-3 rounded space-x-2 shadoww-sm duration-100 ease-in",
         variantClass: "is-",
         wrapperClass: "notifictation-wrapper flex items-center",
         contentClass: "notifictation-content",
@@ -279,7 +279,7 @@ const tailwindConfig = {
     tooltip: {
         override: true,
         rootClass: "tooltip",
-        contentClass: "tooltip-content shadow-sm",
+        contentClass: "tooltip-content shadoww-sm",
         triggerClass: "tooltip-trigger",
         alwaysClass: "is-always",
         multilineClass: "is-multiline",
