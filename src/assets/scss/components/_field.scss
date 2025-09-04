@@ -4,14 +4,19 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-
 /* @docs */
+
 .field {
+    &:not(:last-child) {
+        margin-bottom: .75rem;
+    }
+
     .label {
         display: block;
         color: rgb(179, 179, 179);
         margin-bottom: .25rem;
     }
+    
     .help {
         display: block;
         font-size: .75rem;
@@ -29,10 +34,6 @@
         .field-body {
             flex-grow: 4;
         }
-    }
-
-    &:not(:last-child) {
-        margin-bottom: .75rem;
     }
     
     .field-label {
