@@ -73,7 +73,7 @@ const tailwindConfig = {
         itemActiveClass: "active",
         itemClickableClass: "clickable",
         itemDisabledClass: "disabled",
-        mobileClass: "dropdown-modal",
+        mobileClass: "is-mobile-modal",
         teleportClass: "teleported",
     },
     field: {
