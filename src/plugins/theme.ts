@@ -50,6 +50,7 @@ const tailwindConfig = {
         expandedClass: "w-full",
         inlineClass: "inline",
         menuMobileOverlayClass: "dropdown-backdrop",
+        overlayClass: "dropdown-backdrop",
         menuClass: (): string => {
             const classes = [
                 "dropdown-menu",

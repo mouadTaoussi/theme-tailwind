@@ -109,15 +109,25 @@
 		}
     }
 
-	// &.is-mobile-modal {
-	// 	@media only screen and (max-width: 600px) {
-	// 		.dropdown-menu {
-	// 			position: fixed;
-	// 			top: 50%;
-	// 			left: 50%;
-	// 			width: 80%;
-	// 			transform: translateX(-50%) translateY(-50%);
-	// 		}
-	// 	}
-	// }
+
+	// Mobile dropdown
+	&.is-mobile-modal:not(.inline) {
+		.dropdown-menu {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			width: 80%;
+			transform: translateX(-50%) translateY(-50%);
+			z-index: 1055;
+		}
+	}
+	.dropdown-backdrop {
+		position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: 100vw;
+	    height: 100vh;
+		background-color: rgba(0,0,0,.8);
+		z-index: 1050;
+	}
 }
