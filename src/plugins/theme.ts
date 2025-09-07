@@ -1,5 +1,5 @@
 import type { ComponentProps } from "@oruga-ui/oruga-next";
-// import { isTrueish } from "@oruga-ui/oruga-next";
+import { isTrueish } from "@oruga-ui/oruga-next";
 
 const tailwindConfig = {
     button: {
@@ -105,9 +105,13 @@ const tailwindConfig = {
         clickableClass: "clickable",
         spinClass: "animate-spin",
     },
-    input: {
+    input: { // TTTT
         override: true,
-        rootClass: "input-component",
+        rootClass: (_: string, props: ComponentProps): string => {
+            const classes = ["input-component"];
+            if (isTrueish(props.icon)) classes.push("has-icons-left");
+            return classes.join(" ");
+        },
         inputClass: (_: string, props: ComponentProps): string => {
             const classes = [
                 "input",
@@ -146,8 +150,7 @@ const tailwindConfig = {
         roundedClass: "rounded-xl",
         iconLeftClass: "icon-left",
         iconRightClass: "icon-right",
-        // iconLeftSpaceClass: 'input-group-text',
-        // iconRightSpaceClass: 'input-group-text',
+        hasIconRightClass: "has-icons-right",
         counterClass: "help counter",
     },
     loading: {
@@ -220,7 +223,37 @@ const tailwindConfig = {
         variantClass: "is-",
         sizeClass: "is-",
     },
-    select: {},
+    select: { // TTTT
+        override: true,
+        rootClass: (): string => {
+            const classes = ["select-component", "control"];
+            return classes.join(" ");
+        },
+        selectClass: (_: string, props: ComponentProps): string => {
+            const classes = [
+                "select",
+                "rounded",
+                "shadoww-sm",
+                "focus:ring-2",
+                "w-full",
+            ];
+            if (isTrueish(props.size)) classes.push(`input-${props.size}`);
+            if (isTrueish(props.rounded)) classes.push("rounded-xl");
+            if (isTrueish(props.multiple)) classes.push("is-multiple");
+            if (isTrueish(props.disabled)) classes.push("disabled");
+            // if (isTrueish(props.icon)) classes.push("has-icons-left");
+            // if (isTrueish(props.iconRight)) classes.push("has-icons-right");
+            return classes.join(" ");
+        },
+        rootVariantClass: "border-",
+        expandedClass: "w-full",
+        iconLeftClass: "is-left",
+        iconRightClass: "is-right",
+        placeholderClass: "is-empty",
+        iconRightSpaceClass: "has-icon-right",
+        iconLeftSpaceClass: "has-icon-left",
+        arrowClass: "has-arrow",
+    },
     sidebar: {},
     skeleton: {
         override: true,

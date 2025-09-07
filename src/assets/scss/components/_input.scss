@@ -7,30 +7,30 @@
 $input-icon-spacer: 0.75rem !default;
 $input-border-color: rgb(227, 227, 227) !default;
 $input-border-size: 0.005rem !default;
-$input-padding: 0.50rem 0 !default;
+$input-padding: 0.50rem 0.25rem !default;
 $input-font-size: var(--text-base) !default;
 /* @docs */
 
 @mixin input-size ($padding,$padding-left,$font-size){
     padding: $padding;
-    padding-left: $padding-left;
+    // padding-left: $padding-left;
     // 
     font-size: $font-size;
 }
 
-.select,
 .textarea,
 .input-component {
     position: relative;
     display: inline-block;
-    
+
+    textarea,
     .input {
         border: $input-border-size;
         border-style: var(--tw-border-style);
         border-color: $input-border-color;
         // 
         padding: $input-padding;
-        padding-left: 2rem;
+        // padding-left: 2rem;
         // 
         font-size: $input-font-size;
         // 
@@ -48,6 +48,17 @@ $input-font-size: var(--text-base) !default;
         }
         &.input-large {
             @include input-size(0.75rem 0, 2.75rem, var(--text-lg));
+        }
+    }
+
+    &.has-icons-left {
+        .input {
+            padding-left: 2rem;
+        }
+    }
+    &.has-icons-right {
+        .input {
+            padding-right: 2rem;
         }
     }
 
