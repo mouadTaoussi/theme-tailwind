@@ -66,6 +66,13 @@ $select-font-size: var(--text-base) !default;
         // 
         font-size: $select-font-size;
 
+        &.has-icons-left {
+            padding-left: 2rem;
+        }
+        &.has-icons-right {
+            padding-right: 2rem;
+        }
+
         &.input-small {
             @include select-size(0.25rem 1rem, 1.75rem, var(--text-sm));
         }
