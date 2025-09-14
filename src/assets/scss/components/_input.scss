@@ -51,7 +51,7 @@ $input-font-size: var(--text-base) !default;
         // 
         font-size: $input-font-size;
         line-height: normal;
-        
+
         // Variants
         @each $name, $variant in vars.$theme-colors {
             &.border-#{$name} {
@@ -61,15 +61,12 @@ $input-font-size: var(--text-base) !default;
 
         &.input-small {
             font-size: var(--text-xs);
-            line-height: normal;
         }
         &.input-medium {
             font-size: var(--text-base);
-            line-height: normal;
         }
         &.input-large {
             font-size: var(--text-2xl);
-            line-height: normal;
             &.icon-left {
                 padding-left: 3rem;
             }

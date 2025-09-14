@@ -8,16 +8,10 @@
 $btn-spacer: 0.5rem !default;
 $btn-font-size: var(--text-base) !default;
 $btn-font-weight: 500 !default;
-$btn-line-height: var(--text-base--line-height) !default;
 $btn-padding: 0.50rem 1.75rem !default;
 // $btn-box-shadow: 1px 1px 16px rgba(207,207,207,10) !default;
 /* @docs */
 
-@mixin button-size ($padding, $font-size, $line-height){
-    padding: $padding;
-    font-size: $font-size;
-    line-height: $line-height;
-}
 
 .button {
     background-color: white;
@@ -28,7 +22,7 @@ $btn-padding: 0.50rem 1.75rem !default;
     font-size: $btn-font-size;
     font-weight: $btn-font-weight;
     // 
-    line-height: $btn-line-height;
+    line-height: normal;
     // 
     // transition: all vars.$speed-slow var(--ease-in);  -> duration-100 ease-in
     // 
@@ -79,13 +73,13 @@ $btn-padding: 0.50rem 1.75rem !default;
     }
 
     &.is-small {
-        @include button-size(0.125rem 1.5rem, var(--text-sm), var(--text-sm--line-height));
+        font-size: var(--text-xs);
     }
     &.is-medium {
-        @include button-size(0.25rem 1.5rem, var(--text-base), var(--text-base--line-height));
+        font-size: var(--text-base);
     }
     &.is-large {
-        @include button-size(0.5rem 1.5rem, var(--text-lg), var(--text-lg--line-height));
+        font-size: var(--text-2xl);
     }
 
     &.disabled {
