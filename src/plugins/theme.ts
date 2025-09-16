@@ -308,7 +308,15 @@ const tailwindConfig = {
         mobileSortClass: "table-mobile-sort",
     },
     tabs: {},
-    taginput: {},
+    taginput: {
+        override: true,
+        rootClass: "taginput control",
+        containerClass: "taginput-container",
+        closeClass: "delete is-small",
+        itemClass: "tag",
+        variantClass: "is-",
+        expandedClass: "is-expanded",
+    },
     timepicker: {},
     tooltip: {
         override: true,
