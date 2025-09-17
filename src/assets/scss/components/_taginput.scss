@@ -4,9 +4,43 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-
+$taginput-border-color: rgb(227, 227, 227) !default;
+$taginput-border-size: 0.005rem !default;
 /* @docs */
 
 .taginput {
+    position: relative;
 
+    .taginput-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        // flex-wrap: wrap;
+        padding: 0;
+        height: auto;
+        //
+        border: $taginput-border-size;
+        border-style: var(--tw-border-style);
+        border-color: $taginput-border-color;
+
+        cursor: text;
+
+        &:focus {
+            box-shadow: 1px 1px 1px black;
+        }
+
+        input {
+            border: 0;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        .tag {
+            display: inline-flex;
+            // background-color: rgba(0,0,0,.1);
+            margin: .25rem;
+            padding: 0 .25rem;
+        }
+    }
 }

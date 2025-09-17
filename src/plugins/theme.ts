@@ -311,11 +311,11 @@ const tailwindConfig = {
     taginput: {
         override: true,
         rootClass: "taginput control",
-        containerClass: "taginput-container",
+        containerClass: "taginput-container rounded",
         closeClass: "delete is-small",
-        itemClass: "tag",
+        itemClass: "tag rounded bg-gray-100",
         variantClass: "is-",
-        expandedClass: "is-expanded",
+        expandedClass: "w-full",
     },
     timepicker: {},
     tooltip: {
