@@ -41,6 +41,13 @@ $taginput-border-size: 0.005rem !default;
             // background-color: rgba(0,0,0,.1);
             margin: .25rem;
             padding: 0 .25rem;
+
+            @each $name, $variant in vars.$theme-colors {
+                &.is-#{$name} {
+                    background-color: utils.variant-varname($variant,vars.$variant-degree);
+                    color: white;
+                }
+            }
         }
     }
 }
