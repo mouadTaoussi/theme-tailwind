@@ -25,8 +25,8 @@ $taginput-border-size: 0.005rem !default;
 
         cursor: text;
 
-        &:focus {
-            box-shadow: 1px 1px 1px black;
+        &:focus-within {
+            outline: solid black; 
         }
 
         input {
