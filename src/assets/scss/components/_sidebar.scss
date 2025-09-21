@@ -1,0 +1,37 @@
+
+@use "sass:map";
+@use "./utils/all" as utils;
+@use "./utils/variables" as vars;
+
+/* @docs */
+/* @docs */
+
+.sidebar {
+    position: absolute;
+
+    &.is-inline {
+       .sidebar-content, .sidebar-background {
+            position: static;
+            display: inline;
+       }
+    }
+    
+    .sidebar-content {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        background: white;
+        position: fixed;
+        transition: all .2s ease-in-out;
+    }
+    .sidebar-background {
+        background-color: rgba(0,0,0,.8);
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+    }
+}
