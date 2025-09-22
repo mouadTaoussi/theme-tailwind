@@ -10,9 +10,13 @@
     position: absolute;
 
     &.is-inline {
+        position: static;
        .sidebar-content, .sidebar-background {
             position: static;
             display: inline;
+            border: 0.005rem;
+            border-style: var(--tw-border-style);
+            border-color: rgb(227, 227, 227);
        }
     }
     
@@ -21,9 +25,18 @@
         top: 0;
         left: 0;
         height: 100vh;
+        width: auto;
         background: white;
         position: fixed;
         transition: all .2s ease-in-out;
+        z-index: 9999;
+
+        // &.is-fullheight {
+        //     width: 100vw;
+        // }
+        &.is-expanded:hover {
+            width: 100vw;
+        }
     }
     .sidebar-background {
         background-color: rgba(0,0,0,.8);
@@ -33,5 +46,7 @@
         width: 100vw;
         height: 100vh;
         position: fixed;
+        transition: all .2s ease-in-out;
+        z-index: 40;
     }
 }
