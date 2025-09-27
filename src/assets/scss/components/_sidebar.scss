@@ -21,21 +21,59 @@
     }
     
     .sidebar-content {
-        position: relative;
-        top: 0;
-        left: 0;
-        height: 100vh;
+        // position: relative;
+        // top: 0;
+        // left: 0;
+        // bottom: 0;
+        // height: 100vh;
+        // width: auto;
+        // background: white;
+        // position: fixed;
+        // transition: all .2s ease-in-out;
+        // z-index: 9999;
+        background-color: white;
         width: auto;
-        background: white;
+        height: auto;
         position: fixed;
-        transition: all .2s ease-in-out;
         z-index: 9999;
 
-        // &.is-fullheight {
-        //     width: 100vw;
-        // }
+        &.is-fullwidth {
+            width: 100vw;
+        }
+        &.is-fullheight {
+            height: 100vh;
+        }
+
         &.is-expanded:hover {
             width: 100vw;
+        }
+
+        &.is-left {
+            height: 100vh;
+            top: 0;
+            left: 0;
+            bottom: 0;
+        }
+
+        &.is-right {
+            height: 100vh;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        &.is-top {
+            width: 100vw;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+
+        &.is-bottom {
+            width: 100vw;
+            right: 0;
+            left: 0;
+            bottom: 0;
         }
     }
     .sidebar-background {
