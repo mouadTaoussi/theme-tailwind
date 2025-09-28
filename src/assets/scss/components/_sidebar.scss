@@ -21,21 +21,12 @@
     }
     
     .sidebar-content {
-        // position: relative;
-        // top: 0;
-        // left: 0;
-        // bottom: 0;
-        // height: 100%;
-        // width: auto;
-        // background: white;
-        // position: fixed;
-        transition: all .2s ease-in-out;
-        // z-index: 9999;
-        background-color: white;
-        width: auto;
         height: auto;
+        width: auto;
+        background: white;
         position: fixed;
         z-index: 9999;
+        transition: all .2s ease-in-out;
 
         &.is-fullwidth {
             width: 100%;
