@@ -33,7 +33,15 @@ const tailwindConfig = {
 
     breadcrumb: {},
     carousel: {},
-    checkbox: {},
+    checkbox: {
+        override: true,
+        rootClass: "checkbox",
+        disabledClass: "is-disabled",
+        inputClass: "check rounded",
+        labelClass: "control-label",
+        variantClass: "is-",
+        sizeClass: "is-",
+    },
     collapse: {
         override: true,
         rootClass: "collapse-component rounded-lg my-4",

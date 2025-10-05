@@ -1,0 +1,113 @@
+
+@use "sass:map";
+@use "./utils/all" as utils;
+@use "./utils/variables" as vars;
+
+/* @docs */
+$checkbox-border-color: rgb(227, 227, 227) !default;
+$checkbox-border-size: 2px !default;
+$checkbox-font-size: 15px !default;
+$checkbox-padding: .5em .75em !default;
+$checkbox-control-label-padding-left: 11px !default;
+$checkbox-active-background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree) !default;
+/* @docs */
+
+@mixin checkbox-size ($control,$check,$checked){
+    .control-label {
+        font-size: $control;
+    }
+    .check { 
+        width: $check;
+        height: $check;
+    }
+    // .check::before {
+    //     content: '';
+    //     width: $checked;
+    //     height: $checked;
+    // }
+}
+
+.checkbox {
+    padding: $checkbox-padding;
+    //
+    vertical-align:top;
+    //
+    display: flex;
+    align-items: center;
+
+    .control-label {
+        padding-left: $checkbox-control-label-padding-left;
+        font-size: $checkbox-font-size;
+    }
+    .check {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        //
+        outline: none;
+        //
+        font-size: inherit;
+        //
+        width: 1.25em;
+        height: 1.25em;
+        //
+        flex-shrink: 0;
+        //
+        border: $checkbox-border-size solid $checkbox-border-color;
+        //
+        transition: background .15s ease-in;
+        //
+        background: transparent;
+        
+        &:checked {
+            border-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
+            //
+            background: 
+                $checkbox-active-background-color 
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:white' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E")
+                no-repeat center center;
+        }
+        &:hover {
+            border-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
+        }
+        &:focus {
+            box-shadow: .1px .1px 10px $checkbox-active-background-color;
+        }
+    }
+
+    // Variants
+    // @each $name, $variant in vars.$theme-colors {
+    //     &.is-#{$name} {
+    //         &:checked {
+    //             border-color: $variant;
+    //             //
+    //             background: 
+    //                 $variant 
+    //                 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:white' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E")
+    //                 no-repeat center center;
+    //         }
+    //         &:hover {
+    //             border-color: $variant;
+    //         }
+    //         &:focus {
+    //             box-shadow: .1px .1px 10px $variant;
+    //         }
+    //     }
+    // }
+
+    // Size
+    &.is-small {
+        @include checkbox-size(8px, 1rem, .7rem);
+    }
+    &.is-medium {
+        @include checkbox-size(12px, 1.25rem, 1rem);
+    }
+    &.is-large {
+        @include checkbox-size(20px, 1.50rem, 1.25rem);
+    }
+
+    &.is-disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
