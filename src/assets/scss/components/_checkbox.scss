@@ -4,7 +4,7 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-$checkbox-border-color: rgb(227, 227, 227) !default;
+$checkbox-border-color: utils.variant-varname(map.get(vars.$theme-colors, "secondary"),vars.$variant-degree) !default;
 $checkbox-border-size: 2px !default;
 $checkbox-font-size: 15px !default;
 $checkbox-padding: .5em .75em !default;

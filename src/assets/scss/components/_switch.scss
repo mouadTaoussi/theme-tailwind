@@ -1,0 +1,72 @@
+
+@use "sass:map";
+@use "./utils/all" as utils;
+@use "./utils/variables" as vars;
+
+/* @docs */
+$switch-border-color: rgb(227, 227, 227) !default;
+$switch-border-size: 2px !default;
+$switch-font-size: 15px !default;
+$switch-border-radius: .400rem !default;
+$switch-padding: .5em .75em !default;
+$switch-control-label-padding-left: 11px !default;
+$switch-active-background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree) !default;
+/* @docs */
+
+@mixin switch-size ($control,$check,$checked){
+    .control-label {
+        font-size: $control;
+    }
+    .check { 
+        width: $check;
+        height: $check;
+    }
+}
+
+.switch {
+    padding: $switch-padding;
+    //
+    vertical-align:top;
+    //
+    display: flex;
+    align-items: center;
+
+    .control-label {
+        padding-left: $switch-control-label-padding-left;
+        font-size: $switch-font-size;
+    }
+
+    .check {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        //
+        font-size: inherit;
+        //
+        border-radius: $switch-border-radius;
+        border: 2px solid utils.variant-varname(map.get(vars.$theme-colors, "secondary"),vars.$variant-degree);
+        //
+        width: 2.75rem;
+        height: 1.25rem;
+        //
+        flex-shrink: 0;
+        //
+        outline: none;
+    }
+
+    // Size
+    &.is-small {
+        @include switch-size(8px, 1rem, .7rem);
+    }
+    &.is-medium {
+        @include switch-size(12px, 1.25rem, 1rem);
+    }
+    &.is-large {
+        @include switch-size(20px, 1.50rem, 1.25rem);
+    }
+
+    &.is-disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}

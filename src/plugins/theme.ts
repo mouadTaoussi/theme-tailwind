@@ -298,7 +298,18 @@ const tailwindConfig = {
     },
     slider: {},
     steps: {},
-    switch: {},
+    switch: {
+        override: true,
+        rootClass: "switch",
+        switchClass: "check",
+        positionClass: (value: string): string => `has-${value}-label`,
+        roundedClass: "is-rounded",
+        labelClass: "control-label",
+        sizeClass: "is-",
+        variantClass: "is-",
+        passiveVariantClass: "is-",
+        disabledClass: "is-disabled",
+    },
     table: {
         // @TODO: Integrate Tailwind
         override: true,
