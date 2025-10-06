@@ -20,11 +20,6 @@ $checkbox-active-background-color: utils.variant-varname(map.get(vars.$theme-col
         width: $check;
         height: $check;
     }
-    // .check::before {
-    //     content: '';
-    //     width: $checked;
-    //     height: $checked;
-    // }
 }
 
 .checkbox {
