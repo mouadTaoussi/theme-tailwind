@@ -7,7 +7,7 @@
 $switch-border-color: rgb(227, 227, 227) !default;
 $switch-border-size: 2px !default;
 $switch-font-size: 15px !default;
-$switch-border-radius: .400rem !default;
+$switch-border-radius: .500rem !default;
 $switch-padding: .5em .75em !default;
 $switch-control-label-padding-left: 11px !default;
 $switch-active-background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree) !default;
@@ -36,10 +36,13 @@ $switch-active-background-color: utils.variant-varname(map.get(vars.$theme-color
         font-size: $switch-font-size;
     }
 
-    .check {
+    input {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+    }
+
+    .check {
         //
         font-size: inherit;
         //
@@ -53,6 +56,16 @@ $switch-active-background-color: utils.variant-varname(map.get(vars.$theme-color
         //
         outline: none;
     }
+    // .check::before {
+    //     content: ''; 
+    // }
+    // .check:checked {
+    //     border: $radio-active-background-color 2px solid;
+    // }
+    // .check:checked::before {
+    //     content: '';
+    //     transform: scale(.6);
+    // }
 
     // Size
     &.is-small {
