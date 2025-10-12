@@ -301,7 +301,8 @@ const tailwindConfig = {
     switch: {
         override: true,
         rootClass: "switch",
-        switchClass: "check",
+        // switchClass: "check",
+        inputClass: "check",
         positionClass: (value: string): string => `has-${value}-label`,
         roundedClass: "is-rounded",
         labelClass: "control-label",
