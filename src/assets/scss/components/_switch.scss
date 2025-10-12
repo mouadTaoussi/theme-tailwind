@@ -43,22 +43,34 @@ $switch-active-background-color: utils.variant-varname(map.get(vars.$theme-color
     }
 
     .check {
-        //
-        font-size: inherit;
-        //
-        border-radius: $switch-border-radius;
-        border: 2px solid utils.variant-varname(map.get(vars.$theme-colors, "secondary"),vars.$variant-degree);
-        //
-        width: 2.75rem;
-        height: 1.25rem;
-        //
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
         flex-shrink: 0;
-        //
-        outline: none;
+        font-size: inherit;
+        width: 2.75rem;
+        height: 3,4rem;
+        padding: .2rem;
+        background: gray;
+        border-radius: $switch-border-radius;
+        transition: all vars.$speed-slow var(--ease-in); 
     }
-    // .check::before {
-    //     content: ''; 
-    // }
+    .check::before {
+        content: "";
+        display: block;
+        font-size: inherit;
+        border-radius: $switch-border-radius;
+        width: calc((2.75rem - .2rem * 2) / 2);
+        height: calc((2.75rem - .2rem * 2) * .5);
+        background: white;
+        box-shadow: 0 3px 1px #0000000d, 0 2px 2px #0000001a, 0 3px 3px #0000000d;
+        transition: all vars.$speed-slow var(--ease-in); 
+        will-change: transform;
+        transform-origin: left;
+    }
     // .check:checked {
     //     border: $radio-active-background-color 2px solid;
     // }
