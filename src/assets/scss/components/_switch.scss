@@ -8,8 +8,8 @@ $switch-border-color: rgb(227, 227, 227) !default;
 $switch-border-size: 2px !default;
 $switch-font-size: 15px !default;
 $switch-border-radius: .500rem !default;
-$switch-padding: .5em .75em !default;
-$switch-width: 2.75rem !default;
+$switch-padding: .2rem !default;
+$switch-width: 1.75rem !default;
 $switch-control-label-padding-left: 11px !default;
 $switch-active-background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree) !default;
 /* @docs */
@@ -23,12 +23,12 @@ $switch-active-background-color: utils.variant-varname(map.get(vars.$theme-color
     }
     .check::before {
         content: "";
-        width: calc(($check - .2rem * 2) / 2);
-        height: calc(($check - .2rem * 2) * .5);
+        width: calc(($check - $switch-padding * 2) / 2);
+        height: calc(($check - $switch-padding * 2) * .5);
     }
     .check:checked::before {
         content: '';
-        transform: translateX(calc(($check - .2rem * 2) / 2));
+        transform: translateX(calc(($check - $switch-padding * 2) / 2));
     }
 }
 
@@ -62,8 +62,8 @@ $switch-active-background-color: utils.variant-varname(map.get(vars.$theme-color
         font-size: inherit;
         width: $switch-width;
         height: auto;
-        padding: .2rem;
-        background: gray;
+        padding: $switch-padding;
+        background: rgb(202, 202, 202);
         border-radius: $switch-border-radius;
         transition: all vars.$speed-slow var(--ease-in); 
     }
@@ -72,17 +72,17 @@ $switch-active-background-color: utils.variant-varname(map.get(vars.$theme-color
         display: block;
         font-size: inherit;
         border-radius: $switch-border-radius;
-        width: calc(($switch-width - .2rem * 2) / 2);
-        height: calc(($switch-width - .2rem * 2) * .5);
+        width: calc(($switch-width - $switch-padding * 2) / 2);
+        height: calc(($switch-width - $switch-padding * 2) * .5);
         background: white;
-        box-shadow: 0 3px 1px #0000000d, 0 2px 2px #0000001a, 0 3px 3px #0000000d;
+        // box-shadow: 0 3px 1px #0000000d, 0 2px 2px #0000001a, 0 3px 3px #0000000d;
         transition: all vars.$speed-slow var(--ease-in); 
         will-change: transform;
         transform-origin: left;
     }
     .check:checked::before {
         content: '';
-        transform: translateX(calc(($switch-width - .2rem * 2) / 2));
+        transform: translateX(calc(($switch-width - $switch-padding * 2) / 2));
     }
 
     // Variants
@@ -96,7 +96,7 @@ $switch-active-background-color: utils.variant-varname(map.get(vars.$theme-color
 
     // Size
     &.is-small {
-        @include switch-size(8px, 1rem);
+        @include switch-size(8px, 1.25rem);
     }
     &.is-medium {
         @include switch-size(12px, 1.50rem);
