@@ -8,7 +8,7 @@ $switch-border-color: rgb(227, 227, 227) !default;
 $switch-border-size: 2px !default;
 $switch-font-size: 15px !default;
 $switch-border-radius: .500rem !default;
-$switch-padding: .2rem !default;
+$switch-padding: .15rem !default;
 $switch-width: 1.75rem !default;
 $switch-control-label-padding-left: 11px !default;
 $switch-active-background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree) !default;
