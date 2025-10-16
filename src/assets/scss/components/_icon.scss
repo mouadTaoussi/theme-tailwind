@@ -1,5 +1,6 @@
 
 @use "sass:map";
+@use "sass:list";
 @use "./utils/all" as utils;
 @use "./utils/variables" as vars;
 
@@ -11,9 +12,12 @@ $icon-spin-duration: 2s !default;
     // height: 100%;
     display: inline-flex;
     // padding: 0.25rem;
-    @each $name, $variant in vars.$theme-colors {
+    @each $name, $pair in vars.$theme-colorss {
+        $variant: list.nth($pair, 1);
+        $variant-invert: list.nth($pair, 2);
+
         &.text-#{$name} {
-            color: utils.variant-varname($variant,vars.$variant-degree);
+            color: $variant;
         }
     }
 
