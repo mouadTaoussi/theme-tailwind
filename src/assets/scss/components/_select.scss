@@ -1,5 +1,6 @@
 
 @use "sass:map";
+@use "sass:list";
 @use "./utils/all" as utils;
 @use "./utils/variables" as vars;
 
@@ -43,10 +44,13 @@ $select-arrow-size: 1rem !default;
     }
 
     // Variants
-    @each $name, $variant in vars.$theme-colors {
+    @each $name, $pair in vars.$theme-colorss {
+        $variant: list.nth($pair, 1);
+        $variant-invert: list.nth($pair, 2);
+        
         &.border-#{$name} {
             .select {
-                border-color: utils.variant-varname($variant,vars.$variant-degree);
+                border-color: $variant;
             }
         }
     }

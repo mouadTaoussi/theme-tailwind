@@ -1,5 +1,6 @@
 
 @use "sass:map";
+@use "sass:list";
 @use "./utils/all" as utils;
 @use "./utils/variables" as vars;
 
@@ -84,24 +85,27 @@ $radio-control-label-padding-left: 11px !default;
     }
 
     // Variant 
-    @each $name, $variant in vars.$theme-colors {
+    @each $name, $pair in vars.$theme-colorss {
+        $variant: list.nth($pair, 1);
+        $variant-invert: list.nth($pair, 2);
+
         &.is-#{$name} {
             .check {
-                border: 2px solid utils.variant-varname($variant,vars.$variant-degree);
+                border: 2px solid $variant;
             }
             .check:hover {
-                border: utils.variant-varname($variant,vars.$variant-degree) 2px solid;
+                border: $variant 2px solid;
             }
             .check:focus {
-                box-shadow: .1px .1px 10px utils.variant-varname($variant,vars.$variant-degree);
+                box-shadow: .1px .1px 10px $variant;
             }
             .check::before {
                 content: '';
-                background-color: utils.variant-varname($variant,vars.$variant-degree);
-                border: utils.variant-varname($variant,vars.$variant-degree) 2px solid;
+                background-color: $variant;
+                border: $variant 2px solid;
             }
             .check:checked {
-                border: utils.variant-varname($variant,vars.$variant-degree) 2px solid;
+                border: $variant 2px solid;
             }
         }
     }

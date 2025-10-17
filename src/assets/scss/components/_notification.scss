@@ -1,5 +1,6 @@
 
 @use "sass:map";
+@use "sass:list";
 @use "./utils/all" as utils;
 @use "./utils/variables" as vars;
 
@@ -15,9 +16,12 @@ $notification-icon-margin-right: 0.5rem !default;
     background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
     color: white;
    
-    @each $name, $variant in vars.$theme-colors {
+    @each $name, $pair in vars.$theme-colorss {
+        $variant: list.nth($pair, 1);
+        $variant-invert: list.nth($pair, 2);
+
         &.is-#{$name} {
-            background-color: utils.variant-varname($variant,vars.$variant-degree);
+            background-color: $variant;
         }
     }
     .notifictation-wrapper {

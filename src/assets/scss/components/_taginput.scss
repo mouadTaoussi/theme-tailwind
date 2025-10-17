@@ -1,5 +1,6 @@
 
 @use "sass:map";
+@use "sass:list";
 @use "./utils/all" as utils;
 @use "./utils/variables" as vars;
 
@@ -42,9 +43,12 @@ $taginput-border-size: 0.005rem !default;
             margin: .25rem;
             padding: 0 .25rem;
 
-            @each $name, $variant in vars.$theme-colors {
+            @each $name, $pair in vars.$theme-colorss {
+                $variant-invert: list.nth($pair, 2);
+                $variant: list.nth($pair, 1);
+
                 &.is-#{$name} {
-                    background-color: utils.variant-varname($variant,vars.$variant-degree);
+                    background-color: $variant;
                     color: white;
                 }
             }

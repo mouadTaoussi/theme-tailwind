@@ -1,5 +1,6 @@
 
 @use "sass:map";
+@use "sass:list";
 @use "./utils/all" as utils;
 @use "./utils/variables" as vars;
 
@@ -134,29 +135,32 @@ $tooltip-font-size: 0.85rem !default;
             }
         }
         
-         @each $name, $variant in vars.$theme-colors {
+         @each $name, $pair in vars.$theme-colorss {
+            $variant-invert: list.nth($pair, 2);
+            $variant: list.nth($pair, 1);
+
             &.is-#{$name} {
-                background-color: utils.variant-varname($variant,vars.$variant-degree);
-                border-color: utils.variant-varname($variant,vars.$variant-degree);
+                background-color: $variant;
+                border-color: $variant;
                 
                 &.is-top {
                     &::before {
-                        border-top:$tooltip-arrow-size solid utils.variant-varname($variant,vars.$variant-degree);
+                        border-top:$tooltip-arrow-size solid $variant;
                     }
                 }
                 &.is-bottom {
                     &::before {
-                        border-bottom:$tooltip-arrow-size solid utils.variant-varname($variant,vars.$variant-degree);
+                        border-bottom:$tooltip-arrow-size solid $variant;
                     }
                 }
                 &.is-right {
                     &::before {
-                        border-right:$tooltip-arrow-size solid utils.variant-varname($variant,vars.$variant-degree);
+                        border-right:$tooltip-arrow-size solid $variant;
                     }
                 }
                 &.is-left {
                     &::before {
-                        border-left:$tooltip-arrow-size solid utils.variant-varname($variant,vars.$variant-degree);   
+                        border-left:$tooltip-arrow-size solid $variant;   
                     }
                 }
                 // If light and dark colors are provided

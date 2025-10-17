@@ -1,5 +1,6 @@
 
 @use "sass:map";
+@use "sass:list";
 @use "./utils/all" as utils;
 @use "./utils/variables" as vars;
 
@@ -34,13 +35,16 @@ $upload-border-radius: 3px !default;
         border-radius: $upload-border-radius;
     }
 
-    @each $name, $variant in vars.$theme-colors {
+    @each $name, $pair in vars.$theme-colorss {
+            $variant-invert: list.nth($pair, 2);
+            $variant: list.nth($pair, 1);
+            
             .is-#{$name} {
                 &:hover,
                 &.is-hovered {
-                    background-color: utils.variant-varname($variant,100); // 100 is given to reduce color's opacity
-                    border-color: utils.variant-varname($variant,vars.$variant-degree);
-                    color: utils.variant-varname($variant,vars.$variant-degree);
+                    background-color:$variant-invert; // 100 is given to reduce color's opacity
+                    border-color: $variant;
+                    color: $variant;
                 }
             }
     }
