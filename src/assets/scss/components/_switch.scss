@@ -12,7 +12,7 @@ $switch-border-radius: .500rem !default;
 $switch-padding: .15rem !default;
 $switch-width: 1.75rem !default;
 $switch-control-label-padding-left: 11px !default;
-$switch-active-background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree) !default;
+$switch-active-background-color: list.nth(map.get(vars.$theme-colorss, "primary"), 1) !default;
 /* @docs */
 
 @mixin switch-size ($control,$check){

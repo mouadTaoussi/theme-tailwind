@@ -5,7 +5,7 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-$radio-active-background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree) !default;
+$radio-active-background-color: list.nth(map.get(vars.$theme-colorss, "primary"), 1) !default;
 $radio-border-size: 2px !default;
 $radio-border-radius: 50% !default;
 $radio-font-size: 15px !default;
@@ -45,7 +45,7 @@ $radio-control-label-padding-left: 11px !default;
         font-size: inherit;
         //
         border-radius: $radio-border-radius;
-        border: 2px solid utils.variant-varname(map.get(vars.$theme-colors, "secondary"),vars.$variant-degree);
+        border: 2px solid list.nth(map.get(vars.$theme-colorss, "secondary"), 1);
         //
         width: 1.25rem;
         height: 1.25rem;

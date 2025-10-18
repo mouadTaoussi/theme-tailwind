@@ -4,14 +4,15 @@
 @use "./utils/all" as utils;
 @use "./utils/variables" as vars;
 
-/* @docs */
-$checkbox-border-color: utils.variant-varname(map.get(vars.$theme-colors, "secondary"),vars.$variant-degree) !default;
+/* @docs */ 
+$checkbox-border-color: list.nth(map.get(vars.$theme-colorss, "secondary"), 1) !default;
 $checkbox-border-size: 2px !default;
 $checkbox-font-size: 15px !default;
 $checkbox-padding: .5em .75em !default;
 $checkbox-control-label-padding-left: 11px !default;
-$checkbox-active-background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree) !default;
+$checkbox-active-background-color: list.nth(map.get(vars.$theme-colorss, "primary"), 1) !default;
 /* @docs */
+
 
 @mixin checkbox-size ($control,$check,$checked){
     .control-label {
@@ -57,7 +58,7 @@ $checkbox-active-background-color: utils.variant-varname(map.get(vars.$theme-col
         background: transparent;
         
         &:checked {
-            border-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
+            border-color: list.nth(map.get(vars.$theme-colorss, "primary"), 1);
             //
             background: 
                 $checkbox-active-background-color 
@@ -65,7 +66,7 @@ $checkbox-active-background-color: utils.variant-varname(map.get(vars.$theme-col
                 no-repeat center center;
         }
         &:hover {
-            border-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
+            border-color: list.nth(map.get(vars.$theme-colorss, "primary"), 1);
         }
         &:focus {
             box-shadow: .1px .1px 10px $checkbox-active-background-color;

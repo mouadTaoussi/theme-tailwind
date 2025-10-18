@@ -13,7 +13,7 @@ $notification-icon-margin-right: 0.5rem !default;
 /* @docs */
 
 .notification {
-    background-color: utils.variant-varname(map.get(vars.$theme-colors, "primary"),vars.$variant-degree);
+    background-color: list.nth(map.get(vars.$theme-colorss, "primary"), 1);
     color: white;
    
     @each $name, $pair in vars.$theme-colorss {

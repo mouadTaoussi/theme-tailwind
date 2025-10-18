@@ -1,5 +1,6 @@
 
 @use "sass:map";
+@use "sass:list";
 @use "./utils/all" as utils;
 @use "./utils/variables" as vars;
 
@@ -33,7 +34,7 @@
 
 		.dropdown-item {
 			&.active {
-				background-color: utils.variant-varname('indigo',vars.$variant-degree);
+				background-color: list.nth(map.get(vars.$theme-colorss, "primary"), 1);
 				color: white;
 			}
 			&.disabled {
