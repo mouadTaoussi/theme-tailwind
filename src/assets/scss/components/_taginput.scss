@@ -43,7 +43,7 @@ $taginput-border-size: 0.005rem !default;
             margin: .25rem;
             padding: 0 .25rem;
 
-            @each $name, $pair in vars.$theme-colorss {
+            @each $name, $pair in vars.$theme-colors {
                 $variant-invert: list.nth($pair, 2);
                 $variant: list.nth($pair, 1);
 

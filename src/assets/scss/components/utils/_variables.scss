@@ -3,15 +3,15 @@
 *********************************************/
 @use "sass:map";
 
-$theme-colors: (
-    "primary"  : "blue",
-    "info"     : "sky",
-    "secondary": "gray",
-    "success"  : "green",
-    "danger"   : "red",
-    "warning"  : "yellow"
-);
-$variant-degree : 700;
+// $theme-colors: (
+//     "primary"  : "blue",
+//     "info"     : "sky",
+//     "secondary": "gray",
+//     "success"  : "green",
+//     "danger"   : "red",
+//     "warning"  : "yellow"
+// );
+// $variant-degree : 700;
 
 // $theme-colorss: (
 //     "primary"  : var(--color-blue-700),
@@ -36,7 +36,7 @@ $warning-invert: var(--color-yellow-100) !default;
 $danger: var(--color-red-700) !default;
 $danger-invert: var(--color-red-100) !default;
 
-$theme-colorss: (
+$theme-colors: (
   "primary": (
     $primary,
     $primary-invert,
@@ -62,25 +62,6 @@ $theme-colorss: (
     $danger-invert,
   ),
 ) !default;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 $speed-slow: 150ms !default;
 $speed-slower: 250ms !default;

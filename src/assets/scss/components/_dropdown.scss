@@ -34,7 +34,7 @@
 
 		.dropdown-item {
 			&.active {
-				background-color: list.nth(map.get(vars.$theme-colorss, "primary"), 1);
+				background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
 				color: white;
 			}
 			&.disabled {

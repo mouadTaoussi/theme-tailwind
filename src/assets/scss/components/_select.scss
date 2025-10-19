@@ -44,7 +44,7 @@ $select-arrow-size: 1rem !default;
     }
 
     // Variants
-    @each $name, $pair in vars.$theme-colorss {
+    @each $name, $pair in vars.$theme-colors {
         $variant: list.nth($pair, 1);
         $variant-invert: list.nth($pair, 2);
         

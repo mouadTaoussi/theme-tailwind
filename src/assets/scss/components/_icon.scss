@@ -12,7 +12,7 @@ $icon-spin-duration: 2s !default;
     // height: 100%;
     display: inline-flex;
     // padding: 0.25rem;
-    @each $name, $pair in vars.$theme-colorss {
+    @each $name, $pair in vars.$theme-colors {
         $variant: list.nth($pair, 1);
         $variant-invert: list.nth($pair, 2);
 

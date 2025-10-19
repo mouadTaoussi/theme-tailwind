@@ -35,7 +35,7 @@ $upload-border-radius: 3px !default;
         border-radius: $upload-border-radius;
     }
 
-    @each $name, $pair in vars.$theme-colorss {
+    @each $name, $pair in vars.$theme-colors {
             $variant-invert: list.nth($pair, 2);
             $variant: list.nth($pair, 1);
             

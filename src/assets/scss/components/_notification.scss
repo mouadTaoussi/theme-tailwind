@@ -13,10 +13,10 @@ $notification-icon-margin-right: 0.5rem !default;
 /* @docs */
 
 .notification {
-    background-color: list.nth(map.get(vars.$theme-colorss, "primary"), 1);
+    background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
     color: white;
    
-    @each $name, $pair in vars.$theme-colorss {
+    @each $name, $pair in vars.$theme-colors {
         $variant: list.nth($pair, 1);
         $variant-invert: list.nth($pair, 2);
 
