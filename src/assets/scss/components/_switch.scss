@@ -81,6 +81,9 @@ $switch-active-background-color: list.nth(map.get(vars.$theme-colors, "primary")
         will-change: transform;
         transform-origin: left;
     }
+    .check:checked {
+        background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
+    }
     .check:checked::before {
         content: '';
         transform: translateX(calc(($switch-width - $switch-padding * 2) / 2));
@@ -92,7 +95,7 @@ $switch-active-background-color: list.nth(map.get(vars.$theme-colors, "primary")
         $variant: list.nth($pair, 1);
         
         &.is-#{$name} {
-           .check {
+           .check:checked {
                 background-color: $variant;
            }
         }
