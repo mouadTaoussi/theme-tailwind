@@ -5,14 +5,14 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-$carousel-arrow-background: white !default;
-$carousel-arrow-color: list.nth(map.get(vars.$theme-colors, "primary"), 1) !default;
+$carousel-arrow-background: rgba(255,255,255, 0.5) !default;
+$carousel-arrow-color: white !default;
 $carousel-arrow-icon-spaced: 1.5rem !default;
 $carousel-arrow-top: 50% !default;
 
-$carousel-indicator-background: rgba(0,0,0, 0.5) !default;
-$carousel-indicator-border: white !default;
-$carousel-indicator-color: list.nth(map.get(vars.$theme-colors, "primary"), 1) !default;
+$carousel-indicator-background: rgba(255,255,255, 0.5) !default;
+$carousel-indicator-border: rgba(255,255,255, 0.5) !default;
+$carousel-indicator-color: white !default;
 $carousel-indicator-spaced: 0.5rem !default;
 $carousel-indicator-radius-rounded:9999px !default;
 
@@ -161,6 +161,8 @@ $carousel-overlay-z: 40 !default;
         border: 1px solid $carousel-arrow-background;
         border-radius: $carousel-indicator-radius-rounded;
         outline: 0;
+        width: 30px;
+        height: 30px;
 
         &:hover {
             border: 1px solid $carousel-arrow-color;

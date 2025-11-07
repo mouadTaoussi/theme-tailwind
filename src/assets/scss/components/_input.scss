@@ -52,6 +52,7 @@ $input-font-size: var(--text-base) !default;
         // 
         font-size: $input-font-size;
         line-height: normal;
+        background-color: white;
 
         // Variants
         @each $name, $pair in vars.$theme-colors {
