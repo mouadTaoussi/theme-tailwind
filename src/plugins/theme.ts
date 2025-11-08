@@ -333,7 +333,22 @@ const tailwindConfig = {
             return "items-start";
         },
     },
-    slider: {},
+    slider: {
+        override: true,
+        rootClass: "slider",
+        disabledClass: "is-disabled",
+        trackClass: "slider-track",
+        fillClass: "slider-fill",
+        thumbWrapperClass: "slider-thumb-wrapper",
+        thumbWrapperDraggingClass: "is-dragging",
+        thumbRoundedClass: "is-rounded",
+        variantClass: "is-",
+        sizeClass: "is-",
+        thumbClass: "slider-thumb",
+        tickLabelClass: "slider-tick-label",
+        tickHiddenClass: "is-tick-hidden",
+        tickClass: "slider-tick",
+    },
     steps: {},
     switch: {
         override: true,
