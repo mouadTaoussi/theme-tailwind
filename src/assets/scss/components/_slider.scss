@@ -5,5 +5,32 @@
 @use "./utils/variables" as vars;
 
 .slider {
+
+    .slider-track {
+        background-color: grey;
+        height: 10px;
+        width: 100%;
+        position: relative;
+        .slider-fill {
+            background-color: grey;
+        }
+        
+            .slider-thumb-wrapper {
+                display: inline-flex;
+                align-items: center;
+                position: absolute;
+                cursor: grab;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                flex-direction: column;
+
+                .slider-thumb {
+                    width: 30px;
+                    height: 30px;
+                    background-color: black;
+                }
+
+            }
+    }
     
 }
