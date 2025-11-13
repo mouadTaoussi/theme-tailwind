@@ -7,30 +7,36 @@
 .slider {
 
     .slider-track {
-        background-color: grey;
+        background-color: var(--color-gray-100);
         height: 10px;
         width: 100%;
         position: relative;
+        border-radius: 3px;
+        
         .slider-fill {
-            background-color: grey;
+            background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
+            height: inherit;
+            border-radius: 3px;
         }
         
-            .slider-thumb-wrapper {
-                display: inline-flex;
-                align-items: center;
-                position: absolute;
-                cursor: grab;
-                transform: translate(-50%, -50%);
-                top: 50%;
-                flex-direction: column;
+        .slider-thumb-wrapper {
+            display: inline-flex;
+            align-items: center;
+            position: absolute;
+            cursor: grab;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            flex-direction: column;
 
-                .slider-thumb {
-                    width: 30px;
-                    height: 30px;
-                    background-color: black;
-                }
-
+            .slider-thumb {
+                width: 20px;
+                height: 20px;
+                border: 0.005rem;
+                border-style: var(--tw-border-style);
+                border-color: rgb(227, 227, 227);
+                border-radius: 3px;
+                background-color: white;
             }
+        }
     }
-    
 }
