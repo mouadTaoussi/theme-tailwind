@@ -17,6 +17,16 @@
             background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
             height: inherit;
             border-radius: 3px;
+
+            /// colors
+            @each $name, $pair in vars.$theme-colors {
+                $variant: list.nth($pair, 1);
+                $variant-invert: list.nth($pair, 2);
+                
+                &.is-#{$name} {
+                    background-color: $variant;
+                }
+            }
         }
         
         .slider-thumb-wrapper {
@@ -36,6 +46,13 @@
                 border-color: rgb(227, 227, 227);
                 border-radius: 3px;
                 background-color: white;
+                cursor: grab;
+            }
+
+            &.is-dragging {
+                .slider-thumb {
+                    cursor: grabbing;
+                }
             }
         }
     }
