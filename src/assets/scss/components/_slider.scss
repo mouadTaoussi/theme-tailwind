@@ -9,16 +9,34 @@
     &.is-small {
         .slider-track {
             height: 5px;
+            .slider-thumb-wrapper {
+                .slider-thumb {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
         }
     }
     &.is-medium {
         .slider-track {
             height: 10px;
+            .slider-thumb-wrapper {
+                .slider-thumb {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
         }
     }
     &.is-large {
         .slider-track {
             height: 20px;
+            .slider-thumb-wrapper {
+                .slider-thumb {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
         }
     }
 
