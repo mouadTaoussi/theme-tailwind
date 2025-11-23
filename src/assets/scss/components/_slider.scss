@@ -63,6 +63,14 @@
             }
         }
         
+        .slider-tick {
+            position: absolute;
+            top: 0;
+            width: 3px;
+            transform: translate(-50%);
+            height: inherit;
+            background-color: gray;
+        }
         .slider-thumb-wrapper {
             display: inline-flex;
             align-items: center;
@@ -81,6 +89,10 @@
                 border-radius: 3px;
                 background-color: white;
                 cursor: grab;
+
+                &.is-rounded {
+                    border-radius: 9999px;
+                }
             }
 
             &.is-dragging {
