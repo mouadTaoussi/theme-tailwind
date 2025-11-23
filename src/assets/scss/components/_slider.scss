@@ -51,6 +51,7 @@
             background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
             height: inherit;
             border-radius: 3px;
+            position: absolute;
 
             /// colors
             @each $name, $pair in vars.$theme-colors {
