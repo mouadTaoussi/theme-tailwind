@@ -403,7 +403,17 @@ const tailwindConfig = {
         variantClass: "is-",
         expandedClass: "w-full",
     },
-    timepicker: {},
+    timepicker: {
+        override: true,
+        rootClass: "timepicker",
+        boxClass: "dropdown-item",
+        separatorClass: "is-colon control",
+        footerClass: "timepicker-footer",
+        sizeClass: "is-",
+        selectClasses: {
+            rootClass: "select control",
+        },
+    },
     tooltip: {
         override: true,
         rootClass: "tooltip",

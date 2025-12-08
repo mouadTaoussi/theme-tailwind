@@ -1,0 +1,19 @@
+
+@use "sass:map";
+@use "sass:list";
+@use "./utils/all" as utils;
+@use "./utils/variables" as vars;
+
+.timepicker {
+    width: auto;
+    .dropdown {
+        .dropdown-menu {
+            .dropdown-item {
+                display: flex;
+            }
+        }
+    }
+    .timepicker-footer {
+        // display: flex;
+    }
+}
