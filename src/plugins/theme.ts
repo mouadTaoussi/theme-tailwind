@@ -406,7 +406,7 @@ const tailwindConfig = {
     timepicker: {
         override: true,
         rootClass: "timepicker",
-        boxClass: "dropdown-item",
+        boxClass: "dropdown-item block px-4 py-2 cursor-pointer",
         separatorClass: "is-colon control",
         footerClass: "timepicker-footer",
         sizeClass: "is-",
