@@ -8,13 +8,16 @@
     width: auto;
     .dropdown {
         .dropdown-menu {
+            width: auto; //
             .dropdown-item {
                 display: flex;
+                align-items: center; //
             }
         }
     }
     .timepicker-footer {
-        // display: flex;
+        display: flex; //
+        padding: 0 0.5rem 0 0.5rem;
     }
 }
 
