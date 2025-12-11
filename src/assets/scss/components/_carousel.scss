@@ -27,12 +27,16 @@ $carousel-overlay-z: 40 !default;
 
     &.is-overlay {
         background-color: $carousel-overlay-background;
+        //
         align-items: center;
         flex-direction: column;
         justify-content: center;
         display: flex;
+        //
         max-height: 100vh;
+        //
         position: fixed;
+        //
         z-index: -1;
 
         .carousel-item img {
@@ -71,7 +75,9 @@ $carousel-overlay-z: 40 !default;
 
     .carousel-indicator {
         width: 100%;
+        //
         padding: $carousel-indicator-spaced;
+        //
         display: flex;
         align-items: center;
         justify-content: center;
@@ -85,6 +91,7 @@ $carousel-overlay-z: 40 !default;
 
             flex-wrap: nowrap;
             justify-content: flex-start;
+            //
             overflow: hidden;
             overflow-x: auto;
 
@@ -122,9 +129,13 @@ $carousel-overlay-z: 40 !default;
 
             .indicator-style {
                 display: block;
+                //
                 border: 1px solid $carousel-indicator-background;
+                //
                 background: $carousel-indicator-border;
+                //
                 outline: none;
+                //
                 transition: .2s ease-in-out;
 
                 &.is-boxes {
@@ -157,10 +168,14 @@ $carousel-overlay-z: 40 !default;
     &.icon {
         background: $carousel-arrow-background;
         color: $carousel-arrow-color;
+        //
         cursor: pointer;
+        //
         border: 1px solid $carousel-arrow-background;
         border-radius: $carousel-indicator-radius-rounded;
+        //
         outline: 0;
+        //
         width: 30px;
         height: 30px;
 
@@ -173,6 +188,7 @@ $carousel-overlay-z: 40 !default;
         &.has-icons-right {
             position: absolute;
             top: $carousel-arrow-top;
+            //
             transform: translateY(calc(-1 * $carousel-arrow-top));
             z-index: 1;
         }

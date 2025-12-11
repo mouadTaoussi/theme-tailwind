@@ -7,15 +7,21 @@
 .slider {
     .slider-track {
         background-color: var(--color-gray-100);
+        //
         height: 8px;
         width: 100%;
+        //
         position: relative;
+        //
         border-radius: 3px;
         
         .slider-fill {
             background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
+            //
             height: inherit;
+            //
             border-radius: 3px;
+            //
             position: absolute;
 
             /// colors
@@ -32,35 +38,47 @@
         .slider-tick {
             position: absolute;
             top: 0;
+            //
             width: 2px;
-            transform: translate(-50%);
             height: inherit;
+            //
+            transform: translate(-50%);
+            //
             background-color: var(--color-gray-400);
+            //
             border-radius: 50%;
 
             .slider-tick-label {
                 position: absolute;
                 left: 50%;
+                //
                 font-size: var(--text-xs);
+                //
                 transform: translate(-50%);
             }
         }
         .slider-thumb-wrapper {
             display: inline-flex;
             align-items: center;
-            position: absolute;
-            cursor: grab;
-            transform: translate(-50%, -50%);
-            top: 50%;
             flex-direction: column;
+            //
+            position: absolute;
+            top: 50%;
+            //
+            cursor: grab;
+            //
+            transform: translate(-50%, -50%);
+            
 
             .slider-thumb {
                 width: 20px;
                 height: 20px;
+                //
                 border: 0.005rem;
                 border-style: var(--tw-border-style);
                 border-color: rgb(227, 227, 227);
                 border-radius: 3px;
+                //
                 background-color: white;
                 cursor: grab;
 

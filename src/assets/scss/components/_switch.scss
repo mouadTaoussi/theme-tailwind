@@ -56,14 +56,20 @@ $switch-active-background-color: list.nth(map.get(vars.$theme-colors, "primary")
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+        //
         cursor: pointer;
+        //
         display: flex;
         align-items: center;
         flex-shrink: 0;
+        //
         font-size: inherit;
+        //
         width: $switch-width;
         height: auto;
+        //
         padding: $switch-padding;
+        //
         background: rgb(202, 202, 202);
         border-radius: $switch-border-radius;
         transition: all vars.$speed-slow var(--ease-in); 
@@ -71,10 +77,14 @@ $switch-active-background-color: list.nth(map.get(vars.$theme-colors, "primary")
     .check::before {
         content: "";
         display: block;
+        //
         font-size: inherit;
+        //
         border-radius: $switch-border-radius;
+        //
         width: calc(($switch-width - $switch-padding * 2) / 2);
         height: calc(($switch-width - $switch-padding * 2) * .5);
+        //
         background: white;
         // box-shadow: 0 3px 1px #0000000d, 0 2px 2px #0000001a, 0 3px 3px #0000000d;
         transition: all vars.$speed-slow var(--ease-in); 
