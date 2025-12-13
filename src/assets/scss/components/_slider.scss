@@ -11,7 +11,7 @@
         height: 8px;
         width: 100%;
         //
-        position: relative;
+        position: relative; // -> relative
         //
         border-radius: 3px;
         
@@ -22,7 +22,7 @@
             //
             border-radius: 3px;
             //
-            position: absolute;
+            position: absolute; // -> absolute
 
             /// colors
             @each $name, $pair in vars.$theme-colors {
@@ -37,7 +37,7 @@
         
         .slider-tick {
             position: absolute;
-            top: 0;
+            top: 0; // -> absolute top-0
             //
             width: 2px;
             height: inherit;
@@ -50,7 +50,7 @@
 
             .slider-tick-label {
                 position: absolute;
-                left: 50%;
+                left: 50%; // -> absolute left-1/2
                 //
                 font-size: var(--text-xs);
                 //
@@ -60,12 +60,12 @@
         .slider-thumb-wrapper {
             display: inline-flex;
             align-items: center;
-            flex-direction: column;
+            flex-direction: column; // -> inline-flex flex-col items-center
             //
             position: absolute;
-            top: 50%;
+            top: 50%; // -> absolute top-1/2
             //
-            cursor: grab;
+            cursor: grab; // ->  cursor-grab
             //
             transform: translate(-50%, -50%);
             
@@ -80,7 +80,7 @@
                 border-radius: 3px;
                 //
                 background-color: white;
-                cursor: grab;
+                cursor: grab; // -> bg-white cursor-grab
 
                 &.is-rounded {
                     border-radius: 9999px;

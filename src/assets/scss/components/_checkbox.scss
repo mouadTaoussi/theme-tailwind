@@ -30,7 +30,7 @@ $checkbox-active-background-color: list.nth(map.get(vars.$theme-colors, "primary
     vertical-align:top;
     //
     display: flex;
-    align-items: center;
+    align-items: center; // -> flex items-center
 
     .control-label {
         padding-left: $checkbox-control-label-padding-left;
@@ -44,12 +44,12 @@ $checkbox-active-background-color: list.nth(map.get(vars.$theme-colors, "primary
         //
         outline: none;
         //
-        font-size: inherit;
+        font-size: inherit; 
         //
         width: 1.25em;
         height: 1.25em;
         //
-        flex-shrink: 0;
+        flex-shrink: 0; // -> outline-none text-inherit
         //
         border: $checkbox-border-size solid $checkbox-border-color;
         //

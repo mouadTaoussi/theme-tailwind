@@ -16,13 +16,13 @@ $select-arrow-size: 1rem !default;
 
 .select-component {
     position: relative;
-    display: inline-block;
+    display: inline-block; // -> relative inline-block
 
     .icon { 
         position: absolute;
         top: 0;
         margin: 0;
-        height: 100%;
+        height: 100%; // -> absolute top-0 m-0 h-full
         
         &.icon-right {
             right: $select-icon-spacer;     
