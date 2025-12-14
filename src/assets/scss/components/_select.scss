@@ -15,14 +15,11 @@ $select-arrow-size: 1rem !default;
 /* @docs */
 
 .select-component {
-    position: relative;
-    display: inline-block; // -> relative inline-block
-
     .icon { 
         position: absolute;
         top: 0;
         margin: 0;
-        height: 100%; // -> absolute top-0 m-0 h-full
+        height: 100%;
         
         &.icon-right {
             right: $select-icon-spacer;     
@@ -58,10 +55,8 @@ $select-arrow-size: 1rem !default;
     .select {
         border: $select-border-size;
         border-style: var(--tw-border-style);
-        border-color: $select-border-color;
-        // 
-        padding: $select-padding;
-        // 
+        border-color: $select-border-color; 
+        padding: $select-padding; 
         font-size: $select-font-size;
         line-height: normal;
 

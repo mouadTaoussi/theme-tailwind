@@ -35,11 +35,6 @@ $switch-active-background-color: list.nth(map.get(vars.$theme-colors, "primary")
 
 .switch {
     padding: $switch-padding;
-    //
-    vertical-align:top;
-    //
-    display: flex;
-    align-items: center; // -> flex items-center
 
     .control-label {
         padding-left: $switch-control-label-padding-left;
@@ -56,20 +51,10 @@ $switch-active-background-color: list.nth(map.get(vars.$theme-colors, "primary")
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
-        //
-        cursor: pointer;
-        //
-        display: flex;
-        align-items: center;
-        flex-shrink: 0; // -> flex items-center flex-shrink-0
-        //
         font-size: inherit;
-        //
         width: $switch-width;
         height: auto;
-        //
         padding: $switch-padding;
-        //
         background: rgb(202, 202, 202);
         border-radius: $switch-border-radius;
         transition: all vars.$speed-slow var(--ease-in); 

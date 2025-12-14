@@ -41,17 +41,12 @@ $radio-control-label-padding-left: 11px !default;
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
-        //
         font-size: inherit;
-        //
         border-radius: $radio-border-radius;
         border: 2px solid list.nth(map.get(vars.$theme-colors, "secondary"), 1);
-        //
         width: 1.25rem;
         height: 1.25rem;
-        //
         flex-shrink: 0;
-        //
         outline: none;
     }
     .check:hover {
@@ -63,17 +58,12 @@ $radio-control-label-padding-left: 11px !default;
     .check::before {
         content: '';
         transform: scale(0);
-        //
         position: absolute;
-        //
         background-color: $radio-active-background-color;
-        //
         border: $radio-active-background-color 2px solid;
         border-radius: $radio-border-radius;
-        //
         width: 1rem;
         height: 1rem;
-        //
         transition: all vars.$speed-slow var(--ease-in);      
     }
     .check:checked {

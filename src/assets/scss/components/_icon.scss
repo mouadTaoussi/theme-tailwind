@@ -9,9 +9,6 @@ $icon-spin-duration: 2s !default;
 /* @docs */
 
 .icon {
-    // height: 100%;
-    display: inline-flex;
-    // padding: 0.25rem;
     @each $name, $pair in vars.$theme-colors {
         $variant: list.nth($pair, 1);
         $variant-invert: list.nth($pair, 2);
@@ -19,10 +16,5 @@ $icon-spin-duration: 2s !default;
         &.text-#{$name} {
             color: $variant;
         }
-    }
-
-    &.clickable {
-        pointer-events: auto;
-        cursor: pointer;
     }
 }

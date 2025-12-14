@@ -33,17 +33,6 @@
 		border-color: rgb(227, 227, 227);
 
 		.dropdown-item {
-			// display: block;
-			// width: 100%;
-			// padding: .25rem 1rem;
-			// clear: both;
-			// font-weight: 400;
-			// text-align: inherit;
-			// text-decoration: none;
-			// white-space: nowrap;
-			// background-color: transparent;
-			// border: 0;
-
 			&.active {
 				background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
 				color: white;
@@ -134,11 +123,6 @@
 		}
 	}
 	.dropdown-backdrop {
-		position: fixed;
-	    top: 0;
-	    left: 0;
-	    width: 100vw;
-	    height: 100vh;
 		background-color: rgba(0,0,0,.8);
 		z-index: 1050;
 	}

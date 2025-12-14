@@ -10,16 +10,7 @@ $taginput-border-size: 0.005rem !default;
 /* @docs */
 
 .taginput {
-    position: relative;
-
     .taginput-container {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start; //-> flex items-center justify-start
-        // flex-wrap: wrap;
-        padding: 0;
-        height: auto; // -> p-0 h-auto
-        //
         border: $taginput-border-size;
         border-style: var(--tw-border-style);
         border-color: $taginput-border-color;
@@ -38,8 +29,6 @@ $taginput-border-size: 0.005rem !default;
         }
 
         .tag {
-            display: inline-flex;
-            // background-color: rgba(0,0,0,.1);
             margin: .25rem;
             padding: 0 .25rem;
 

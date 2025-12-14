@@ -30,12 +30,6 @@ $pagination-link-min-width: 2.5rem !default;
             opacity: 0.5;
         }
     }
-    .pagination-list {
-        list-style: none;
-        //
-        margin: 0;
-        padding: 0;
-    }
     .pagination-link {
         border: $pagination-link-border-size;
         border-style: var(--tw-border-style);
@@ -70,9 +64,6 @@ $pagination-link-min-width: 2.5rem !default;
     // size
 
     .is-current {
-        pointer-events: none;
-        cursor: not-allowed;
-        //
         background-color: $pagination-active-background-color;
         color: white;
         border-color: $pagination-active-background-color;

@@ -18,26 +18,13 @@ $tooltip-padding: 0.35rem 0.75rem !default;
 $tooltip-font-size: 0.85rem !default;
 /* @docs */
 
-// source : theme-bulma
 .tooltip {
-    position: relative;
-    display: inline-flex;
-
     .tooltip-content {
         background-color: $tooltip-bg;
         color: $tooltip-color;
-        //
         border-radius: $tooltip-border-radius;
-        //
-        position: absolute;
-        //
-        width: auto;
-        white-space: nowrap;
         padding: $tooltip-padding;
-        //
-        font-weight: 400;
         font-size: $tooltip-font-size;
-        //
         z-index: $tooltip-zindex;
 
         &::before {
@@ -45,11 +32,6 @@ $tooltip-font-size: 0.85rem !default;
             content: "";
             pointer-events: none;
             z-index: $tooltip-zindex;
-        }
-
-        &.is-always {
-            opacity: 1;
-            visibility: visible;
         }
         &.is-multiline {
             text-align: center;
@@ -166,9 +148,6 @@ $tooltip-font-size: 0.85rem !default;
                 // If light and dark colors are provided
             }
         }
-    }
-    .tooltip-trigger {
-          width: 100%;
     }
 
     &.is-teleported {

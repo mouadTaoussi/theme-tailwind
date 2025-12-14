@@ -33,48 +33,34 @@ const tailwindConfig = {
 
     breadcrumb: {},
     carousel: {
-        // override: true,
-        // rootClass: "carousel relative w-full",
-        // overlayClass: "is-overlay",
-        // wrapperClass: "carousel-scene relative h-56 overflow-hidden rounded-lg md:h-96",
-        // itemsClass: "carousel-items relative h-56 overflow-hidden rounded-lg md:h-96",
-        // itemsDraggingClass: "is-dragging",
-        // arrowIconClass: "carousel-arrow",
-        // arrowIconPrevClass: "has-icons-left",
-        // arrowIconNextClass: "has-icons-right",
-        // indicatorsClass: "indicator-item absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse",
-        // indicatorClass: "w-3 h-3 rounded-full",
-        // // indicatorsInsideClass: "is-inside",
-        // // indicatorsInsidePositionClass: "is-",
-        // // indicatorItemClass: "w-3 h-3 rounded-full",
-        // // indicatorItemActiveClass: "is-active",
-        // // indicatorItemStyleClass: "is-",
-        // itemClass: "hidden duration-700 ease-in-out",
-        // itemActiveClass: "is-active",
         override: true,
-        rootClass: "carousel",
-        overlayClass: "is-overlay",
-        wrapperClass: "carousel-scene",
-        itemsClass: "carousel-items",
+        rootClass: "carousel relative overflow-hidden w-full",
+        overlayClass:
+            "is-overlay flex flex-col items-center justify-center fixed",
+        wrapperClass: "carousel-scene w-full relative",
+        itemsClass: "carousel-items flex",
         itemsDraggingClass: "is-dragging",
-        arrowIconClass: "carousel-arrow",
+        arrowIconClass: "carousel-arrow transition duration-200 ease-in-out",
         arrowIconPrevClass: "has-icons-left",
         arrowIconNextClass: "has-icons-right",
-        indicatorsClass: "carousel-indicator",
+        indicatorsClass:
+            "carousel-indicator w-full flex items-center justify-center absolute bottom-0",
         indicatorClass: "indicator-item",
-        indicatorsInsideClass: "is-inside",
+        indicatorsInsideClass: "is-inside absolute",
         indicatorsInsidePositionClass: "is-",
-        indicatorItemClass: "indicator-style",
+        indicatorItemClass:
+            "indicator-style block outline-none transition duration-200 ease-in-out",
         indicatorItemActiveClass: "is-active",
         indicatorItemStyleClass: "is-",
-        itemClass: "carousel-item",
+        itemClass:
+            "carousel-item flex-shrink-0 w-full border-2 border-transparent",
         itemActiveClass: "is-active",
     },
     checkbox: {
         override: true,
-        rootClass: "checkbox",
+        rootClass: "checkbox flex items-center align-top",
         disabledClass: "is-disabled",
-        inputClass: "check rounded",
+        inputClass: "check rounded outline-none text-inherit flex-shrink-0",
         labelClass: "control-label",
         variantClass: "is-",
         sizeClass: "is-",
@@ -94,8 +80,9 @@ const tailwindConfig = {
         disabledClass: "disabled",
         expandedClass: "w-full",
         inlineClass: "inline",
-        menuMobileOverlayClass: "dropdown-backdrop",
-        overlayClass: "dropdown-backdrop",
+        menuMobileOverlayClass:
+            "dropdown-backdrop fixed top-0 left-0 w-screen h-screen",
+        overlayClass: "dropdown-backdrop fixed top-0 left-0 w-screen h-screen",
         menuClass: (): string => {
             const classes = [
                 "dropdown-menu",
@@ -139,7 +126,7 @@ const tailwindConfig = {
     },
     icon: {
         override: true,
-        rootClass: "icon flex justify-center items-center",
+        rootClass: "icon inline-flex justify-center items-center",
         variantClass: "text-",
         sizeClass: (position: string): string => {
             if (position == "small") return "text-xs";
@@ -147,10 +134,10 @@ const tailwindConfig = {
             else if (position == "large") return "text-xl";
             return "";
         },
-        clickableClass: "clickable",
+        clickableClass: "clickable cursor-pointer pointer-events-auto",
         spinClass: "animate-spin",
     },
-    input: { // TTTT
+    input: {
         override: true,
         rootClass: (_: string, props: ComponentProps): string => {
             const classes = ["input-component"];
@@ -210,11 +197,13 @@ const tailwindConfig = {
     menu: {},
     modal: {
         override: true,
-        rootClass: "modal",
+        rootClass:
+            "modal flex flex-col justify-center items-center w-screen h-screen relative top-0 left-0",
         activeClass: "is-active",
-        overlayClass: "modal-background",
-        contentClass: "modal-content",
-        closeClass: "modal-close",
+        overlayClass: "modal-background w-full h-full",
+        contentClass:
+            "modal-content bg-white w-auto absolute top-[10%] left-[50%] -translate-x-1/2 overflow-auto",
+        closeClass: "modal-close absolute top-0 left-0",
         fullScreenClass: "is-full-screen",
         scrollClipClass: "is-clipped",
     },
@@ -250,10 +239,10 @@ const tailwindConfig = {
         simpleClass: "is-simple",
         orderClass: "is-",
         listClass:
-            "pagination-list text-center flex justify-start items-center flex-wrap grow shrink order-1",
+            "pagination-list text-center flex justify-start items-center flex-wrap grow shrink order-1 list-none m-0 p-0",
         mobileClass: "is-mobile",
         buttonClass: "pagination-link",
-        buttonCurrentClass: "is-current",
+        buttonCurrentClass: "is-current pointer-events-none cursor-not-allowed",
         buttonDisabledClass: "is-disabled",
         buttonNextClass: "pagination-next",
         buttonPrevClass: "pagination-previous",
@@ -268,10 +257,15 @@ const tailwindConfig = {
         variantClass: "is-",
         sizeClass: "is-",
     },
-    select: { // TTTT
+    select: {
         override: true,
         rootClass: (_: string, props: ComponentProps): string => {
-            const classes = ["select-component", "control"];
+            const classes = [
+                "select-component",
+                "control",
+                "relative",
+                "inline-block",
+            ];
             if (isTrueish(props.icon)) classes.push("has-icons-left");
             if (isTrueish(props.iconRight)) classes.push("has-icons-right");
             return classes.join(" ");
@@ -298,7 +292,7 @@ const tailwindConfig = {
         iconRightSpaceClass: "has-icons-right",
         iconLeftSpaceClass: "has-icons-left",
         arrowClass: "has-arrow",
-    }, 
+    },
     sidebar: {
         override: true,
         rootClass: "sidebar",
@@ -337,24 +331,25 @@ const tailwindConfig = {
         override: true,
         rootClass: "slider",
         disabledClass: "is-disabled",
-        trackClass: "slider-track",
-        fillClass: "slider-fill",
-        thumbWrapperClass: "slider-thumb-wrapper",
+        trackClass: "slider-track relative",
+        fillClass: "slider-fill absolute",
+        thumbWrapperClass:
+            "slider-thumb-wrapper inline-flex flex-col items-center absolute top-1/2 cursor-grab",
         thumbWrapperDraggingClass: "is-dragging",
         thumbRoundedClass: "is-rounded",
         variantClass: "is-",
         sizeClass: "is-",
-        thumbClass: "slider-thumb",
-        tickLabelClass: "slider-tick-label",
+        thumbClass: "slider-thumb bg-white cursor-grab",
+        tickLabelClass: "slider-tick-label absolute left-1/2",
         tickHiddenClass: "is-tick-hidden",
-        tickClass: "slider-tick",
+        tickClass: "slider-tick absolute top-0",
     },
     steps: {},
     switch: {
         override: true,
-        rootClass: "switch",
+        rootClass: "switch flex items-center align-top",
         // switchClass: "check",
-        inputClass: "check",
+        inputClass: "check flex items-center flex-shrink-0 cursor-pointer",
         positionClass: (value: string): string => `has-${value}-label`,
         roundedClass: "is-rounded",
         labelClass: "control-label",
@@ -396,19 +391,21 @@ const tailwindConfig = {
     tabs: {},
     taginput: {
         override: true,
-        rootClass: "taginput control",
-        containerClass: "taginput-container rounded",
+        rootClass: "taginput relative control",
+        containerClass:
+            "taginput-container rounded flex items-center justify-start p-0 h-auto",
         closeClass: "delete is-small",
-        itemClass: "tag rounded bg-gray-100",
+        itemClass: "tag rounded bg-gray-100 inline-flex",
         variantClass: "is-",
         expandedClass: "w-full",
     },
     timepicker: {
         override: true,
-        rootClass: "timepicker",
-        boxClass: "dropdown-item block px-4 py-2 cursor-pointer",
+        rootClass: "timepicker w-auto",
+        boxClass:
+            "dropdown-item block px-4 py-2 cursor-pointer flex items-center",
         separatorClass: "is-colon control",
-        footerClass: "timepicker-footer",
+        footerClass: "timepicker-footer flex",
         sizeClass: "is-",
         selectClasses: {
             rootClass: "select control",
@@ -416,11 +413,12 @@ const tailwindConfig = {
     },
     tooltip: {
         override: true,
-        rootClass: "tooltip",
-        contentClass: "tooltip-content shadoww-sm",
-        triggerClass: "tooltip-trigger",
-        alwaysClass: "is-always",
-        multilineClass: "is-multiline",
+        rootClass: "tooltip relative inline-flex",
+        contentClass:
+            "tooltip-content shadoww-sm absolute w-auto whitespace-nowrap font-normal",
+        triggerClass: "tooltip-trigger w-full",
+        alwaysClass: "is-always opacity-100 visible",
+        multilineClass: "is-multiline text-center whitespace-normal",
         variantClass: "is-",
         positionClass: "is-",
         teleportClass: "is-teleported",
