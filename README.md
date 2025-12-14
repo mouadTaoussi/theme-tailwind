@@ -7,8 +7,8 @@
 </p>
 
 <p align="center">
-    <a href="https://www.npmjs.com/package/@oruga-ui/theme-bulma"><img src="https://img.shields.io/npm/v/@oruga-ui/theme-bulma.svg?logo=npm" /><a>
-    <a href="https://www.npmjs.com/package/@oruga-ui/theme-bulma"><img src="https://img.shields.io/npm/dt/@oruga-ui/theme-bulma.svg" /></a>
+    <a href="https://www.npmjs.com/package/@oruga-ui/theme-tailwind"><img src="https://img.shields.io/npm/v/@oruga-ui/theme-bulma.svg?logo=npm" /><a>
+    <a href="https://www.npmjs.com/package/@oruga-ui/theme-tailwind"><img src="https://img.shields.io/npm/dt/@oruga-ui/theme-bulma.svg" /></a>
     <a href="https://discord.gg/RuKuBYN"><img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg?logo=discord" /></a>
     <a href="https://ko-fi.com/mlmoravek"><img src="https://img.shields.io/badge/ko--fi-donate-%23FF5E5B?style=flat&logo=ko-fi&logoColor=white" /></a>
 </p>
@@ -16,13 +16,13 @@
 ### Install
 
 ```sh
-npm install @oruga-ui/theme-bulma
+npm install @oruga-ui/theme-tailwind
 ```
 
 or
 
 ```sh
-yarn add @oruga-ui/theme-bulma
+yarn add @oruga-ui/theme-tailwind
 ```
 
 ### Configure
@@ -32,12 +32,12 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 import Oruga from '@oruga-ui/oruga-next'
-import { bulmaConfig } from '@oruga-ui/theme-bulma'
+import { tailwindConfig } from '@oruga-ui/theme-tailwind'
 
-import '@oruga-ui/theme-bulma/dist/bulma.css'
+import '@oruga-ui/theme-tailwind/dist/tailwind.css'
 
 createApp(App)
-    .use(Oruga, bulmaConfig)
+    .use(Oruga, tailwindConfig)
     .mount('#app')
 ```
 
@@ -46,14 +46,14 @@ Please note, this package can be used without importing any other Oruga styling 
 
 ### Customization (SASS/SCSS)
 
-Bulma is a highly customizable CSS framework. From colors to typography, spacing and sizes, forms and layouts, all parts of Bulma can be customized by the user (see [Bulma Customization](https://bulma.io/documentation/customize/concepts/)).
+Tailwind is a highly customizable CSS framework. From colors to typography, spacing and sizes, forms and layouts, all parts of Tailwind can be customized by the user (see [Tailwind Customization](https://bulma.io/documentation/customize/concepts/)).
 
-Using the following sample code you **don't need** `import '@oruga-ui/theme-bulma/dist/bulma.css'` but you have to add a custom sass/scss file to customize Bulma and the theme variables. 
-To overwrite Bulma’s Sass variables with your own values, you have to use `@use` and the `with` keyword, which takes a Sass map.
-You have two options for including the theme: include all the styling at once (including full bulma), or include the Oruga theme and Bulma separately.
+Using the following sample code you **don't need** `import '@oruga-ui/theme-tailwind/dist/tailwind.css'` but you have to add a custom sass/scss file to customize Tailwind and the theme variables. 
+To overwrite Tailwind Sass variables with your own values, you have to use `@use` and the `with` keyword, which takes a Sass map.
+You have two options for including the theme: include all the styling at once (including full tailwind), or include the Oruga theme and Tailwind separately.
 
 ```scss
-// Option A: Include all styling (including bulma)
+// Option A: Include all styling (including tailwind)
 
 // set your color overrides
 $primary: #8c67ef;
@@ -63,8 +63,8 @@ $link: $primary;
 $twitter: #4099FF;
 $custom-colors: ('twitter': $twitter);
 
-// Include the Oruga Bulma theme with Bulma included (you can only manipulate any derived variables here)
-@use '@oruga-ui/theme-bulma/dist/scss/bulma-build' with (
+// Include the Oruga Tailwind theme with Tailwind included (you can only manipulate any derived variables here)
+@use '@oruga-ui/theme-tailwind/dist/scss/tailwind-build' with (
     $family-primary: '"Nunito", sans-serif',
     $primary: $primary,
     $link: $link,
@@ -74,10 +74,10 @@ $custom-colors: ('twitter': $twitter);
 // Then add additional custom code here
 // ...
 ```
-**_NOTE:_** Note that only variables within Bulma's [derived-variables.scss](https://github.com/jgthms/bulma/blob/main/sass/utilities/derived-variables.scss) file can be overridden here.
+**_NOTE:_** Note that only variables within Taiwlnd's [derived-variables.scss](https://github.com/jgthms/bulma/blob/main/sass/utilities/derived-variables.scss) file can be overridden here.
 
 ```scss
-// Option B: Include the Oruga theme and Bulma separately
+// Option B: Include the Oruga theme and Tailwind separately
 
 // set your color overrides
 $primary: #8c67ef;
@@ -88,20 +88,20 @@ $twitter: #4099FF;
 $custom-colors: ('twitter': $twitter);
 
 // 1. Include the Oruga theme first (you can only manipulate any derived variables here)
-@use '@oruga-ui/theme-bulma/dist/scss/bulma' with (
+@use '@oruga-ui/theme-tailwind/dist/scss/tailwind' with (
     $family-primary: '"Nunito", sans-serif',
     $primary: $primary,
     $link: $link,
     $custom-colors: $custom-colors,
 );
 
-// 2. Include any other Bulma module with specific configuration here
-@use "bulma/sass/elements" with (
+// 2. Include any other Tailwind module with specific configuration here
+@use "tailwind/sass/elements" with (
     $button-weight: 800
 );
 
-// 3. Include the remaining parts or full Bulma
-@use "bulma/sass";
+// 3. Include the remaining parts or full Tailwind
+@use "tailwind/sass";
 
 // Then add additional custom code here
 // ...
@@ -109,18 +109,18 @@ $custom-colors: ('twitter': $twitter);
 
 ### Override default config
 
-In case you want to replace the default style of a component you can override or add new classes changing ``bulmaConfig``; more details about components customization on https://oruga-ui.com/documentation/customisation.html
+In case you want to replace the default style of a component you can override or add new classes changing ``tailwindConfig``; more details about components customization on https://oruga-ui.com/documentation/customisation.html
 
 ```js
 import { createApp } from 'vue'
 
 import Oruga from '@oruga-ui/oruga-next'
-import { bulmaConfig } from '@oruga-ui/theme-bulma'
+import { tailwindConfig } from '@oruga-ui/theme-tailwind'
 
-import '@oruga-ui/theme-bulma/dist/bulma.css'
+import '@oruga-ui/theme-tailwind/dist/tailwind.css'
 
-const customBulmaConfig = {
-    ...bulmaConfig,
+const customTailwindConfig = {
+    ...TailwindConfig,
     checkbox: {
         override: true,
         rootClass: 'checkbox'
@@ -128,7 +128,7 @@ const customBulmaConfig = {
 }
 
 createApp(App)
-    .use(Oruga, customBulmaConfig)
+    .use(Oruga, customTailwindConfig)
     .mount('#app')
 ```
 
@@ -136,7 +136,7 @@ createApp(App)
 ## Contributors
 Thank you to everyone involved for improving this project, day by day 💚
 
-<a href="https://github.com/oruga-ui/theme-bulma">
+<a href="https://github.com/oruga-ui/theme-tailwind">
   <img
   src="https://contrib.rocks/image?repo=oruga-ui/theme-bulma"
   />
@@ -146,8 +146,8 @@ Thank you to everyone involved for improving this project, day by day 💚
 
 ## Credits
 
-Logo designed by [rubjo](https://github.com/rubjo)
+Logo designed by [mouadTaoussi](https://github.com/mouadTaoussi)
 
 ## License
 
-Code released under [MIT](https://github.com/oruga-ui/theme-bulma/blob/master/LICENSE) license.
+Code released under [MIT](https://github.com/oruga-ui/theme-tailwind/blob/master/LICENSE) license.
