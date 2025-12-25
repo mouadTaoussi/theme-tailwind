@@ -13,13 +13,11 @@
     }
 
     .label {
-        display: block;
         color: rgb(179, 179, 179);
         margin-bottom: .25rem;
     }
     
     .help {
-        display: block;
         font-size: .75rem;
         margin-top: .25rem;
         // Variants
@@ -40,18 +38,8 @@
         }
     }
     
-    .field-label {
-        flex-basis: 0;
-        flex-grow: 1;
-        margin-inline-end: 1.5rem;
-        text-align: right;
-    }
-
     .field-body {
         .has-addons {
-            display: flex;
-            justify-content: flex-start;
-
             .button, .input-component, select-component {
                 margin: 0;
             }
@@ -89,12 +77,6 @@
 
         // Grouped 
         .is-grouped {
-            display: flex;
-            gap: .75rem;
-            justify-content: flex-start;
-            &.is-grouped-multiline {
-                flex-wrap: wrap;
-            }
             button , .input , .select {
                 margin: 0;
             }

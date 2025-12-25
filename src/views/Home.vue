@@ -97,6 +97,164 @@
                 </button>
             </div>
         </section>
+        <!-- Table Component -->
+         <div class="table-wrapper" data-oruga="table">
+            <div style="display: none;">
+                <span data-oruga="table-column" data-id="1">
+                    ID <!---->
+                </span>
+                <span data-oruga="table-column" data-id="2">
+                    First Name <!---->
+                </span>
+                <span data-oruga="table-column" data-id="3">
+                    Last Name <!---->
+                </span>
+                <span data-oruga="table-column" data-id="4">
+                    Date <!---->
+                </span>
+                <span data-oruga="table-column" data-id="5">
+                    Gender <!---->
+                </span>
+            </div>
+            <!----><!---->
+            <div class="table-inner rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+                <table class="table min-w-full divide-y divide-gray-200">
+                    <!---->
+                    <thead class="bg-gray-50">
+                        <tr>
+                        <!----><!---->
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider is-sortable is-unselectable" draggable="false" style="width: 40px;">
+                            <div class="flex items-center space-x-1 cursor-pointer hover:text-gray-700">
+                                <span>ID</span>
+                                <span class="th-wrap sort-icon">
+                                    <span class="icon inline-flex justify-center items-center text-xs" data-oruga="icon">
+                                    <i class="fas fa-arrow-up fa-sm"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider is-sortable is-unselectable" draggable="false">
+                            <div class="flex items-center space-x-1 cursor-pointer hover:text-gray-700">
+                                <span>First Name</span>
+                                <span class="th-wrap sort-icon">
+                                    <span class="icon inline-flex justify-center items-center text-xs" data-oruga="icon">
+                                    <i class="fas fa-arrow-up fa-sm"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider is-sortable is-unselectable" draggable="false">
+                            <div class="flex items-center space-x-1 cursor-pointer hover:text-gray-700">
+                                <span>Last Name</span>
+                                <span class="th-wrap sort-icon">
+                                    <span class="icon inline-flex justify-center items-center text-xs" data-oruga="icon">
+                                    <i class="fas fa-arrow-up fa-sm"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </th>
+                        <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider is-sortable is-unselectable is-centered" draggable="false">
+                            <div class="flex items-center justify-center space-x-1 cursor-pointer hover:text-gray-700">
+                                <span>Date</span>
+                                <span class="th-wrap sort-icon">
+                                    <span class="icon inline-flex justify-center items-center text-xs" data-oruga="icon">
+                                    <i class="fas fa-arrow-up fa-sm"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider is-sortable is-unselectable" draggable="false">
+                            <div class="flex items-center space-x-1 cursor-pointer hover:text-gray-700">
+                                <span>Gender</span>
+                                <span class="th-wrap sort-icon">
+                                    <span class="icon inline-flex justify-center items-center text-xs" data-oruga="icon">
+                                    <i class="fas fa-arrow-up fa-sm"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </th>
+                        <!---->
+                        </tr>
+                        <!----><!---->
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50 transition-colors duration-150" draggable="false">
+                        <!----><!---->
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900" data-label="ID" style="width: 40px;">1</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800" data-label="First Name">Jesse</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800" data-label="Last Name">Simmons</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 text-center" data-label="Date">10/15/2016</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800" data-label="Gender">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                Male
+                            </span>
+                        </td>
+                        <!---->
+                        </tr>
+                        <!---->
+                        <tr class="hover:bg-gray-50 transition-colors duration-150" draggable="false">
+                        <!----><!---->
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900" data-label="ID" style="width: 40px;">2</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800" data-label="First Name">John</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800" data-label="Last Name">Jacobs</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 text-center" data-label="Date">12/15/2016</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800" data-label="Gender">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                Male
+                            </span>
+                        </td>
+                        <!---->
+                        </tr>
+                        <!---->
+                        <tr class="hover:bg-gray-50 transition-colors duration-150" draggable="false">
+                        <!----><!---->
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900" data-label="ID" style="width: 40px;">3</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800" data-label="First Name">Tina</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800" data-label="Last Name">Gilbert</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 text-center" data-label="Date">4/26/2016</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800" data-label="Gender">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-pink-100 text-pink-800">
+                                Female
+                            </span>
+                        </td>
+                        <!---->
+                        </tr>
+                        <!---->
+                        <tr class="hover:bg-gray-50 transition-colors duration-150" draggable="false">
+                        <!----><!---->
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900" data-label="ID" style="width: 40px;">4</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800" data-label="First Name">Clarence</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800" data-label="Last Name">Flores</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 text-center" data-label="Date">4/10/2016</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800" data-label="Gender">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                Male
+                            </span>
+                        </td>
+                        <!---->
+                        </tr>
+                        <!---->
+                        <tr class="hover:bg-gray-50 transition-colors duration-150" draggable="false">
+                        <!----><!---->
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900" data-label="ID" style="width: 40px;">5</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800" data-label="First Name">Anne</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800" data-label="Last Name">Lee</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 text-center" data-label="Date">12/6/2016</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800" data-label="Gender">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-pink-100 text-pink-800">
+                                Female
+                            </span>
+                        </td>
+                        <!---->
+                        </tr>
+                        <!----><!---->
+                    </tbody>
+                    <!---->
+                </table>
+                <!---->
+            </div>
+            <!---->
+            </div>
     </div>
 </template>
 
