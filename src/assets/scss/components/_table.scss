@@ -6,75 +6,15 @@
 /* @docs */
 
 /* @docs */
+
 .table-inner {
-    width: 100%;
     .table {
-        width: 100%;
-        
-        thead {
-            tr {
-                th {
-                    padding: 8px 0;
-                    text-align: left;
-                    border-bottom: 2px solid  rgb(202, 202, 202);
-                    cursor: pointer;
-                    &:hover {
-                        border-bottom: 2px solid rgb(77, 77, 77);
-                    }
-                }
-                border-bottom: .5px solid rgb(202, 202, 202);
-            }
-        }
-        tbody {
-            tr {
-                cursor: pointer;
-                td {
-                    padding: 8px 0;
-                    .has-text-centered {
-                        text-align: center;
-                    }
-                }
-                &:hover {
-                    background-color: rgb(202, 202, 202);
-                }
-            }
-        }
-        tfoot {
-
-        }
-
-
-        tr:not(:last-child) {
-            border-bottom: .5px solid rgb(202, 202, 202);
-        }
-
-
-
-
-        &.is-bordered {}
-        &.is-striped {}
-        &.is-narrow {}
-        &.is-hoverable {}
-        &.is-empty {}
-
-        &.table-footer {}
-        &.is-mobile {}
-
-        .is-sortable {} 
-        .is-current-sort {}
-        .sort-icon {}
-        .is-unselectable {}
-        .is-centered {}
-        .has-text-centered {
-            text-align: center;
+        .is-narrowed {
+            tr, th, td {
+                padding: 0;
+            } 
         }
         
     }
-   
+    
 }
-
-// @media only screen and (max-width: 600px) {
-//   body {
-//     background-color: lightblue;
-//   }
-// }

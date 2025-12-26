@@ -8,7 +8,7 @@
 $pagination-active-background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1) !default;
 $pagination-nav-padding-left: 0.75rem !default;
 $pagination-nav-padding-right: 0.75rem !default;
-$pagination-link-margin: 0 4px !default;
+$pagination-link-margin: 0 4px 0 0 !default;
 $pagination-link-padding: 8px 12px !default;
 $pagination-link-border-color: rgb(227, 227, 227) !default;
 $pagination-link-border-radius: 3px !default;
