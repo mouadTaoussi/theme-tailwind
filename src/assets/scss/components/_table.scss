@@ -9,7 +9,7 @@
 
 .table-inner {
     .table {
-        .is-narrowed {
+        &.is-narrowed {
             tr, th, td {
                 padding: 0;
             } 

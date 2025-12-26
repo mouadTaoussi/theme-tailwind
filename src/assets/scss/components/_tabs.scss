@@ -1,0 +1,24 @@
+
+@use "sass:map";
+@use "sass:list";
+@use "./utils/all" as utils;
+@use "./utils/variables" as vars;
+
+/* @docs */
+
+/* @docs */
+
+.tabs-wrapper {
+    .tabs {
+        .tab {
+            .tab-link {
+                padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+                transition: all vars.$speed-slow var(--ease-in);
+                &.active {
+                    background-color: list.nth(map.get(vars.$theme-colors, "primary"), 2);
+                    color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
+                }
+            }
+        }
+    }
+}
