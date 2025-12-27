@@ -45,7 +45,7 @@ const tailwindConfig = {
         arrowIconNextClass: "has-icons-right",
         indicatorsClass:
             "carousel-indicator w-full flex items-center justify-center absolute bottom-0",
-        indicatorClass: "indicator-item",
+        indicatorClass: "indicator-item [&_img]:cursor-default",
         indicatorsInsideClass: "is-inside absolute",
         indicatorsInsidePositionClass: "is-",
         indicatorItemClass:
@@ -59,25 +59,27 @@ const tailwindConfig = {
     checkbox: {
         override: true,
         rootClass: "checkbox flex items-center align-top",
-        disabledClass: "is-disabled",
+        disabledClass:
+            "is-disabled pointer-events-none cursor-not-allowed opacity-50",
         inputClass: "check rounded outline-none text-inherit flex-shrink-0",
-        labelClass: "control-label",
+        labelClass:
+            "control-label select-none text-sm font-medium text-heading",
         variantClass: "is-",
         sizeClass: "is-",
     },
     collapse: {
         override: true,
         rootClass: "collapse-component rounded-lg my-4",
-        triggerClass: "collapse-component-trigger",
-        contentClass: "collapse-component-content",
+        triggerClass: "collapse-component-trigger cursor-pointer inline-block",
+        contentClass: "collapse-component-content [display:inherit]",
     },
     datepicker: {},
     datetimepicker: {},
     dropdown: {
         override: true,
-        rootClass: "dropdown relative btn-group",
+        rootClass: "dropdown relative btn-group inline-block align-middle",
         triggerClass: "dropdown-trigger",
-        disabledClass: "disabled",
+        disabledClass: "disabled opacity-50 cursor-not-allowed",
         expandedClass: "w-full",
         inlineClass: "inline",
         menuMobileOverlayClass:
@@ -105,22 +107,23 @@ const tailwindConfig = {
             "dropdown-item block px-4 py-2 hover:bg-gray-50 cursor-pointer",
         itemActiveClass: "active",
         itemClickableClass: "clickable",
-        itemDisabledClass: "disabled",
+        itemDisabledClass: "disabled opacity-50 cursor-not-allowed",
         mobileClass: "is-mobile-modal",
         teleportClass: "teleported",
     },
     field: {
         override: true,
         rootClass: "field",
-        labelClass: "label block",
+        labelClass: "label block text-gray-500 mb-2",
         labelSizeClass: "is-",
         messageClass: "help block",
         messageVariantClass: "is-",
         bodyClass: "field-body",
         addonsClass: "has-addons flex justify-start",
-        groupedClass: "is-grouped flex gap-3 justify-start",
+        groupedClass:
+            "is-grouped flex gap-3 justify-start [&_input]:m-0 [&_select]:m-0 [&_button]:m-0",
         groupMultilineClass: "is-grouped-multiline flex-wrap",
-        horizontalClass: "is-horizontal",
+        horizontalClass: "is-horizontal flex",
         horizontalLabelClass:
             "field-label flex-basis-0 flex-grow me-6 text-right",
         horizontalBodyClass: "field-body",
@@ -261,9 +264,11 @@ const tailwindConfig = {
     radio: {
         override: true,
         rootClass: "radio flex justify-start items-center relative",
-        disabledClass: "is-disabled",
+        disabledClass:
+            "is-disabled pointer-events-none cursor-not-allowed opacity-50",
         inputClass: "check",
-        labelClass: "control-label",
+        labelClass:
+            "control-label select-none text-sm font-medium text-heading",
         variantClass: "is-",
         sizeClass: "is-",
     },
@@ -291,7 +296,10 @@ const tailwindConfig = {
             if (isTrueish(props.size)) classes.push(`input-${props.size}`);
             if (isTrueish(props.rounded)) classes.push("rounded-xl");
             if (isTrueish(props.multiple)) classes.push("is-multiple");
-            if (isTrueish(props.disabled)) classes.push("disabled");
+            if (isTrueish(props.disabled))
+                classes.push(
+                    "disabled pointer-events-none cursor-not-allowed opacity-50",
+                );
             return classes.join(" ");
         },
         rootVariantClass: "border-",
@@ -340,7 +348,8 @@ const tailwindConfig = {
     slider: {
         override: true,
         rootClass: "slider",
-        disabledClass: "is-disabled",
+        disabledClass:
+            "is-disabled pointer-events-none cursor-not-allowed opacity-50",
         trackClass: "slider-track relative",
         fillClass: "slider-fill absolute",
         thumbWrapperClass:
@@ -389,11 +398,13 @@ const tailwindConfig = {
         inputClass: "check flex items-center flex-shrink-0 cursor-pointer",
         positionClass: (value: string): string => `has-${value}-label`,
         roundedClass: "is-rounded",
-        labelClass: "control-label",
+        labelClass:
+            "control-label select-none text-sm font-medium text-heading",
         sizeClass: "is-",
         variantClass: "is-",
         passiveVariantClass: "is-",
-        disabledClass: "is-disabled",
+        disabledClass:
+            "is-disabled pointer-events-none cursor-not-allowed opacity-50",
     },
     table: {
         override: true,
@@ -445,7 +456,7 @@ const tailwindConfig = {
         tabClass: "tab-link",
         tabIconClass: "tab-icon me-2",
         tabLabelClass: "tab-title",
-        tabActiveClass: "active bg-sky-500 text-white",
+        tabActiveClass: "active",
         tabDisabledClass: "is-disabled",
         transitioningClass: "is-transitioning",
     },
@@ -489,7 +500,8 @@ const tailwindConfig = {
         draggableClass: "upload-draggable w-full",
         variantClass: "is-",
         expandedClass: "w-full",
-        disabledClass: "is-disabled",
+        disabledClass:
+            "is-disabled pointer-events-none cursor-not-allowed opacity-50",
         hoveredClass: "is-hovered",
     },
 };

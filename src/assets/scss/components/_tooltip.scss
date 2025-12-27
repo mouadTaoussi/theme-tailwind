@@ -169,14 +169,14 @@ $tooltip-font-size: 0.85rem !default;
             }
         }
     }
-    &.is-dashed {
+    &.is-dashed { // To Tailwind
         .tooltip-trigger {
             border-bottom: 1px dashed gray;
             cursor: default;
         }
     }
 
-    &.is-square {
+    &.is-square { // To Tailwind
         .tooltip-content {
             border-radius: 0;
         }

@@ -8,16 +8,8 @@
 /* @docs */
 
 .dropdown {
-    display: inline-block;
-	vertical-align: middle;
-
-	&.disabled {
-		opacity: 0.5;
-        cursor: not-allowed;
-	}
-
 	&.inline {
-		.dropdown-menu {
+		.dropdown-menu { 
 			position: static;
 			display: inline-block;
         	padding: 0;
@@ -109,7 +101,6 @@
 			left: 0;
 		}
     }
-
 
 	// Mobile dropdown
 	&.is-mobile-modal:not(.inline) {

@@ -3,25 +3,6 @@
 *********************************************/
 @use "sass:map";
 
-// $theme-colors: (
-//     "primary"  : "blue",
-//     "info"     : "sky",
-//     "secondary": "gray",
-//     "success"  : "green",
-//     "danger"   : "red",
-//     "warning"  : "yellow"
-// );
-// $variant-degree : 700;
-
-// $theme-colorss: (
-//     "primary"  : var(--color-blue-700),
-//     "info"     : var(--color-sky-700),
-//     "secondary": var(--color-gray-700),
-//     "success"  : var(--color-green-700),
-//     "danger"   : var(--color-red-700),
-//     "warning"  : var(--color-yellow-700)
-// );
-
 $primary: var(--color-blue-700) !default;
 $primary-invert: var(--color-blue-50) !default;
 $secondary: var(--color-gray-700) !default;
@@ -74,22 +55,3 @@ $active-shadow-size: 0 0 0.5em !default;
 
 // make the custom colors extandable by providing a new variable to override
 $custom-colors: () !default;
-
-// @forward "bulma/sass/utilities/derived-variables" with (
-//     // adding aditional colors to colors map
-//     $custom-colors:
-//         map.merge(
-//             // merge our custom-colors with the overridable map
-//             ("secondary": $secondary),
-//             $custom-colors
-//         )
-// );
-
-// @use "bulma/sass/utilities/derived-variables" as vars;
-
-// $sizes-map: (
-//     "small": vars.$size-small,
-//     "normal": vars.$size-normal,
-//     "medium": vars.$size-medium,
-//     "large": vars.$size-large,
-// ) !default;

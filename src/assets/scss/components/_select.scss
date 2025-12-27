@@ -15,7 +15,7 @@ $select-arrow-size: 1rem !default;
 /* @docs */
 
 .select-component {
-    .icon { 
+    .icon {
         position: absolute;
         top: 0;
         margin: 0;
@@ -94,10 +94,6 @@ $select-arrow-size: 1rem !default;
             padding-right: calc(
             $select-arrow-size * 2
             );
-        }
-
-        &.disabled {
-            background-color: $select-border-color;
         }
     }
 }

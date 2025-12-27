@@ -35,7 +35,6 @@ $notification-icon-margin-right: 0.5rem !default;
   & > button {
     background-color: transparent;
     border: 0;
-    // 
     position: absolute;
     top: $notification-close-btn-position;
     right: $notification-close-btn-position;
@@ -43,9 +42,7 @@ $notification-icon-margin-right: 0.5rem !default;
 }
 .notifictations {
     pointer-events: none;
-    // 
     padding: $notification-notices-padding;
-    // 
     z-index: $notification-notices-zindex;
 
     .alert {

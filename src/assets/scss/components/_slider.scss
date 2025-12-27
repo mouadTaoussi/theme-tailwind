@@ -5,13 +5,13 @@
 @use "./utils/variables" as vars;
 
 .slider {
-    .slider-track {
+    .slider-track { // To Tailwind
         background-color: var(--color-gray-100);
         height: 8px;
         width: 100%;
         border-radius: 3px;
         
-        .slider-fill {
+        .slider-fill { // To Tailwind
             background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
             height: inherit;
 
@@ -28,7 +28,7 @@
             }
         }
         
-        .slider-tick {
+        .slider-tick { // To Tailwind
             width: 2px;
             height: inherit;
             transform: translate(-50%);
@@ -43,7 +43,7 @@
         .slider-thumb-wrapper {
             transform: translate(-50%, -50%);
 
-            .slider-thumb {
+            .slider-thumb { // To Tailwind
                 width: 20px;
                 height: 20px;
                 border: 0.005rem;
@@ -55,7 +55,7 @@
                 }
             }
 
-            &.is-dragging {
+            &.is-dragging { // To Tailwind
                 .slider-thumb {
                     cursor: grabbing;
                 }

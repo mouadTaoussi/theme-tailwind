@@ -13,7 +13,7 @@ $upload-border-radius: 3px !default;
 /* @docs */
 
 .upload {
-    input[type="file"] {
+    input[type="file"] { // To Tailwind
         cursor: pointer;
         position: absolute;
         top: 0;
@@ -49,10 +49,10 @@ $upload-border-radius: 3px !default;
             }
     }
 
-    &.is-disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-    }
+    // &.is-disabled { // To Tailwind
+    //     opacity: 0.5;
+    //     cursor: not-allowed;
+    // }
 
     // &.is-rounded {
     //     border-radius: $upload-rounded-border-radius;

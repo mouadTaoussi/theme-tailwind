@@ -26,10 +26,6 @@ $carousel-overlay-z: 40 !default;
         max-height: 100vh;
         z-index: -1;
 
-        .carousel-item img {
-            cursor: default;
-        }
-
         .carousel-indicator.has-background {
             background: transparent;
         }
@@ -49,23 +45,6 @@ $carousel-overlay-z: 40 !default;
         &.has-background {
             background: $carousel-indicator-background;
         }
-
-        // &.has-custom {
-        //     // @include mixins.overflow-touch;
-
-        //     flex-wrap: nowrap;
-        //     justify-content: flex-start;
-        //     overflow: hidden;
-        //     overflow-x: auto; // // -> flex flex-nowrap justify-start overflow-hidden overflow-x-auto
-
-        //     &.is-small .indicator-item {
-        //         flex: 1 0 10%;
-        //     }
-
-        //     &.is-medium .indicator-item {
-        //         flex: 1 0 16.66667%;
-        //     }
-        // }
 
         &.is-inside {
             &.is-bottom {

@@ -35,12 +35,9 @@ $pagination-link-min-width: 2.5rem !default;
         border-style: var(--tw-border-style);
         border-color: $pagination-link-border-color;
         border-radius: $pagination-link-border-radius;
-        //
         padding: $pagination-link-padding;
         margin: $pagination-link-margin;
-        //
         min-width: $pagination-link-min-width;
-        //
         transition-duration: 294ms;
         transition-property: background-color, border-color, box-shadow, color;
     }

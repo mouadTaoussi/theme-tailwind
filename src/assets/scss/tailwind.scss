@@ -31,44 +31,7 @@
 @forward "./components/tooltip";
 @forward "./components/upload";
 
-@import "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @tailwind tokens;
-
-@theme {
-  // --font-display: Inter, ui-sans-serif, "system-ui", -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-display--font-feature-settings: "cv02", "cv03", "cv04", "cv11"; 
-  --font-display--font-variation-settings: "opsz" 32; 
-}
-
-html {
-    -webkit-text-size-adjust: 100%;
-    tab-size: 4;
-    line-height: 1.5;
-    // font-family: var(--font-display);
-    font-feature-settings: var(--font-display--font-feature-settings);
-    font-variation-settings: var(--font-display--font-variation-settings);
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #bcbcbc; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #808080; 
-}

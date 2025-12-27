@@ -11,7 +11,6 @@ $radio-border-radius: 50% !default;
 $radio-font-size: 15px !default;
 $radio-padding: .5em .75em !default;
 $radio-control-label-padding-left: 11px !default;
-// $radio
 /* @docs */
 
 @mixin radio-size ($control,$check,$checked){
@@ -109,10 +108,5 @@ $radio-control-label-padding-left: 11px !default;
     }
     &.is-large {
         @include radio-size(20px, 1.50rem, 1.25rem);
-    }
-
-    &.is-disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
     }
 }

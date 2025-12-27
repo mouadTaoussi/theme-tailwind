@@ -12,11 +12,6 @@
         margin-bottom: .75rem;
     }
 
-    .label {
-        color: rgb(179, 179, 179);
-        margin-bottom: .25rem;
-    }
-    
     .help {
         font-size: .75rem;
         margin-top: .25rem;
@@ -32,7 +27,7 @@
     }
 
     &.is-horizontal {
-        display: flex;
+        // display: flex;
         .field-body {
             flex-grow: 4;
         }
@@ -72,13 +67,6 @@
             > *:not(:first-child):not(:last-child) select,
             > select:not(:first-child):not(:last-child) {
                 border-radius: 0;
-            }
-        }
-
-        // Grouped 
-        .is-grouped {
-            button , .input , .select {
-                margin: 0;
             }
         }
     }

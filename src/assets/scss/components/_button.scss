@@ -17,21 +17,14 @@ $btn-padding: 0.50rem 1.75rem !default;
 .button {
     background-color: white;
     color: black;
-    // 
     padding:$btn-padding;
-    // 
     font-size: $btn-font-size;
     font-weight: $btn-font-weight;
-    // 
     line-height: normal;
-    // 
-    // transition: all vars.$speed-slow var(--ease-in);  -> duration-100 ease-in
-    // 
     border: 0.005rem;
-    border-style: var(--tw-border-style);
-    border-color: rgb(227, 227, 227);
-    //     
-   &:hover {
+    border-style: var(--tw-border-style);   
+   
+    &:hover {
         background-color: rgb(250, 250, 250);
     }
     
@@ -54,22 +47,20 @@ $btn-padding: 0.50rem 1.75rem !default;
             &.border {
                 background-color: transparent;
                 color: $variant;
-                // // 
+
                 &:hover {
                     background-color: $variant;
                     color: white;
-                // // 
                 }
             }
             &.inverted {
                 color: $variant;
                 background-color: transparent;
-                // 
                 border-color: transparent;
+
                 &:hover {
                     background-color: $variant-invert;
                     color: $variant;
-                    // 
                     border-color: $variant;
                 }
             }

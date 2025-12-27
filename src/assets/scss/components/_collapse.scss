@@ -1,14 +1,3 @@
 
 @use "sass:map";
 @use "./utils/variables" as vars;
-
-.collapse-component {
-    &-trigger {
-        cursor: pointer;
-        display: inline-block;
-    }
-
-    &-content {
-        display: inherit;
-    }
-}

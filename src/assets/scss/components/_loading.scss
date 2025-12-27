@@ -4,7 +4,7 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-$loading-overlay-background-color: var(--color-gray-100) !default;
+$loading-overlay-background-color: var(--color-gray-50) !default;
 $loading-overlay-zindex: 9999 !default;
 /* @docs */
 

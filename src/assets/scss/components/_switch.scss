@@ -41,12 +41,6 @@ $switch-active-background-color: list.nth(map.get(vars.$theme-colors, "primary")
         font-size: $switch-font-size;
     }
 
-    // input {
-    //     -webkit-appearance: none;
-    //     -moz-appearance: none;
-    //     appearance: none;
-    // }
-
     .check {
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -61,17 +55,12 @@ $switch-active-background-color: list.nth(map.get(vars.$theme-colors, "primary")
     }
     .check::before {
         content: "";
-        display: block; // -> block
-        //
+        display: block;
         font-size: inherit;
-        //
         border-radius: $switch-border-radius;
-        //
         width: calc(($switch-width - $switch-padding * 2) / 2);
         height: calc(($switch-width - $switch-padding * 2) * .5);
-        //
-        background: white; // -> bg-white
-        // box-shadow: 0 3px 1px #0000000d, 0 2px 2px #0000001a, 0 3px 3px #0000000d;
+        background: white;
         transition: all vars.$speed-slow var(--ease-in); 
         will-change: transform;
         transform-origin: left;
@@ -105,10 +94,5 @@ $switch-active-background-color: list.nth(map.get(vars.$theme-colors, "primary")
     }
     &.is-large {
         @include switch-size(20px, 2rem);
-    }
-
-    &.is-disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
     }
 }
