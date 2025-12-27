@@ -366,7 +366,7 @@ const tailwindConfig = {
     steps: {
         override: true,
         rootClass: "steps-wrapper",
-        navClass: (_: string, props: ComponentProps) => {
+        navClass: (_: string, props: ComponentProps): string => {
             const classes = ["steps"];
             if (props.labelPosition === "left") classes.push("has-label-left");
             if (props.labelPosition === "right")
@@ -441,23 +441,38 @@ const tailwindConfig = {
     tabs: {
         override: true,
         rootClass: "tabs-wrapper",
-        contentClass: "tabs-content",
+        contentClass: "tabs-content p-4 flex-1",
         multilineClass: "is-multiline",
-        expandedClass: "w-full ",
-        verticalClass: "block",
-        positionClass: "is-",
+        expandedClass: "[&_.tab]:flex-1",
+        verticalClass: "flex [&_.tabs]:block",
+        positionClass: (position: string): string => {
+            if (position == "left") return "";
+            else if (position == "right") return "flex-row-reverse";
+            return "";
+        },
         navClass:
-            "tabs flex flex-wrap text-sm font-medium text-center text-body border-b border-default border-gray-200 text-gray-500",
+            "tabs flex flex-wrap font-medium border-b border-default border-gray-200 text-gray-500",
         navTypeClass: "is-",
         navItemClass: "tab",
-        navSizeClass: "is-",
-        navPositionClass: "is-",
+        navSizeClass: (size: string): string => {
+            if (size == "small") return "text-sm";
+            else if (size == "medium") return "text-md";
+            else if (size == "large") return "text-lg";
+            return "text-sm";
+        },
+        navPositionClass: (position: string): string => {
+            if (position == "left") return "justify-start";
+            else if (position == "centered") return "justify-center";
+            else if (position == "right") return "justify-end";
+            return "left";
+        },
         tabPanelClass: "tab-item",
-        tabClass: "tab-link",
+        tabClass: "tab-link w-full flex items-center",
         tabIconClass: "tab-icon me-2",
         tabLabelClass: "tab-title",
         tabActiveClass: "active",
-        tabDisabledClass: "is-disabled",
+        tabDisabledClass:
+            "is-disabled pointer-events-none cursor-not-allowed opacity-50",
         transitioningClass: "is-transitioning",
     },
     taginput: {
