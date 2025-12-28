@@ -450,9 +450,16 @@ const tailwindConfig = {
             else if (position == "right") return "flex-row-reverse";
             return "";
         },
-        navClass:
-            "tabs flex flex-wrap font-medium border-b border-default border-gray-200 text-gray-500",
-        navTypeClass: "is-",
+        navClass: "tabs flex flex-wrap font-medium",
+        navTypeClass: (type: string): string => {
+            if (type == "toggle")
+                return "toggle text-gray-500 [&_.tab]:border-default [&_.tab]:border [&_.tab]:border-gray-200";
+            else if (type == "boxed")
+                return "boxed text-gray-500 border-default border-b border-gray-200";
+            else if (type == "pills") return "pills";
+            else
+                return "default text-gray-500 border-default border-b border-gray-200";
+        },
         navItemClass: "tab",
         navSizeClass: (size: string): string => {
             if (size == "small") return "text-sm";
