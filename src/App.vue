@@ -8,7 +8,7 @@ import components from "@/components";
             <router-link to="/" class="theme-label">
                 <img
                     class="image__oruga"
-                    src="../../public/oruga-tailwind.svg"
+                    src="../../public/oruga-tailwind.png"
                     alt="Logo Oruga Theme Tailwind" />
                 <b>Oruga Tailwind Theme</b>
             </router-link>

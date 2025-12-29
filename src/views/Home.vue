@@ -3,7 +3,7 @@
         <div class="column is-narrow">
             <img
                 class="image__oruga"
-                src="../../public/oruga-tailwind.svg"
+                src="../../public/oruga-tailwind.png"
                 alt="Logo Oruga Theme Tailwind" />
         </div>
         <h1 class="text-center">Oruga Tailwind Theme Demo</h1>

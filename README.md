@@ -7,8 +7,8 @@
 </p>
 
 <p align="center">
-    <a href="https://www.npmjs.com/package/@oruga-ui/theme-tailwind"><img src="https://img.shields.io/npm/v/@oruga-ui/theme-bulma.svg?logo=npm" /><a>
-    <a href="https://www.npmjs.com/package/@oruga-ui/theme-tailwind"><img src="https://img.shields.io/npm/dt/@oruga-ui/theme-bulma.svg" /></a>
+    <!-- <a href="https://www.npmjs.com/package/@oruga-ui/theme-tailwind"><img src="https://img.shields.io/npm/v/@oruga-ui/theme-bulma.svg?logo=npm" /><a> -->
+    <!-- <a href="https://www.npmjs.com/package/@oruga-ui/theme-tailwind"><img src="https://img.shields.io/npm/dt/@oruga-ui/theme-bulma.svg" /></a> -->
     <a href="https://discord.gg/RuKuBYN"><img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg?logo=discord" /></a>
     <a href="https://ko-fi.com/mlmoravek"><img src="https://img.shields.io/badge/ko--fi-donate-%23FF5E5B?style=flat&logo=ko-fi&logoColor=white" /></a>
 </p>
@@ -136,11 +136,11 @@ createApp(App)
 ## Contributors
 Thank you to everyone involved for improving this project, day by day 💚
 
-<a href="https://github.com/oruga-ui/theme-tailwind">
+<!-- <a href="https://github.com/oruga-ui/theme-tailwind">
   <img
   src="https://contrib.rocks/image?repo=oruga-ui/theme-bulma"
   />
-</a>
+</a> -->
 
 [Complete list](CONTRIBUTORS.md).
 
