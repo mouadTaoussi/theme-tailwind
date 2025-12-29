@@ -133,9 +133,9 @@ const tailwindConfig = {
         rootClass: "icon inline-flex justify-center items-center",
         variantClass: "text-",
         sizeClass: (position: string): string => {
-            if (position == "small") return "text-xs";
+            if (position == "small") return "text-sm";
             else if (position == "medium") return "text-md";
-            else if (position == "large") return "text-xl";
+            else if (position == "large") return "text-lg";
             return "";
         },
         clickableClass: "clickable cursor-pointer pointer-events-auto",
@@ -203,10 +203,10 @@ const tailwindConfig = {
         rootClass: "menu",
         listClass: "menu-list",
         listLabelClass: "menu-label",
-        itemButtonClass: "menu-item",
+        itemButtonClass: "menu-item mb-2",
         itemButtonActiveClass: "is-active",
         itemButtonDisabledClass: "is-disabled",
-        itemSubmenuClass: "submenu",
+        itemSubmenuClass: "submenu border-l m-2 pl-2",
     },
     modal: {
         override: true,

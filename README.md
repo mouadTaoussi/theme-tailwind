@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="240" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" />
+    <img width="240" src="public/oruga-tailwind.svg" />
 </p>
 
 <p align="center">
