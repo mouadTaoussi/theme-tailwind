@@ -200,13 +200,14 @@ const tailwindConfig = {
     },
     menu: {
         override: true,
-        rootClass: "menu",
+        rootClass: "menu text-sm font-medium text-heading",
         listClass: "menu-list",
-        listLabelClass: "menu-label",
-        itemButtonClass: "menu-item mb-2",
-        itemButtonActiveClass: "is-active",
-        itemButtonDisabledClass: "is-disabled",
-        itemSubmenuClass: "submenu border-l m-2 pl-2",
+        listLabelClass: "menu-label my-2 text-gray-500",
+        itemButtonClass: "menu-item [&_.icon]:mr-2 [&_.icon]:ml-1",
+        itemButtonActiveClass: "active",
+        itemButtonDisabledClass:
+            "disabled pointer-events-none cursor-not-allowed opacity-50",
+        itemSubmenuClass: "submenu border-l border-gray-200",
     },
     modal: {
         override: true,

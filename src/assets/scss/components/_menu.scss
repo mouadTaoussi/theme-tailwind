@@ -1,0 +1,35 @@
+
+@use "sass:map";
+@use "sass:list";
+@use "./utils/all" as utils;
+@use "./utils/variables" as vars;
+
+/* @docs */
+/* @docs */
+
+.menu {
+    button {
+        text-align: left;
+        width: 100%;
+        padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
+        border-radius: .25rem;
+        &:hover {
+            background-color: list.nth(map.get(vars.$theme-colors, "secondary"), 2);
+        } 
+    }
+    .submenu {
+        margin-left: 1.25rem;
+        padding-left: 0.25rem;
+
+        .menu-item {
+            text-align: left;
+            width: 100%;
+            transition: all vars.$speed-slow var(--ease-in);
+            border-radius: .25rem;
+            &.active {
+                background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
+                color: white;
+            } 
+        }
+    }
+}
