@@ -1,0 +1,30 @@
+
+@use "sass:map";
+@use "sass:list";
+@use "./utils/all" as utils;
+@use "./utils/variables" as vars;
+
+/* @docs */
+/* @docs */
+
+.datepicker {
+    .datepicker-table {
+        padding: 0 10px;
+        .datepicker-header{
+            display: table-header-group;
+            font-weight: bold;
+        }
+        .datepicker-body .datepicker-row {
+            display: table-row;;
+        }
+    }
+
+    .datepicker-cell {
+        border: 1px solid black;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+        border-radius: var(--bulma-radius);
+        padding: .5rem .75rem;
+    }
+}
