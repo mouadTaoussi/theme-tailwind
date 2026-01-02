@@ -10,7 +10,7 @@ import components from "@/components";
                     class="image__oruga"
                     src="../../public/oruga-tailwind.png"
                     alt="Logo Oruga Theme Tailwind" />
-                <b>Oruga Tailwind Theme</b>
+                <b style="color: black">Oruga Tailwind Theme</b>
             </router-link>
 
             <hr />

@@ -5,7 +5,7 @@ const tailwindConfig = {
     button: {
         override: true,
         rootClass:
-            "button duration-100 ease-in shadoww-sm rounded focus:outline-offset-2 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500",
+            "button duration-100 ease-in rounded-lg shadow-xs focus:outline-offset-2 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500",
         wrapperClass: "button-wrapper",
         sizeClass: "is-",
         variantClass: "is-",
@@ -63,7 +63,7 @@ const tailwindConfig = {
             "is-disabled pointer-events-none cursor-not-allowed opacity-50",
         inputClass: "check rounded outline-none text-inherit flex-shrink-0",
         labelClass:
-            "control-label select-none text-sm font-medium text-heading",
+            "control-label select-none text-sm font-medium text-heading ml-2",
         variantClass: "is-",
         sizeClass: "is-",
     },
@@ -81,23 +81,24 @@ const tailwindConfig = {
         boxClass: "dropdown-item m-4",
         tableClass: "datepicker-table",
         tableHeadClass: "datepicker-header",
-        tableHeadCellClass: "datepicker-cell",
-        headerButtonsClass: "pagination field flex",
+        tableHeadCellClass: "datepicker-cell hover:bg-gray-100 rounded",
+        headerButtonsClass: "pagination field flex justify-center",
         prevButtonClass: "pagination-previous",
         nextButtonClass: "pagination-next",
-        listsClass: "pagination-list",
+        listsClass: "pagination-list flex [&_.select-component]:mr-2",
         tableBodyClass: (_: string, props: ComponentProps) => {
             const classes = ["datepicker-body"];
             if (props.events) classes.push(`has-events`);
             return classes.join(" ");
         },
         tableRowClass: "datepicker-row",
-        tableCellClass: "datepicker-cell",
+        tableCellClass: "datepicker-cell hover:bg-gray-100 rounded",
         tableCellSelectableClass: "is-selectable",
         tableCellUnselectableClass:
             "unselectable opacity-50 cursor-not-allowed",
-        tableCellTodayClass: "is-today",
-        tableCellSelectedClass: "is-selected",
+        tableCellTodayClass: "is-today bg-blue-100 text-blue-500",
+        tableCellSelectedClass: "is-selected bg-blue-500 text-white",
+        //
         tableCellWithinHoveredClass: "is-within-hovered",
         tableCellFirstHoveredClass: "is-first-hovered",
         tableCellLastHoveredClass: "is-last-hovered",
@@ -147,9 +148,11 @@ const tailwindConfig = {
                 "divide-y",
                 "divide-gray-100",
                 "rounded-lg",
-                "shadoww-sm",
+                "shadow-lg",
                 "w-44",
-                "w-full",
+                "w-auto",
+                "p-2",
+                "text-gray-600",
             ];
             return classes.join(" ");
         },
@@ -157,7 +160,7 @@ const tailwindConfig = {
         menuActiveClass: "show",
         itemTag: "a",
         itemClass:
-            "dropdown-item block px-4 py-2 hover:bg-gray-50 cursor-pointer",
+            "dropdown-item rounded-lg block px-4 py-2 font-medium hover:bg-gray-100 cursor-pointer",
         itemActiveClass: "active",
         itemClickableClass: "clickable",
         itemDisabledClass: "disabled opacity-50 cursor-not-allowed",
@@ -197,17 +200,18 @@ const tailwindConfig = {
     input: {
         override: true,
         rootClass: (_: string, props: ComponentProps): string => {
-            const classes = ["input-component"];
+            const classes = ["input-component", "[&_.icon]:text-gray-500"];
             if (isTrueish(props.icon)) classes.push("has-icons-left");
             return classes.join(" ");
         },
         inputClass: (_: string, props: ComponentProps): string => {
             const classes = [
                 "input",
-                "rounded",
-                "shadoww-sm",
+                "rounded-lg",
+                "shadow-xs",
                 "focus:ring-2",
                 "w-full",
+                "!bg-gray-50",
             ];
 
             if (props.icon) classes.push("icon-left");
@@ -218,7 +222,7 @@ const tailwindConfig = {
             const classes = [
                 "input",
                 "rounded",
-                "shadoww-sm",
+                "shadow-xs",
                 "focus:ring-2",
                 "w-full",
             ];
@@ -277,7 +281,7 @@ const tailwindConfig = {
     notification: {
         override: true,
         rootClass:
-            "notification alert relative flex items-center px-4 py-3 my-3 rounded space-x-2 shadoww-sm duration-100 ease-in",
+            "notification alert relative flex items-center px-4 py-3 my-3 rounded-lg space-x-2 duration-100 ease-in",
         variantClass: "is-",
         wrapperClass: "notifictation-wrapper flex items-center",
         contentClass: "notifictation-content",
@@ -322,7 +326,7 @@ const tailwindConfig = {
             "is-disabled pointer-events-none cursor-not-allowed opacity-50",
         inputClass: "check",
         labelClass:
-            "control-label select-none text-sm font-medium text-heading",
+            "control-label select-none text-sm font-medium text-heading ml-2",
         variantClass: "is-",
         sizeClass: "is-",
     },
@@ -342,8 +346,8 @@ const tailwindConfig = {
         selectClass: (_: string, props: ComponentProps): string => {
             const classes = [
                 "select",
-                "rounded",
-                "shadoww-sm",
+                "rounded-lg",
+                "shadow-xs",
                 "focus:ring-2",
                 "w-full",
             ];
@@ -453,7 +457,7 @@ const tailwindConfig = {
         positionClass: (value: string): string => `has-${value}-label`,
         roundedClass: "is-rounded",
         labelClass:
-            "control-label select-none text-sm font-medium text-heading",
+            "control-label select-none text-sm font-medium text-heading ml-2",
         sizeClass: "is-",
         variantClass: "is-",
         passiveVariantClass: "is-",
@@ -538,7 +542,7 @@ const tailwindConfig = {
     },
     taginput: {
         override: true,
-        rootClass: "taginput relative control",
+        rootClass: "taginput relative control shadow-xs",
         containerClass:
             "taginput-container rounded flex items-center justify-start p-0 h-auto",
         closeClass: "delete is-small",
@@ -562,7 +566,7 @@ const tailwindConfig = {
         override: true,
         rootClass: "tooltip relative inline-flex",
         contentClass:
-            "tooltip-content shadoww-sm absolute w-auto whitespace-nowrap font-normal",
+            "tooltip-content shadow-lg absolute w-auto whitespace-nowrap font-normal",
         triggerClass: "tooltip-trigger w-full",
         alwaysClass: "is-always opacity-100 visible",
         multilineClass: "is-multiline text-center whitespace-normal",

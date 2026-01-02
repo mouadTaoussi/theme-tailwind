@@ -6,7 +6,7 @@
                 src="../../public/oruga-tailwind.png"
                 alt="Logo Oruga Theme Tailwind" />
         </div>
-        <h1 class="text-center">Oruga Tailwind Theme Demo</h1>
+        <h1 class="text-center text-black">Oruga Tailwind Theme Demo</h1>
     </div>
 </template>
 

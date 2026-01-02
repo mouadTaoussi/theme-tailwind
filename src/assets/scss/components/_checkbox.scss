@@ -9,7 +9,6 @@ $checkbox-border-color: list.nth(map.get(vars.$theme-colors, "secondary"), 1) !d
 $checkbox-border-size: 2px !default;
 $checkbox-font-size: 15px !default;
 $checkbox-padding: .5em .75em !default;
-$checkbox-control-label-padding-left: 11px !default;
 $checkbox-active-background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1) !default;
 /* @docs */
 
@@ -28,7 +27,6 @@ $checkbox-active-background-color: list.nth(map.get(vars.$theme-colors, "primary
     padding: $checkbox-padding;
 
     .control-label {
-        padding-left: $checkbox-control-label-padding-left;
         font-size: $checkbox-font-size;
     }
     

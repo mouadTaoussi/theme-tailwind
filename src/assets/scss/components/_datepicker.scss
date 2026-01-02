@@ -8,23 +8,65 @@
 /* @docs */
 
 .datepicker {
+    .datepicker-header {
+        .pagination {
+            .pagination-previous {
+                order: 1;
+            }
+            .pagination-list {
+                order: 2;
+            }
+            .pagination-next {
+                order: 3; margin: 0;
+            }
+        }
+    }
     .datepicker-table {
-        padding: 0 10px;
+        // padding: 0 10px;
         .datepicker-header{
             display: table-header-group;
             font-weight: bold;
+            table-layout: fixed; 
+            width: 100%;
         }
         .datepicker-body .datepicker-row {
-            display: table-row;;
+            display: table-row;
+            table-layout: fixed; 
+            width: 100%;
         }
     }
 
     .datepicker-cell {
-        border: 1px solid black;
         text-align: center;
-        vertical-align: middle;
         display: table-cell;
-        border-radius: var(--bulma-radius);
+        width: 3.1rem;
         padding: .5rem .75rem;
+        cursor: pointer;
     }
 }
+// .datepicker {
+//   .datepicker-table {
+//     padding: 0 10px;
+
+//     .datepicker-header {
+//       display: flex;
+//       font-weight: bold;
+//     }
+
+//     .datepicker-body .datepicker-row {
+//       display: flex;
+//     }
+//   }
+
+//   .datepicker-cell {
+//     text-align: center;
+//     flex: 1;
+//     border: 1px solid black;
+//     // border-radius: var(--bulma-radius);
+//     padding: .5rem .75rem;
+//   }
+// }
+
+// display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;

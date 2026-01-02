@@ -33,12 +33,12 @@
 				opacity: 0.5;
         		cursor: not-allowed;
 			}
-			&:first-child {
-				@apply rounded-t-lg;
-			}
-			&:last-child {
-				@apply rounded-b-lg;
-			}
+			// &:first-child {
+			// 	@apply rounded-t-lg;
+			// }
+			// &:last-child {
+			// 	@apply rounded-b-lg;
+			// }
 		}
 
 		// Position

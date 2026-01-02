@@ -10,7 +10,6 @@ $radio-border-size: 2px !default;
 $radio-border-radius: 50% !default;
 $radio-font-size: 15px !default;
 $radio-padding: .5em .75em !default;
-$radio-control-label-padding-left: 11px !default;
 /* @docs */
 
 @mixin radio-size ($control,$check,$checked){
@@ -33,7 +32,6 @@ $radio-control-label-padding-left: 11px !default;
     vertical-align:top;
 
     .control-label {
-        padding-left: $radio-control-label-padding-left;
         font-size: $radio-font-size;
     }
     .check {
@@ -61,8 +59,8 @@ $radio-control-label-padding-left: 11px !default;
         background-color: $radio-active-background-color;
         border: $radio-active-background-color 2px solid;
         border-radius: $radio-border-radius;
-        width: 1rem;
-        height: 1rem;
+        width: 1.06rem;
+        height: 1.06rem;
         transition: all vars.$speed-slow var(--ease-in);      
     }
     .check:checked {
@@ -101,12 +99,12 @@ $radio-control-label-padding-left: 11px !default;
 
     // Size 
     &.is-small {
-        @include radio-size(8px, 1rem, .7rem);
+        @include radio-size(8px, 1rem, .79rem);
     }
     &.is-medium {
-        @include radio-size(12px, 1.25rem, 1rem);
+        @include radio-size(12px, 1.25rem, 1.06rem);
     }
     &.is-large {
-        @include radio-size(20px, 1.50rem, 1.25rem);
+        @include radio-size(20px, 1.50rem, 1.30rem);
     }
 }

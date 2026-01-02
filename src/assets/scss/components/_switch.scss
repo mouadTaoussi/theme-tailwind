@@ -11,7 +11,6 @@ $switch-font-size: 15px !default;
 $switch-border-radius: .500rem !default;
 $switch-padding: .15rem !default;
 $switch-width: 1.75rem !default;
-$switch-control-label-padding-left: 11px !default;
 $switch-active-background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1) !default;
 /* @docs */
 
@@ -37,7 +36,6 @@ $switch-active-background-color: list.nth(map.get(vars.$theme-colors, "primary")
     padding: $switch-padding;
 
     .control-label {
-        padding-left: $switch-control-label-padding-left;
         font-size: $switch-font-size;
     }
 
