@@ -3,7 +3,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 
-import Oruga from "@oruga-ui/oruga-next";
+import Oruga from "@oruga-ui/oruga";
 import Examples from "@oruga-ui/examples";
 
 // add examples styles

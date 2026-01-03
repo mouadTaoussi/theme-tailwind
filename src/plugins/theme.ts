@@ -1,15 +1,15 @@
-import type { ComponentProps } from "@oruga-ui/oruga-next";
-import { isTrueish } from "@oruga-ui/oruga-next";
+import type { ComponentProps } from "@oruga-ui/oruga";
+import { isTrueish } from "@oruga-ui/oruga";
 
 const tailwindConfig = {
     button: {
         override: true,
         rootClass:
-            "button duration-100 ease-in rounded-lg shadow-xs focus:outline-offset-2 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500",
+            "button duration-100 ease-in rounded-lg shadow-xs focus:outline-offset-2 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500",
         wrapperClass: "button-wrapper",
         sizeClass: "is-",
         variantClass: "is-",
-        roundedClass: "rounded-xl",
+        roundedClass: "!rounded-3xl",
         expandedClass: "w-full",
         disabledClass: "disabled",
         // // loadingClass: "is-loading",
