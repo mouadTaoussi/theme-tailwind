@@ -8,7 +8,7 @@
 $select-icon-spacer: 0.75rem !default;
 $select-border-color: rgb(227, 227, 227) !default;
 $select-border-size: 0.005rem !default;
-$select-padding: 0.70rem 2rem 0.70rem 1rem !default;
+$select-padding: 0.70rem 2.2rem 0.70rem 1rem !default;
 $select-font-size: var(--text-base) !default;
 $select-arrow-color: black !default;
 $select-arrow-size: 1rem !default;
@@ -29,16 +29,16 @@ $select-arrow-size: 1rem !default;
         }
     }
 
-    &.has-icons-left {
-        .select {
-            padding-left: 2rem;
-        }
-    }
-    &.has-icons-right {
-        .select {
-            padding-right: 2rem;
-        }
-    }
+    // &.has-icons-left {
+    //     .select {
+    //         padding-left: 2.5rem;
+    //     }
+    // }
+    // &.has-icons-right {
+    //     .select {
+    //         padding-right: 2.5rem;
+    //     }
+    // }
 
     // Variants
     @each $name, $pair in vars.$theme-colors {
@@ -61,10 +61,10 @@ $select-arrow-size: 1rem !default;
         line-height: normal;
 
         &.has-icons-left {
-            padding-left: 2rem;
+            padding-left: 2.5rem;
         }
         &.has-icons-right {
-            padding-right: 2rem;
+            padding-right: 2.5rem;
         }
 
         &.input-small {

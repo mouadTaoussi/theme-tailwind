@@ -233,8 +233,9 @@ const tailwindConfig = {
         },
         variantClass: "border-",
         expandedClass: "w-full",
-        disabledClass: "disabled",
-        roundedClass: "rounded-xl",
+        disabledClass:
+            "disabled pointer-events-none cursor-not-allowed opacity-50",
+        roundedClass: "!rounded-3xl",
         iconLeftClass: "icon-left",
         iconRightClass: "icon-right",
         hasIconRightClass: "has-icons-right",
@@ -344,9 +345,10 @@ const tailwindConfig = {
                 "shadow-xs",
                 "focus:ring-2",
                 "w-full",
+                "!bg-gray-50",
             ];
             if (isTrueish(props.size)) classes.push(`input-${props.size}`);
-            if (isTrueish(props.rounded)) classes.push("rounded-xl");
+            if (isTrueish(props.rounded)) classes.push("!rounded-3xl");
             if (isTrueish(props.multiple)) classes.push("is-multiple");
             if (isTrueish(props.disabled))
                 classes.push(
@@ -359,7 +361,7 @@ const tailwindConfig = {
         iconLeftClass: "icon-left",
         iconRightClass: "icon-right",
         placeholderClass: "is-empty",
-        iconRightSpaceClass: "has-icons-right",
+        iconRightSpaceClass: "has-icons-right appearance-none",
         iconLeftSpaceClass: "has-icons-left",
         arrowClass: "has-arrow",
     },
