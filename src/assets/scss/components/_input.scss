@@ -33,12 +33,12 @@ $input-font-size: var(--text-base) !default;
 
     &.has-icons-left {
         .input {
-            padding-left: 2rem;
+            padding-left: 2.2rem;
         }
     }
     &.has-icons-right {
         .input {
-            padding-right: 2rem;
+            padding-right: 2.2rem;
         }
     }
 
@@ -61,18 +61,27 @@ $input-font-size: var(--text-base) !default;
                 border-color: $variant;
             }
         }
+    }
 
-        &.input-small {
+    &.input-small {
+        textarea,
+        .input {
             font-size: var(--text-xs);
-        }
-        &.input-medium {
+        } 
+    }
+    &.input-medium {
+        textarea,
+        .input {
             font-size: var(--text-base);
         }
-        &.input-large {
+    }
+    &.input-large {
+        textarea,
+        .input {
             font-size: var(--text-2xl);
             &.icon-left {
-                padding-left: 3rem;
+                padding-left: 3.5rem;
             }
-        }
+        } 
     }
 }

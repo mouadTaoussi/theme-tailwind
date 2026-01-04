@@ -40,9 +40,9 @@ const tailwindConfig = {
         wrapperClass: "carousel-scene w-full relative",
         itemsClass: "carousel-items flex",
         itemsDraggingClass: "is-dragging",
-        arrowIconClass: "carousel-arrow transition duration-200 ease-in-out",
-        arrowIconPrevClass: "has-icons-left",
-        arrowIconNextClass: "has-icons-right",
+        iconClass: "carousel-arrow transition duration-200 ease-in-out",
+        iconPrevClass: "has-icons-left",
+        iconNextClass: "has-icons-right",
         indicatorsClass:
             "carousel-indicator w-full flex items-center justify-center absolute bottom-0",
         indicatorClass: "indicator-item [&_img]:cursor-default",
@@ -219,13 +219,7 @@ const tailwindConfig = {
             return classes.join(" ");
         },
         textareaClass: (_: string, props: ComponentProps): string => {
-            const classes = [
-                "input",
-                "rounded",
-                "shadow-xs",
-                "focus:ring-2",
-                "w-full",
-            ];
+            const classes = [];
 
             if (props.icon) classes.push("icon-left");
             if (props.iconRight) classes.push("icon-right");
