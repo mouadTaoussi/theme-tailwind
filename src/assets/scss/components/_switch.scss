@@ -33,7 +33,7 @@ $switch-active-background-color: list.nth(map.get(vars.$theme-colors, "primary")
 }
 
 .switch {
-    padding: $switch-padding;
+    // padding: $switch-padding;
 
     .control-label {
         font-size: $switch-font-size;

@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="240" src="public/oruga-tailwind.svg" />
+    <img width="240" src="public/oruga-tailwind-full.jpg" />
 </p>
 
 <p align="center">

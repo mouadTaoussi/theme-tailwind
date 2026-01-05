@@ -9,7 +9,7 @@ $radio-active-background-color: list.nth(map.get(vars.$theme-colors, "primary"),
 $radio-border-size: 2px !default;
 $radio-border-radius: 50% !default;
 $radio-font-size: 15px !default;
-$radio-padding: .5em .75em !default;
+// $radio-padding: .5em .75em !default;
 /* @docs */
 
 @mixin radio-size ($control,$check,$checked){
@@ -28,7 +28,7 @@ $radio-padding: .5em .75em !default;
 }
 
 .radio {
-    padding: $radio-padding;
+    // padding: $radio-padding;
     vertical-align:top;
 
     .control-label {

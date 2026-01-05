@@ -28,12 +28,12 @@
         // transition: all .2s ease-in-out; // -> h-auto w-auto bg-white transition-all duration-200 ease-in-out
         z-index: 9999;
 
-        &.is-fullwidth {
-            width: 100%;
-        }
-        &.is-fullheight {
-            height: 100%;
-        }
+        // &.is-fullwidth {
+        //     width: 100%;
+        // }
+        // &.is-fullheight {
+        //     height: 100%;
+        // }
 
         &.is-expanded:hover {
             width: 100%;

@@ -8,10 +8,8 @@
 /* @docs */
 
 .field {
-    &:not(:last-child) {
-        margin-bottom: .75rem;
-    }
-
+    margin-bottom: .75rem;
+    
     .help {
         font-size: .75rem;
         margin-top: .25rem;
