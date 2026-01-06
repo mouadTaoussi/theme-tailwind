@@ -138,7 +138,7 @@ const tailwindConfig = {
         inlineClass: "inline",
         menuMobileOverlayClass:
             "dropdown-backdrop fixed top-0 left-0 w-screen h-screen",
-        overlayClass: "dropdown-backdrop fixed top-0 left-0 w-screen h-screen",
+        overlayClass: "dropdown-backdrop fixed top-0 left-0 w-screen h-screen z-40 bg-black/80 backdrop-blur-sm",
         menuClass: (): string => {
             const classes = [
                 "dropdown-menu",
@@ -266,7 +266,7 @@ const tailwindConfig = {
         rootClass:
             "modal flex flex-col justify-center items-center w-screen h-screen relative top-0 left-0",
         activeClass: "is-active",
-        overlayClass: "modal-background w-full h-full",
+        overlayClass: "modal-background w-full h-full bg-black/80 backdrop-blur-sm",
         contentClass:
             "modal-content bg-white w-auto absolute top-[10%] left-[50%] -translate-x-1/2 overflow-auto",
         closeClass: "modal-close absolute top-0 left-0",
@@ -367,9 +367,10 @@ const tailwindConfig = {
     },
     sidebar: {
         override: true,
-        rootClass: "sidebar",
-        overlayClass: "sidebar-background",
-        contentClass: "sidebar-content shadow-xs bg-white !w-auto !h-auto",
+        rootClass: "sidebar absolute",
+        overlayClass:
+            "sidebar-background relative top-0 left-0 w-full h-full z-40 bg-black/80 backdrop-blur-sm",
+        contentClass: "sidebar-content shadow-sm bg-white !w-auto !h-auto z-41",
         activeClass: "is-active",
         positionClass: "is-",
         expandOnHoverClass: "!w-full",
@@ -504,31 +505,31 @@ const tailwindConfig = {
             else if (position == "right") return "flex-row-reverse";
             return "";
         },
-        navClass: "tabs flex flex-wrap font-medium",
-        navTypeClass: (type: string): string => {
+        listClass: "tabs flex font-medium",
+        typeClass: (type: string): string => {
             if (type == "toggle")
                 return "toggle text-gray-500 [&_.tab]:border-default [&_.tab]:border [&_.tab]:border-gray-200";
             else if (type == "boxed")
-                return "boxed text-gray-500 border-default border-b border-gray-200";
+                return "boxed text-gray-500 [&_.tabs]:border-default [&_.tabs]:border-b [&_.tabs]:border-gray-200";
             else if (type == "pills") return "pills";
             else
-                return "default text-gray-500 border-default border-b border-gray-200";
+                return "default text-gray-500 [&_.tabs]:border-default [&_.tabs]:border-b [&_.tabs]:border-gray-200";
         },
-        navItemClass: "tab",
-        navSizeClass: (size: string): string => {
+        tabClass: "tab",
+        sizeClass: (size: string): string => {
             if (size == "small") return "text-sm";
             else if (size == "medium") return "text-md";
             else if (size == "large") return "text-lg";
             return "text-sm";
         },
-        navPositionClass: (position: string): string => {
-            if (position == "left") return "justify-start";
-            else if (position == "centered") return "justify-center";
-            else if (position == "right") return "justify-end";
-            return "left";
-        },
+        // navPositionClass: (position: string): string => {
+        //     if (position == "left") return "justify-start";
+        //     else if (position == "centered") return "justify-center";
+        //     else if (position == "right") return "justify-end";
+        //     return "left";
+        // },
         tabPanelClass: "tab-item",
-        tabClass: "tab-link w-full flex items-center",
+        tabClass: "tab-link flex items-center",
         tabIconClass: "tab-icon me-2",
         tabLabelClass: "tab-title",
         tabActiveClass: "active",

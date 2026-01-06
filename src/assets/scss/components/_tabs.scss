@@ -14,41 +14,41 @@ $tabs-boroder-radius: .75rem;
             padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
             transition: all vars.$speed-slow var(--ease-in);
         }
+    }
 
-        &.boxed {
-            .tab-link {
-                border-top-right-radius: $tabs-boroder-radius;
-                border-top-left-radius: $tabs-boroder-radius;
-                &.active {
-                    background-color: list.nth(map.get(vars.$theme-colors, "primary"), 2);
-                    color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
-                }
+     &.boxed {
+        .tab-link {
+            border-top-right-radius: $tabs-boroder-radius;
+            border-top-left-radius: $tabs-boroder-radius;
+            &.active {
+                background-color: list.nth(map.get(vars.$theme-colors, "primary"), 2);
+                color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
             }
         }
-        &.toggle {
-            .tab-link {
-                &.active {
-                    background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
-                    color: white;
-                }
+    }
+    &.toggle {
+        .tab-link {
+            &.active {
+                background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
+                color: white;
             }
         }
-        &.pills {
-            .tab-link {
-                border-radius: $tabs-boroder-radius;
-                &.active {
-                    background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
-                    color: white;
-                } 
-            }
+    }
+    &.pills {
+        .tab-link {
+            border-radius: $tabs-boroder-radius;
+            &.active {
+                background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
+                color: white;
+            } 
         }
-        &.default {
-            .tab-link {
-               &.active {
-                    border-bottom: 1px solid;
-                    color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
-                } 
-            }
+    }
+    &.default {
+        .tab-link {
+            &.active {
+                border-bottom: 1px solid;
+                color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
+            } 
         }
     }
 }
