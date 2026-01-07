@@ -498,38 +498,33 @@ const tailwindConfig = {
         rootClass: "tabs-wrapper",
         contentClass: "tabs-content p-4 flex-1",
         multilineClass: "is-multiline",
-        expandedClass: "[&_.tab]:flex-1",
-        verticalClass: "flex [&_.tabs]:block",
+        expandedClass: "[&_.tab-link]:flex-1",
+        verticalClass: "flex [&_.tabs]:block [&_.tab-link]:w-full",
         positionClass: (position: string): string => {
-            if (position == "left") return "";
-            else if (position == "right") return "flex-row-reverse";
-            return "";
+            if (position == "left") return "[&_.tabs]:justify-start";
+            else if (position == "centered") return "[&_.tabs]:justify-center";
+            else if (position == "right")
+                return "[&_.tabs]:justify-end flex-row-reverse";
+            return "left";
         },
-        listClass: "tabs flex font-medium",
+        listClass: "tabs flex font-medium flex-wrap",
         typeClass: (type: string): string => {
             if (type == "toggle")
-                return "toggle text-gray-500 [&_.tab]:border-default [&_.tab]:border [&_.tab]:border-gray-200";
+                return "toggle text-gray-500 [&_.tab-link]:border-default [&_.tab-link]:border [&_.tab-link]:border-gray-200";
             else if (type == "boxed")
                 return "boxed text-gray-500 [&_.tabs]:border-default [&_.tabs]:border-b [&_.tabs]:border-gray-200";
-            else if (type == "pills") return "pills";
+            else if (type == "pills") return "pills text-gray-500";
             else
                 return "default text-gray-500 [&_.tabs]:border-default [&_.tabs]:border-b [&_.tabs]:border-gray-200";
         },
-        tabClass: "tab",
         sizeClass: (size: string): string => {
             if (size == "small") return "text-sm";
             else if (size == "medium") return "text-md";
             else if (size == "large") return "text-lg";
             return "text-sm";
         },
-        // navPositionClass: (position: string): string => {
-        //     if (position == "left") return "justify-start";
-        //     else if (position == "centered") return "justify-center";
-        //     else if (position == "right") return "justify-end";
-        //     return "left";
-        // },
         tabPanelClass: "tab-item",
-        tabClass: "tab-link flex items-center",
+        tabClass: "tab-link flex",
         tabIconClass: "tab-icon me-2",
         tabLabelClass: "tab-title",
         tabActiveClass: "active",
