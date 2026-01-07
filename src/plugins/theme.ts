@@ -568,13 +568,13 @@ const tailwindConfig = {
     },
     upload: {
         override: true,
-        rootClass: "upload control",
+        rootClass: "upload control rounded-xl",
         draggableClass: "upload-draggable w-full",
         variantClass: "is-",
         expandedClass: "w-full",
         disabledClass:
             "is-disabled pointer-events-none cursor-not-allowed opacity-50",
-        hoveredClass: "is-hovered",
+        draggableHoveredClass: "is-hovered",
     },
 };
 

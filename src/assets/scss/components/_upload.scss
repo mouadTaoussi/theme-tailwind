@@ -36,30 +36,15 @@ $upload-border-radius: 3px !default;
     }
 
     @each $name, $pair in vars.$theme-colors {
-            $variant-invert: list.nth($pair, 2);
-            $variant: list.nth($pair, 1);
-            
-            .is-#{$name} {
-                &:hover,
-                &.is-hovered {
-                    background-color:$variant-invert; // 100 is given to reduce color's opacity
-                    border-color: $variant;
-                    color: $variant;
-                }
+        $variant-invert: list.nth($pair, 2);
+        $variant: list.nth($pair, 1);
+        
+        &.is-#{$name} {
+            .is-hovered {
+                background-color:$variant-invert; // 100 is given to reduce color's opacity
+                border-color: $variant;
+                color: $variant;
             }
+        }
     }
-
-    // &.is-disabled { // To Tailwind
-    //     opacity: 0.5;
-    //     cursor: not-allowed;
-    // }
-
-    // &.is-rounded {
-    //     border-radius: $upload-rounded-border-radius;
-
-    //     .file-name {
-    //         border-top-right-radius: $upload-rounded-border-radius;
-    //         border-bottom-right-radius: $upload-rounded-border-radius;
-    //     }
-    // }
 }
