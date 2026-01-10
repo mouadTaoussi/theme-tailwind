@@ -433,23 +433,25 @@ const tailwindConfig = {
     steps: {
         override: true,
         rootClass: "steps-wrapper",
-        navClass: (_: string, props: ComponentProps): string => {
-            const classes = ["steps"];
-            if (props.labelPosition === "left") classes.push("has-label-left");
-            if (props.labelPosition === "right")
-                classes.push("has-label-right");
-            return classes.join(" ");
-        },
+        // navClass: (_: string, props: ComponentProps): string => {
+        //     const classes = ["steps", "flex"];
+        //     if (props.labelPosition === "left") classes.push("has-label-left");
+        //     if (props.labelPosition === "right")
+        //         classes.push("has-label-right");
+        //     return classes.join(" ");
+        // },
+        listClass: "steps flex flex-wrap",
         verticalClass: "is-vertical",
         animatedClass: "is-animated",
         positionClass: "is-",
         sizeClass: "is-",
-        navItemClass: "step",
-        navItemVariantClass: "is-",
-        navItemActiveClass: "is-active",
-        navItemPreviousClass: "is-previous",
-        stepClass: "step-link",
+        stepClass: "step flex-1 flex justify-center flex-col",
+        stepVariantClass: "is-",
+        stepActiveClass: "is-active",
+        stepPreviousClass: "is-previous",
+        stepNextClass: "is-next",
         stepLabelClass: "step-title",
+        stepPositionClass: "label-",
         stepClickableClass: "is-clickable",
         markerClass: "step-marker",
         markerRoundedClass: "is-rounded",
