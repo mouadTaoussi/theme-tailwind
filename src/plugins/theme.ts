@@ -76,13 +76,15 @@ const tailwindConfig = {
     datepicker: {
         override: true,
         rootClass: "datepicker",
-        headerClass: "datepicker-header",
+        headerClass:
+            "datepicker-header flex justify-center pb-4 border-b border-gray-200",
         footerClass: "datepicker-footer",
         boxClass: "dropdown-item m-4",
-        tableClass: "datepicker-table",
+        tableClass: "datepicker-table pt-4",
         tableHeadClass: "datepicker-header",
-        tableHeadCellClass: "datepicker-cell hover:bg-gray-100 rounded",
-        headerButtonsClass: "pagination field flex justify-center",
+        tableHeadCellClass:
+            "datepicker-cell relative hover:bg-gray-100 rounded",
+        // headerButtonsClass: "pagination field flex justify-center",
         prevButtonClass: "pagination-previous",
         nextButtonClass: "pagination-next",
         listsClass: "pagination-list flex [&_.select-component]:mr-2",
@@ -92,39 +94,48 @@ const tailwindConfig = {
             return classes.join(" ");
         },
         tableRowClass: "datepicker-row",
-        tableCellClass: "datepicker-cell hover:bg-gray-100 rounded",
+        tableCellClass: "datepicker-cell relative hover:bg-gray-100 rounded",
         tableCellSelectableClass: "is-selectable",
         tableCellUnselectableClass:
             "unselectable opacity-50 cursor-not-allowed",
         tableCellTodayClass: "is-today bg-blue-100 text-blue-500",
         tableCellSelectedClass: "is-selected bg-blue-500 text-white",
         //
-        tableCellWithinHoveredClass: "is-within-hovered",
-        tableCellFirstHoveredClass: "is-first-hovered",
-        tableCellLastHoveredClass: "is-last-hovered",
-        tableCellFirstSelectedClass: "is-first-selected",
-        tableCellLastSelectedClass: "is-last-selected",
-        tableCellWithinSelectedClass: "is-within-selected",
+        tableCellWithinHoveredClass:
+            "is-within-hovered bg-gray-100 rounded-none",
+        tableCellFirstHoveredClass:
+            "is-first-hovered bg-gray-100 rounded-r-none",
+        tableCellLastHoveredClass: "is-last-hovered bg-gray-100 rounded-l-none",
+        tableCellFirstSelectedClass: "is-first-selected rounded-r-none",
+        tableCellLastSelectedClass: "is-last-selected rounded-l-none",
+        tableCellWithinSelectedClass: "is-within-selected rounded-none",
         tableCellInvisibleClass: "",
         tableCellNearbyClass: "is-nearby",
         tableCellEventsClass: "has-event",
-        tableEventIndicatorsClass: "is-",
+        tableEventIndicatorClass: (type: string): string => {
+            if (type == "dots") return "is-dots rounded-lg w-1.5 h-1.5 mx-0.5";
+            return "is-bars w-2 h-1";
+        },
+
         tableEventVariantClass: "is-",
-        tableEventsClass: "events",
-        tableEventClass: "event",
+        tableEventsClass:
+            "events absolute buttom-0.5 left-0 flex justify-center w-full",
+        tableEventClass: "event bg-red-500", // bg-red-500 will be replaced 
         monthBodyClass: "datepicker-body",
         monthCellClass: "datepicker-cell",
-        monthCellFirstHoveredClass: "is-first-hovered",
-        monthCellFirstSelectedClass: "is-first-selected",
-        monthCellLastHoveredClass: "is-last-hovered",
-        monthCellLastSelectedClass: "is-last-selected",
+        monthCellFirstHoveredClass:
+            "is-first-hovered bg-gray-100 rounded-r-none",
+        monthCellFirstSelectedClass: "is-first-selected rounded-r-none",
+        monthCellLastHoveredClass: "is-last-hovered bg-gray-100 rounded-l-none",
+        monthCellLastSelectedClass: "is-last-selected rounded-l-none",
         monthCellSelectableClass: "is-selectable",
-        monthCellSelectedClass: "is-selected",
-        monthCellTodayClass: "is-today",
+        monthCellSelectedClass: "is-selected text-white",
+        monthCellTodayClass: "is-today text-blue-500",
         monthCellUnselectableClass:
             "unselectable opacity-50 cursor-not-allowed",
-        monthCellWithinHoveredClass: "is-within-hovered",
-        monthCellWithinSelectedClass: "is-within-selected",
+        monthCellWithinHoveredClass:
+            "is-within-hovered bg-gray-100 rounded-none",
+        monthCellWithinSelectedClass: "is-within-selected rounded-none",
         monthClass: "datepicker-table",
         monthTableClass: "datepicker-months",
     },
@@ -138,7 +149,8 @@ const tailwindConfig = {
         inlineClass: "inline",
         menuMobileOverlayClass:
             "dropdown-backdrop fixed top-0 left-0 w-screen h-screen",
-        overlayClass: "dropdown-backdrop fixed top-0 left-0 w-screen h-screen z-40 bg-black/80 backdrop-blur-sm",
+        overlayClass:
+            "dropdown-backdrop fixed top-0 left-0 w-screen h-screen z-40 bg-black/80 backdrop-blur-sm",
         menuClass: (): string => {
             const classes = [
                 "dropdown-menu",
