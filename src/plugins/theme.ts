@@ -580,7 +580,7 @@ const tailwindConfig = {
         override: true,
         rootClass: "timepicker w-auto",
         boxClass:
-            "dropdown-item block px-4 py-2 cursor-pointer flex items-center",
+            "dropdown-item px-4 py-2 cursor-pointer flex justify-center items-center [&_select]:appearance-none font-medium",
         separatorClass: "is-colon control",
         footerClass: "timepicker-footer flex",
         sizeClass: "is-",
