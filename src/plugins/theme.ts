@@ -78,9 +78,9 @@ const tailwindConfig = {
         rootClass: "datepicker",
         headerClass:
             "datepicker-header flex justify-center pb-4 border-b border-gray-200",
-        footerClass: "datepicker-footer",
+        footerClass: "datepicker-footer pt-4 border-t border-gray-200",
         boxClass: "dropdown-item m-4",
-        tableClass: "datepicker-table pt-4",
+        tableClass: "datepicker-table py-4",
         tableHeadClass: "datepicker-header",
         tableHeadCellClass:
             "datepicker-cell relative hover:bg-gray-100 rounded",
@@ -139,7 +139,12 @@ const tailwindConfig = {
         monthClass: "datepicker-table",
         monthTableClass: "datepicker-months",
     },
-    datetimepicker: {},
+    datetimepicker: {
+        override: true,
+        datepickerWrapperClass: "datepicker-wrapper",
+        timepickerWrapperClass:
+            "timepicker-wrapper [&_.dropdown]:w-full [&_.dropdown-menu]:!shadow-sm [&_.dropdown-menu]:!w-full",
+    },
     dropdown: {
         override: true,
         rootClass: "dropdown relative btn-group inline-block align-middle",
@@ -440,22 +445,25 @@ const tailwindConfig = {
         //         classes.push("has-label-right");
         //     return classes.join(" ");
         // },
-        listClass: "steps flex flex-wrap",
-        verticalClass: "is-vertical",
+        listClass: "steps flex flex-wrap font-medium",
+        verticalClass:
+            "is-vertical flex flex-wrap [&_.steps]:flex-col [&_.step-content]:grow [&_.step-navigation]:basis-full",
         animatedClass: "is-animated",
         positionClass: "is-",
         sizeClass: "is-",
-        stepClass: "step flex-1 flex justify-center flex-col",
+        stepClass: "step flex-1 flex items-center flex-col text-gray-700",
         stepVariantClass: "is-",
-        stepActiveClass: "is-active",
+        stepActiveClass:
+            "is-active [&_.step-marker]:text-blue-500 [&_.step-marker]:bg-blue-100 [&_.step-title]:text-blue-500",
         stepPreviousClass: "is-previous",
         stepNextClass: "is-next",
-        stepLabelClass: "step-title",
+        stepLabelClass: "step-title mt-[4px]",
         stepPositionClass: "label-",
-        stepClickableClass: "is-clickable",
-        markerClass: "step-marker",
+        stepClickableClass: "is-clickable cursor-pointer",
+        markerClass:
+            "step-marker flex justify-center items-center bg-gray-100 w-10 h-10 rounded-4xl",
         markerRoundedClass: "is-rounded",
-        contentClass: "step-content",
+        contentClass: "step-content p-4",
         transitioningClass: "is-transitioning",
         stepPanelClass: "step-item",
         navigationClass: "step-navigation",
