@@ -31,7 +31,19 @@ const tailwindConfig = {
         itemGroupTitleClass: `text-xs font-bold text-gray-300 uppercase tracking-wider bg-gray-50`,
     },
 
-    breadcrumb: {},
+    breadcrumb: {
+        override: true,
+        rootClass: "breadcrumb font-medium text-gray-700",
+        listClass:
+            "inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse",
+        variantClass: "is-",
+        sizeClass: "is-",
+        positionClass: "is-",
+        itemClass: "breadcrumb-item inline-flex items-center",
+        activeClass: "is-active",
+        disabledClass:
+            "is-disabled  pointer-events-none cursor-not-allowed opacity-50",
+    },
     carousel: {
         override: true,
         rootClass: "carousel relative overflow-hidden w-full",
