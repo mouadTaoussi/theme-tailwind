@@ -1,25 +1,5 @@
 @import "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap";
 
 * {
-    font-family: 'Inter';
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #bcbcbc; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #808080; 
-}
+    font-family: "Inter", 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+};

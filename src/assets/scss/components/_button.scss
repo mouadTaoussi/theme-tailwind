@@ -10,29 +10,14 @@ $btn-spacer: 0.5rem !default;
 $btn-font-size: var(--text-base) !default;
 $btn-font-weight: 500 !default;
 $btn-padding: 0.70rem 0.70rem !default;
-// $btn-box-shadow: 1px 1px 16px rgba(207,207,207,10) !default;
 /* @docs */
 
 
 .button {
-    background-color: white;
-    color: black;
     padding:$btn-padding;
     font-size: $btn-font-size;
     font-weight: $btn-font-weight;
     line-height: normal;
-    border: 0.005rem;
-    border-style: var(--tw-border-style);
-    border-color: rgb(227, 227, 227);
-    
-    &:hover {
-        background-color: rgb(250, 250, 250);
-    }
-    
-    .button-wrapper {
-        display: inline-flex;
-        align-items: center;
-    }
 
     @each $name, $pair in vars.$theme-colors {
         $variant: list.nth($pair, 1);
@@ -45,7 +30,7 @@ $btn-padding: 0.70rem 0.70rem !default;
             &:hover {
                 opacity: .7;
             }
-            &.border {
+            &.outlined {
                 background-color: transparent;
                 color: $variant;
 
@@ -78,13 +63,6 @@ $btn-padding: 0.70rem 0.70rem !default;
         font-size: var(--text-2xl);
     }
 
-    &.disabled {
-        opacity: .5; 
-        &:hover {
-            cursor: not-allowed;
-            box-shadow: none;
-        }
-    }
     .icon {
         margin-right: $btn-spacer;
         margin-left: calc($btn-spacer / 2);

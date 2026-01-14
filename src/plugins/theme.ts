@@ -5,17 +5,18 @@ const tailwindConfig = {
     button: {
         override: true,
         rootClass:
-            "button duration-100 ease-in rounded-lg shadow-xs focus:outline-offset-2 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500",
-        wrapperClass: "button-wrapper",
+            "button cursor-pointer text-gray-500 border border-gray-200 rounded-lg shadow-xs hover:bg-gray-200 focus:outline-offset-2 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500",
+        wrapperClass: "button-wrapper inline-flex items-center",
         sizeClass: "is-",
         variantClass: "is-",
         roundedClass: "!rounded-3xl",
         expandedClass: "w-full",
-        disabledClass: "disabled",
+        disabledClass:
+            "is-disabled pointer-events-none cursor-not-allowed opacity-50",
         // // loadingClass: "is-loading",
         outlinedClass: (variant: string): string => {
-            if (!variant) return "border";
-            return `is-${variant} border`;
+            if (!variant) return "outlined";
+            return `is-${variant} outlined`;
         },
         invertedClass: (variant: string): string => {
             if (!variant) return "inverted";
@@ -25,25 +26,34 @@ const tailwindConfig = {
     autocomplete: {
         override: true,
         rootClass: `autocomplete`,
-        // itemClass: ``,
         itemHoverClass: `bg-gray-50`,
         itemEmptyClass: `text-gray-400 italic text-sm`,
         itemGroupTitleClass: `text-xs font-bold text-gray-300 uppercase tracking-wider bg-gray-50`,
     },
 
-    breadcrumb: {
-        override: true,
-        rootClass: "breadcrumb font-medium text-gray-700",
-        listClass:
-            "inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse",
-        variantClass: "is-",
-        sizeClass: "is-",
-        positionClass: "is-",
-        itemClass: "breadcrumb-item inline-flex items-center",
-        activeClass: "is-active",
-        disabledClass:
-            "is-disabled  pointer-events-none cursor-not-allowed opacity-50",
-    },
+    // breadcrumb: {
+    //     override: true,
+    //     rootClass: "breadcrumb-wrapper font-medium text-gray-700",
+    //     listClass: (props: ComponentProps): string => {
+    //         const classes = ["breadcrumb"];
+    //         if (props.separator)
+    //             classes.push(
+    //                 `[&_.breadcrumb-item:not(:last-child)]:after:content-['${props.separator}'] [&_.breadcrumb-item:not(:last-child)]:after:mx-2 [&_.breadcrumb-item:not(:last-child)]:after:text-gray-400"`,
+    //             );
+    //         if (props.size) classes.push(`is-medium`);
+    //         if (props.variant) classes.push(`is-primary`);
+    //         if (props.position) classes.push(`is-left`);
+    //         return classes.join(" ");
+    //         // "inline-flex items-center ,
+    //     },
+    //     variantClass: "is-",
+    //     sizeClass: "is-",
+    //     positionClass: "is-",
+    //     itemClass: "breadcrumb-item inline-flex items-center cursor-pointer [&_.icon]:mx-1.5",
+    //     activeClass: "is-active text-blue-500",
+    //     disabledClass:
+    //         "is-disabled pointer-events-none cursor-not-allowed opacity-50",
+    // },
     carousel: {
         override: true,
         rootClass: "carousel relative overflow-hidden w-full",
@@ -163,9 +173,10 @@ const tailwindConfig = {
         triggerClass: "dropdown-trigger",
         disabledClass: "disabled opacity-50 cursor-not-allowed",
         expandedClass: "w-full",
-        inlineClass: "inline",
+        inlineClass:
+            "inline [&_.dropdown-menu]:static [&_.dropdown-menu]:inline-block [&_.dropdown-menu]:overflow-auto [&_.dropdown-menu]:z-0",
         menuMobileOverlayClass:
-            "dropdown-backdrop fixed top-0 left-0 w-screen h-screen",
+            "dropdown-backdrop fixed top-0 left-0 w-screen h-screen z-40 bg-black/80 backdrop-blur-sm",
         overlayClass:
             "dropdown-backdrop fixed top-0 left-0 w-screen h-screen z-40 bg-black/80 backdrop-blur-sm",
         menuClass: (): string => {
@@ -178,10 +189,11 @@ const tailwindConfig = {
                 "divide-gray-100",
                 "rounded-lg",
                 "shadow-lg",
-                "w-44",
-                "w-auto",
+                "min-w-48",
+                "w-full",
                 "p-2",
                 "text-gray-600",
+                "border border-gray-100",
             ];
             return classes.join(" ");
         },
@@ -190,9 +202,10 @@ const tailwindConfig = {
         itemTag: "a",
         itemClass:
             "dropdown-item rounded-lg block px-4 py-2 font-medium hover:bg-gray-100 cursor-pointer",
-        itemActiveClass: "active",
-        itemClickableClass: "clickable",
+        itemSelectedClass: "active text-white",
+        itemFocusedClass: "focused bg-gray-100",
         itemDisabledClass: "disabled opacity-50 cursor-not-allowed",
+        modalClass: "is-mobile-modal",
         mobileClass: "is-mobile-modal",
         teleportClass: "teleported",
     },
@@ -295,9 +308,10 @@ const tailwindConfig = {
         rootClass:
             "modal flex flex-col justify-center items-center w-screen h-screen relative top-0 left-0",
         activeClass: "is-active",
-        overlayClass: "modal-background w-full h-full bg-black/80 backdrop-blur-sm",
+        overlayClass:
+            "modal-background w-full h-full bg-black/80 backdrop-blur-sm",
         contentClass:
-            "modal-content bg-white w-auto absolute top-[10%] left-[50%] -translate-x-1/2 overflow-auto",
+            "modal-content bg-white w-auto absolute top-[10%] left-[50%] -translate-x-1/2 overflow-auto rounded-lg",
         closeClass: "modal-close absolute top-0 left-0",
         fullScreenClass: "is-full-screen",
         scrollClipClass: "is-clipped",
@@ -307,7 +321,8 @@ const tailwindConfig = {
         rootClass:
             "notification alert relative flex items-center px-4 py-3 my-3 rounded-lg space-x-2 duration-100 ease-in",
         variantClass: "is-",
-        wrapperClass: "notifictation-wrapper flex items-center",
+        wrapperClass:
+            "notifictation-wrapper flex items-center max-w-[95%] text-left",
         contentClass: "notifictation-content",
         positionClass: "position-",
         iconClass: "media mr-3 ",
@@ -443,7 +458,7 @@ const tailwindConfig = {
         variantClass: "is-",
         sizeClass: "is-",
         thumbClass: "slider-thumb bg-white cursor-grab",
-        tickLabelClass: "slider-tick-label absolute left-1/2",
+        tickLabelClass: "slider-tick-label absolute top-1/2 left-1/2",
         tickHiddenClass: "is-tick-hidden",
         tickClass: "slider-tick absolute top-0",
     },

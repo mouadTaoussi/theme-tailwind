@@ -8,37 +8,11 @@
 /* @docs */
 
 .dropdown {
-	&.inline {
-		.dropdown-menu { 
-			position: static;
-			display: inline-block;
-        	padding: 0;
-        	overflow: auto;
-        	z-index: 0;
-		}
-	}	
-
 	.dropdown-menu {
-		min-width: 12rem;
-		border: 0.005rem;
-		border-style: var(--tw-border-style);
-		border-color: rgb(227, 227, 227);
-
 		.dropdown-item {
 			&.active {
 				background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
-				color: white;
 			}
-			&.disabled {
-				opacity: 0.5;
-        		cursor: not-allowed;
-			}
-			// &:first-child {
-			// 	@apply rounded-t-lg;
-			// }
-			// &:last-child {
-			// 	@apply rounded-b-lg;
-			// }
 		}
 
 		// Position
@@ -113,8 +87,4 @@
 			z-index: 1055;
 		}
 	}
-	// .dropdown-backdrop {
-	// 	background-color: rgba(0,0,0,.8);
-	// 	z-index: 1050;
-	// }
 }
