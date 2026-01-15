@@ -83,11 +83,6 @@ $btn-padding: 0.70rem 0.70rem !default;
         margin-left: calc($btn-spacer / 2);
     }
 
-    // &.is-loading {
-    //     box-shadow: none;
-    //     color: transparent !important;
-    //     pointer-events: none;
-    // }
     &.is-loading:after {
         content: "";
         position: absolute;
