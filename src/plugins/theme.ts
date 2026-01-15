@@ -5,7 +5,7 @@ const tailwindConfig = {
     button: {
         override: true,
         rootClass:
-            "button cursor-pointer text-gray-500 border border-gray-200 rounded-lg shadow-xs hover:bg-gray-200 focus:outline-offset-2 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500",
+            "button relative cursor-pointer text-gray-500 border border-gray-200 rounded-lg shadow-xs hover:bg-gray-200 focus:outline-offset-2 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500",
         wrapperClass: "button-wrapper inline-flex items-center",
         sizeClass: "is-",
         variantClass: "is-",
@@ -13,7 +13,7 @@ const tailwindConfig = {
         expandedClass: "w-full",
         disabledClass:
             "is-disabled pointer-events-none cursor-not-allowed opacity-50",
-        // // loadingClass: "is-loading",
+        loadingClass: "is-loading shadow-none pointer-events-none !text-transparent",
         outlinedClass: (variant: string): string => {
             if (!variant) return "outlined";
             return `is-${variant} outlined`;
