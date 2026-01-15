@@ -13,7 +13,8 @@ const tailwindConfig = {
         expandedClass: "w-full",
         disabledClass:
             "is-disabled pointer-events-none cursor-not-allowed opacity-50",
-        loadingClass: "is-loading shadow-none pointer-events-none !text-transparent",
+        loadingClass:
+            "is-loading shadow-none pointer-events-none !text-transparent",
         outlinedClass: (variant: string): string => {
             if (!variant) return "outlined";
             return `is-${variant} outlined`;
