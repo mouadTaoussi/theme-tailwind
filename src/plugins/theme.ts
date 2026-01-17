@@ -63,17 +63,22 @@ const tailwindConfig = {
         wrapperClass: "carousel-scene w-full relative",
         itemsClass: "carousel-items flex",
         itemsDraggingClass: "is-dragging",
-        iconClass: "carousel-arrow transition duration-200 ease-in-out",
+        iconClass:
+            "carousel-arrow transition duration-200 ease-in-out bg-white/50 text-white border border-white/50 rounded-full w-[30px] h-[30px] hover:opacity-100",
         iconPrevClass: "has-icons-left",
         iconNextClass: "has-icons-right",
         indicatorsClass:
-            "carousel-indicator w-full flex items-center justify-center absolute bottom-0",
+            "carousel-indicator p-2 w-full flex items-center justify-center",
         indicatorClass: "indicator-item [&_img]:cursor-default",
         indicatorsInsideClass: "is-inside absolute",
-        indicatorsInsidePositionClass: "is-",
+        // indicatorsInsidePositionClass: "is-",
+        indicatorsPositionClass: (_: string, props: ComponentProps): string => {
+            if (props.indicatorPosition == "top") return "top-0";
+            return "bottom-0";
+        },
         indicatorItemClass:
-            "indicator-style block outline-none transition duration-200 ease-in-out",
-        indicatorItemActiveClass: "is-active",
+            "indicator-style block outline-none transition duration-200 ease-in-out border border-white/50 hover:bg-white",
+        indicatorItemActiveClass: "is-active bg-white",
         indicatorItemStyleClass: "is-",
         itemClass:
             "carousel-item flex-shrink-0 w-full border-2 border-transparent",

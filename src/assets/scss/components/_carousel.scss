@@ -5,24 +5,24 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-$carousel-arrow-background: rgba(255,255,255, 0.5) !default;
-$carousel-arrow-color: white !default;
-$carousel-arrow-icon-spaced: 1.5rem !default;
-$carousel-arrow-top: 50% !default;
+// $carousel-arrow-background: rgba(255,255,255, 0.5) !default;
+// $carousel-arrow-color: white !default;
+// $carousel-arrow-icon-spaced: 1.5rem !default;
+// $carousel-arrow-top: 50% !default;
 
-$carousel-indicator-background: WHITE !default;
-$carousel-indicator-border: rgba(255,255,255, 0.5) !default;
-$carousel-indicator-color: white !default;
-$carousel-indicator-spaced: 0.5rem !default;
-$carousel-indicator-radius-rounded:9999px !default;
+// $carousel-indicator-background: WHITE !default;
+// $carousel-indicator-border: rgba(255,255,255, 0.5) !default;
+// $carousel-indicator-color: white !default;
+// $carousel-indicator-spaced: 0.5rem !default;
+// $carousel-indicator-radius-rounded:9999px !default;
 
-$carousel-overlay-background: rgba(0,0,0, 0.86) !default;
-$carousel-overlay-z: 40 !default;
+// $carousel-overlay-background: rgba(0,0,0, 0.86) !default;
+// $carousel-overlay-z: 40 !default;
 /* @docs */
 
 .carousel {
     &.is-overlay {
-        background-color: $carousel-overlay-background;
+        background-color: rgba(0,0,0, 0.86);
         max-height: 100vh;
         z-index: -1;
 
@@ -40,36 +40,36 @@ $carousel-overlay-z: 40 !default;
     }
 
     .carousel-indicator {
-        padding: $carousel-indicator-spaced;
+        // padding: 0.5rem;
 
         &.has-background {
-            background: $carousel-indicator-background;
+            background: white;
         }
 
-        &.is-inside {
-            &.is-bottom {
-                bottom: 0;
-            }
+        // &.is-inside {
+        //     &.is-bottom {
+        //         bottom: 0;
+        //     }
 
-            &.is-top {
-                top: 0;
-            }
-        }
+        //     &.is-top {
+        //         top: 0;
+        //     }
+        // }
 
         .indicator-item {
             &:not(:last-child) {
-                margin-right: $carousel-indicator-spaced;
+                margin-right: 0.5rem;
             }
 
-            .indicator-style.is-active,
-            .indicator-style.is-active:hover {
-                background: $carousel-indicator-background;
-                border: 1px solid $carousel-indicator-border;
-            }
+            // .indicator-style.is-active,
+            // .indicator-style.is-active:hover {
+            //     background: white;
+            //     border: 1px solid rgba(255,255,255, 0.5);
+            // }
 
             .indicator-style {
-                border: 1px solid $carousel-indicator-background;
-                background: $carousel-indicator-border;
+                // border: 1px solid white;
+                // background: rgba(255,255,255, 0.5);
 
                 &.is-boxes {
                     height: 10px;
@@ -77,7 +77,7 @@ $carousel-overlay-z: 40 !default;
                 }
 
                 &.is-dots {
-                    border-radius: $carousel-indicator-radius-rounded;
+                    border-radius: 9999rem;
                     height: 10px;
                     width: 10px;
                 }
@@ -92,37 +92,37 @@ $carousel-overlay-z: 40 !default;
 }
 
 .carousel-arrow {
-    &.is-hovered {
-        opacity: 0;
-    }
+    // &.is-hovered {
+    //     opacity: 0;
+    // }
+// bg-white/50 text-white border border-white/50 rounded-full w-[30px] h-[30px] hover:opacity-100
+    // &.icon { 
+        // background: rgba(255,255,255, 0.5);
+        // color: white;
+        // border: 1px solid rgba(255,255,255, 0.5);
+        // border-radius: 9999rem;
+        // width: 30px;
+        // height: 30px;
 
-    &.icon {
-        background: $carousel-arrow-background;
-        color: $carousel-arrow-color;
-        border: 1px solid $carousel-arrow-background;
-        border-radius: $carousel-indicator-radius-rounded;
-        width: 30px;
-        height: 30px;
-
-        &:hover {
-            border: 1px solid $carousel-arrow-color;
-            opacity: 1;
-        }
+        // &:hover {
+        //     border: 1px solid white;
+        //     opacity: 1;
+        // }
 
         &.has-icons-left,
         &.has-icons-right {
             position: absolute;
-            top: $carousel-arrow-top;
-            transform: translateY(calc(-1 * $carousel-arrow-top));
+            top: 50%;
+            transform: translateY(calc(-1 * 50%));
             z-index: 1;
         }
 
         &.has-icons-left {
-            left: $carousel-arrow-icon-spaced;
+            left: 1.5rem;
         }
 
         &.has-icons-right {
-            right: $carousel-arrow-icon-spaced;
+            right: 1.5rem;
         }
-    }
+    // }
 }
