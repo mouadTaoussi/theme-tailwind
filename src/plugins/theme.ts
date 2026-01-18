@@ -85,14 +85,21 @@ const tailwindConfig = {
     },
     checkbox: {
         override: true,
-        rootClass: "checkbox flex items-center align-top",
+        rootClass:
+            "checkbox flex items-center align-top [&_.check]:w-5 [&_.check]:h-5",
         disabledClass:
             "is-disabled pointer-events-none cursor-not-allowed opacity-50",
-        inputClass: "check rounded outline-none text-inherit flex-shrink-0",
-        labelClass:
-            "control-label select-none text-sm font-medium text-heading ml-2",
+        inputClass:
+            "check rounded outline-none text-inherit flex-shrink-0 border-2 border-gray-500 bg-transparent transition-colors duration-150 ease-in focus:ring-2 focus:ring-brand-soft",
+        labelClass: "control-label select-none font-medium text-heading ml-2",
         variantClass: "is-",
-        sizeClass: "is-",
+        sizeClass: (_: string, props: ComponentProps): string => {
+            if (props.size == "small")
+                return "is-small [&_.check]:!w-3 [&_.check]:!h-3 [&_.control-label]:text-xs";
+            if (props.size == "medium")
+                return "is-medium [&_.check]:!w-4 [&_.check]:!h-4 [&_.control-label]:text-sm";
+            return "is-large [&_.check]:!w-6 [&_.check]:!h-6 [&_.control-label]:text-xl";
+        },
     },
     collapse: {
         override: true,
