@@ -68,20 +68,19 @@ const tailwindConfig = {
         iconPrevClass: "has-icons-left",
         iconNextClass: "has-icons-right",
         indicatorsClass:
-            "carousel-indicator p-2 w-full flex items-center justify-center",
+            "carousel-indicator p-2 w-full flex items-center justify-center bg-gray-300",
         indicatorClass: "indicator-item [&_img]:cursor-default",
-        indicatorsInsideClass: "is-inside absolute",
-        // indicatorsInsidePositionClass: "is-",
+        indicatorsInsideClass: "is-inside absolute bg-transparent",
         indicatorsPositionClass: (_: string, props: ComponentProps): string => {
             if (props.indicatorPosition == "top") return "top-0";
             return "bottom-0";
         },
         indicatorItemClass:
-            "indicator-style block outline-none transition duration-200 ease-in-out border border-white/50 hover:bg-white",
+            "indicator-style block outline-none transition duration-200 ease-in-out border border-white hover:bg-white",
         indicatorItemActiveClass: "is-active bg-white",
         indicatorItemStyleClass: "is-",
         itemClass:
-            "carousel-item flex-shrink-0 w-full border-2 border-transparent",
+            "carousel-item flex-shrink-0 w-full border-b-2 border-transparent",
         itemActiveClass: "is-active",
     },
     checkbox: {
