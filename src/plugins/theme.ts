@@ -90,7 +90,7 @@ const tailwindConfig = {
         disabledClass:
             "is-disabled pointer-events-none cursor-not-allowed opacity-50",
         inputClass:
-            "check rounded outline-none text-inherit flex-shrink-0 border-2 border-gray-500 bg-transparent transition-colors duration-150 ease-in focus:ring-2 focus:ring-brand-soft",
+            "check rounded outline-none text-inherit flex-shrink-0 border-2 border-gray-500 bg-transparent transition-colors duration-150 ease-in focus:ring-2 focus:ring-brand-soft appearance-none [-webkit-appearance:none] [-moz-appearance:none]",
         labelClass: "control-label select-none font-medium text-heading ml-2",
         variantClass: "is-",
         sizeClass: (_: string, props: ComponentProps): string => {
@@ -375,11 +375,17 @@ const tailwindConfig = {
         rootClass: "radio flex justify-start items-center relative",
         disabledClass:
             "is-disabled pointer-events-none cursor-not-allowed opacity-50",
-        inputClass: "check",
-        labelClass:
-            "control-label select-none text-sm font-medium text-heading ml-2",
+        inputClass:
+            "check rounded-full outline-none text-inherit flex-shrink-0 border-2 focus:ring-2 focus:ring-brand-soft appearance-none [-webkit-appearance:none] [-moz-appearance:none]",
+        labelClass: "control-label select-none font-medium text-heading ml-2",
         variantClass: "is-",
-        sizeClass: "is-",
+        sizeClass: (_: string, props: ComponentProps): string => {
+            if (props.size == "small")
+                return "is-small [&_.control-label]:text-xs";
+            if (props.size == "medium")
+                return "is-medium [&_.control-label]:text-sm";
+            return "is-large [&_.control-label]:text-xl";
+        },
     },
     select: {
         override: true,
@@ -511,9 +517,10 @@ const tailwindConfig = {
         override: true,
         rootClass: "switch flex items-center align-top",
         // switchClass: "check",
-        inputClass: "check flex items-center flex-shrink-0 cursor-pointer",
+        inputClass:
+            "check flex items-center flex-shrink-0 cursor-pointer bg-gray-200 h-auto text-inherit focus:ring-2 focus:ring-brand-soft appearance-none [-webkit-appearance:none] [-moz-appearance:none]",
         positionClass: (value: string): string => `has-${value}-label`,
-        roundedClass: "is-rounded",
+        roundedClass: "rounded",
         labelClass:
             "control-label select-none text-sm font-medium text-heading ml-2",
         sizeClass: "is-",

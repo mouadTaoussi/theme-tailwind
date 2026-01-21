@@ -5,17 +5,17 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-$radio-active-background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1) !default;
-$radio-border-size: 2px !default;
-$radio-border-radius: 50% !default;
-$radio-font-size: 15px !default;
+// $radio-active-background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1) !default;
+// $radio-border-size: 2px !default;
+// $radio-border-radius: 50% !default;
+// $radio-font-size: 15px !default;
 // $radio-padding: .5em .75em !default;
 /* @docs */
 
-@mixin radio-size ($control,$check,$checked){
-    .control-label {
-        font-size: $control;
-    }
+@mixin radio-size ($check, $checked){
+    // .control-label {
+    //     font-size: $control;
+    // }
     .check { 
         width: $check;
         height: $check;
@@ -29,42 +29,42 @@ $radio-font-size: 15px !default;
 
 .radio {
     // padding: $radio-padding;
-    vertical-align:top;
+    // vertical-align:top;
 
-    .control-label {
-        font-size: $radio-font-size;
-    }
+    // .control-label {
+    //     font-size: 15px;
+    // }
     .check {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        font-size: inherit;
-        border-radius: $radio-border-radius;
-        border: 2px solid list.nth(map.get(vars.$theme-colors, "secondary"), 1);
+        // -webkit-appearance: none;
+        // -moz-appearance: none;
+        // appearance: none;
+        // font-size: inherit;
+        // border-radius: 9999px;
+        border-color: list.nth(map.get(vars.$theme-colors, "secondary"), 1);
         width: 1.25rem;
         height: 1.25rem;
-        flex-shrink: 0;
-        outline: none;
+        // flex-shrink: 0;
+        // outline: none;
     }
-    .check:hover {
-        border: $radio-active-background-color 2px solid;
-    }
-    .check:focus {
-        box-shadow: .1px .1px 10px $radio-active-background-color;
-    }
+    // .check:hover {
+    //     border-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
+    // }
+    // .check:focus {
+    //     box-shadow: .1px .1px 10px list.nth(map.get(vars.$theme-colors, "primary"), 1);
+    // }
     .check::before {
         content: '';
         transform: scale(0);
         position: absolute;
-        background-color: $radio-active-background-color;
-        border: $radio-active-background-color 2px solid;
-        border-radius: $radio-border-radius;
+        background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
+        border-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
+        border-radius: 9999px;
         width: 1.06rem;
         height: 1.06rem;
         transition: all vars.$speed-slow var(--ease-in);      
     }
     .check:checked {
-        border: $radio-active-background-color 2px solid;
+        border-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
     }
     .check:checked::before {
         content: '';
@@ -78,33 +78,33 @@ $radio-font-size: 15px !default;
 
         &.is-#{$name} {
             .check {
-                border: 2px solid $variant;
+                border-color: $variant;
             }
-            .check:hover {
-                border: $variant 2px solid;
-            }
-            .check:focus {
-                box-shadow: .1px .1px 10px $variant;
-            }
+            // .check:hover {
+            //     border-color: $variant;
+            // }
+            // .check:focus {
+            //     box-shadow: .1px .1px 10px $variant;
+            // }
             .check::before {
                 content: '';
                 background-color: $variant;
-                border: $variant 2px solid;
+                border-color: $variant;
             }
             .check:checked {
-                border: $variant 2px solid;
+                border-color: $variant;
             }
         }
     }
 
     // Size 
     &.is-small {
-        @include radio-size(8px, 1rem, .79rem);
+        @include radio-size(1rem, .79rem);
     }
     &.is-medium {
-        @include radio-size(12px, 1.25rem, 1.06rem);
+        @include radio-size(1.25rem, 1.06rem);
     }
     &.is-large {
-        @include radio-size(20px, 1.50rem, 1.30rem);
+        @include radio-size(1.50rem, 1.30rem);
     }
 }
