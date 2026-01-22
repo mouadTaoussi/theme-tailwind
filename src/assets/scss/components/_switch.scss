@@ -5,13 +5,6 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-// $switch-border-color: rgb(227, 227, 227) !default;
-// $switch-border-size: 2px !default;
-// $switch-font-size: 15px !default;
-// $switch-border-radius: .500rem !default;
-// $switch-padding: .15rem !default;
-// $switch-width: 1.75rem !default;
-// $switch-active-background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1) !default;
 /* @docs */
 
 @mixin switch-size ($control,$check){
@@ -33,21 +26,9 @@
 }
 
 .switch {
-    // padding: 0.15rem;
-
-    // .control-label {
-        font-size: $switch-font-size;
-    // }
-
     .check {
-        // -webkit-appearance: none;
-        // -moz-appearance: none;
-        // appearance: none;
-        // font-size: inherit;
         width: 1.75rem;
-        // height: auto;
         padding: 0.15rem;
-        // background: rgb(202, 202, 202);
         border-radius: 9999px;
         transition: all vars.$speed-slow var(--ease-in); 
     }
