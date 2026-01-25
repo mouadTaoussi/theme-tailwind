@@ -222,9 +222,9 @@ const tailwindConfig = {
     field: {
         override: true,
         rootClass: "field",
-        labelClass: "label block text-gray-500 mb-2",
+        labelClass: "field-label block text-gray-500 mb-2",
         labelSizeClass: "is-",
-        messageClass: "help block",
+        messageClass: "help block text-xs my-2",
         messageVariantClass: "is-",
         bodyClass: "field-body",
         addonsClass: "has-addons flex justify-start",
@@ -233,8 +233,8 @@ const tailwindConfig = {
         groupMultilineClass: "is-grouped-multiline flex-wrap",
         horizontalClass: "is-horizontal flex",
         horizontalLabelClass:
-            "field-label", // basis-0 grow shrink-0 me-6 text-right
-        horizontalBodyClass: "field-body",
+            "field-label flex-grow-1 flex-shrink-0 basis-0 mr-6 text-right",
+        horizontalBodyClass: "field-body basis-0 flex-grow-5",
     },
     icon: {
         override: true,
