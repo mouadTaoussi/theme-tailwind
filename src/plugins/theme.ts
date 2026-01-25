@@ -105,7 +105,8 @@ const tailwindConfig = {
     collapse: {
         override: true,
         rootClass: "collapse-component rounded-lg my-4",
-        triggerClass: "collapse-component-trigger cursor-pointer inline-block",
+        triggerClass:
+            "collapse-component-trigger cursor-pointer inline-block w-full",
         contentClass: "collapse-component-content [display:inherit]",
     },
     datepicker: {
@@ -185,13 +186,11 @@ const tailwindConfig = {
         rootClass: "dropdown relative btn-group inline-block align-middle",
         triggerClass: "dropdown-trigger",
         disabledClass: "disabled opacity-50 cursor-not-allowed",
-        expandedClass: "w-full",
+        expandedClass: "w-full [&_.dropdown-menu]:w-full",
         inlineClass:
             "inline [&_.dropdown-menu]:static [&_.dropdown-menu]:inline-block [&_.dropdown-menu]:overflow-auto [&_.dropdown-menu]:z-0",
-        menuMobileOverlayClass:
-            "dropdown-backdrop fixed top-0 left-0 w-screen h-screen z-40 bg-black/80 backdrop-blur-sm",
         overlayClass:
-            "dropdown-backdrop fixed top-0 left-0 w-screen h-screen z-40 bg-black/80 backdrop-blur-sm",
+            "dropdown-backdrop fixed top-0 left-0 w-full h-full z-40 bg-black/80 backdrop-blur-sm",
         menuClass: (): string => {
             const classes = [
                 "dropdown-menu",
@@ -203,7 +202,6 @@ const tailwindConfig = {
                 "rounded-lg",
                 "shadow-lg",
                 "min-w-48",
-                "w-full",
                 "p-2",
                 "text-gray-600",
                 "border border-gray-100",
@@ -219,7 +217,6 @@ const tailwindConfig = {
         itemFocusedClass: "focused bg-gray-100",
         itemDisabledClass: "disabled opacity-50 cursor-not-allowed",
         modalClass: "is-mobile-modal",
-        mobileClass: "is-mobile-modal",
         teleportClass: "teleported",
     },
     field: {
@@ -319,7 +316,7 @@ const tailwindConfig = {
     modal: {
         override: true,
         rootClass:
-            "modal flex flex-col justify-center items-center w-screen h-screen relative top-0 left-0",
+            "modal flex flex-col justify-center items-center w-full h-full relative top-0 left-0",
         activeClass: "is-active",
         overlayClass:
             "modal-background w-full h-full bg-black/80 backdrop-blur-sm",

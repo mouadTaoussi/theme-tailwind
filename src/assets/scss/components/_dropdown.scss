@@ -78,13 +78,22 @@
 
 	// Mobile dropdown
 	&.is-mobile-modal:not(.inline) {
-		.dropdown-menu {
+		> .dropdown-menu {
 			position: fixed;
-			top: 50%;
+			top: 25%;
 			left: 50%;
-			width: 80%;
-			transform: translateX(-50%) translateY(-50%);
+			bottom: auto;
+			right: auto;
+			transform: translateX(-50%);
+			width: calc(100vw - 54px);
+			max-width: 400px;
+			max-height: calc(100vh - 120px);
+			white-space: normal;
+			overflow-y: auto;
 			z-index: 1055;
+		}
+		> .dropdown-item {
+			padding: 1rem 1.5rem;
 		}
 	}
 }
