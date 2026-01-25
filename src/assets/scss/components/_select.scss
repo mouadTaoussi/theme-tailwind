@@ -29,17 +29,6 @@ $select-arrow-size: 1rem !default;
         }
     }
 
-    // &.has-icons-left {
-    //     .select {
-    //         padding-left: 2.5rem;
-    //     }
-    // }
-    // &.has-icons-right {
-    //     .select {
-    //         padding-right: 2.5rem;
-    //     }
-    // }
-
     // Variants
     @each $name, $pair in vars.$theme-colors {
         $variant: list.nth($pair, 1);

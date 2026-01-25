@@ -448,7 +448,7 @@ const tailwindConfig = {
         rootClass: "skeleton flex",
         itemClass: "rounded bg-gray-200 w-full h-2",
         itemRoundedClass: "rounded",
-        animationClass: "animate-pulse",
+        animatedClass: "animate-pulse",
         sizeClass: (position: string): string => {
             if (position == "small") return "h-2";
             else if (position == "medium") return "h-3";

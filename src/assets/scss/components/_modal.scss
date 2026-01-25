@@ -4,7 +4,6 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-
 /* @docs */
 
 .modal {
@@ -15,7 +14,4 @@
         max-height: calc(90vh - 10%);
         z-index: 9999;
     }
-    // .modal-background {
-    //     background-color: rgba(0,0,0,.8);
-    // }
 }
