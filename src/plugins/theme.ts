@@ -233,7 +233,7 @@ const tailwindConfig = {
         groupMultilineClass: "is-grouped-multiline flex-wrap",
         horizontalClass: "is-horizontal flex",
         horizontalLabelClass:
-            "field-label flex-basis-0 flex-grow me-6 text-right",
+            "field-label", // basis-0 grow shrink-0 me-6 text-right
         horizontalBodyClass: "field-body",
     },
     icon: {
@@ -296,9 +296,10 @@ const tailwindConfig = {
     loading: {
         override: true,
         rootClass:
-            "loading flex justify-center items-center absolute top-0 right-0 bottom-0 left-0 overflow-hidden",
+            "loading flex justify-center items-center absolute top-0 right-0 bottom-0 left-0 overflow-hidden [&_.loading-overlay]:z-40 [&_span]:z-50",
         fullPageClass: "is-full-page fixed",
-        overlayClass: "loading-overlay absolute top-0 right-0 bottom-0 left-0",
+        overlayClass:
+            "loading-overlay absolute top-0 right-0 bottom-0 left-0 bg-white/10 backdrop-blur-sm",
         iconClass: "icon",
         scrollClipClass: "is-clipped",
     },

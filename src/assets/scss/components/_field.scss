@@ -9,6 +9,14 @@
 
 .field {
     margin-bottom: .75rem;
+
+    .field-label {
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 0;
+        margin-inline-end: 1.5rem;
+        text-align: right;
+    }
     
     .help {
         font-size: .75rem;

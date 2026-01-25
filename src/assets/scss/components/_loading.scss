@@ -4,7 +4,7 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-$loading-overlay-background-color: var(--color-gray-50) !default;
+// $loading-overlay-background-color: var(--color-gray-50) !default;
 $loading-overlay-zindex: 9999 !default;
 /* @docs */
 
@@ -15,8 +15,8 @@ $loading-overlay-zindex: 9999 !default;
         z-index: $loading-overlay-zindex;
     }
 
-    .loading-overlay {
-        background-color: $loading-overlay-background-color;
-        opacity: .7;
-    }
+    // .loading-overlay {
+    //     // background-color: $loading-overlay-background-color;
+    //     opacity: .7;
+    // }
 }
