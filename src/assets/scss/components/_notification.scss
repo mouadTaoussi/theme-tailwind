@@ -5,11 +5,6 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-$notification-close-btn-position: 1rem !default;
-$notification-notices-padding: 2em !default;
-$notification-notices-zindex: 99999 !default;
-$notification-notices-max-width: 600px !default;
-$notification-icon-margin-right: 0.5rem !default;
 /* @docs */
 
 .notification {
@@ -24,30 +19,20 @@ $notification-icon-margin-right: 0.5rem !default;
             background-color: $variant;
         }
     }
-    .notifictation-wrapper {
-        .icon {
-            height: 100%;
-            margin-right: $notification-icon-margin-right;
-        }
-    }
 }
 .alert {
   & > button {
     background-color: transparent;
     border: 0;
     position: absolute;
-    top: $notification-close-btn-position;
-    right: $notification-close-btn-position;
+    top: 1rem;
+    right: 1rem;
   }
 }
 .notifictations {
-    pointer-events: none;
-    padding: $notification-notices-padding;
-    z-index: $notification-notices-zindex;
-
     .alert {
         pointer-events: auto;
-        max-width: $notification-notices-max-width;
+        max-width: 600px;
 
         &.position {
             &-top,

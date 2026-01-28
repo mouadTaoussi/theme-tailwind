@@ -6,17 +6,17 @@
 
 
 /* @docs */
-$btn-spacer: 0.5rem !default;
-$btn-font-size: var(--text-base) !default;
-$btn-font-weight: 500 !default;
-$btn-padding: 0.70rem 0.70rem !default;
+// $btn-spacer: 0.5rem !default;
+// $btn-font-size: var(--text-base) !default;
+// $btn-font-weight: 500 !default;
+// $btn-padding: 0.70rem 0.70rem !default;
 /* @docs */
 
 
 .button {
-    padding:$btn-padding;
-    font-size: $btn-font-size;
-    font-weight: $btn-font-weight;
+    padding:0.70rem 0.70rem;
+    font-size: var(--text-base);
+    font-weight: 500;
     line-height: normal;
 
     @each $name, $pair in vars.$theme-colors {
@@ -79,8 +79,8 @@ $btn-padding: 0.70rem 0.70rem !default;
     }
 
     .icon {
-        margin-right: $btn-spacer;
-        margin-left: calc($btn-spacer / 2);
+        margin-right: 0.5rem;
+        margin-left: calc(0.5rem / 2);
     }
 
     &.is-loading:after {
@@ -100,5 +100,5 @@ $btn-padding: 0.70rem 0.70rem !default;
 }
 
 .button:not(:last-child):not(.w-full) {
-    margin-right: $btn-spacer;
+    margin-right: 0.5rem;
 }

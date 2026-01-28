@@ -252,7 +252,12 @@ const tailwindConfig = {
     input: {
         override: true,
         rootClass: (_: string, props: ComponentProps): string => {
-            const classes = ["input-component", "[&_.icon]:text-gray-500"];
+            const classes = [
+                "input-component",
+                "inline-block",
+                "relative",
+                "[&_.icon]:text-gray-500",
+            ];
             if (isTrueish(props.icon)) classes.push("has-icons-left");
             return classes.join(" ");
         },
@@ -264,19 +269,20 @@ const tailwindConfig = {
                 "focus:ring-2",
                 "w-full",
                 "!bg-gray-50",
+                "border border-gray-200",
             ];
 
             if (props.icon) classes.push("icon-left");
             if (props.iconRight) classes.push("icon-right");
             return classes.join(" ");
         },
-        textareaClass: (_: string, props: ComponentProps): string => {
-            const classes = [];
+        // textareaClass: (_: string, props: ComponentProps): string => {
+        //     const classes = [];
 
-            if (props.icon) classes.push("icon-left");
-            if (props.iconRight) classes.push("icon-right");
-            return classes.join(" ");
-        },
+        //     if (props.icon) classes.push("icon-left");
+        //     if (props.iconRight) classes.push("icon-right");
+        //     return classes.join(" ");
+        // },
         sizeClass: (_: string, props: ComponentProps): string => {
             if (props.size == "small") return "input-small";
             else if (props.size == "medium") return "input-medium";
@@ -305,14 +311,16 @@ const tailwindConfig = {
     },
     menu: {
         override: true,
-        rootClass: "menu text-sm font-medium text-heading",
+        rootClass:
+            "menu text-sm font-medium text-heading [&_button]:text-left [&_button]:w-full [&_button]:rounded [&_button]:p-4",
         listClass: "menu-list",
         listLabelClass: "menu-label my-2 text-gray-500",
-        itemButtonClass: "menu-item [&_.icon]:mr-2 [&_.icon]:ml-1",
+        itemButtonClass:
+            "menu-item text-left w-full rounded [&_.icon]:mr-2 [&_.icon]:ml-1",
         itemButtonActiveClass: "active",
         itemButtonDisabledClass:
             "disabled pointer-events-none cursor-not-allowed opacity-50",
-        itemSubmenuClass: "submenu border-l border-gray-200",
+        itemSubmenuClass: "submenu ml-5 pl-1 border-l border-gray-200",
     },
     modal: {
         override: true,
@@ -333,13 +341,13 @@ const tailwindConfig = {
             "notification alert relative flex items-center px-4 py-3 my-3 rounded-lg space-x-2 duration-100 ease-in",
         variantClass: "is-",
         wrapperClass:
-            "notifictation-wrapper flex items-center max-w-[95%] text-left",
+            "notifictation-wrapper flex items-center max-w-[95%] text-left [&_.icon]:h-full [&_.icon]:mr-2",
         contentClass: "notifictation-content",
         positionClass: "position-",
         iconClass: "media mr-3 ",
         closeClass: "close",
         noticeClass:
-            "notifictations fixed top-0 right-0 bottom-0 left-0 overflow-hidden flex items-center",
+            "notifictations fixed top-0 right-0 bottom-0 left-0 overflow-hidden flex items-center pointer-events-none p-8 z-40",
         noticePositionClass: "position-",
     },
     pagination: {
@@ -408,6 +416,7 @@ const tailwindConfig = {
                 "focus:ring-2",
                 "w-full",
                 "!bg-gray-50",
+                "border border-gray-200",
             ];
             if (isTrueish(props.size)) classes.push(`input-${props.size}`);
             if (isTrueish(props.rounded)) classes.push("!rounded-3xl");

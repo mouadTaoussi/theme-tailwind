@@ -5,18 +5,9 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-$input-icon-spacer: 0.75rem !default;
-$input-border-color: rgb(227, 227, 227) !default;
-$input-border-size: 0.005rem !default;
-$input-padding: 0.70rem 1rem !default;
-$input-font-size: var(--text-base) !default;
 /* @docs */
 
-.textarea,
 .input-component {
-    position: relative;
-    display: inline-block;
-
     .icon { 
         position: absolute;
         top: 0;
@@ -24,10 +15,10 @@ $input-font-size: var(--text-base) !default;
         height: 100%;
         
         &.icon-right {
-            right: $input-icon-spacer;     
+            right: 0.75rem;     
         }
         &.icon-left {
-            left: $input-icon-spacer;
+            left: 0.75rem;
         }
     }
 
@@ -42,15 +33,10 @@ $input-font-size: var(--text-base) !default;
         }
     }
 
-    textarea,
     .input {
-        border: $input-border-size;
-        border-style: var(--tw-border-style);
-        border-color: $input-border-color;
-        padding: $input-padding;
-        font-size: $input-font-size;
+        padding: 0.70rem 1rem;
+        font-size: var(--text-base);
         line-height: normal;
-        background-color: white;
 
         // Variants
         @each $name, $pair in vars.$theme-colors {
@@ -64,19 +50,16 @@ $input-font-size: var(--text-base) !default;
     }
 
     &.input-small {
-        textarea,
         .input {
             font-size: var(--text-xs);
         } 
     }
     &.input-medium {
-        textarea,
         .input {
             font-size: var(--text-base);
         }
     }
     &.input-large {
-        textarea,
         .input {
             font-size: var(--text-2xl);
             &.icon-left {
