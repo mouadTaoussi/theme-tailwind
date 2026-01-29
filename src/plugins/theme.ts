@@ -377,7 +377,7 @@ const tailwindConfig = {
         },
         listClass:
             "pagination-list text-center flex justify-start items-center flex-wrap grow shrink list-none m-0 p-0",
-        mobileClass: "is-mobile",
+        mobileClass: "is-mobile flex-wrap",
         buttonClass: "pagination-link mr-2",
         buttonCurrentClass: "is-current pointer-events-none cursor-not-allowed",
         buttonDisabledClass:
