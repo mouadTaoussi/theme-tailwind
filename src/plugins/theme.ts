@@ -360,19 +360,28 @@ const tailwindConfig = {
                 "flex",
                 "justify-between",
                 "items-center",
+                "mb-4",
             ];
-            if (props.rounded) classes.push("rounded"); // doesn't work // position is not included
+            if (props.rounded) classes.push("rounded");
             return classes.join(" ");
         },
         sizeClass: "is-",
         simpleClass: "is-simple",
         orderClass: "is-",
+        positionClass: (_: string, props: ComponentProps): string => {
+            if (props.position == "right")
+                return "[&_.pagination-list]:justify-end";
+            if (props.position == "centered")
+                return "[&_.pagination-list]:justify-center";
+            return "[&_.pagination-list]:justify-start";
+        },
         listClass:
-            "pagination-list text-center flex justify-start items-center flex-wrap grow shrink order-1 list-none m-0 p-0",
+            "pagination-list text-center flex justify-start items-center flex-wrap grow shrink list-none m-0 p-0",
         mobileClass: "is-mobile",
-        buttonClass: "pagination-link",
+        buttonClass: "pagination-link mr-2",
         buttonCurrentClass: "is-current pointer-events-none cursor-not-allowed",
-        buttonDisabledClass: "is-disabled",
+        buttonDisabledClass:
+            "disabled pointer-events-none cursor-not-allowed opacity-5",
         buttonNextClass: "pagination-next",
         buttonPrevClass: "pagination-previous",
         infoClass: "info",

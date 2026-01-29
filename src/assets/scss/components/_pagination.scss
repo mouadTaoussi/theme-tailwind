@@ -5,65 +5,21 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-$pagination-active-background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1) !default;
-$pagination-nav-padding-left: 0.75rem !default;
-$pagination-nav-padding-right: 0.75rem !default;
-$pagination-link-margin: 0 4px 0 0 !default;
-$pagination-link-padding: 8px 12px !default;
-$pagination-link-border-color: rgb(227, 227, 227) !default;
-$pagination-link-border-radius: 3px !default;
-$pagination-link-border-size: 0.005rem !default;
-$pagination-link-min-width: 2.5rem !default;
 /* @docs */
 
 .pagination {
-    margin-bottom: 1.5rem;
-
-    .pagination-previous,
-    .pagination-next {
-        padding-right: $pagination-nav-padding-right;
-        padding-left: $pagination-nav-padding-left;
-
-        &.is-disabled {
-            pointer-events: none;
-            cursor: not-allowed;
-            opacity: 0.5;
-        }
-    }
     .pagination-link {
-        border: $pagination-link-border-size;
-        border-style: var(--tw-border-style);
-        border-color: $pagination-link-border-color;
-        border-radius: $pagination-link-border-radius;
-        padding: $pagination-link-padding;
-        margin: $pagination-link-margin;
-        min-width: $pagination-link-min-width;
-        transition-duration: 294ms;
-        transition-property: background-color, border-color, box-shadow, color;
+        min-width: 2.5rem;
     }
 
     &.is-simple {
         justify-content: normal;
-
-        &.is-left {
-            justify-content: flex-start;
-        }
-
-        &.is-centered {
-            justify-content: center;
-        }
-
-        &.is-right {
-            justify-content: flex-end;
-        }
     }
 
-    // size
-
     .is-current {
-        background-color: $pagination-active-background-color;
+        background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
         color: white;
-        border-color: $pagination-active-background-color;
+        border-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
     }
 
     &.is-mobile {
