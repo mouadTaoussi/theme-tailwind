@@ -8,42 +8,46 @@
 
 .sidebar {
     &.is-inline {
-        position: static; // -> static 
+        position: static;
        .sidebar-content, .sidebar-background {
             position: static; 
-            display: inline; // -> static inline
+            display: inline;
        }
     }
     
     .sidebar-content {
         position: fixed;
 
-        &.is-top {
-            width: 100%;
-            top: 0;
-            right: 0;
-            left: 0;
+        // &.is-top {
+        //     width: 100%;
+        //     top: 0;
+        //     right: 0;
+        //     left: 0;
+        //     // w-full top-0 right-0 left-0
+        // }
+        // &.is-right {
+        //     height: 100%;
+        //     top: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     // h-full top-0 right-0 bottom-0
+        // }
+        // &.is-left {
+        //     height: 100%;
+        //     top: 0;
+        //     left: 0;
+        //     bottom: 0;
+        //     // h-full top-0 left-0 bottom-0
+        // }
+        // &.is-bottom {
+        //     width: 100%;
+        //     right: 0;
+        //     left: 0;
+        //     bottom: 0;
+        //     // w-full right-0 left-0 bottom-0
         }
-        &.is-right {
-            height: 100%;
-            top: 0;
-            right: 0;
-            bottom: 0;
-        }
-        &.is-left {
-            height: 100%;
-            top: 0;
-            left: 0;
-            bottom: 0;
-        }
-        &.is-bottom {
-            width: 100%;
-            right: 0;
-            left: 0;
-            bottom: 0;
-        }
-    }
+    // }
     .sidebar-background {
-        position: fixed; // -> fixed 
+        position: fixed;
     }
 }

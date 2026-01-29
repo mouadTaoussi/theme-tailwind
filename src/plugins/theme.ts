@@ -452,7 +452,15 @@ const tailwindConfig = {
             "sidebar-background relative top-0 left-0 w-full h-full z-40 bg-black/80 backdrop-blur-sm",
         contentClass: "sidebar-content shadow-sm bg-white !w-auto !h-auto z-41",
         activeClass: "is-active",
-        positionClass: "is-",
+        // positionClass: "is-",
+        positionClass: (_: string, props: ComponentProps): string => {
+            if (props.position == "top") return "w-full top-0 right-0 left-0";
+            if (props.position == "right")
+                return "h-full top-0 right-0 bottom-0";
+            if (props.position == "bottom")
+                return "w-full right-0 left-0 bottom-0";
+            return "h-full top-0 left-0 bottom-0";
+        },
         expandOnHoverClass: "!w-full",
         fullheightClass: "!h-full",
         fullwidthClass: "!w-full",
