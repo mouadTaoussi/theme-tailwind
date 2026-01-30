@@ -5,43 +5,16 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-$upload-bg: transparent !default;
-$upload-draggable-padding: 35px !default;
-$upload-border-color: var(--color-gray-500) !default;
-$upload-border-radius: 3px !default;
-// $upload-rounded-border-radius: 30px !default;
 /* @docs */
 
 .upload {
-    input[type="file"] { // To Tailwind
-        cursor: pointer;
-        position: absolute;
-        top: 0;
-        left: 0;
-        //
-        width: 100%;
-        height: 100%;
-        //
-        opacity: 0;
-        outline: none;
-        //
-        z-index: -1;
-    }
-    .upload-draggable {
-        cursor: pointer;
-        padding: $upload-draggable-padding;
-        background-color: $upload-bg;
-        border: 1px dashed $upload-border-color;
-        border-radius: $upload-border-radius;
-    }
-
     @each $name, $pair in vars.$theme-colors {
         $variant-invert: list.nth($pair, 2);
         $variant: list.nth($pair, 1);
         
         &.is-#{$name} {
             .is-hovered {
-                background-color:$variant-invert; // 100 is given to reduce color's opacity
+                background-color:$variant-invert;
                 border-color: $variant;
                 color: $variant;
             }

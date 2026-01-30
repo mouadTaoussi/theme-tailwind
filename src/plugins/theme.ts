@@ -452,7 +452,6 @@ const tailwindConfig = {
             "sidebar-background relative top-0 left-0 w-full h-full z-40 bg-black/80 backdrop-blur-sm",
         contentClass: "sidebar-content shadow-sm bg-white !w-auto !h-auto z-41",
         activeClass: "is-active",
-        // positionClass: "is-",
         positionClass: (_: string, props: ComponentProps): string => {
             if (props.position == "top") return "w-full top-0 right-0 left-0";
             if (props.position == "right")
@@ -662,8 +661,23 @@ const tailwindConfig = {
     },
     upload: {
         override: true,
-        rootClass: "upload control rounded-xl",
-        draggableClass: "upload-draggable w-full",
+        rootClass: (_: string): string => {
+            const classes = [
+                "upload",
+                "[&_input[type='file']]:cursor-pointer",
+                "[&_input[type='file']]:absolute",
+                "[&_input[type='file']]:top-0",
+                "[&_input[type='file']]:left-0",
+                "[&_input[type='file']]:w-full",
+                "[&_input[type='file']]:h-full",
+                "[&_input[type='file']]:opacity-0",
+                "[&_input[type='file']]:outline-none",
+                "[&_input[type='file']]:z-[-1]",
+            ];
+            return classes.join(" ");
+        },
+        draggableClass:
+            "upload-draggable w-full bg-transparent cursor-pointer p-12 border border-gray-500 border-dashed rounded-lg",
         variantClass: "is-",
         expandedClass: "w-full",
         disabledClass:
