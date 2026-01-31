@@ -500,13 +500,15 @@ const tailwindConfig = {
             "is-dragging [&_.slider-thumb]:cursor-grabbing",
         thumbRoundedClass: "rounded-full",
         variantClass: "is-",
-        sizeClass: "is-",
-        // sizeClass: (position: string): string => {
-        //     if (position == "small") return "h-2";
-        //     else if (position == "medium") return "h-3";
-        //     else if (position == "large") return "h-6";
-        //     return "h-3";
-        // },
+        sizeClass: (position: string): string => {
+            if (position == "small")
+                return "[&_.slider-track]:h-1.5 [&_.slider-thumb]:w-4 [&_.slider-thumb]:h-4";
+            else if (position == "medium")
+                return "[&_.slider-track]:h-2.5 [&_.slider-thumb]:w-5 [&_.slider-thumb]:h-5";
+            else if (position == "large")
+                return "[&_.slider-track]:h-5 [&_.slider-thumb]:w-7.5 [&_.slider-thumb]:h-7.5";
+            return "default";
+        },
         thumbClass:
             "slider-thumb bg-white cursor-grab w-5 h-5 border border-gray-200 rounded",
         tickLabelClass:
