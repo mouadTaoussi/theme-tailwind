@@ -5,7 +5,7 @@ const tailwindConfig = {
     button: {
         override: true,
         rootClass:
-            "button relative cursor-pointer text-gray-500 border border-gray-200 rounded-lg shadow-xs hover:bg-gray-200 focus:outline-offset-2 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500",
+            "button relative cursor-pointer text-gray-500 border border-gray-200 rounded-lg shadow-xs hover:bg-gray-200 focus:outline-offset-2 focus:outline-2 focus:outline-gray-500",
         wrapperClass: "button-wrapper inline-flex items-center",
         sizeClass: "is-",
         variantClass: "is-",
@@ -640,11 +640,11 @@ const tailwindConfig = {
     },
     taginput: {
         override: true,
-        rootClass: "taginput relative control shadow-xs",
+        rootClass: "taginput relative control shadow-xs ",
         containerClass:
-            "taginput-container rounded flex items-center justify-start p-0 h-auto",
+            "taginput-container focus-within:ring-2 cursor-text bg-gray-50 border border-gray-200 rounded flex items-center justify-start h-auto [&_.input]:focus:outline-none [&_.input]:border-none [&_.input]:shadow-none",
         closeClass: "delete is-small",
-        itemClass: "tag rounded bg-gray-100 inline-flex",
+        itemClass: "tag m-1 px-1 rounded bg-gray-100 inline-flex",
         variantClass: "is-",
         expandedClass: "w-full",
     },

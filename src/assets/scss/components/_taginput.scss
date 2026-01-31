@@ -5,41 +5,25 @@
 @use "./utils/variables" as vars;
 
 /* @docs */
-$taginput-border-color: rgb(227, 227, 227) !default;
-$taginput-border-size: 0.005rem !default;
 /* @docs */
 
 .taginput {
     .taginput-container {
-        border: $taginput-border-size;
-        border-style: var(--tw-border-style);
-        border-color: $taginput-border-color;
-
-        cursor: text;
-
-        &:focus-within {
-            outline: solid black; 
-        }
-
         input {
-            border: 0;
             &:focus {
                 box-shadow: none;
             }
-        }
+        } 
+    }
 
-        .tag {
-            margin: .25rem;
-            padding: 0 .25rem;
+    @each $name, $pair in vars.$theme-colors {
+        $variant-invert: list.nth($pair, 2);
+        $variant: list.nth($pair, 1);
 
-            @each $name, $pair in vars.$theme-colors {
-                $variant-invert: list.nth($pair, 2);
-                $variant: list.nth($pair, 1);
-
-                &.is-#{$name} {
-                    background-color: $variant;
-                    color: white;
-                }
+        &.is-#{$name} {
+            .tag {
+                background-color: $variant;
+                color: white;
             }
         }
     }
