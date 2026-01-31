@@ -617,8 +617,9 @@ const tailwindConfig = {
             if (type == "toggle")
                 return "toggle text-gray-500 [&_.tab-link]:border-default [&_.tab-link]:border [&_.tab-link]:border-gray-200";
             else if (type == "boxed")
-                return "boxed text-gray-500 [&_.tabs]:border-default [&_.tabs]:border-b [&_.tabs]:border-gray-200";
-            else if (type == "pills") return "pills text-gray-500";
+                return "boxed [&_.tab-link]:rounded-t-lg text-gray-500 [&_.tabs]:border-default [&_.tabs]:border-b [&_.tabs]:border-gray-200";
+            else if (type == "pills")
+                return "pills [&_.tab-link]:rounded-lg text-gray-500";
             else
                 return "default text-gray-500 [&_.tabs]:border-default [&_.tabs]:border-b [&_.tabs]:border-gray-200";
         },
@@ -629,7 +630,7 @@ const tailwindConfig = {
             return "text-sm";
         },
         tabPanelClass: "tab-item",
-        tabClass: "tab-link flex",
+        tabClass: "tab-link p-4 flex items-center",
         tabIconClass: "tab-icon me-2",
         tabLabelClass: "tab-title",
         tabActiveClass: "active",
