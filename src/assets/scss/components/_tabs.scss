@@ -10,7 +10,7 @@
 .tabs-wrapper {
      &.boxed {
         .tab-link {
-            &.active {
+            &.is-active {
                 background-color: list.nth(map.get(vars.$theme-colors, "primary"), 2);
                 color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
             }
@@ -18,7 +18,7 @@
     }
     &.toggle {
         .tab-link {
-            &.active {
+            &.is-active {
                 background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
                 color: white;
             }
@@ -26,7 +26,7 @@
     }
     &.pills {
         .tab-link {
-            &.active {
+            &.is-active {
                 background-color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
                 color: white;
             } 
@@ -34,7 +34,7 @@
     }
     &.default {
         .tab-link {
-            &.active {
+            &.is-active {
                 border-bottom: 1px solid;
                 color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
             } 

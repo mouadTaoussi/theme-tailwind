@@ -30,7 +30,7 @@
             &:hover {
                 opacity: .7;
             }
-            &.outlined {
+            &.is-outlined {
                 background-color: transparent;
                 color: $variant;
 
@@ -46,7 +46,7 @@
                     border-top-color: transparent;
                 }
             }
-            &.inverted {
+            &.is-inverted {
                 color: $variant;
                 background-color: transparent;
                 border-color: transparent;

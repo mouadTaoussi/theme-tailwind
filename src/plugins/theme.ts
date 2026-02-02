@@ -4,8 +4,23 @@ import { isTrueish } from "@oruga-ui/oruga";
 const tailwindConfig = {
     button: {
         override: true,
-        rootClass:
-            "button relative cursor-pointer text-gray-500 border border-gray-200 rounded-lg shadow-xs hover:bg-gray-200 focus:outline-offset-2 focus:outline-2 focus:outline-gray-500",
+        rootClass: (): string => {
+            const classes = [
+                "button",
+                "relative",
+                "cursor-pointer",
+                "text-gray-500",
+                "border",
+                "border-gray-200",
+                "rounded-lg",
+                "shadow-xs",
+                "hover:bg-gray-200",
+                "focus:outline-offset-2",
+                "focus:outline-2",
+                "focus:outline-gray-500",
+            ];
+            return classes.join(" ");
+        },
         wrapperClass: "button-wrapper inline-flex items-center",
         sizeClass: "is-",
         variantClass: "is-",
@@ -16,12 +31,12 @@ const tailwindConfig = {
         loadingClass:
             "is-loading shadow-none pointer-events-none !text-transparent",
         outlinedClass: (variant: string): string => {
-            if (!variant) return "outlined";
-            return `is-${variant} outlined`;
+            if (!variant) return "is-outlined";
+            return `is-${variant} is-outlined`;
         },
         invertedClass: (variant: string): string => {
-            if (!variant) return "inverted";
-            return `is-${variant} inverted`;
+            if (!variant) return "is-inverted";
+            return `is-${variant} is-inverted`;
         },
     },
     autocomplete: {
@@ -63,8 +78,23 @@ const tailwindConfig = {
         wrapperClass: "carousel-scene w-full relative",
         itemsClass: "carousel-items flex",
         itemsDraggingClass: "is-dragging",
-        iconClass:
-            "carousel-arrow transition duration-200 ease-in-out bg-white/50 text-white border border-white/50 rounded-full w-[30px] h-[30px] hover:opacity-100",
+        iconClass: (): string => {
+            const classes = [
+                "carousel-arrow",
+                "transition",
+                "duration-200",
+                "ease-in-out",
+                "bg-white/50",
+                "text-white",
+                "border",
+                "border-white/50",
+                "rounded-full",
+                "w-[30px]",
+                "h-[30px]",
+                "hover:opacity-100",
+            ];
+            return classes.join(" ");
+        },
         iconPrevClass: "has-icons-left",
         iconNextClass: "has-icons-right",
         indicatorsClass:
@@ -89,8 +119,27 @@ const tailwindConfig = {
             "checkbox flex items-center align-top inline-flex [&_.check]:w-5 [&_.check]:h-5",
         disabledClass:
             "is-disabled pointer-events-none cursor-not-allowed opacity-50",
-        inputClass:
-            "check rounded outline-none text-inherit flex-shrink-0 border-2 border-gray-500 bg-transparent transition-colors duration-150 ease-in focus:ring-2 focus:ring-brand-soft appearance-none [-webkit-appearance:none] [-moz-appearance:none]",
+        inputClass: (): string => {
+            const classes = [
+                "check ",
+                "rounded ",
+                "outline-none",
+                "text-inherit",
+                "flex-shrink-0",
+                "border-2",
+                "border-gray-500",
+                "bg-transparent",
+                "transition-colors",
+                "duration-150",
+                "ease-in",
+                "focus:ring-2",
+                "focus:ring-brand-soft",
+                "appearance-none ",
+                "[-webkit-appearance:none]",
+                "[-moz-appearance:none]",
+            ];
+            return classes.join(" ");
+        },
         labelClass:
             "control-label select-none font-medium text-heading ml-2 mr-4",
         variantClass: "is-",
@@ -120,7 +169,6 @@ const tailwindConfig = {
         tableHeadClass: "datepicker-header",
         tableHeadCellClass:
             "datepicker-cell relative hover:bg-gray-100 rounded",
-        // headerButtonsClass: "pagination field flex justify-center",
         prevButtonClass: "pagination-previous",
         nextButtonClass: "pagination-next",
         listsClass: "pagination-list flex [&_.select-component]:mr-2",
@@ -133,7 +181,7 @@ const tailwindConfig = {
         tableCellClass: "datepicker-cell relative hover:bg-gray-100 rounded",
         tableCellSelectableClass: "is-selectable",
         tableCellUnselectableClass:
-            "unselectable opacity-50 cursor-not-allowed",
+            "is-unselectable opacity-50 cursor-not-allowed",
         tableCellTodayClass: "is-today bg-blue-100 text-blue-500",
         tableCellSelectedClass: "is-selected bg-blue-500 text-white",
         //
@@ -168,7 +216,7 @@ const tailwindConfig = {
         monthCellSelectedClass: "is-selected text-white",
         monthCellTodayClass: "is-today text-blue-500",
         monthCellUnselectableClass:
-            "unselectable opacity-50 cursor-not-allowed",
+            "is-unselectable opacity-50 cursor-not-allowed",
         monthCellWithinHoveredClass:
             "is-within-hovered bg-gray-100 rounded-none",
         monthCellWithinSelectedClass: "is-within-selected rounded-none",
@@ -185,10 +233,10 @@ const tailwindConfig = {
         override: true,
         rootClass: "dropdown relative btn-group inline-block align-middle",
         triggerClass: "dropdown-trigger",
-        disabledClass: "disabled opacity-50 cursor-not-allowed",
+        disabledClass: "is-disabled opacity-50 cursor-not-allowed",
         expandedClass: "w-full [&_.dropdown-menu]:w-full",
         inlineClass:
-            "inline [&_.dropdown-menu]:static [&_.dropdown-menu]:inline-block [&_.dropdown-menu]:overflow-auto [&_.dropdown-menu]:z-0",
+            "is-inline [&_.dropdown-menu]:static [&_.dropdown-menu]:inline-block [&_.dropdown-menu]:overflow-auto [&_.dropdown-menu]:z-0",
         overlayClass:
             "dropdown-backdrop fixed top-0 left-0 w-full h-full z-40 bg-black/80 backdrop-blur-sm",
         menuClass: (): string => {
@@ -213,9 +261,9 @@ const tailwindConfig = {
         itemTag: "a",
         itemClass:
             "dropdown-item rounded-lg block px-4 py-2 font-medium hover:bg-gray-100 cursor-pointer",
-        itemSelectedClass: "active text-white",
-        itemFocusedClass: "focused bg-gray-100",
-        itemDisabledClass: "disabled opacity-50 cursor-not-allowed",
+        itemSelectedClass: "is-active text-white",
+        itemFocusedClass: "is-focused bg-gray-100",
+        itemDisabledClass: "is-disabled opacity-50 cursor-not-allowed",
         modalClass: "is-mobile-modal",
         teleportClass: "teleported",
     },
@@ -276,13 +324,6 @@ const tailwindConfig = {
             if (props.iconRight) classes.push("icon-right");
             return classes.join(" ");
         },
-        // textareaClass: (_: string, props: ComponentProps): string => {
-        //     const classes = [];
-
-        //     if (props.icon) classes.push("icon-left");
-        //     if (props.iconRight) classes.push("icon-right");
-        //     return classes.join(" ");
-        // },
         sizeClass: (_: string, props: ComponentProps): string => {
             if (props.size == "small") return "input-small";
             else if (props.size == "medium") return "input-medium";
@@ -292,7 +333,7 @@ const tailwindConfig = {
         variantClass: "border-",
         expandedClass: "w-full",
         disabledClass:
-            "disabled pointer-events-none cursor-not-allowed opacity-50",
+            "is-disabled pointer-events-none cursor-not-allowed opacity-50",
         roundedClass: "!rounded-3xl",
         iconLeftClass: "icon-left",
         iconRightClass: "icon-right",
@@ -301,8 +342,23 @@ const tailwindConfig = {
     },
     loading: {
         override: true,
-        rootClass:
-            "loading flex justify-center items-center absolute top-0 right-0 bottom-0 left-0 overflow-hidden [&_.loading-overlay]:z-40 [&_span]:z-50",
+        rootClass: (): string => {
+            const classes = [
+                "loading",
+                "flex",
+                "justify-center",
+                "items-center",
+                "absolute",
+                "top-0",
+                "right-0",
+                "bottom-0",
+                "left-0",
+                "overflow-hidden",
+                "[&_.loading-overlay]:z-40",
+                "[&_span]:z-50",
+            ];
+            return classes.join(" ");
+        },
         fullPageClass: "is-full-page fixed",
         overlayClass:
             "loading-overlay absolute top-0 right-0 bottom-0 left-0 bg-white/10 backdrop-blur-sm",
@@ -391,8 +447,22 @@ const tailwindConfig = {
         rootClass: "radio flex justify-start items-center relative inline-flex",
         disabledClass:
             "is-disabled pointer-events-none cursor-not-allowed opacity-50",
-        inputClass:
-            "check rounded-full outline-none text-inherit flex-shrink-0 border-2 focus:ring-2 focus:ring-brand-soft appearance-none [-webkit-appearance:none] [-moz-appearance:none]",
+        inputClass: (): string => {
+            const classes = [
+                "check",
+                "rounded-full",
+                "outline-none",
+                "text-inherit",
+                "flex-shrink-0",
+                "border-2",
+                "focus:ring-2",
+                "focus:ring-brand-soft",
+                "appearance-none",
+                "[-webkit-appearance:none]",
+                "[-moz-appearance:none]",
+            ];
+            return classes.join(" ");
+        },
         labelClass:
             "control-label select-none font-medium text-heading ml-2 mr-4",
         variantClass: "is-",
@@ -432,7 +502,7 @@ const tailwindConfig = {
             if (isTrueish(props.multiple)) classes.push("is-multiple");
             if (isTrueish(props.disabled))
                 classes.push(
-                    "disabled pointer-events-none cursor-not-allowed opacity-50",
+                    "is-disabled pointer-events-none cursor-not-allowed opacity-50",
                 );
             return classes.join(" ");
         },
@@ -472,7 +542,7 @@ const tailwindConfig = {
         override: true,
         rootClass: "skeleton flex",
         itemClass: "rounded bg-gray-200 w-full h-2",
-        itemRoundedClass: "rounded",
+        itemRoundedClass: "rounded-full",
         animatedClass: "animate-pulse",
         sizeClass: (position: string): string => {
             if (position == "small") return "h-2";
@@ -520,13 +590,6 @@ const tailwindConfig = {
     steps: {
         override: true,
         rootClass: "steps-wrapper",
-        // navClass: (_: string, props: ComponentProps): string => {
-        //     const classes = ["steps", "flex"];
-        //     if (props.labelPosition === "left") classes.push("has-label-left");
-        //     if (props.labelPosition === "right")
-        //         classes.push("has-label-right");
-        //     return classes.join(" ");
-        // },
         listClass: "steps flex flex-wrap font-medium",
         verticalClass:
             "is-vertical flex flex-wrap [&_.steps]:flex-col [&_.step-content]:grow [&_.step-navigation]:basis-full",
@@ -553,9 +616,24 @@ const tailwindConfig = {
     switch: {
         override: true,
         rootClass: "switch flex items-center align-top inline-flex",
-        // switchClass: "check",
-        inputClass:
-            "check flex items-center flex-shrink-0 cursor-pointer bg-gray-200 h-auto text-inherit focus:ring-2 focus:ring-brand-soft appearance-none [-webkit-appearance:none] [-moz-appearance:none]",
+        inputClass: (): string => {
+            const classes = [
+                "check",
+                "flex",
+                "items-center",
+                "flex-shrink-0",
+                "cursor-pointer",
+                "bg-gray-200",
+                "h-auto",
+                "text-inherit",
+                "focus:ring-2",
+                "focus:ring-brand-soft",
+                "appearance-none",
+                "[-webkit-appearance:none]",
+                "[-moz-appearance:none]",
+            ];
+            return classes.join(" ");
+        },
         positionClass: (value: string): string => `has-${value}-label`,
         roundedClass: "rounded",
         labelClass:
@@ -570,8 +648,22 @@ const tailwindConfig = {
         override: true,
         rootClass: "table-wrapper",
         wrapperClass: "table-inner v relative",
-        tableClass:
-            "table min-w-full divide-y divide-gray-200 [&_th]:text-left [&_tr]:border-t [&_tr]:border-gray-200 [&_td]:px-3 [&_td]:py-2 [&_th]:px-3 [&_th]:py-2",
+        tableClass: (): string => {
+            const classes = [
+                "table",
+                "min-w-full",
+                "divide-y",
+                "divide-gray-200",
+                "[&_th]:text-left",
+                "[&_tr]:border-t",
+                "[&_tr]:border-gray-200",
+                "[&_td]:px-3",
+                "[&_td]:py-2",
+                "[&_th]:px-3",
+                "[&_th]:py-2",
+            ];
+            return classes.join(" ");
+        },
         borderedClass: "border border-gray-200",
         stripedClass: "[&>tbody>tr:nth-child(even)]:bg-gray-50",
         narrowedClass: "is-narrowed",
@@ -633,7 +725,7 @@ const tailwindConfig = {
         tabClass: "tab-link p-4 flex items-center",
         tabIconClass: "tab-icon me-2",
         tabLabelClass: "tab-title",
-        tabActiveClass: "active",
+        tabActiveClass: "is-active",
         tabDisabledClass:
             "is-disabled pointer-events-none cursor-not-allowed opacity-50",
         transitioningClass: "is-transitioning",
@@ -641,8 +733,24 @@ const tailwindConfig = {
     taginput: {
         override: true,
         rootClass: "taginput relative control shadow-xs ",
-        containerClass:
-            "taginput-container focus-within:ring-2 cursor-text bg-gray-50 border border-gray-200 rounded flex items-center justify-start h-auto [&_.input]:focus:outline-none [&_.input]:border-none [&_.input]:shadow-none",
+        containerClass: (): string => {
+            const classes = [
+                "taginput-container",
+                "focus-within:ring-2",
+                "cursor-text",
+                "bg-gray-50",
+                "border border-gray-200",
+                "rounded",
+                "flex",
+                "items-center",
+                "justify-start",
+                "h-auto",
+                "[&_.input]:focus:outline-none",
+                "[&_.input]:border-none [&_.input]:shadow-none",
+                "[&_.input]:shadow-none",
+            ];
+            return classes.join(" ");
+        },
         closeClass: "delete is-small",
         itemClass: "tag m-1 px-1 rounded bg-gray-100 inline-flex",
         variantClass: "is-",
@@ -663,11 +771,31 @@ const tailwindConfig = {
     tooltip: {
         override: true,
         rootClass: "tooltip relative inline-flex",
-        contentClass:
-            "tooltip-content shadow-lg absolute w-auto whitespace-nowrap font-normal",
+        contentClass: (): string => {
+            const classes = [
+                "tooltip-content",
+                "shadow-lg",
+                "absolute",
+                "w-auto",
+                "whitespace-nowrap",
+                "font-normal",
+                "bg-black",
+                "text-white",
+                "rounded-sm",
+                "px-3",
+                "py-1",
+                "text-sm",
+                "z-[38]",
+                "before:absolute",
+                "before:content-['']",
+                "before:pointer-events-none",
+                "before:z-[38]",
+            ];
+            return classes.join(" ");
+        },
         triggerClass: "tooltip-trigger w-full",
         alwaysClass: "is-always opacity-100 visible",
-        multilineClass: "is-multiline text-center whitespace-normal",
+        multilineClass: "is-multiline",
         variantClass: "is-",
         positionClass: "is-",
         teleportClass: "is-teleported",
