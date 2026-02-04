@@ -593,23 +593,27 @@ const tailwindConfig = {
         listClass: "steps flex flex-wrap font-medium",
         verticalClass:
             "is-vertical flex flex-wrap [&_.steps]:flex-col [&_.step-content]:grow [&_.step-navigation]:basis-full",
-        animatedClass: "is-animated",
-        positionClass: "is-",
-        sizeClass: "is-",
+        // animatedClass: "is-animated",
+        // positionClass: "is-",
+        positionClass: (position: string): string => {
+            if (position == "left") return "is-left";
+            else if (position == "right") return "is-right flex-row-reverse";
+            return "is-left";
+        },
+        // sizeClass: "is-",
         stepClass: "step flex-1 flex items-center flex-col text-gray-700",
         stepVariantClass: "is-",
-        stepActiveClass:
-            "is-active [&_.step-marker]:text-blue-500 [&_.step-marker]:bg-blue-100 [&_.step-title]:text-blue-500",
-        stepPreviousClass: "is-previous",
-        stepNextClass: "is-next",
+        stepActiveClass: "is-active",
+        // stepPreviousClass: "is-previous",
+        // stepNextClass: "is-next",
         stepLabelClass: "step-title mt-[4px]",
         stepPositionClass: "label-",
         stepClickableClass: "is-clickable cursor-pointer",
         markerClass:
             "step-marker flex justify-center items-center bg-gray-100 w-10 h-10 rounded-4xl",
-        markerRoundedClass: "is-rounded",
+        // markerRoundedClass: "is-rounded",
         contentClass: "step-content p-4",
-        transitioningClass: "is-transitioning",
+        // transitioningClass: "is-transitioning",
         stepPanelClass: "step-item",
         navigationClass: "step-navigation",
     },
@@ -698,11 +702,12 @@ const tailwindConfig = {
         expandedClass: "[&_.tab-link]:flex-1",
         verticalClass: "flex [&_.tabs]:block [&_.tab-link]:w-full",
         positionClass: (position: string): string => {
-            if (position == "left") return "[&_.tabs]:justify-start";
-            else if (position == "centered") return "[&_.tabs]:justify-center";
+            if (position == "left") return "is-left [&_.tabs]:justify-start";
+            else if (position == "centered")
+                return "is-centered [&_.tabs]:justify-center";
             else if (position == "right")
-                return "[&_.tabs]:justify-end flex-row-reverse";
-            return "left";
+                return "is-right [&_.tabs]:justify-end flex-row-reverse";
+            return "is-left";
         },
         listClass: "tabs flex font-medium flex-wrap",
         typeClass: (type: string): string => {

@@ -1,0 +1,39 @@
+
+@use "sass:map";
+@use "sass:list";
+@use "./utils/all" as utils;
+@use "./utils/variables" as vars;
+
+.steps-wrapper {
+    .steps {
+        .is-active {
+            // .is-warning {
+            .step-marker {
+                background-color: list.nth(map.get(vars.$theme-colors, "primary"), 2);
+                color: list.nth(map.get(vars.$theme-colors, "primary"), 1)
+            }
+            .step-title {
+                color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
+            }
+            // }
+        } 
+        // / [&_.step-marker]:text-blue-500 [&_.step-marker]:bg-blue-100 [&_.step-title]:text-blue-500
+
+
+        @each $name, $pair in vars.$theme-colors {
+            $variant: list.nth($pair, 1);
+            $variant-invert: list.nth($pair, 2);
+            .is-active {
+                &.is-#{$name} {
+                    .step-marker {
+                        background-color: $variant-invert;
+                        color: $variant;
+                    }
+                    .step-title {
+                        color: $variant;
+                    }
+                }
+            }
+        }
+    }
+}
