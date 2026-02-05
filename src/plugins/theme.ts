@@ -594,23 +594,35 @@ const tailwindConfig = {
         verticalClass:
             "is-vertical flex flex-wrap [&_.steps]:flex-col [&_.step-content]:grow [&_.step-navigation]:basis-full",
         // animatedClass: "is-animated",
-        // positionClass: "is-",
         positionClass: (position: string): string => {
             if (position == "left") return "is-left";
             else if (position == "right") return "is-right flex-row-reverse";
             return "is-left";
         },
-        // sizeClass: "is-",
-        stepClass: "step flex-1 flex items-center flex-col text-gray-700",
+        sizeClass: (size: string): string => {
+            if (size == "small")
+                return "[&_.step-marker]:w-8 [&_.step-marker]:h-8 [&_.step-title]:text-sm";
+            else if (size == "medium")
+                return "[&_.step-marker]:w-12 [&_.step-marker]:h-12 [&_.step-title]:text-md";
+            else if (size == "large")
+                return "[&_.step-marker]:w-17 [&_.step-marker]:h-17 [&_.step-title]:text-lg";
+            return "";
+        },
+        stepClass: "step flex-1 flex items-center text-gray-700",
         stepVariantClass: "is-",
         stepActiveClass: "is-active",
         // stepPreviousClass: "is-previous",
         // stepNextClass: "is-next",
         stepLabelClass: "step-title mt-[4px]",
-        stepPositionClass: "label-",
+        stepPositionClass: (position: string): string => {
+            if (position == "left") return "flex-row-reverse";
+            else if (position == "right") return "";
+            else if (position == "bottom") return "flex-col";
+            return "";
+        },
         stepClickableClass: "is-clickable cursor-pointer",
         markerClass:
-            "step-marker flex justify-center items-center bg-gray-100 w-10 h-10 rounded-4xl",
+            "step-marker m-2 flex justify-center items-center bg-gray-100 w-10 h-10 rounded-4xl",
         // markerRoundedClass: "is-rounded",
         contentClass: "step-content p-4",
         // transitioningClass: "is-transitioning",
