@@ -2,7 +2,7 @@
 @forward "tailwindcss";
 
 @forward "./components/autocomplete"; 
-// @forward "./components/breadcrumb";
+@forward "./components/breadcrumb";
 @forward "./components/button";
 @forward "./components/carousel";
 @forward "./components/checkbox";

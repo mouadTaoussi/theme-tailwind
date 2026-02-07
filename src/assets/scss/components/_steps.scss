@@ -6,8 +6,19 @@
 
 .steps-wrapper {
     .steps {
+        // .step-marker:not(:first-child)::before {
+        //     content: " ";
+        //     display: block;
+        //     position: absolute;
+        //     width: 75%;
+        //     height: 1px;
+        //     top: 32%;
+        //     left: -37%;
+        //     bottom: 0;
+        //     background: var(--color-gray-200);
+        // }
+        
         .is-active {
-            // .is-warning {
             .step-marker {
                 background-color: list.nth(map.get(vars.$theme-colors, "primary"), 2);
                 color: list.nth(map.get(vars.$theme-colors, "primary"), 1)
@@ -15,10 +26,7 @@
             .step-title {
                 color: list.nth(map.get(vars.$theme-colors, "primary"), 1);
             }
-            // }
         } 
-        // / [&_.step-marker]:text-blue-500 [&_.step-marker]:bg-blue-100 [&_.step-title]:text-blue-500
-
 
         @each $name, $pair in vars.$theme-colors {
             $variant: list.nth($pair, 1);

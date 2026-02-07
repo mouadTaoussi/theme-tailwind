@@ -47,29 +47,31 @@ const tailwindConfig = {
         itemGroupTitleClass: `text-xs font-bold text-gray-300 uppercase tracking-wider bg-gray-50`,
     },
 
-    // breadcrumb: {
-    //     override: true,
-    //     rootClass: "breadcrumb-wrapper font-medium text-gray-700",
-    //     listClass: (props: ComponentProps): string => {
-    //         const classes = ["breadcrumb"];
-    //         if (props.separator)
-    //             classes.push(
-    //                 `[&_.breadcrumb-item:not(:last-child)]:after:content-['${props.separator}'] [&_.breadcrumb-item:not(:last-child)]:after:mx-2 [&_.breadcrumb-item:not(:last-child)]:after:text-gray-400"`,
-    //             );
-    //         if (props.size) classes.push(`is-medium`);
-    //         if (props.variant) classes.push(`is-primary`);
-    //         if (props.position) classes.push(`is-left`);
-    //         return classes.join(" ");
-    //         // "inline-flex items-center ,
-    //     },
-    //     variantClass: "is-",
-    //     sizeClass: "is-",
-    //     positionClass: "is-",
-    //     itemClass: "breadcrumb-item inline-flex items-center cursor-pointer [&_.icon]:mx-1.5",
-    //     activeClass: "is-active text-blue-500",
-    //     disabledClass:
-    //         "is-disabled pointer-events-none cursor-not-allowed opacity-50",
-    // },
+    breadcrumb: {
+        override: true,
+        rootClass: "breadcrumb-wrapper font-medium text-gray-700",
+        listClass: "breadcrumb flex",
+        variantClass: "is-",
+        sizeClass: (size: string): string => {
+            if (size == "small") return "text-sm";
+            else if (size == "medium") return "text-md";
+            else if (size == "large") return "text-xl";
+            return "text-sm";
+        },
+        positionClass: (props: ComponentProps): string => {
+            if (props.position == "left")
+                return "[&_.breadcrumb]:justify-start";
+            if (props.position == "centered")
+                return "[&_.breadcrumb]:justify-center";
+            if (props.position == "right") return "[&_.breadcrumb]:justify-end";
+            return "[&_.breadcrumb]:justify-start";
+        },
+        // positionClass: "",
+        itemClass: "breadcrumb-item cursor-pointer [&_.icon]:mx-1.5",
+        activeClass: "is-active text-blue-500",
+        disabledClass:
+            "is-disabled pointer-events-none cursor-not-allowed opacity-50",
+    },
     carousel: {
         override: true,
         rootClass: "carousel relative overflow-hidden w-full",
@@ -593,7 +595,7 @@ const tailwindConfig = {
         listClass: "steps flex flex-wrap font-medium",
         verticalClass:
             "is-vertical flex flex-wrap [&_.steps]:flex-col [&_.step-content]:grow [&_.step-navigation]:basis-full",
-        // animatedClass: "is-animated",
+        animatedClass: "is-animated",
         positionClass: (position: string): string => {
             if (position == "left") return "is-left";
             else if (position == "right") return "is-right flex-row-reverse";
@@ -608,11 +610,11 @@ const tailwindConfig = {
                 return "[&_.step-marker]:w-17 [&_.step-marker]:h-17 [&_.step-title]:text-lg";
             return "";
         },
-        stepClass: "step flex-1 flex items-center text-gray-700",
+        stepClass: "step relative flex-1 flex items-center text-gray-700",
         stepVariantClass: "is-",
         stepActiveClass: "is-active",
-        // stepPreviousClass: "is-previous",
-        // stepNextClass: "is-next",
+        stepPreviousClass: "is-previous",
+        stepNextClass: "is-next",
         stepLabelClass: "step-title mt-[4px]",
         stepPositionClass: (position: string): string => {
             if (position == "left") return "flex-row-reverse";
@@ -623,9 +625,8 @@ const tailwindConfig = {
         stepClickableClass: "is-clickable cursor-pointer",
         markerClass:
             "step-marker m-2 flex justify-center items-center bg-gray-100 w-10 h-10 rounded-4xl",
-        // markerRoundedClass: "is-rounded",
         contentClass: "step-content p-4",
-        // transitioningClass: "is-transitioning",
+        transitioningClass: "is-transitioning",
         stepPanelClass: "step-item",
         navigationClass: "step-navigation",
     },

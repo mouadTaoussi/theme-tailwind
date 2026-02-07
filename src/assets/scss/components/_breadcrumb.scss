@@ -1,4 +1,25 @@
 
 @use "sass:map";
+@use "sass:list";
 @use "./utils/all" as utils;
 @use "./utils/variables" as vars;
+
+.breadcrumb-wrapper {
+    @each $name, $pair in vars.$theme-colors {
+        $variant: list.nth($pair, 1);
+        $variant-invert: list.nth($pair, 2);
+
+        &.is-#{$name} {
+            color: $variant;
+        }
+    }
+    .breadcrumb {
+        .breadcrumb-item {
+            // define seprator
+            &:not(:first-child)::before {
+                content: var(--seperator, "/");
+                margin: 0 10px;
+            }
+        }
+    }
+}
